@@ -21,7 +21,7 @@ This is the only official repository and is maintained by the community.
  
 ## Example
 
-Do check out & run [example.ts](Example/example.ts) to see an example usage of the library.
+Do check out & run the example script to see an example usage of the library.
 The script covers most common use cases.
 To run the example script, download or clone the repo and then type the following in a terminal:
 1. ``` cd path/to/Baileys ```
@@ -107,7 +107,7 @@ import makeWASocket from '@innovatorssoft/baileys'
         - [Status Mentions Message](#status-mentions-message) 
         - [Shop Message](#shop-message) 
         - [Collection Message](#collection-message) 
-    - [AI Icon Feature](ai-icon-feature) 
+    - [AI Icon Feature](#ai-icon-feature) 
     - [Sending with Link Preview](#sending-messages-with-link-previews)
     - [Media Messages](#media-messages)
         - [Gif Message](#gif-message)
