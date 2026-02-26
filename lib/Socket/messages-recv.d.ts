@@ -1,6 +1,6 @@
 import { Boom } from '@hapi/boom'
 import { proto } from '../../WAProto'
-import { MessageReceiptType, MessageRelayOptions, SocketConfig, WAMessageKey, ContactAction } from '../Types'
+import { MessageReceiptType, MessageRelayOptions, SocketConfig, WAMessageKey, ContactAction, WAInitiateCallOptions, WAInitiateCallResult } from '../Types'
 import { BinaryNode } from '../WABinary'
 
 export declare const makeMessagesRecvSocket: (config: SocketConfig) => {
@@ -10,6 +10,8 @@ export declare const makeMessagesRecvSocket: (config: SocketConfig) => {
         id: any
         to: string
     }>
+    initiateCall: (jid: string, options?: WAInitiateCallOptions) => Promise<WAInitiateCallResult>
+    cancelCall: (callId: string, callTo: string) => Promise<void>
     rejectCall: (callId: string, callFrom: string) => Promise<void>
     fetchMessageHistory: (count: number, oldestMsgKey: WAMessageKey, oldestMsgTimestamp: number | Long) => Promise<string>
     requestPlaceholderResend: (messageKey: WAMessageKey) => Promise<string | undefined>
@@ -54,7 +56,7 @@ export declare const makeMessagesRecvSocket: (config: SocketConfig) => {
     newsletterWMexQuery: (jid?: string | undefined, query_id: number, content: BinaryNode) => Promise<BinaryNode>
     newsletterMetadata: (type: "invite" | "jid", key: string, role?: import("../Types").NewsletterViewRole | undefined) => Promise<import("../Types").NewsletterMetadata>
     newsletterFetchAllParticipating: () => Promise<{
-    	[_: string]: import("../Types").NewsletterMetadata
+        [_: string]: import("../Types").NewsletterMetadata
     }>
     newsletterAdminCount: (jid: string) => Promise<number>
     newsletterChangeOwner: (jid: string, userLid: string) => Promise<void>
@@ -101,9 +103,9 @@ export declare const makeMessagesRecvSocket: (config: SocketConfig) => {
     appPatch: (patchCreate: import("../Types").WAPatchCreate) => Promise<void>
     createCallLink: (type: 'audio' | 'video', event?: number, timeoutMs?: number) => Promise<void>
     sendPresenceUpdate: (type: import("../Types").WAPresence, toJid?: string | undefined) => Promise<void>
-    presenceSubscribe: (toJid: string, tcToken?: Buffer | undefined) => Promise<void>    
+    presenceSubscribe: (toJid: string, tcToken?: Buffer | undefined) => Promise<void>
     getLidUser: (jid: string) => Promise<{
-    	lid: string
+        lid: string
         id: string
     }[] | undefined>
     fetchBlocklist: () => Promise<string[]>

@@ -127,6 +127,7 @@ import makeWASocket from '@innovatorssoft/baileys'
     - [Downloading Media Messages](#downloading-media-messages)
     - [Re-upload Media Message to Whatsapp](#re-upload-media-message-to-whatsapp)
 - [Reject Call](#reject-call)
+- [Initiate Voice Call](#initiate-voice-call)
 - [Send States in Chat](#send-states-in-chat)
     - [Reading Messages](#reading-messages)
     - [Update Presence](#update-presence)
@@ -2116,6 +2117,24 @@ sock.ev.on('messages.upsert', async ({ [m] }) => {
 - WhatsApp automatically removes old media from their servers. For the device to access said media -- a re-upload is required by another device that has it. This can be accomplished using: 
 ```ts
 await sock.updateMediaMessage(msg)
+```
+
+## Initiate Voice Call
+
+- Initiates outgoing call signaling to a 1:1 or group jid
+- Supports audio (default) and video calls
+- Returns `{ callId, to, isVideo }` — use `callId` to cancel the call
+- **Note: full WebRTC/SRTP media transport is not implemented; this covers the signaling layer only**
+
+```ts
+// Initiate a voice call
+const { callId } = await sock.initiateCall(jid)
+
+// Initiate a video call
+const { callId } = await sock.initiateCall(jid, { isVideo: true })
+
+// Cancel an outgoing call
+await sock.cancelCall(callId, jid)
 ```
 
 ## Reject Call
