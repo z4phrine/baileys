@@ -298,6 +298,7 @@ $root.StatusAttributions = (function() {
                 case 7:
                 case 8:
                 case 9:
+                case 10:
                     break;
                 }
             }
@@ -422,9 +423,13 @@ $root.StatusAttributions = (function() {
             case 8:
                 message.type = 8;
                 break;
-            case "STATUS_CLOSE_SHARING":
+            case "NEWSLETTER_STATUS":
             case 9:
                 message.type = 9;
+                break;
+            case "STATUS_CLOSE_SHARING":
+            case 10:
+                message.type = 10;
                 break;
             }
             if (object.actionUrl != null)
@@ -1022,6 +1027,7 @@ $root.StatusAttributions = (function() {
                     case 8:
                     case 9:
                     case 10:
+                    case 11:
                         break;
                     }
                 }
@@ -1102,6 +1108,10 @@ $root.StatusAttributions = (function() {
                 case "GOOGLE_PHOTOS":
                 case 10:
                     message.source = 10;
+                    break;
+                case "SOUNDCLOUD":
+                case 11:
+                    message.source = 11;
                     break;
                 }
                 if (object.duration != null)
@@ -1188,6 +1198,7 @@ $root.StatusAttributions = (function() {
              * @property {number} APPLE_MUSIC=8 APPLE_MUSIC value
              * @property {number} SHARECHAT=9 SHARECHAT value
              * @property {number} GOOGLE_PHOTOS=10 GOOGLE_PHOTOS value
+             * @property {number} SOUNDCLOUD=11 SOUNDCLOUD value
              */
             ExternalShare.Source = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -1202,6 +1213,7 @@ $root.StatusAttributions = (function() {
                 values[valuesById[8] = "APPLE_MUSIC"] = 8;
                 values[valuesById[9] = "SHARECHAT"] = 9;
                 values[valuesById[10] = "GOOGLE_PHOTOS"] = 10;
+                values[valuesById[11] = "SOUNDCLOUD"] = 11;
                 return values;
             })();
 
@@ -2715,7 +2727,8 @@ $root.StatusAttributions = (function() {
          * @property {number} RL_ATTRIBUTION=6 RL_ATTRIBUTION value
          * @property {number} AI_CREATED=7 AI_CREATED value
          * @property {number} LAYOUTS=8 LAYOUTS value
-         * @property {number} STATUS_CLOSE_SHARING=9 STATUS_CLOSE_SHARING value
+         * @property {number} NEWSLETTER_STATUS=9 NEWSLETTER_STATUS value
+         * @property {number} STATUS_CLOSE_SHARING=10 STATUS_CLOSE_SHARING value
          */
         StatusAttribution.Type = (function() {
             var valuesById = {}, values = Object.create(valuesById);
@@ -2728,7 +2741,8 @@ $root.StatusAttributions = (function() {
             values[valuesById[6] = "RL_ATTRIBUTION"] = 6;
             values[valuesById[7] = "AI_CREATED"] = 7;
             values[valuesById[8] = "LAYOUTS"] = 8;
-            values[valuesById[9] = "STATUS_CLOSE_SHARING"] = 9;
+            values[valuesById[9] = "NEWSLETTER_STATUS"] = 9;
+            values[valuesById[10] = "STATUS_CLOSE_SHARING"] = 10;
             return values;
         })();
 

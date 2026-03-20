@@ -28,6 +28,7 @@ $root.CompanionReg = (function() {
          * @property {boolean|null} [isSyncdPureLidSession] ClientPairingProps isSyncdPureLidSession
          * @property {boolean|null} [isSyncdSnapshotRecoveryEnabled] ClientPairingProps isSyncdSnapshotRecoveryEnabled
          * @property {boolean|null} [isHsThumbnailSyncEnabled] ClientPairingProps isHsThumbnailSyncEnabled
+         * @property {Uint8Array|null} [subscriptionSyncPayload] ClientPairingProps subscriptionSyncPayload
          */
 
         /**
@@ -77,6 +78,14 @@ $root.CompanionReg = (function() {
          */
         ClientPairingProps.prototype.isHsThumbnailSyncEnabled = null;
 
+        /**
+         * ClientPairingProps subscriptionSyncPayload.
+         * @member {Uint8Array|null|undefined} subscriptionSyncPayload
+         * @memberof CompanionReg.ClientPairingProps
+         * @instance
+         */
+        ClientPairingProps.prototype.subscriptionSyncPayload = null;
+
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
 
@@ -101,6 +110,12 @@ $root.CompanionReg = (function() {
         // Virtual OneOf for proto3 optional field
         Object.defineProperty(ClientPairingProps.prototype, "_isHsThumbnailSyncEnabled", {
             get: $util.oneOfGetter($oneOfFields = ["isHsThumbnailSyncEnabled"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(ClientPairingProps.prototype, "_subscriptionSyncPayload", {
+            get: $util.oneOfGetter($oneOfFields = ["subscriptionSyncPayload"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -136,6 +151,8 @@ $root.CompanionReg = (function() {
                 writer.uint32(/* id 3, wireType 0 =*/24).bool(message.isSyncdSnapshotRecoveryEnabled);
             if (message.isHsThumbnailSyncEnabled != null && Object.hasOwnProperty.call(message, "isHsThumbnailSyncEnabled"))
                 writer.uint32(/* id 4, wireType 0 =*/32).bool(message.isHsThumbnailSyncEnabled);
+            if (message.subscriptionSyncPayload != null && Object.hasOwnProperty.call(message, "subscriptionSyncPayload"))
+                writer.uint32(/* id 5, wireType 2 =*/42).bytes(message.subscriptionSyncPayload);
             return writer;
         };
 
@@ -186,6 +203,10 @@ $root.CompanionReg = (function() {
                     }
                 case 4: {
                         message.isHsThumbnailSyncEnabled = reader.bool();
+                        break;
+                    }
+                case 5: {
+                        message.subscriptionSyncPayload = reader.bytes();
                         break;
                     }
                 default:
@@ -244,6 +265,11 @@ $root.CompanionReg = (function() {
                 if (typeof message.isHsThumbnailSyncEnabled !== "boolean")
                     return "isHsThumbnailSyncEnabled: boolean expected";
             }
+            if (message.subscriptionSyncPayload != null && message.hasOwnProperty("subscriptionSyncPayload")) {
+                properties._subscriptionSyncPayload = 1;
+                if (!(message.subscriptionSyncPayload && typeof message.subscriptionSyncPayload.length === "number" || $util.isString(message.subscriptionSyncPayload)))
+                    return "subscriptionSyncPayload: buffer expected";
+            }
             return null;
         };
 
@@ -267,6 +293,11 @@ $root.CompanionReg = (function() {
                 message.isSyncdSnapshotRecoveryEnabled = Boolean(object.isSyncdSnapshotRecoveryEnabled);
             if (object.isHsThumbnailSyncEnabled != null)
                 message.isHsThumbnailSyncEnabled = Boolean(object.isHsThumbnailSyncEnabled);
+            if (object.subscriptionSyncPayload != null)
+                if (typeof object.subscriptionSyncPayload === "string")
+                    $util.base64.decode(object.subscriptionSyncPayload, message.subscriptionSyncPayload = $util.newBuffer($util.base64.length(object.subscriptionSyncPayload)), 0);
+                else if (object.subscriptionSyncPayload.length >= 0)
+                    message.subscriptionSyncPayload = object.subscriptionSyncPayload;
             return message;
         };
 
@@ -302,6 +333,11 @@ $root.CompanionReg = (function() {
                 object.isHsThumbnailSyncEnabled = message.isHsThumbnailSyncEnabled;
                 if (options.oneofs)
                     object._isHsThumbnailSyncEnabled = "isHsThumbnailSyncEnabled";
+            }
+            if (message.subscriptionSyncPayload != null && message.hasOwnProperty("subscriptionSyncPayload")) {
+                object.subscriptionSyncPayload = options.bytes === String ? $util.base64.encode(message.subscriptionSyncPayload, 0, message.subscriptionSyncPayload.length) : options.bytes === Array ? Array.prototype.slice.call(message.subscriptionSyncPayload) : message.subscriptionSyncPayload;
+                if (options.oneofs)
+                    object._subscriptionSyncPayload = "subscriptionSyncPayload";
             }
             return object;
         };
@@ -2913,6 +2949,8 @@ $root.CompanionReg = (function() {
              * @property {boolean|null} [completeOnDemandReady] HistorySyncConfig completeOnDemandReady
              * @property {number|null} [thumbnailSyncDaysLimit] HistorySyncConfig thumbnailSyncDaysLimit
              * @property {number|null} [initialSyncMaxMessagesPerChat] HistorySyncConfig initialSyncMaxMessagesPerChat
+             * @property {boolean|null} [supportManusHistory] HistorySyncConfig supportManusHistory
+             * @property {boolean|null} [supportHatchHistory] HistorySyncConfig supportHatchHistory
              */
 
             /**
@@ -3090,6 +3128,22 @@ $root.CompanionReg = (function() {
              */
             HistorySyncConfig.prototype.initialSyncMaxMessagesPerChat = null;
 
+            /**
+             * HistorySyncConfig supportManusHistory.
+             * @member {boolean|null|undefined} supportManusHistory
+             * @memberof CompanionReg.DeviceProps.HistorySyncConfig
+             * @instance
+             */
+            HistorySyncConfig.prototype.supportManusHistory = null;
+
+            /**
+             * HistorySyncConfig supportHatchHistory.
+             * @member {boolean|null|undefined} supportHatchHistory
+             * @memberof CompanionReg.DeviceProps.HistorySyncConfig
+             * @instance
+             */
+            HistorySyncConfig.prototype.supportHatchHistory = null;
+
             // OneOf field names bound to virtual getters and setters
             var $oneOfFields;
 
@@ -3213,6 +3267,18 @@ $root.CompanionReg = (function() {
                 set: $util.oneOfSetter($oneOfFields)
             });
 
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(HistorySyncConfig.prototype, "_supportManusHistory", {
+                get: $util.oneOfGetter($oneOfFields = ["supportManusHistory"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(HistorySyncConfig.prototype, "_supportHatchHistory", {
+                get: $util.oneOfGetter($oneOfFields = ["supportHatchHistory"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
             /**
              * Creates a new HistorySyncConfig instance using the specified properties.
              * @function create
@@ -3277,6 +3343,10 @@ $root.CompanionReg = (function() {
                     writer.uint32(/* id 19, wireType 0 =*/152).uint32(message.thumbnailSyncDaysLimit);
                 if (message.initialSyncMaxMessagesPerChat != null && Object.hasOwnProperty.call(message, "initialSyncMaxMessagesPerChat"))
                     writer.uint32(/* id 20, wireType 0 =*/160).uint32(message.initialSyncMaxMessagesPerChat);
+                if (message.supportManusHistory != null && Object.hasOwnProperty.call(message, "supportManusHistory"))
+                    writer.uint32(/* id 21, wireType 0 =*/168).bool(message.supportManusHistory);
+                if (message.supportHatchHistory != null && Object.hasOwnProperty.call(message, "supportHatchHistory"))
+                    writer.uint32(/* id 22, wireType 0 =*/176).bool(message.supportHatchHistory);
                 return writer;
             };
 
@@ -3391,6 +3461,14 @@ $root.CompanionReg = (function() {
                         }
                     case 20: {
                             message.initialSyncMaxMessagesPerChat = reader.uint32();
+                            break;
+                        }
+                    case 21: {
+                            message.supportManusHistory = reader.bool();
+                            break;
+                        }
+                    case 22: {
+                            message.supportHatchHistory = reader.bool();
                             break;
                         }
                     default:
@@ -3529,6 +3607,16 @@ $root.CompanionReg = (function() {
                     if (!$util.isInteger(message.initialSyncMaxMessagesPerChat))
                         return "initialSyncMaxMessagesPerChat: integer expected";
                 }
+                if (message.supportManusHistory != null && message.hasOwnProperty("supportManusHistory")) {
+                    properties._supportManusHistory = 1;
+                    if (typeof message.supportManusHistory !== "boolean")
+                        return "supportManusHistory: boolean expected";
+                }
+                if (message.supportHatchHistory != null && message.hasOwnProperty("supportHatchHistory")) {
+                    properties._supportHatchHistory = 1;
+                    if (typeof message.supportHatchHistory !== "boolean")
+                        return "supportHatchHistory: boolean expected";
+                }
                 return null;
             };
 
@@ -3584,6 +3672,10 @@ $root.CompanionReg = (function() {
                     message.thumbnailSyncDaysLimit = object.thumbnailSyncDaysLimit >>> 0;
                 if (object.initialSyncMaxMessagesPerChat != null)
                     message.initialSyncMaxMessagesPerChat = object.initialSyncMaxMessagesPerChat >>> 0;
+                if (object.supportManusHistory != null)
+                    message.supportManusHistory = Boolean(object.supportManusHistory);
+                if (object.supportHatchHistory != null)
+                    message.supportHatchHistory = Boolean(object.supportHatchHistory);
                 return message;
             };
 
@@ -3699,6 +3791,16 @@ $root.CompanionReg = (function() {
                     object.initialSyncMaxMessagesPerChat = message.initialSyncMaxMessagesPerChat;
                     if (options.oneofs)
                         object._initialSyncMaxMessagesPerChat = "initialSyncMaxMessagesPerChat";
+                }
+                if (message.supportManusHistory != null && message.hasOwnProperty("supportManusHistory")) {
+                    object.supportManusHistory = message.supportManusHistory;
+                    if (options.oneofs)
+                        object._supportManusHistory = "supportManusHistory";
+                }
+                if (message.supportHatchHistory != null && message.hasOwnProperty("supportHatchHistory")) {
+                    object.supportHatchHistory = message.supportHatchHistory;
+                    if (options.oneofs)
+                        object._supportHatchHistory = "supportHatchHistory";
                 }
                 return object;
             };

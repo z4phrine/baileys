@@ -86,6 +86,7 @@ message GlobalSettings {
 message WallpaperSettings {
     optional string filename = 1;
     optional uint32 opacity = 2;
+    optional bool isGenAi = 3;
 }
 
 message GroupParticipant {
@@ -176,6 +177,9 @@ message Conversation {
     optional Protocol.LimitSharing.TriggerType limitSharingTrigger = 52;
     optional bool limitSharingInitiatedByMe = 53;
     optional bool maibaAiThreadEnabled = 54;
+    optional bool isMarketingMessageThread = 55;
+    optional bool isSenderNewAccount = 56;
+    optional uint32 afterReadDuration = 57;
     enum EndOfHistoryTransferType {
         COMPLETE_BUT_MORE_MESSAGES_REMAIN_ON_PRIMARY = 0;
         COMPLETE_AND_NO_MORE_MESSAGE_REMAIN_ON_PRIMARY = 1;
@@ -202,6 +206,7 @@ message HistorySync {
     optional string companionMetaNonce = 16;
     optional bytes shareableChatIdentifierEncryptionKey = 17;
     repeated Account accounts = 18;
+    optional bytes nctSalt = 19;
     enum BotAIWaitListState {
         IN_WAITLIST = 0;
         AI_AVAILABLE = 1;
