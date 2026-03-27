@@ -52,24 +52,6 @@ export namespace DeviceCapabilities {
         /** DeviceCapabilities aiThread. */
         public aiThread?: (DeviceCapabilities.DeviceCapabilities.IAiThread|null);
 
-        /** DeviceCapabilities _chatLockSupportLevel. */
-        public _chatLockSupportLevel?: "chatLockSupportLevel";
-
-        /** DeviceCapabilities _lidMigration. */
-        public _lidMigration?: "lidMigration";
-
-        /** DeviceCapabilities _businessBroadcast. */
-        public _businessBroadcast?: "businessBroadcast";
-
-        /** DeviceCapabilities _userHasAvatar. */
-        public _userHasAvatar?: "userHasAvatar";
-
-        /** DeviceCapabilities _memberNameTagPrimarySupport. */
-        public _memberNameTagPrimarySupport?: "memberNameTagPrimarySupport";
-
-        /** DeviceCapabilities _aiThread. */
-        public _aiThread?: "aiThread";
-
         /**
          * Creates a new DeviceCapabilities instance using the specified properties.
          * @param [properties] Properties to set
@@ -169,9 +151,6 @@ export namespace DeviceCapabilities {
             /** AiThread supportLevel. */
             public supportLevel?: (DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel|null);
 
-            /** AiThread _supportLevel. */
-            public _supportLevel?: "supportLevel";
-
             /**
              * Creates a new AiThread instance using the specified properties.
              * @param [properties] Properties to set
@@ -265,6 +244,15 @@ export namespace DeviceCapabilities {
 
             /** BusinessBroadcast importListEnabled */
             importListEnabled?: (boolean|null);
+
+            /** BusinessBroadcast companionSupportEnabled */
+            companionSupportEnabled?: (boolean|null);
+
+            /** BusinessBroadcast campaignSyncEnabled */
+            campaignSyncEnabled?: (boolean|null);
+
+            /** BusinessBroadcast insightsSyncEnabled */
+            insightsSyncEnabled?: (boolean|null);
         }
 
         /** Represents a BusinessBroadcast. */
@@ -279,8 +267,14 @@ export namespace DeviceCapabilities {
             /** BusinessBroadcast importListEnabled. */
             public importListEnabled?: (boolean|null);
 
-            /** BusinessBroadcast _importListEnabled. */
-            public _importListEnabled?: "importListEnabled";
+            /** BusinessBroadcast companionSupportEnabled. */
+            public companionSupportEnabled?: (boolean|null);
+
+            /** BusinessBroadcast campaignSyncEnabled. */
+            public campaignSyncEnabled?: (boolean|null);
+
+            /** BusinessBroadcast insightsSyncEnabled. */
+            public insightsSyncEnabled?: (boolean|null);
 
             /**
              * Creates a new BusinessBroadcast instance using the specified properties.
@@ -386,9 +380,6 @@ export namespace DeviceCapabilities {
             /** LIDMigration chatDbMigrationTimestamp. */
             public chatDbMigrationTimestamp?: (number|Long|null);
 
-            /** LIDMigration _chatDbMigrationTimestamp. */
-            public _chatDbMigrationTimestamp?: "chatDbMigrationTimestamp";
-
             /**
              * Creates a new LIDMigration instance using the specified properties.
              * @param [properties] Properties to set
@@ -492,9 +483,6 @@ export namespace DeviceCapabilities {
 
             /** UserHasAvatar userHasAvatar. */
             public userHasAvatar?: (boolean|null);
-
-            /** UserHasAvatar _userHasAvatar. */
-            public _userHasAvatar?: "userHasAvatar";
 
             /**
              * Creates a new UserHasAvatar instance using the specified properties.

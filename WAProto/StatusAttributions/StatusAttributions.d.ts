@@ -64,12 +64,6 @@ export namespace StatusAttributions {
         /** StatusAttribution aiCreatedAttribution. */
         public aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
 
-        /** StatusAttribution _type. */
-        public _type?: "type";
-
-        /** StatusAttribution _actionUrl. */
-        public _actionUrl?: "actionUrl";
-
         /** StatusAttribution attributionData. */
         public attributionData?: ("statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution"|"aiCreatedAttribution");
 
@@ -171,9 +165,6 @@ export namespace StatusAttributions {
 
             /** AiCreatedAttribution source. */
             public source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
-
-            /** AiCreatedAttribution _source. */
-            public _source?: "source";
 
             /**
              * Creates a new AiCreatedAttribution instance using the specified properties.
@@ -299,18 +290,6 @@ export namespace StatusAttributions {
             /** ExternalShare actionFallbackUrl. */
             public actionFallbackUrl?: (string|null);
 
-            /** ExternalShare _actionUrl. */
-            public _actionUrl?: "actionUrl";
-
-            /** ExternalShare _source. */
-            public _source?: "source";
-
-            /** ExternalShare _duration. */
-            public _duration?: "duration";
-
-            /** ExternalShare _actionFallbackUrl. */
-            public _actionFallbackUrl?: "actionFallbackUrl";
-
             /**
              * Creates a new ExternalShare instance using the specified properties.
              * @param [properties] Properties to set
@@ -403,7 +382,8 @@ export namespace StatusAttributions {
                 THREADS = 7,
                 APPLE_MUSIC = 8,
                 SHARECHAT = 9,
-                GOOGLE_PHOTOS = 10
+                GOOGLE_PHOTOS = 10,
+                SOUNDCLOUD = 11
             }
         }
 
@@ -425,9 +405,6 @@ export namespace StatusAttributions {
 
             /** GroupStatus authorJid. */
             public authorJid?: (string|null);
-
-            /** GroupStatus _authorJid. */
-            public _authorJid?: "authorJid";
 
             /**
              * Creates a new GroupStatus instance using the specified properties.
@@ -556,24 +533,6 @@ export namespace StatusAttributions {
             /** Music isExplicit. */
             public isExplicit?: (boolean|null);
 
-            /** Music _authorName. */
-            public _authorName?: "authorName";
-
-            /** Music _songId. */
-            public _songId?: "songId";
-
-            /** Music _title. */
-            public _title?: "title";
-
-            /** Music _author. */
-            public _author?: "author";
-
-            /** Music _artistAttribution. */
-            public _artistAttribution?: "artistAttribution";
-
-            /** Music _isExplicit. */
-            public _isExplicit?: "isExplicit";
-
             /**
              * Creates a new Music instance using the specified properties.
              * @param [properties] Properties to set
@@ -670,9 +629,6 @@ export namespace StatusAttributions {
 
             /** RLAttribution source. */
             public source?: (StatusAttributions.StatusAttribution.RLAttribution.Source|null);
-
-            /** RLAttribution _source. */
-            public _source?: "source";
 
             /**
              * Creates a new RLAttribution instance using the specified properties.
@@ -787,12 +743,6 @@ export namespace StatusAttributions {
 
             /** StatusReshare metadata. */
             public metadata?: (StatusAttributions.StatusAttribution.StatusReshare.IMetadata|null);
-
-            /** StatusReshare _source. */
-            public _source?: "source";
-
-            /** StatusReshare _metadata. */
-            public _metadata?: "metadata";
 
             /**
              * Creates a new StatusReshare instance using the specified properties.
@@ -911,18 +861,6 @@ export namespace StatusAttributions {
                 /** Metadata hasMultipleReshares. */
                 public hasMultipleReshares?: (boolean|null);
 
-                /** Metadata _duration. */
-                public _duration?: "duration";
-
-                /** Metadata _channelJid. */
-                public _channelJid?: "channelJid";
-
-                /** Metadata _channelMessageId. */
-                public _channelMessageId?: "channelMessageId";
-
-                /** Metadata _hasMultipleReshares. */
-                public _hasMultipleReshares?: "hasMultipleReshares";
-
                 /**
                  * Creates a new Metadata instance using the specified properties.
                  * @param [properties] Properties to set
@@ -1021,7 +959,9 @@ export namespace StatusAttributions {
             GROUP_STATUS = 5,
             RL_ATTRIBUTION = 6,
             AI_CREATED = 7,
-            LAYOUTS = 8
+            LAYOUTS = 8,
+            NEWSLETTER_STATUS = 9,
+            STATUS_CLOSE_SHARING = 10
         }
     }
 }

@@ -28,9 +28,6 @@ export namespace LidMigrationSyncPayload {
         /** LIDMigrationMappingSyncPayload chatDbMigrationTimestamp. */
         public chatDbMigrationTimestamp?: (number|Long|null);
 
-        /** LIDMigrationMappingSyncPayload _chatDbMigrationTimestamp. */
-        public _chatDbMigrationTimestamp?: "chatDbMigrationTimestamp";
-
         /**
          * Creates a new LIDMigrationMappingSyncPayload instance using the specified properties.
          * @param [properties] Properties to set
@@ -139,15 +136,6 @@ export namespace LidMigrationSyncPayload {
 
         /** LIDMigrationMapping latestLid. */
         public latestLid?: (number|Long|null);
-
-        /** LIDMigrationMapping _pn. */
-        public _pn?: "pn";
-
-        /** LIDMigrationMapping _assignedLid. */
-        public _assignedLid?: "assignedLid";
-
-        /** LIDMigrationMapping _latestLid. */
-        public _latestLid?: "latestLid";
 
         /**
          * Creates a new LIDMigrationMapping instance using the specified properties.

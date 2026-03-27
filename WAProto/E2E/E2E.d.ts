@@ -34,15 +34,6 @@ export namespace E2E {
         /** AIQueryFanout timestamp. */
         public timestamp?: (number|Long|null);
 
-        /** AIQueryFanout _messageKey. */
-        public _messageKey?: "messageKey";
-
-        /** AIQueryFanout _message. */
-        public _message?: "message";
-
-        /** AIQueryFanout _timestamp. */
-        public _timestamp?: "timestamp";
-
         /**
          * Creates a new AIQueryFanout instance using the specified properties.
          * @param [properties] Properties to set
@@ -125,10 +116,10 @@ export namespace E2E {
     interface IAIRichResponseMessage {
 
         /** AIRichResponseMessage messageType */
-        messageType?: (AICommon.AIRichResponseMessageType|null);
+        messageType?: (AICommonDeprecated.AIRichResponseMessageType|null);
 
         /** AIRichResponseMessage submessages */
-        submessages?: (AICommon.IAIRichResponseSubMessage[]|null);
+        submessages?: (AICommonDeprecated.IAIRichResponseSubMessage[]|null);
 
         /** AIRichResponseMessage unifiedResponse */
         unifiedResponse?: (AICommon.IAIRichResponseUnifiedResponse|null);
@@ -147,25 +138,16 @@ export namespace E2E {
         constructor(properties?: E2E.IAIRichResponseMessage);
 
         /** AIRichResponseMessage messageType. */
-        public messageType?: (AICommon.AIRichResponseMessageType|null);
+        public messageType?: (AICommonDeprecated.AIRichResponseMessageType|null);
 
         /** AIRichResponseMessage submessages. */
-        public submessages: AICommon.IAIRichResponseSubMessage[];
+        public submessages: AICommonDeprecated.IAIRichResponseSubMessage[];
 
         /** AIRichResponseMessage unifiedResponse. */
         public unifiedResponse?: (AICommon.IAIRichResponseUnifiedResponse|null);
 
         /** AIRichResponseMessage contextInfo. */
         public contextInfo?: (E2E.IContextInfo|null);
-
-        /** AIRichResponseMessage _messageType. */
-        public _messageType?: "messageType";
-
-        /** AIRichResponseMessage _unifiedResponse. */
-        public _unifiedResponse?: "unifiedResponse";
-
-        /** AIRichResponseMessage _contextInfo. */
-        public _contextInfo?: "contextInfo";
 
         /**
          * Creates a new AIRichResponseMessage instance using the specified properties.
@@ -269,12 +251,6 @@ export namespace E2E {
 
         /** MemberLabel labelTimestamp. */
         public labelTimestamp?: (number|Long|null);
-
-        /** MemberLabel _label. */
-        public _label?: "label";
-
-        /** MemberLabel _labelTimestamp. */
-        public _labelTimestamp?: "labelTimestamp";
 
         /**
          * Creates a new MemberLabel instance using the specified properties.
@@ -490,18 +466,6 @@ export namespace E2E {
             /** UrlTrackingMapElement cardIndex. */
             public cardIndex?: (number|null);
 
-            /** UrlTrackingMapElement _originalUrl. */
-            public _originalUrl?: "originalUrl";
-
-            /** UrlTrackingMapElement _unconsentedUsersUrl. */
-            public _unconsentedUsersUrl?: "unconsentedUsersUrl";
-
-            /** UrlTrackingMapElement _consentedUsersUrl. */
-            public _consentedUsersUrl?: "consentedUsersUrl";
-
-            /** UrlTrackingMapElement _cardIndex. */
-            public _cardIndex?: "cardIndex";
-
             /**
              * Creates a new UrlTrackingMapElement instance using the specified properties.
              * @param [properties] Properties to set
@@ -642,27 +606,6 @@ export namespace E2E {
         /** ProcessedVideo capabilities. */
         public capabilities: string[];
 
-        /** ProcessedVideo _directPath. */
-        public _directPath?: "directPath";
-
-        /** ProcessedVideo _fileSha256. */
-        public _fileSha256?: "fileSha256";
-
-        /** ProcessedVideo _height. */
-        public _height?: "height";
-
-        /** ProcessedVideo _width. */
-        public _width?: "width";
-
-        /** ProcessedVideo _fileLength. */
-        public _fileLength?: "fileLength";
-
-        /** ProcessedVideo _bitrate. */
-        public _bitrate?: "bitrate";
-
-        /** ProcessedVideo _quality. */
-        public _quality?: "quality";
-
         /**
          * Creates a new ProcessedVideo instance using the specified properties.
          * @param [properties] Properties to set
@@ -770,9 +713,6 @@ export namespace E2E {
 
         /** LIDMigrationMappingSyncMessage encodedMappingPayload. */
         public encodedMappingPayload?: (Uint8Array|null);
-
-        /** LIDMigrationMappingSyncMessage _encodedMappingPayload. */
-        public _encodedMappingPayload?: "encodedMappingPayload";
 
         /**
          * Creates a new LIDMigrationMappingSyncMessage instance using the specified properties.
@@ -883,15 +823,6 @@ export namespace E2E {
         /** MediaNotifyMessage fileLength. */
         public fileLength?: (number|Long|null);
 
-        /** MediaNotifyMessage _expressPathUrl. */
-        public _expressPathUrl?: "expressPathUrl";
-
-        /** MediaNotifyMessage _fileEncSha256. */
-        public _fileEncSha256?: "fileEncSha256";
-
-        /** MediaNotifyMessage _fileLength. */
-        public _fileLength?: "fileLength";
-
         /**
          * Creates a new MediaNotifyMessage instance using the specified properties.
          * @param [properties] Properties to set
@@ -1001,15 +932,6 @@ export namespace E2E {
         /** MessageSecretMessage encPayload. */
         public encPayload?: (Uint8Array|null);
 
-        /** MessageSecretMessage _version. */
-        public _version?: "version";
-
-        /** MessageSecretMessage _encIv. */
-        public _encIv?: "encIv";
-
-        /** MessageSecretMessage _encPayload. */
-        public _encPayload?: "encPayload";
-
         /**
          * Creates a new MessageSecretMessage instance using the specified properties.
          * @param [properties] Properties to set
@@ -1113,12 +1035,6 @@ export namespace E2E {
         /** GroupMention groupSubject. */
         public groupSubject?: (string|null);
 
-        /** GroupMention _groupJid. */
-        public _groupJid?: "groupJid";
-
-        /** GroupMention _groupSubject. */
-        public _groupSubject?: "groupSubject";
-
         /**
          * Creates a new GroupMention instance using the specified properties.
          * @param [properties] Properties to set
@@ -1221,12 +1137,6 @@ export namespace E2E {
 
         /** ActionLink buttonTitle. */
         public buttonTitle?: (string|null);
-
-        /** ActionLink _url. */
-        public _url?: "url";
-
-        /** ActionLink _buttonTitle. */
-        public _buttonTitle?: "buttonTitle";
 
         /**
          * Creates a new ActionLink instance using the specified properties.
@@ -1342,18 +1252,6 @@ export namespace E2E {
 
         /** DisappearingMode initiatedByMe. */
         public initiatedByMe?: (boolean|null);
-
-        /** DisappearingMode _initiator. */
-        public _initiator?: "initiator";
-
-        /** DisappearingMode _trigger. */
-        public _trigger?: "trigger";
-
-        /** DisappearingMode _initiatorDeviceJid. */
-        public _initiatorDeviceJid?: "initiatorDeviceJid";
-
-        /** DisappearingMode _initiatedByMe. */
-        public _initiatedByMe?: "initiatedByMe";
 
         /**
          * Creates a new DisappearingMode instance using the specified properties.
@@ -1527,36 +1425,6 @@ export namespace E2E {
         /** PaymentBackground type. */
         public type?: (E2E.PaymentBackground.Type|null);
 
-        /** PaymentBackground _id. */
-        public _id?: "id";
-
-        /** PaymentBackground _fileLength. */
-        public _fileLength?: "fileLength";
-
-        /** PaymentBackground _width. */
-        public _width?: "width";
-
-        /** PaymentBackground _height. */
-        public _height?: "height";
-
-        /** PaymentBackground _mimetype. */
-        public _mimetype?: "mimetype";
-
-        /** PaymentBackground _placeholderArgb. */
-        public _placeholderArgb?: "placeholderArgb";
-
-        /** PaymentBackground _textArgb. */
-        public _textArgb?: "textArgb";
-
-        /** PaymentBackground _subtextArgb. */
-        public _subtextArgb?: "subtextArgb";
-
-        /** PaymentBackground _mediaData. */
-        public _mediaData?: "mediaData";
-
-        /** PaymentBackground _type. */
-        public _type?: "type";
-
         /**
          * Creates a new PaymentBackground instance using the specified properties.
          * @param [properties] Properties to set
@@ -1680,21 +1548,6 @@ export namespace E2E {
             /** MediaData directPath. */
             public directPath?: (string|null);
 
-            /** MediaData _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** MediaData _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** MediaData _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** MediaData _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** MediaData _directPath. */
-            public _directPath?: "directPath";
-
             /**
              * Creates a new MediaData instance using the specified properties.
              * @param [properties] Properties to set
@@ -1811,15 +1664,6 @@ export namespace E2E {
         /** Money currencyCode. */
         public currencyCode?: (string|null);
 
-        /** Money _value. */
-        public _value?: "value";
-
-        /** Money _offset. */
-        public _offset?: "offset";
-
-        /** Money _currencyCode. */
-        public _currencyCode?: "currencyCode";
-
         /**
          * Creates a new Money instance using the specified properties.
          * @param [properties] Properties to set
@@ -1935,9 +1779,6 @@ export namespace E2E {
         /** HydratedTemplateButton callButton. */
         public callButton?: (E2E.HydratedTemplateButton.IHydratedCallButton|null);
 
-        /** HydratedTemplateButton _index. */
-        public _index?: "index";
-
         /** HydratedTemplateButton hydratedButton. */
         public hydratedButton?: ("quickReplyButton"|"urlButton"|"callButton");
 
@@ -2046,12 +1887,6 @@ export namespace E2E {
             /** HydratedCallButton phoneNumber. */
             public phoneNumber?: (string|null);
 
-            /** HydratedCallButton _displayText. */
-            public _displayText?: "displayText";
-
-            /** HydratedCallButton _phoneNumber. */
-            public _phoneNumber?: "phoneNumber";
-
             /**
              * Creates a new HydratedCallButton instance using the specified properties.
              * @param [properties] Properties to set
@@ -2154,12 +1989,6 @@ export namespace E2E {
 
             /** HydratedQuickReplyButton id. */
             public id?: (string|null);
-
-            /** HydratedQuickReplyButton _displayText. */
-            public _displayText?: "displayText";
-
-            /** HydratedQuickReplyButton _id. */
-            public _id?: "id";
 
             /**
              * Creates a new HydratedQuickReplyButton instance using the specified properties.
@@ -2275,18 +2104,6 @@ export namespace E2E {
 
             /** HydratedURLButton webviewPresentation. */
             public webviewPresentation?: (E2E.HydratedTemplateButton.HydratedURLButton.WebviewPresentationType|null);
-
-            /** HydratedURLButton _displayText. */
-            public _displayText?: "displayText";
-
-            /** HydratedURLButton _url. */
-            public _url?: "url";
-
-            /** HydratedURLButton _consentedUsersUrl. */
-            public _consentedUsersUrl?: "consentedUsersUrl";
-
-            /** HydratedURLButton _webviewPresentation. */
-            public _webviewPresentation?: "webviewPresentation";
 
             /**
              * Creates a new HydratedURLButton instance using the specified properties.
@@ -2414,9 +2231,6 @@ export namespace E2E {
         /** TemplateButton callButton. */
         public callButton?: (E2E.TemplateButton.ICallButton|null);
 
-        /** TemplateButton _index. */
-        public _index?: "index";
-
         /** TemplateButton button. */
         public button?: ("quickReplyButton"|"urlButton"|"callButton");
 
@@ -2525,12 +2339,6 @@ export namespace E2E {
             /** CallButton phoneNumber. */
             public phoneNumber?: (E2E.Message.IHighlyStructuredMessage|null);
 
-            /** CallButton _displayText. */
-            public _displayText?: "displayText";
-
-            /** CallButton _phoneNumber. */
-            public _phoneNumber?: "phoneNumber";
-
             /**
              * Creates a new CallButton instance using the specified properties.
              * @param [properties] Properties to set
@@ -2634,12 +2442,6 @@ export namespace E2E {
             /** QuickReplyButton id. */
             public id?: (string|null);
 
-            /** QuickReplyButton _displayText. */
-            public _displayText?: "displayText";
-
-            /** QuickReplyButton _id. */
-            public _id?: "id";
-
             /**
              * Creates a new QuickReplyButton instance using the specified properties.
              * @param [properties] Properties to set
@@ -2742,12 +2544,6 @@ export namespace E2E {
 
             /** URLButton url. */
             public url?: (E2E.Message.IHighlyStructuredMessage|null);
-
-            /** URLButton _displayText. */
-            public _displayText?: "displayText";
-
-            /** URLButton _url. */
-            public _url?: "url";
 
             /**
              * Creates a new URLButton instance using the specified properties.
@@ -2858,15 +2654,6 @@ export namespace E2E {
 
         /** Location name. */
         public name?: (string|null);
-
-        /** Location _degreesLatitude. */
-        public _degreesLatitude?: "degreesLatitude";
-
-        /** Location _degreesLongitude. */
-        public _degreesLongitude?: "degreesLongitude";
-
-        /** Location _name. */
-        public _name?: "name";
 
         /**
          * Creates a new Location instance using the specified properties.
@@ -2982,18 +2769,6 @@ export namespace E2E {
 
         /** Point y. */
         public y?: (number|null);
-
-        /** Point _xDeprecated. */
-        public _xDeprecated?: "xDeprecated";
-
-        /** Point _yDeprecated. */
-        public _yDeprecated?: "yDeprecated";
-
-        /** Point _x. */
-        public _x?: "x";
-
-        /** Point _y. */
-        public _y?: "y";
 
         /**
          * Creates a new Point instance using the specified properties.
@@ -3134,15 +2909,6 @@ export namespace E2E {
         /** InteractiveAnnotation tapAction. */
         public tapAction?: (E2E.ITapLinkAction|null);
 
-        /** InteractiveAnnotation _shouldSkipConfirmation. */
-        public _shouldSkipConfirmation?: "shouldSkipConfirmation";
-
-        /** InteractiveAnnotation _embeddedContent. */
-        public _embeddedContent?: "embeddedContent";
-
-        /** InteractiveAnnotation _statusLinkType. */
-        public _statusLinkType?: "statusLinkType";
-
         /** InteractiveAnnotation action. */
         public action?: ("location"|"newsletter"|"embeddedAction"|"tapAction");
 
@@ -3258,12 +3024,6 @@ export namespace E2E {
 
         /** TapLinkAction tapUrl. */
         public tapUrl?: (string|null);
-
-        /** TapLinkAction _title. */
-        public _title?: "title";
-
-        /** TapLinkAction _tapUrl. */
-        public _tapUrl?: "tapUrl";
 
         /**
          * Creates a new TapLinkAction instance using the specified properties.
@@ -3546,48 +3306,6 @@ export namespace E2E {
         /** EmbeddedMusic overlapDurationInMs. */
         public overlapDurationInMs?: (number|Long|null);
 
-        /** EmbeddedMusic _musicContentMediaId. */
-        public _musicContentMediaId?: "musicContentMediaId";
-
-        /** EmbeddedMusic _songId. */
-        public _songId?: "songId";
-
-        /** EmbeddedMusic _author. */
-        public _author?: "author";
-
-        /** EmbeddedMusic _title. */
-        public _title?: "title";
-
-        /** EmbeddedMusic _artworkDirectPath. */
-        public _artworkDirectPath?: "artworkDirectPath";
-
-        /** EmbeddedMusic _artworkSha256. */
-        public _artworkSha256?: "artworkSha256";
-
-        /** EmbeddedMusic _artworkEncSha256. */
-        public _artworkEncSha256?: "artworkEncSha256";
-
-        /** EmbeddedMusic _artistAttribution. */
-        public _artistAttribution?: "artistAttribution";
-
-        /** EmbeddedMusic _countryBlocklist. */
-        public _countryBlocklist?: "countryBlocklist";
-
-        /** EmbeddedMusic _isExplicit. */
-        public _isExplicit?: "isExplicit";
-
-        /** EmbeddedMusic _artworkMediaKey. */
-        public _artworkMediaKey?: "artworkMediaKey";
-
-        /** EmbeddedMusic _musicSongStartTimeInMs. */
-        public _musicSongStartTimeInMs?: "musicSongStartTimeInMs";
-
-        /** EmbeddedMusic _derivedContentStartTimeInMs. */
-        public _derivedContentStartTimeInMs?: "derivedContentStartTimeInMs";
-
-        /** EmbeddedMusic _overlapDurationInMs. */
-        public _overlapDurationInMs?: "overlapDurationInMs";
-
         /**
          * Creates a new EmbeddedMusic instance using the specified properties.
          * @param [properties] Properties to set
@@ -3690,12 +3408,6 @@ export namespace E2E {
 
         /** EmbeddedMessage message. */
         public message?: (E2E.IMessage|null);
-
-        /** EmbeddedMessage _stanzaId. */
-        public _stanzaId?: "stanzaId";
-
-        /** EmbeddedMessage _message. */
-        public _message?: "message";
 
         /**
          * Creates a new EmbeddedMessage instance using the specified properties.
@@ -3835,24 +3547,6 @@ export namespace E2E {
 
         /** DeviceListMetadata recipientKeyIndexes. */
         public recipientKeyIndexes: number[];
-
-        /** DeviceListMetadata _senderKeyHash. */
-        public _senderKeyHash?: "senderKeyHash";
-
-        /** DeviceListMetadata _senderTimestamp. */
-        public _senderTimestamp?: "senderTimestamp";
-
-        /** DeviceListMetadata _senderAccountType. */
-        public _senderAccountType?: "senderAccountType";
-
-        /** DeviceListMetadata _receiverAccountType. */
-        public _receiverAccountType?: "receiverAccountType";
-
-        /** DeviceListMetadata _recipientKeyHash. */
-        public _recipientKeyHash?: "recipientKeyHash";
-
-        /** DeviceListMetadata _recipientTimestamp. */
-        public _recipientTimestamp?: "recipientTimestamp";
 
         /**
          * Creates a new DeviceListMetadata instance using the specified properties.
@@ -4041,51 +3735,6 @@ export namespace E2E {
         /** MessageContextInfo weblinkRenderConfig. */
         public weblinkRenderConfig?: (E2E.WebLinkRenderConfig|null);
 
-        /** MessageContextInfo _deviceListMetadata. */
-        public _deviceListMetadata?: "deviceListMetadata";
-
-        /** MessageContextInfo _deviceListMetadataVersion. */
-        public _deviceListMetadataVersion?: "deviceListMetadataVersion";
-
-        /** MessageContextInfo _messageSecret. */
-        public _messageSecret?: "messageSecret";
-
-        /** MessageContextInfo _paddingBytes. */
-        public _paddingBytes?: "paddingBytes";
-
-        /** MessageContextInfo _messageAddOnDurationInSecs. */
-        public _messageAddOnDurationInSecs?: "messageAddOnDurationInSecs";
-
-        /** MessageContextInfo _botMessageSecret. */
-        public _botMessageSecret?: "botMessageSecret";
-
-        /** MessageContextInfo _botMetadata. */
-        public _botMetadata?: "botMetadata";
-
-        /** MessageContextInfo _reportingTokenVersion. */
-        public _reportingTokenVersion?: "reportingTokenVersion";
-
-        /** MessageContextInfo _messageAddOnExpiryType. */
-        public _messageAddOnExpiryType?: "messageAddOnExpiryType";
-
-        /** MessageContextInfo _messageAssociation. */
-        public _messageAssociation?: "messageAssociation";
-
-        /** MessageContextInfo _capiCreatedGroup. */
-        public _capiCreatedGroup?: "capiCreatedGroup";
-
-        /** MessageContextInfo _supportPayload. */
-        public _supportPayload?: "supportPayload";
-
-        /** MessageContextInfo _limitSharing. */
-        public _limitSharing?: "limitSharing";
-
-        /** MessageContextInfo _limitSharingV2. */
-        public _limitSharingV2?: "limitSharingV2";
-
-        /** MessageContextInfo _weblinkRenderConfig. */
-        public _weblinkRenderConfig?: "weblinkRenderConfig";
-
         /**
          * Creates a new MessageContextInfo instance using the specified properties.
          * @param [properties] Properties to set
@@ -4197,12 +3846,6 @@ export namespace E2E {
 
         /** ThreadID threadKey. */
         public threadKey?: (Protocol.IMessageKey|null);
-
-        /** ThreadID _threadType. */
-        public _threadType?: "threadType";
-
-        /** ThreadID _threadKey. */
-        public _threadKey?: "threadKey";
 
         /**
          * Creates a new ThreadID instance using the specified properties.
@@ -4323,15 +3966,6 @@ export namespace E2E {
         /** MessageAssociation messageIndex. */
         public messageIndex?: (number|null);
 
-        /** MessageAssociation _associationType. */
-        public _associationType?: "associationType";
-
-        /** MessageAssociation _parentMessageKey. */
-        public _parentMessageKey?: "parentMessageKey";
-
-        /** MessageAssociation _messageIndex. */
-        public _messageIndex?: "messageIndex";
-
         /**
          * Creates a new MessageAssociation instance using the specified properties.
          * @param [properties] Properties to set
@@ -4433,7 +4067,8 @@ export namespace E2E {
             STATUS_QUESTION = 16,
             STATUS_ADD_YOURS_DIWALI = 17,
             STATUS_REACTION = 18,
-            HEVC_VIDEO_DUAL_UPLOAD = 19
+            HEVC_VIDEO_DUAL_UPLOAD = 19,
+            POLL_ADD_OPTION = 20
         }
     }
 
@@ -4604,6 +4239,18 @@ export namespace E2E {
 
         /** ContextInfo botMessageSharingInfo */
         botMessageSharingInfo?: (AICommon.IBotMessageSharingInfo|null);
+
+        /** ContextInfo isSpoiler */
+        isSpoiler?: (boolean|null);
+
+        /** ContextInfo mediaDomainInfo */
+        mediaDomainInfo?: (E2E.IMediaDomainInfo|null);
+
+        /** ContextInfo partiallySelectedContent */
+        partiallySelectedContent?: (E2E.ContextInfo.IPartiallySelectedContent|null);
+
+        /** ContextInfo afterReadDuration */
+        afterReadDuration?: (number|null);
     }
 
     /** Represents a ContextInfo. */
@@ -4780,161 +4427,17 @@ export namespace E2E {
         /** ContextInfo botMessageSharingInfo. */
         public botMessageSharingInfo?: (AICommon.IBotMessageSharingInfo|null);
 
-        /** ContextInfo _stanzaId. */
-        public _stanzaId?: "stanzaId";
+        /** ContextInfo isSpoiler. */
+        public isSpoiler?: (boolean|null);
 
-        /** ContextInfo _participant. */
-        public _participant?: "participant";
+        /** ContextInfo mediaDomainInfo. */
+        public mediaDomainInfo?: (E2E.IMediaDomainInfo|null);
 
-        /** ContextInfo _quotedMessage. */
-        public _quotedMessage?: "quotedMessage";
+        /** ContextInfo partiallySelectedContent. */
+        public partiallySelectedContent?: (E2E.ContextInfo.IPartiallySelectedContent|null);
 
-        /** ContextInfo _remoteJid. */
-        public _remoteJid?: "remoteJid";
-
-        /** ContextInfo _conversionSource. */
-        public _conversionSource?: "conversionSource";
-
-        /** ContextInfo _conversionData. */
-        public _conversionData?: "conversionData";
-
-        /** ContextInfo _conversionDelaySeconds. */
-        public _conversionDelaySeconds?: "conversionDelaySeconds";
-
-        /** ContextInfo _forwardingScore. */
-        public _forwardingScore?: "forwardingScore";
-
-        /** ContextInfo _isForwarded. */
-        public _isForwarded?: "isForwarded";
-
-        /** ContextInfo _quotedAd. */
-        public _quotedAd?: "quotedAd";
-
-        /** ContextInfo _placeholderKey. */
-        public _placeholderKey?: "placeholderKey";
-
-        /** ContextInfo _expiration. */
-        public _expiration?: "expiration";
-
-        /** ContextInfo _ephemeralSettingTimestamp. */
-        public _ephemeralSettingTimestamp?: "ephemeralSettingTimestamp";
-
-        /** ContextInfo _ephemeralSharedSecret. */
-        public _ephemeralSharedSecret?: "ephemeralSharedSecret";
-
-        /** ContextInfo _externalAdReply. */
-        public _externalAdReply?: "externalAdReply";
-
-        /** ContextInfo _entryPointConversionSource. */
-        public _entryPointConversionSource?: "entryPointConversionSource";
-
-        /** ContextInfo _entryPointConversionApp. */
-        public _entryPointConversionApp?: "entryPointConversionApp";
-
-        /** ContextInfo _entryPointConversionDelaySeconds. */
-        public _entryPointConversionDelaySeconds?: "entryPointConversionDelaySeconds";
-
-        /** ContextInfo _disappearingMode. */
-        public _disappearingMode?: "disappearingMode";
-
-        /** ContextInfo _actionLink. */
-        public _actionLink?: "actionLink";
-
-        /** ContextInfo _groupSubject. */
-        public _groupSubject?: "groupSubject";
-
-        /** ContextInfo _parentGroupJid. */
-        public _parentGroupJid?: "parentGroupJid";
-
-        /** ContextInfo _trustBannerType. */
-        public _trustBannerType?: "trustBannerType";
-
-        /** ContextInfo _trustBannerAction. */
-        public _trustBannerAction?: "trustBannerAction";
-
-        /** ContextInfo _isSampled. */
-        public _isSampled?: "isSampled";
-
-        /** ContextInfo _utm. */
-        public _utm?: "utm";
-
-        /** ContextInfo _forwardedNewsletterMessageInfo. */
-        public _forwardedNewsletterMessageInfo?: "forwardedNewsletterMessageInfo";
-
-        /** ContextInfo _businessMessageForwardInfo. */
-        public _businessMessageForwardInfo?: "businessMessageForwardInfo";
-
-        /** ContextInfo _smbClientCampaignId. */
-        public _smbClientCampaignId?: "smbClientCampaignId";
-
-        /** ContextInfo _smbServerCampaignId. */
-        public _smbServerCampaignId?: "smbServerCampaignId";
-
-        /** ContextInfo _dataSharingContext. */
-        public _dataSharingContext?: "dataSharingContext";
-
-        /** ContextInfo _alwaysShowAdAttribution. */
-        public _alwaysShowAdAttribution?: "alwaysShowAdAttribution";
-
-        /** ContextInfo _featureEligibilities. */
-        public _featureEligibilities?: "featureEligibilities";
-
-        /** ContextInfo _entryPointConversionExternalSource. */
-        public _entryPointConversionExternalSource?: "entryPointConversionExternalSource";
-
-        /** ContextInfo _entryPointConversionExternalMedium. */
-        public _entryPointConversionExternalMedium?: "entryPointConversionExternalMedium";
-
-        /** ContextInfo _ctwaSignals. */
-        public _ctwaSignals?: "ctwaSignals";
-
-        /** ContextInfo _ctwaPayload. */
-        public _ctwaPayload?: "ctwaPayload";
-
-        /** ContextInfo _forwardedAiBotMessageInfo. */
-        public _forwardedAiBotMessageInfo?: "forwardedAiBotMessageInfo";
-
-        /** ContextInfo _statusAttributionType. */
-        public _statusAttributionType?: "statusAttributionType";
-
-        /** ContextInfo _urlTrackingMap. */
-        public _urlTrackingMap?: "urlTrackingMap";
-
-        /** ContextInfo _pairedMediaType. */
-        public _pairedMediaType?: "pairedMediaType";
-
-        /** ContextInfo _rankingVersion. */
-        public _rankingVersion?: "rankingVersion";
-
-        /** ContextInfo _memberLabel. */
-        public _memberLabel?: "memberLabel";
-
-        /** ContextInfo _isQuestion. */
-        public _isQuestion?: "isQuestion";
-
-        /** ContextInfo _statusSourceType. */
-        public _statusSourceType?: "statusSourceType";
-
-        /** ContextInfo _isGroupStatus. */
-        public _isGroupStatus?: "isGroupStatus";
-
-        /** ContextInfo _forwardOrigin. */
-        public _forwardOrigin?: "forwardOrigin";
-
-        /** ContextInfo _questionReplyQuotedMessage. */
-        public _questionReplyQuotedMessage?: "questionReplyQuotedMessage";
-
-        /** ContextInfo _statusAudienceMetadata. */
-        public _statusAudienceMetadata?: "statusAudienceMetadata";
-
-        /** ContextInfo _nonJidMentions. */
-        public _nonJidMentions?: "nonJidMentions";
-
-        /** ContextInfo _quotedType. */
-        public _quotedType?: "quotedType";
-
-        /** ContextInfo _botMessageSharingInfo. */
-        public _botMessageSharingInfo?: "botMessageSharingInfo";
+        /** ContextInfo afterReadDuration. */
+        public afterReadDuration?: (number|null);
 
         /**
          * Creates a new ContextInfo instance using the specified properties.
@@ -5053,18 +4556,6 @@ export namespace E2E {
             /** AdReplyInfo caption. */
             public caption?: (string|null);
 
-            /** AdReplyInfo _advertiserName. */
-            public _advertiserName?: "advertiserName";
-
-            /** AdReplyInfo _mediaType. */
-            public _mediaType?: "mediaType";
-
-            /** AdReplyInfo _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** AdReplyInfo _caption. */
-            public _caption?: "caption";
-
             /**
              * Creates a new AdReplyInfo instance using the specified properties.
              * @param [properties] Properties to set
@@ -5171,9 +4662,6 @@ export namespace E2E {
 
             /** BusinessMessageForwardInfo businessOwnerJid. */
             public businessOwnerJid?: (string|null);
-
-            /** BusinessMessageForwardInfo _businessOwnerJid. */
-            public _businessOwnerJid?: "businessOwnerJid";
 
             /**
              * Creates a new BusinessMessageForwardInfo instance using the specified properties.
@@ -5289,15 +4777,6 @@ export namespace E2E {
 
             /** DataSharingContext dataSharingFlags. */
             public dataSharingFlags?: (number|null);
-
-            /** DataSharingContext _showMmDisclosure. */
-            public _showMmDisclosure?: "showMmDisclosure";
-
-            /** DataSharingContext _encryptedSignalTokenConsented. */
-            public _encryptedSignalTokenConsented?: "encryptedSignalTokenConsented";
-
-            /** DataSharingContext _dataSharingFlags. */
-            public _dataSharingFlags?: "dataSharingFlags";
 
             /**
              * Creates a new DataSharingContext instance using the specified properties.
@@ -5427,21 +4906,6 @@ export namespace E2E {
 
                 /** Parameters contents. */
                 public contents?: (E2E.ContextInfo.DataSharingContext.IParameters|null);
-
-                /** Parameters _key. */
-                public _key?: "key";
-
-                /** Parameters _stringData. */
-                public _stringData?: "stringData";
-
-                /** Parameters _intData. */
-                public _intData?: "intData";
-
-                /** Parameters _floatData. */
-                public _floatData?: "floatData";
-
-                /** Parameters _contents. */
-                public _contents?: "contents";
 
                 /**
                  * Creates a new Parameters instance using the specified properties.
@@ -5605,6 +5069,9 @@ export namespace E2E {
 
             /** ExternalAdReplyInfo adPreviewUrl */
             adPreviewUrl?: (string|null);
+
+            /** ExternalAdReplyInfo containsCtwaFlowsAutoReply */
+            containsCtwaFlowsAutoReply?: (boolean|null);
         }
 
         /** Represents an ExternalAdReplyInfo. */
@@ -5697,86 +5164,8 @@ export namespace E2E {
             /** ExternalAdReplyInfo adPreviewUrl. */
             public adPreviewUrl?: (string|null);
 
-            /** ExternalAdReplyInfo _title. */
-            public _title?: "title";
-
-            /** ExternalAdReplyInfo _body. */
-            public _body?: "body";
-
-            /** ExternalAdReplyInfo _mediaType. */
-            public _mediaType?: "mediaType";
-
-            /** ExternalAdReplyInfo _thumbnailUrl. */
-            public _thumbnailUrl?: "thumbnailUrl";
-
-            /** ExternalAdReplyInfo _mediaUrl. */
-            public _mediaUrl?: "mediaUrl";
-
-            /** ExternalAdReplyInfo _thumbnail. */
-            public _thumbnail?: "thumbnail";
-
-            /** ExternalAdReplyInfo _sourceType. */
-            public _sourceType?: "sourceType";
-
-            /** ExternalAdReplyInfo _sourceId. */
-            public _sourceId?: "sourceId";
-
-            /** ExternalAdReplyInfo _sourceUrl. */
-            public _sourceUrl?: "sourceUrl";
-
-            /** ExternalAdReplyInfo _containsAutoReply. */
-            public _containsAutoReply?: "containsAutoReply";
-
-            /** ExternalAdReplyInfo _renderLargerThumbnail. */
-            public _renderLargerThumbnail?: "renderLargerThumbnail";
-
-            /** ExternalAdReplyInfo _showAdAttribution. */
-            public _showAdAttribution?: "showAdAttribution";
-
-            /** ExternalAdReplyInfo _ctwaClid. */
-            public _ctwaClid?: "ctwaClid";
-
-            /** ExternalAdReplyInfo _ref. */
-            public _ref?: "ref";
-
-            /** ExternalAdReplyInfo _clickToWhatsappCall. */
-            public _clickToWhatsappCall?: "clickToWhatsappCall";
-
-            /** ExternalAdReplyInfo _adContextPreviewDismissed. */
-            public _adContextPreviewDismissed?: "adContextPreviewDismissed";
-
-            /** ExternalAdReplyInfo _sourceApp. */
-            public _sourceApp?: "sourceApp";
-
-            /** ExternalAdReplyInfo _automatedGreetingMessageShown. */
-            public _automatedGreetingMessageShown?: "automatedGreetingMessageShown";
-
-            /** ExternalAdReplyInfo _greetingMessageBody. */
-            public _greetingMessageBody?: "greetingMessageBody";
-
-            /** ExternalAdReplyInfo _ctaPayload. */
-            public _ctaPayload?: "ctaPayload";
-
-            /** ExternalAdReplyInfo _disableNudge. */
-            public _disableNudge?: "disableNudge";
-
-            /** ExternalAdReplyInfo _originalImageUrl. */
-            public _originalImageUrl?: "originalImageUrl";
-
-            /** ExternalAdReplyInfo _automatedGreetingMessageCtaType. */
-            public _automatedGreetingMessageCtaType?: "automatedGreetingMessageCtaType";
-
-            /** ExternalAdReplyInfo _wtwaAdFormat. */
-            public _wtwaAdFormat?: "wtwaAdFormat";
-
-            /** ExternalAdReplyInfo _adType. */
-            public _adType?: "adType";
-
-            /** ExternalAdReplyInfo _wtwaWebsiteUrl. */
-            public _wtwaWebsiteUrl?: "wtwaWebsiteUrl";
-
-            /** ExternalAdReplyInfo _adPreviewUrl. */
-            public _adPreviewUrl?: "adPreviewUrl";
+            /** ExternalAdReplyInfo containsCtwaFlowsAutoReply. */
+            public containsCtwaFlowsAutoReply?: (boolean|null);
 
             /**
              * Creates a new ExternalAdReplyInfo instance using the specified properties.
@@ -5915,21 +5304,6 @@ export namespace E2E {
             /** FeatureEligibilities canReceiveMultiReact. */
             public canReceiveMultiReact?: (boolean|null);
 
-            /** FeatureEligibilities _cannotBeReactedTo. */
-            public _cannotBeReactedTo?: "cannotBeReactedTo";
-
-            /** FeatureEligibilities _cannotBeRanked. */
-            public _cannotBeRanked?: "cannotBeRanked";
-
-            /** FeatureEligibilities _canRequestFeedback. */
-            public _canRequestFeedback?: "canRequestFeedback";
-
-            /** FeatureEligibilities _canBeReshared. */
-            public _canBeReshared?: "canBeReshared";
-
-            /** FeatureEligibilities _canReceiveMultiReact. */
-            public _canReceiveMultiReact?: "canReceiveMultiReact";
-
             /**
              * Creates a new FeatureEligibilities instance using the specified properties.
              * @param [properties] Properties to set
@@ -6035,6 +5409,9 @@ export namespace E2E {
 
             /** ForwardedNewsletterMessageInfo accessibilityText */
             accessibilityText?: (string|null);
+
+            /** ForwardedNewsletterMessageInfo profileName */
+            profileName?: (string|null);
         }
 
         /** Represents a ForwardedNewsletterMessageInfo. */
@@ -6061,20 +5438,8 @@ export namespace E2E {
             /** ForwardedNewsletterMessageInfo accessibilityText. */
             public accessibilityText?: (string|null);
 
-            /** ForwardedNewsletterMessageInfo _newsletterJid. */
-            public _newsletterJid?: "newsletterJid";
-
-            /** ForwardedNewsletterMessageInfo _serverMessageId. */
-            public _serverMessageId?: "serverMessageId";
-
-            /** ForwardedNewsletterMessageInfo _newsletterName. */
-            public _newsletterName?: "newsletterName";
-
-            /** ForwardedNewsletterMessageInfo _contentType. */
-            public _contentType?: "contentType";
-
-            /** ForwardedNewsletterMessageInfo _accessibilityText. */
-            public _accessibilityText?: "accessibilityText";
+            /** ForwardedNewsletterMessageInfo profileName. */
+            public profileName?: (string|null);
 
             /**
              * Creates a new ForwardedNewsletterMessageInfo instance using the specified properties.
@@ -6177,6 +5542,103 @@ export namespace E2E {
             HEVC_VIDEO_CHILD = 8
         }
 
+        /** Properties of a PartiallySelectedContent. */
+        interface IPartiallySelectedContent {
+
+            /** PartiallySelectedContent text */
+            text?: (string|null);
+        }
+
+        /** Represents a PartiallySelectedContent. */
+        class PartiallySelectedContent implements IPartiallySelectedContent {
+
+            /**
+             * Constructs a new PartiallySelectedContent.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: E2E.ContextInfo.IPartiallySelectedContent);
+
+            /** PartiallySelectedContent text. */
+            public text?: (string|null);
+
+            /**
+             * Creates a new PartiallySelectedContent instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns PartiallySelectedContent instance
+             */
+            public static create(properties?: E2E.ContextInfo.IPartiallySelectedContent): E2E.ContextInfo.PartiallySelectedContent;
+
+            /**
+             * Encodes the specified PartiallySelectedContent message. Does not implicitly {@link E2E.ContextInfo.PartiallySelectedContent.verify|verify} messages.
+             * @param message PartiallySelectedContent message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: E2E.ContextInfo.IPartiallySelectedContent, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified PartiallySelectedContent message, length delimited. Does not implicitly {@link E2E.ContextInfo.PartiallySelectedContent.verify|verify} messages.
+             * @param message PartiallySelectedContent message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: E2E.ContextInfo.IPartiallySelectedContent, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a PartiallySelectedContent message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns PartiallySelectedContent
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.ContextInfo.PartiallySelectedContent;
+
+            /**
+             * Decodes a PartiallySelectedContent message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns PartiallySelectedContent
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.ContextInfo.PartiallySelectedContent;
+
+            /**
+             * Verifies a PartiallySelectedContent message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a PartiallySelectedContent message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns PartiallySelectedContent
+             */
+            public static fromObject(object: { [k: string]: any }): E2E.ContextInfo.PartiallySelectedContent;
+
+            /**
+             * Creates a plain object from a PartiallySelectedContent message. Also converts values to other types if specified.
+             * @param message PartiallySelectedContent
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: E2E.ContextInfo.PartiallySelectedContent, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this PartiallySelectedContent to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for PartiallySelectedContent
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a QuestionReplyQuotedMessage. */
         interface IQuestionReplyQuotedMessage {
 
@@ -6207,15 +5669,6 @@ export namespace E2E {
 
             /** QuestionReplyQuotedMessage quotedResponse. */
             public quotedResponse?: (E2E.IMessage|null);
-
-            /** QuestionReplyQuotedMessage _serverQuestionId. */
-            public _serverQuestionId?: "serverQuestionId";
-
-            /** QuestionReplyQuotedMessage _quotedQuestion. */
-            public _quotedQuestion?: "quotedQuestion";
-
-            /** QuestionReplyQuotedMessage _quotedResponse. */
-            public _quotedResponse?: "quotedResponse";
 
             /**
              * Creates a new QuestionReplyQuotedMessage instance using the specified properties.
@@ -6315,6 +5768,12 @@ export namespace E2E {
 
             /** StatusAudienceMetadata audienceType */
             audienceType?: (E2E.ContextInfo.StatusAudienceMetadata.AudienceType|null);
+
+            /** StatusAudienceMetadata listName */
+            listName?: (string|null);
+
+            /** StatusAudienceMetadata listEmoji */
+            listEmoji?: (string|null);
         }
 
         /** Represents a StatusAudienceMetadata. */
@@ -6329,8 +5788,11 @@ export namespace E2E {
             /** StatusAudienceMetadata audienceType. */
             public audienceType?: (E2E.ContextInfo.StatusAudienceMetadata.AudienceType|null);
 
-            /** StatusAudienceMetadata _audienceType. */
-            public _audienceType?: "audienceType";
+            /** StatusAudienceMetadata listName. */
+            public listName?: (string|null);
+
+            /** StatusAudienceMetadata listEmoji. */
+            public listEmoji?: (string|null);
 
             /**
              * Creates a new StatusAudienceMetadata instance using the specified properties.
@@ -6454,12 +5916,6 @@ export namespace E2E {
             /** UTMInfo utmCampaign. */
             public utmCampaign?: (string|null);
 
-            /** UTMInfo _utmSource. */
-            public _utmSource?: "utmSource";
-
-            /** UTMInfo _utmCampaign. */
-            public _utmCampaign?: "utmCampaign";
-
             /**
              * Creates a new UTMInfo instance using the specified properties.
              * @param [properties] Properties to set
@@ -6537,6 +5993,109 @@ export namespace E2E {
              */
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
+    }
+
+    /** Properties of a MediaDomainInfo. */
+    interface IMediaDomainInfo {
+
+        /** MediaDomainInfo mediaKeyDomain */
+        mediaKeyDomain?: (E2E.MediaKeyDomain|null);
+
+        /** MediaDomainInfo e2EeMediaKey */
+        e2EeMediaKey?: (Uint8Array|null);
+    }
+
+    /** Represents a MediaDomainInfo. */
+    class MediaDomainInfo implements IMediaDomainInfo {
+
+        /**
+         * Constructs a new MediaDomainInfo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: E2E.IMediaDomainInfo);
+
+        /** MediaDomainInfo mediaKeyDomain. */
+        public mediaKeyDomain?: (E2E.MediaKeyDomain|null);
+
+        /** MediaDomainInfo e2EeMediaKey. */
+        public e2EeMediaKey?: (Uint8Array|null);
+
+        /**
+         * Creates a new MediaDomainInfo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns MediaDomainInfo instance
+         */
+        public static create(properties?: E2E.IMediaDomainInfo): E2E.MediaDomainInfo;
+
+        /**
+         * Encodes the specified MediaDomainInfo message. Does not implicitly {@link E2E.MediaDomainInfo.verify|verify} messages.
+         * @param message MediaDomainInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: E2E.IMediaDomainInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified MediaDomainInfo message, length delimited. Does not implicitly {@link E2E.MediaDomainInfo.verify|verify} messages.
+         * @param message MediaDomainInfo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: E2E.IMediaDomainInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a MediaDomainInfo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns MediaDomainInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.MediaDomainInfo;
+
+        /**
+         * Decodes a MediaDomainInfo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns MediaDomainInfo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.MediaDomainInfo;
+
+        /**
+         * Verifies a MediaDomainInfo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a MediaDomainInfo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns MediaDomainInfo
+         */
+        public static fromObject(object: { [k: string]: any }): E2E.MediaDomainInfo;
+
+        /**
+         * Creates a plain object from a MediaDomainInfo message. Also converts values to other types if specified.
+         * @param message MediaDomainInfo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: E2E.MediaDomainInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this MediaDomainInfo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for MediaDomainInfo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
     /** Properties of a Message. */
@@ -6826,6 +6385,27 @@ export namespace E2E {
 
         /** Message pollResultSnapshotMessageV3 */
         pollResultSnapshotMessageV3?: (E2E.Message.IPollResultSnapshotMessage|null);
+
+        /** Message newsletterAdminProfileMessage */
+        newsletterAdminProfileMessage?: (E2E.Message.IFutureProofMessage|null);
+
+        /** Message newsletterAdminProfileMessageV2 */
+        newsletterAdminProfileMessageV2?: (E2E.Message.IFutureProofMessage|null);
+
+        /** Message spoilerMessage */
+        spoilerMessage?: (E2E.Message.IFutureProofMessage|null);
+
+        /** Message pollCreationMessageV6 */
+        pollCreationMessageV6?: (E2E.Message.IPollCreationMessage|null);
+
+        /** Message conditionalRevealMessage */
+        conditionalRevealMessage?: (E2E.Message.IConditionalRevealMessage|null);
+
+        /** Message pollAddOptionMessage */
+        pollAddOptionMessage?: (E2E.Message.IPollAddOptionMessage|null);
+
+        /** Message eventInviteMessage */
+        eventInviteMessage?: (E2E.Message.IEventInviteMessage|null);
     }
 
     /** Represents a Message. */
@@ -7122,290 +6702,26 @@ export namespace E2E {
         /** Message pollResultSnapshotMessageV3. */
         public pollResultSnapshotMessageV3?: (E2E.Message.IPollResultSnapshotMessage|null);
 
-        /** Message _conversation. */
-        public _conversation?: "conversation";
+        /** Message newsletterAdminProfileMessage. */
+        public newsletterAdminProfileMessage?: (E2E.Message.IFutureProofMessage|null);
 
-        /** Message _senderKeyDistributionMessage. */
-        public _senderKeyDistributionMessage?: "senderKeyDistributionMessage";
+        /** Message newsletterAdminProfileMessageV2. */
+        public newsletterAdminProfileMessageV2?: (E2E.Message.IFutureProofMessage|null);
 
-        /** Message _imageMessage. */
-        public _imageMessage?: "imageMessage";
+        /** Message spoilerMessage. */
+        public spoilerMessage?: (E2E.Message.IFutureProofMessage|null);
 
-        /** Message _contactMessage. */
-        public _contactMessage?: "contactMessage";
+        /** Message pollCreationMessageV6. */
+        public pollCreationMessageV6?: (E2E.Message.IPollCreationMessage|null);
 
-        /** Message _locationMessage. */
-        public _locationMessage?: "locationMessage";
+        /** Message conditionalRevealMessage. */
+        public conditionalRevealMessage?: (E2E.Message.IConditionalRevealMessage|null);
 
-        /** Message _extendedTextMessage. */
-        public _extendedTextMessage?: "extendedTextMessage";
+        /** Message pollAddOptionMessage. */
+        public pollAddOptionMessage?: (E2E.Message.IPollAddOptionMessage|null);
 
-        /** Message _documentMessage. */
-        public _documentMessage?: "documentMessage";
-
-        /** Message _audioMessage. */
-        public _audioMessage?: "audioMessage";
-
-        /** Message _videoMessage. */
-        public _videoMessage?: "videoMessage";
-
-        /** Message _call. */
-        public _call?: "call";
-
-        /** Message _chat. */
-        public _chat?: "chat";
-
-        /** Message _protocolMessage. */
-        public _protocolMessage?: "protocolMessage";
-
-        /** Message _contactsArrayMessage. */
-        public _contactsArrayMessage?: "contactsArrayMessage";
-
-        /** Message _highlyStructuredMessage. */
-        public _highlyStructuredMessage?: "highlyStructuredMessage";
-
-        /** Message _fastRatchetKeySenderKeyDistributionMessage. */
-        public _fastRatchetKeySenderKeyDistributionMessage?: "fastRatchetKeySenderKeyDistributionMessage";
-
-        /** Message _sendPaymentMessage. */
-        public _sendPaymentMessage?: "sendPaymentMessage";
-
-        /** Message _liveLocationMessage. */
-        public _liveLocationMessage?: "liveLocationMessage";
-
-        /** Message _requestPaymentMessage. */
-        public _requestPaymentMessage?: "requestPaymentMessage";
-
-        /** Message _declinePaymentRequestMessage. */
-        public _declinePaymentRequestMessage?: "declinePaymentRequestMessage";
-
-        /** Message _cancelPaymentRequestMessage. */
-        public _cancelPaymentRequestMessage?: "cancelPaymentRequestMessage";
-
-        /** Message _templateMessage. */
-        public _templateMessage?: "templateMessage";
-
-        /** Message _stickerMessage. */
-        public _stickerMessage?: "stickerMessage";
-
-        /** Message _groupInviteMessage. */
-        public _groupInviteMessage?: "groupInviteMessage";
-
-        /** Message _templateButtonReplyMessage. */
-        public _templateButtonReplyMessage?: "templateButtonReplyMessage";
-
-        /** Message _productMessage. */
-        public _productMessage?: "productMessage";
-
-        /** Message _deviceSentMessage. */
-        public _deviceSentMessage?: "deviceSentMessage";
-
-        /** Message _messageContextInfo. */
-        public _messageContextInfo?: "messageContextInfo";
-
-        /** Message _listMessage. */
-        public _listMessage?: "listMessage";
-
-        /** Message _viewOnceMessage. */
-        public _viewOnceMessage?: "viewOnceMessage";
-
-        /** Message _orderMessage. */
-        public _orderMessage?: "orderMessage";
-
-        /** Message _listResponseMessage. */
-        public _listResponseMessage?: "listResponseMessage";
-
-        /** Message _ephemeralMessage. */
-        public _ephemeralMessage?: "ephemeralMessage";
-
-        /** Message _invoiceMessage. */
-        public _invoiceMessage?: "invoiceMessage";
-
-        /** Message _buttonsMessage. */
-        public _buttonsMessage?: "buttonsMessage";
-
-        /** Message _buttonsResponseMessage. */
-        public _buttonsResponseMessage?: "buttonsResponseMessage";
-
-        /** Message _paymentInviteMessage. */
-        public _paymentInviteMessage?: "paymentInviteMessage";
-
-        /** Message _interactiveMessage. */
-        public _interactiveMessage?: "interactiveMessage";
-
-        /** Message _reactionMessage. */
-        public _reactionMessage?: "reactionMessage";
-
-        /** Message _stickerSyncRmrMessage. */
-        public _stickerSyncRmrMessage?: "stickerSyncRmrMessage";
-
-        /** Message _interactiveResponseMessage. */
-        public _interactiveResponseMessage?: "interactiveResponseMessage";
-
-        /** Message _pollCreationMessage. */
-        public _pollCreationMessage?: "pollCreationMessage";
-
-        /** Message _pollUpdateMessage. */
-        public _pollUpdateMessage?: "pollUpdateMessage";
-
-        /** Message _keepInChatMessage. */
-        public _keepInChatMessage?: "keepInChatMessage";
-
-        /** Message _documentWithCaptionMessage. */
-        public _documentWithCaptionMessage?: "documentWithCaptionMessage";
-
-        /** Message _requestPhoneNumberMessage. */
-        public _requestPhoneNumberMessage?: "requestPhoneNumberMessage";
-
-        /** Message _viewOnceMessageV2. */
-        public _viewOnceMessageV2?: "viewOnceMessageV2";
-
-        /** Message _encReactionMessage. */
-        public _encReactionMessage?: "encReactionMessage";
-
-        /** Message _editedMessage. */
-        public _editedMessage?: "editedMessage";
-
-        /** Message _viewOnceMessageV2Extension. */
-        public _viewOnceMessageV2Extension?: "viewOnceMessageV2Extension";
-
-        /** Message _pollCreationMessageV2. */
-        public _pollCreationMessageV2?: "pollCreationMessageV2";
-
-        /** Message _scheduledCallCreationMessage. */
-        public _scheduledCallCreationMessage?: "scheduledCallCreationMessage";
-
-        /** Message _groupMentionedMessage. */
-        public _groupMentionedMessage?: "groupMentionedMessage";
-
-        /** Message _pinInChatMessage. */
-        public _pinInChatMessage?: "pinInChatMessage";
-
-        /** Message _pollCreationMessageV3. */
-        public _pollCreationMessageV3?: "pollCreationMessageV3";
-
-        /** Message _scheduledCallEditMessage. */
-        public _scheduledCallEditMessage?: "scheduledCallEditMessage";
-
-        /** Message _ptvMessage. */
-        public _ptvMessage?: "ptvMessage";
-
-        /** Message _botInvokeMessage. */
-        public _botInvokeMessage?: "botInvokeMessage";
-
-        /** Message _callLogMesssage. */
-        public _callLogMesssage?: "callLogMesssage";
-
-        /** Message _messageHistoryBundle. */
-        public _messageHistoryBundle?: "messageHistoryBundle";
-
-        /** Message _encCommentMessage. */
-        public _encCommentMessage?: "encCommentMessage";
-
-        /** Message _bcallMessage. */
-        public _bcallMessage?: "bcallMessage";
-
-        /** Message _lottieStickerMessage. */
-        public _lottieStickerMessage?: "lottieStickerMessage";
-
-        /** Message _eventMessage. */
-        public _eventMessage?: "eventMessage";
-
-        /** Message _encEventResponseMessage. */
-        public _encEventResponseMessage?: "encEventResponseMessage";
-
-        /** Message _commentMessage. */
-        public _commentMessage?: "commentMessage";
-
-        /** Message _newsletterAdminInviteMessage. */
-        public _newsletterAdminInviteMessage?: "newsletterAdminInviteMessage";
-
-        /** Message _placeholderMessage. */
-        public _placeholderMessage?: "placeholderMessage";
-
-        /** Message _secretEncryptedMessage. */
-        public _secretEncryptedMessage?: "secretEncryptedMessage";
-
-        /** Message _albumMessage. */
-        public _albumMessage?: "albumMessage";
-
-        /** Message _eventCoverImage. */
-        public _eventCoverImage?: "eventCoverImage";
-
-        /** Message _stickerPackMessage. */
-        public _stickerPackMessage?: "stickerPackMessage";
-
-        /** Message _statusMentionMessage. */
-        public _statusMentionMessage?: "statusMentionMessage";
-
-        /** Message _pollResultSnapshotMessage. */
-        public _pollResultSnapshotMessage?: "pollResultSnapshotMessage";
-
-        /** Message _pollCreationOptionImageMessage. */
-        public _pollCreationOptionImageMessage?: "pollCreationOptionImageMessage";
-
-        /** Message _associatedChildMessage. */
-        public _associatedChildMessage?: "associatedChildMessage";
-
-        /** Message _groupStatusMentionMessage. */
-        public _groupStatusMentionMessage?: "groupStatusMentionMessage";
-
-        /** Message _pollCreationMessageV4. */
-        public _pollCreationMessageV4?: "pollCreationMessageV4";
-
-        /** Message _statusAddYours. */
-        public _statusAddYours?: "statusAddYours";
-
-        /** Message _groupStatusMessage. */
-        public _groupStatusMessage?: "groupStatusMessage";
-
-        /** Message _richResponseMessage. */
-        public _richResponseMessage?: "richResponseMessage";
-
-        /** Message _statusNotificationMessage. */
-        public _statusNotificationMessage?: "statusNotificationMessage";
-
-        /** Message _limitSharingMessage. */
-        public _limitSharingMessage?: "limitSharingMessage";
-
-        /** Message _botTaskMessage. */
-        public _botTaskMessage?: "botTaskMessage";
-
-        /** Message _questionMessage. */
-        public _questionMessage?: "questionMessage";
-
-        /** Message _messageHistoryNotice. */
-        public _messageHistoryNotice?: "messageHistoryNotice";
-
-        /** Message _groupStatusMessageV2. */
-        public _groupStatusMessageV2?: "groupStatusMessageV2";
-
-        /** Message _botForwardedMessage. */
-        public _botForwardedMessage?: "botForwardedMessage";
-
-        /** Message _statusQuestionAnswerMessage. */
-        public _statusQuestionAnswerMessage?: "statusQuestionAnswerMessage";
-
-        /** Message _questionReplyMessage. */
-        public _questionReplyMessage?: "questionReplyMessage";
-
-        /** Message _questionResponseMessage. */
-        public _questionResponseMessage?: "questionResponseMessage";
-
-        /** Message _statusQuotedMessage. */
-        public _statusQuotedMessage?: "statusQuotedMessage";
-
-        /** Message _statusStickerInteractionMessage. */
-        public _statusStickerInteractionMessage?: "statusStickerInteractionMessage";
-
-        /** Message _pollCreationMessageV5. */
-        public _pollCreationMessageV5?: "pollCreationMessageV5";
-
-        /** Message _newsletterFollowerInviteMessageV2. */
-        public _newsletterFollowerInviteMessageV2?: "newsletterFollowerInviteMessageV2";
-
-        /** Message _pollResultSnapshotMessageV3. */
-        public _pollResultSnapshotMessageV3?: "pollResultSnapshotMessageV3";
+        /** Message eventInviteMessage. */
+        public eventInviteMessage?: (E2E.Message.IEventInviteMessage|null);
 
         /**
          * Creates a new Message instance using the specified properties.
@@ -7518,15 +6834,6 @@ export namespace E2E {
             /** AlbumMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** AlbumMessage _expectedImageCount. */
-            public _expectedImageCount?: "expectedImageCount";
-
-            /** AlbumMessage _expectedVideoCount. */
-            public _expectedVideoCount?: "expectedVideoCount";
-
-            /** AlbumMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new AlbumMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -7630,9 +6937,6 @@ export namespace E2E {
             /** AppStateFatalExceptionNotification timestamp. */
             public timestamp?: (number|Long|null);
 
-            /** AppStateFatalExceptionNotification _timestamp. */
-            public _timestamp?: "timestamp";
-
             /**
              * Creates a new AppStateFatalExceptionNotification instance using the specified properties.
              * @param [properties] Properties to set
@@ -7735,12 +7039,6 @@ export namespace E2E {
 
             /** AppStateSyncKey keyData. */
             public keyData?: (E2E.Message.IAppStateSyncKeyData|null);
-
-            /** AppStateSyncKey _keyId. */
-            public _keyId?: "keyId";
-
-            /** AppStateSyncKey _keyData. */
-            public _keyData?: "keyData";
 
             /**
              * Creates a new AppStateSyncKey instance using the specified properties.
@@ -7851,15 +7149,6 @@ export namespace E2E {
             /** AppStateSyncKeyData timestamp. */
             public timestamp?: (number|Long|null);
 
-            /** AppStateSyncKeyData _keyData. */
-            public _keyData?: "keyData";
-
-            /** AppStateSyncKeyData _fingerprint. */
-            public _fingerprint?: "fingerprint";
-
-            /** AppStateSyncKeyData _timestamp. */
-            public _timestamp?: "timestamp";
-
             /**
              * Creates a new AppStateSyncKeyData instance using the specified properties.
              * @param [properties] Properties to set
@@ -7969,12 +7258,6 @@ export namespace E2E {
             /** AppStateSyncKeyFingerprint deviceIndexes. */
             public deviceIndexes: number[];
 
-            /** AppStateSyncKeyFingerprint _rawId. */
-            public _rawId?: "rawId";
-
-            /** AppStateSyncKeyFingerprint _currentIndex. */
-            public _currentIndex?: "currentIndex";
-
             /**
              * Creates a new AppStateSyncKeyFingerprint instance using the specified properties.
              * @param [properties] Properties to set
@@ -8071,9 +7354,6 @@ export namespace E2E {
 
             /** AppStateSyncKeyId keyId. */
             public keyId?: (Uint8Array|null);
-
-            /** AppStateSyncKeyId _keyId. */
-            public _keyId?: "keyId";
 
             /**
              * Creates a new AppStateSyncKeyId instance using the specified properties.
@@ -8397,9 +7677,6 @@ export namespace E2E {
 
             /** AudioMessage accessibilityLabel */
             accessibilityLabel?: (string|null);
-
-            /** AudioMessage mediaKeyDomain */
-            mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
         }
 
         /** Represents an AudioMessage. */
@@ -8458,60 +7735,6 @@ export namespace E2E {
 
             /** AudioMessage accessibilityLabel. */
             public accessibilityLabel?: (string|null);
-
-            /** AudioMessage mediaKeyDomain. */
-            public mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
-            /** AudioMessage _url. */
-            public _url?: "url";
-
-            /** AudioMessage _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** AudioMessage _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** AudioMessage _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** AudioMessage _seconds. */
-            public _seconds?: "seconds";
-
-            /** AudioMessage _ptt. */
-            public _ptt?: "ptt";
-
-            /** AudioMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** AudioMessage _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** AudioMessage _directPath. */
-            public _directPath?: "directPath";
-
-            /** AudioMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** AudioMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** AudioMessage _streamingSidecar. */
-            public _streamingSidecar?: "streamingSidecar";
-
-            /** AudioMessage _waveform. */
-            public _waveform?: "waveform";
-
-            /** AudioMessage _backgroundArgb. */
-            public _backgroundArgb?: "backgroundArgb";
-
-            /** AudioMessage _viewOnce. */
-            public _viewOnce?: "viewOnce";
-
-            /** AudioMessage _accessibilityLabel. */
-            public _accessibilityLabel?: "accessibilityLabel";
-
-            /** AudioMessage _mediaKeyDomain. */
-            public _mediaKeyDomain?: "mediaKeyDomain";
 
             /**
              * Creates a new AudioMessage instance using the specified properties.
@@ -8627,18 +7850,6 @@ export namespace E2E {
 
             /** BCallMessage caption. */
             public caption?: (string|null);
-
-            /** BCallMessage _sessionId. */
-            public _sessionId?: "sessionId";
-
-            /** BCallMessage _mediaType. */
-            public _mediaType?: "mediaType";
-
-            /** BCallMessage _masterKey. */
-            public _masterKey?: "masterKey";
-
-            /** BCallMessage _caption. */
-            public _caption?: "caption";
 
             /**
              * Creates a new BCallMessage instance using the specified properties.
@@ -8801,18 +8012,6 @@ export namespace E2E {
             /** ButtonsMessage locationMessage. */
             public locationMessage?: (E2E.Message.ILocationMessage|null);
 
-            /** ButtonsMessage _contentText. */
-            public _contentText?: "contentText";
-
-            /** ButtonsMessage _footerText. */
-            public _footerText?: "footerText";
-
-            /** ButtonsMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** ButtonsMessage _headerType. */
-            public _headerType?: "headerType";
-
             /** ButtonsMessage header. */
             public header?: ("text"|"documentMessage"|"imageMessage"|"videoMessage"|"locationMessage");
 
@@ -8933,18 +8132,6 @@ export namespace E2E {
                 /** Button nativeFlowInfo. */
                 public nativeFlowInfo?: (E2E.Message.ButtonsMessage.Button.INativeFlowInfo|null);
 
-                /** Button _buttonId. */
-                public _buttonId?: "buttonId";
-
-                /** Button _buttonText. */
-                public _buttonText?: "buttonText";
-
-                /** Button _type. */
-                public _type?: "type";
-
-                /** Button _nativeFlowInfo. */
-                public _nativeFlowInfo?: "nativeFlowInfo";
-
                 /**
                  * Creates a new Button instance using the specified properties.
                  * @param [properties] Properties to set
@@ -9043,9 +8230,6 @@ export namespace E2E {
 
                     /** ButtonText displayText. */
                     public displayText?: (string|null);
-
-                    /** ButtonText _displayText. */
-                    public _displayText?: "displayText";
 
                     /**
                      * Creates a new ButtonText instance using the specified properties.
@@ -9149,12 +8333,6 @@ export namespace E2E {
 
                     /** NativeFlowInfo paramsJson. */
                     public paramsJson?: (string|null);
-
-                    /** NativeFlowInfo _name. */
-                    public _name?: "name";
-
-                    /** NativeFlowInfo _paramsJson. */
-                    public _paramsJson?: "paramsJson";
 
                     /**
                      * Creates a new NativeFlowInfo instance using the specified properties.
@@ -9291,15 +8469,6 @@ export namespace E2E {
             /** ButtonsResponseMessage selectedDisplayText. */
             public selectedDisplayText?: (string|null);
 
-            /** ButtonsResponseMessage _selectedButtonId. */
-            public _selectedButtonId?: "selectedButtonId";
-
-            /** ButtonsResponseMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** ButtonsResponseMessage _type. */
-            public _type?: "type";
-
             /** ButtonsResponseMessage response. */
             public response?: "selectedDisplayText";
 
@@ -9422,6 +8591,9 @@ export namespace E2E {
 
             /** Call messageContextInfo */
             messageContextInfo?: (E2E.IMessageContextInfo|null);
+
+            /** Call callEntryPoint */
+            callEntryPoint?: (number|null);
         }
 
         /** Represents a Call. */
@@ -9463,35 +8635,8 @@ export namespace E2E {
             /** Call messageContextInfo. */
             public messageContextInfo?: (E2E.IMessageContextInfo|null);
 
-            /** Call _callKey. */
-            public _callKey?: "callKey";
-
-            /** Call _conversionSource. */
-            public _conversionSource?: "conversionSource";
-
-            /** Call _conversionData. */
-            public _conversionData?: "conversionData";
-
-            /** Call _conversionDelaySeconds. */
-            public _conversionDelaySeconds?: "conversionDelaySeconds";
-
-            /** Call _ctwaSignals. */
-            public _ctwaSignals?: "ctwaSignals";
-
-            /** Call _ctwaPayload. */
-            public _ctwaPayload?: "ctwaPayload";
-
-            /** Call _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** Call _nativeFlowCallButtonPayload. */
-            public _nativeFlowCallButtonPayload?: "nativeFlowCallButtonPayload";
-
-            /** Call _deeplinkPayload. */
-            public _deeplinkPayload?: "deeplinkPayload";
-
-            /** Call _messageContextInfo. */
-            public _messageContextInfo?: "messageContextInfo";
+            /** Call callEntryPoint. */
+            public callEntryPoint?: (number|null);
 
             /**
              * Creates a new Call instance using the specified properties.
@@ -9614,18 +8759,6 @@ export namespace E2E {
             /** CallLogMessage participants. */
             public participants: E2E.Message.CallLogMessage.ICallParticipant[];
 
-            /** CallLogMessage _isVideo. */
-            public _isVideo?: "isVideo";
-
-            /** CallLogMessage _callOutcome. */
-            public _callOutcome?: "callOutcome";
-
-            /** CallLogMessage _durationSecs. */
-            public _durationSecs?: "durationSecs";
-
-            /** CallLogMessage _callType. */
-            public _callType?: "callType";
-
             /**
              * Creates a new CallLogMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -9743,12 +8876,6 @@ export namespace E2E {
                 /** CallParticipant callOutcome. */
                 public callOutcome?: (E2E.Message.CallLogMessage.CallOutcome|null);
 
-                /** CallParticipant _jid. */
-                public _jid?: "jid";
-
-                /** CallParticipant _callOutcome. */
-                public _callOutcome?: "callOutcome";
-
                 /**
                  * Creates a new CallParticipant instance using the specified properties.
                  * @param [properties] Properties to set
@@ -9854,9 +8981,6 @@ export namespace E2E {
             /** CancelPaymentRequestMessage key. */
             public key?: (Protocol.IMessageKey|null);
 
-            /** CancelPaymentRequestMessage _key. */
-            public _key?: "key";
-
             /**
              * Creates a new CancelPaymentRequestMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -9959,12 +9083,6 @@ export namespace E2E {
 
             /** Chat id. */
             public id?: (string|null);
-
-            /** Chat _displayName. */
-            public _displayName?: "displayName";
-
-            /** Chat _id. */
-            public _id?: "id";
 
             /**
              * Creates a new Chat instance using the specified properties.
@@ -10093,24 +9211,6 @@ export namespace E2E {
             /** CloudAPIThreadControlNotification shouldSuppressNotification. */
             public shouldSuppressNotification?: (boolean|null);
 
-            /** CloudAPIThreadControlNotification _status. */
-            public _status?: "status";
-
-            /** CloudAPIThreadControlNotification _senderNotificationTimestampMs. */
-            public _senderNotificationTimestampMs?: "senderNotificationTimestampMs";
-
-            /** CloudAPIThreadControlNotification _consumerLid. */
-            public _consumerLid?: "consumerLid";
-
-            /** CloudAPIThreadControlNotification _consumerPhoneNumber. */
-            public _consumerPhoneNumber?: "consumerPhoneNumber";
-
-            /** CloudAPIThreadControlNotification _notificationContent. */
-            public _notificationContent?: "notificationContent";
-
-            /** CloudAPIThreadControlNotification _shouldSuppressNotification. */
-            public _shouldSuppressNotification?: "shouldSuppressNotification";
-
             /**
              * Creates a new CloudAPIThreadControlNotification instance using the specified properties.
              * @param [properties] Properties to set
@@ -10223,12 +9323,6 @@ export namespace E2E {
                 /** CloudAPIThreadControlNotificationContent extraJson. */
                 public extraJson?: (string|null);
 
-                /** CloudAPIThreadControlNotificationContent _handoffNotificationText. */
-                public _handoffNotificationText?: "handoffNotificationText";
-
-                /** CloudAPIThreadControlNotificationContent _extraJson. */
-                public _extraJson?: "extraJson";
-
                 /**
                  * Creates a new CloudAPIThreadControlNotificationContent instance using the specified properties.
                  * @param [properties] Properties to set
@@ -10333,12 +9427,6 @@ export namespace E2E {
             /** CommentMessage targetMessageKey. */
             public targetMessageKey?: (Protocol.IMessageKey|null);
 
-            /** CommentMessage _message. */
-            public _message?: "message";
-
-            /** CommentMessage _targetMessageKey. */
-            public _targetMessageKey?: "targetMessageKey";
-
             /**
              * Creates a new CommentMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -10417,6 +9505,130 @@ export namespace E2E {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of a ConditionalRevealMessage. */
+        interface IConditionalRevealMessage {
+
+            /** ConditionalRevealMessage encPayload */
+            encPayload?: (Uint8Array|null);
+
+            /** ConditionalRevealMessage encIv */
+            encIv?: (Uint8Array|null);
+
+            /** ConditionalRevealMessage conditionalRevealMessageType */
+            conditionalRevealMessageType?: (E2E.Message.ConditionalRevealMessage.ConditionalRevealMessageType|null);
+
+            /** ConditionalRevealMessage revealKeyId */
+            revealKeyId?: (string|null);
+        }
+
+        /** Represents a ConditionalRevealMessage. */
+        class ConditionalRevealMessage implements IConditionalRevealMessage {
+
+            /**
+             * Constructs a new ConditionalRevealMessage.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: E2E.Message.IConditionalRevealMessage);
+
+            /** ConditionalRevealMessage encPayload. */
+            public encPayload?: (Uint8Array|null);
+
+            /** ConditionalRevealMessage encIv. */
+            public encIv?: (Uint8Array|null);
+
+            /** ConditionalRevealMessage conditionalRevealMessageType. */
+            public conditionalRevealMessageType?: (E2E.Message.ConditionalRevealMessage.ConditionalRevealMessageType|null);
+
+            /** ConditionalRevealMessage revealKeyId. */
+            public revealKeyId?: (string|null);
+
+            /**
+             * Creates a new ConditionalRevealMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ConditionalRevealMessage instance
+             */
+            public static create(properties?: E2E.Message.IConditionalRevealMessage): E2E.Message.ConditionalRevealMessage;
+
+            /**
+             * Encodes the specified ConditionalRevealMessage message. Does not implicitly {@link E2E.Message.ConditionalRevealMessage.verify|verify} messages.
+             * @param message ConditionalRevealMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: E2E.Message.IConditionalRevealMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ConditionalRevealMessage message, length delimited. Does not implicitly {@link E2E.Message.ConditionalRevealMessage.verify|verify} messages.
+             * @param message ConditionalRevealMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: E2E.Message.IConditionalRevealMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ConditionalRevealMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ConditionalRevealMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.ConditionalRevealMessage;
+
+            /**
+             * Decodes a ConditionalRevealMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ConditionalRevealMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.ConditionalRevealMessage;
+
+            /**
+             * Verifies a ConditionalRevealMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ConditionalRevealMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ConditionalRevealMessage
+             */
+            public static fromObject(object: { [k: string]: any }): E2E.Message.ConditionalRevealMessage;
+
+            /**
+             * Creates a plain object from a ConditionalRevealMessage message. Also converts values to other types if specified.
+             * @param message ConditionalRevealMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: E2E.Message.ConditionalRevealMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ConditionalRevealMessage to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ConditionalRevealMessage
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace ConditionalRevealMessage {
+
+            /** ConditionalRevealMessageType enum. */
+            enum ConditionalRevealMessageType {
+                UNKNOWN = 0,
+                SCHEDULED_MESSAGE = 1
+            }
+        }
+
         /** Properties of a ContactMessage. */
         interface IContactMessage {
 
@@ -10428,6 +9640,9 @@ export namespace E2E {
 
             /** ContactMessage contextInfo */
             contextInfo?: (E2E.IContextInfo|null);
+
+            /** ContactMessage isSelfContact */
+            isSelfContact?: (boolean|null);
         }
 
         /** Represents a ContactMessage. */
@@ -10448,14 +9663,8 @@ export namespace E2E {
             /** ContactMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** ContactMessage _displayName. */
-            public _displayName?: "displayName";
-
-            /** ContactMessage _vcard. */
-            public _vcard?: "vcard";
-
-            /** ContactMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
+            /** ContactMessage isSelfContact. */
+            public isSelfContact?: (boolean|null);
 
             /**
              * Creates a new ContactMessage instance using the specified properties.
@@ -10566,12 +9775,6 @@ export namespace E2E {
             /** ContactsArrayMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** ContactsArrayMessage _displayName. */
-            public _displayName?: "displayName";
-
-            /** ContactsArrayMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new ContactsArrayMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -10668,9 +9871,6 @@ export namespace E2E {
 
             /** DeclinePaymentRequestMessage key. */
             public key?: (Protocol.IMessageKey|null);
-
-            /** DeclinePaymentRequestMessage _key. */
-            public _key?: "key";
 
             /**
              * Creates a new DeclinePaymentRequestMessage instance using the specified properties.
@@ -10780,15 +9980,6 @@ export namespace E2E {
 
             /** DeviceSentMessage phash. */
             public phash?: (string|null);
-
-            /** DeviceSentMessage _destinationJid. */
-            public _destinationJid?: "destinationJid";
-
-            /** DeviceSentMessage _message. */
-            public _message?: "message";
-
-            /** DeviceSentMessage _phash. */
-            public _phash?: "phash";
 
             /**
              * Creates a new DeviceSentMessage instance using the specified properties.
@@ -10933,9 +10124,6 @@ export namespace E2E {
 
             /** DocumentMessage accessibilityLabel */
             accessibilityLabel?: (string|null);
-
-            /** DocumentMessage mediaKeyDomain */
-            mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
         }
 
         /** Represents a DocumentMessage. */
@@ -11009,75 +10197,6 @@ export namespace E2E {
 
             /** DocumentMessage accessibilityLabel. */
             public accessibilityLabel?: (string|null);
-
-            /** DocumentMessage mediaKeyDomain. */
-            public mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
-            /** DocumentMessage _url. */
-            public _url?: "url";
-
-            /** DocumentMessage _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** DocumentMessage _title. */
-            public _title?: "title";
-
-            /** DocumentMessage _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** DocumentMessage _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** DocumentMessage _pageCount. */
-            public _pageCount?: "pageCount";
-
-            /** DocumentMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** DocumentMessage _fileName. */
-            public _fileName?: "fileName";
-
-            /** DocumentMessage _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** DocumentMessage _directPath. */
-            public _directPath?: "directPath";
-
-            /** DocumentMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** DocumentMessage _contactVcard. */
-            public _contactVcard?: "contactVcard";
-
-            /** DocumentMessage _thumbnailDirectPath. */
-            public _thumbnailDirectPath?: "thumbnailDirectPath";
-
-            /** DocumentMessage _thumbnailSha256. */
-            public _thumbnailSha256?: "thumbnailSha256";
-
-            /** DocumentMessage _thumbnailEncSha256. */
-            public _thumbnailEncSha256?: "thumbnailEncSha256";
-
-            /** DocumentMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** DocumentMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** DocumentMessage _thumbnailHeight. */
-            public _thumbnailHeight?: "thumbnailHeight";
-
-            /** DocumentMessage _thumbnailWidth. */
-            public _thumbnailWidth?: "thumbnailWidth";
-
-            /** DocumentMessage _caption. */
-            public _caption?: "caption";
-
-            /** DocumentMessage _accessibilityLabel. */
-            public _accessibilityLabel?: "accessibilityLabel";
-
-            /** DocumentMessage _mediaKeyDomain. */
-            public _mediaKeyDomain?: "mediaKeyDomain";
 
             /**
              * Creates a new DocumentMessage instance using the specified properties.
@@ -11188,15 +10307,6 @@ export namespace E2E {
             /** EncCommentMessage encIv. */
             public encIv?: (Uint8Array|null);
 
-            /** EncCommentMessage _targetMessageKey. */
-            public _targetMessageKey?: "targetMessageKey";
-
-            /** EncCommentMessage _encPayload. */
-            public _encPayload?: "encPayload";
-
-            /** EncCommentMessage _encIv. */
-            public _encIv?: "encIv";
-
             /**
              * Creates a new EncCommentMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -11305,15 +10415,6 @@ export namespace E2E {
 
             /** EncEventResponseMessage encIv. */
             public encIv?: (Uint8Array|null);
-
-            /** EncEventResponseMessage _eventCreationMessageKey. */
-            public _eventCreationMessageKey?: "eventCreationMessageKey";
-
-            /** EncEventResponseMessage _encPayload. */
-            public _encPayload?: "encPayload";
-
-            /** EncEventResponseMessage _encIv. */
-            public _encIv?: "encIv";
 
             /**
              * Creates a new EncEventResponseMessage instance using the specified properties.
@@ -11424,15 +10525,6 @@ export namespace E2E {
             /** EncReactionMessage encIv. */
             public encIv?: (Uint8Array|null);
 
-            /** EncReactionMessage _targetMessageKey. */
-            public _targetMessageKey?: "targetMessageKey";
-
-            /** EncReactionMessage _encPayload. */
-            public _encPayload?: "encPayload";
-
-            /** EncReactionMessage _encIv. */
-            public _encIv?: "encIv";
-
             /**
              * Creates a new EncReactionMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -11505,6 +10597,139 @@ export namespace E2E {
 
             /**
              * Gets the default type url for EncReactionMessage
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an EventInviteMessage. */
+        interface IEventInviteMessage {
+
+            /** EventInviteMessage contextInfo */
+            contextInfo?: (E2E.IContextInfo|null);
+
+            /** EventInviteMessage eventId */
+            eventId?: (string|null);
+
+            /** EventInviteMessage eventTitle */
+            eventTitle?: (string|null);
+
+            /** EventInviteMessage jpegThumbnail */
+            jpegThumbnail?: (Uint8Array|null);
+
+            /** EventInviteMessage startTime */
+            startTime?: (number|Long|null);
+
+            /** EventInviteMessage caption */
+            caption?: (string|null);
+
+            /** EventInviteMessage isCanceled */
+            isCanceled?: (boolean|null);
+        }
+
+        /** Represents an EventInviteMessage. */
+        class EventInviteMessage implements IEventInviteMessage {
+
+            /**
+             * Constructs a new EventInviteMessage.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: E2E.Message.IEventInviteMessage);
+
+            /** EventInviteMessage contextInfo. */
+            public contextInfo?: (E2E.IContextInfo|null);
+
+            /** EventInviteMessage eventId. */
+            public eventId?: (string|null);
+
+            /** EventInviteMessage eventTitle. */
+            public eventTitle?: (string|null);
+
+            /** EventInviteMessage jpegThumbnail. */
+            public jpegThumbnail?: (Uint8Array|null);
+
+            /** EventInviteMessage startTime. */
+            public startTime?: (number|Long|null);
+
+            /** EventInviteMessage caption. */
+            public caption?: (string|null);
+
+            /** EventInviteMessage isCanceled. */
+            public isCanceled?: (boolean|null);
+
+            /**
+             * Creates a new EventInviteMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns EventInviteMessage instance
+             */
+            public static create(properties?: E2E.Message.IEventInviteMessage): E2E.Message.EventInviteMessage;
+
+            /**
+             * Encodes the specified EventInviteMessage message. Does not implicitly {@link E2E.Message.EventInviteMessage.verify|verify} messages.
+             * @param message EventInviteMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: E2E.Message.IEventInviteMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified EventInviteMessage message, length delimited. Does not implicitly {@link E2E.Message.EventInviteMessage.verify|verify} messages.
+             * @param message EventInviteMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: E2E.Message.IEventInviteMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an EventInviteMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns EventInviteMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.EventInviteMessage;
+
+            /**
+             * Decodes an EventInviteMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns EventInviteMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.EventInviteMessage;
+
+            /**
+             * Verifies an EventInviteMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an EventInviteMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns EventInviteMessage
+             */
+            public static fromObject(object: { [k: string]: any }): E2E.Message.EventInviteMessage;
+
+            /**
+             * Creates a plain object from an EventInviteMessage message. Also converts values to other types if specified.
+             * @param message EventInviteMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: E2E.Message.EventInviteMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this EventInviteMessage to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for EventInviteMessage
              * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
              * @returns The default type url
              */
@@ -11595,42 +10820,6 @@ export namespace E2E {
 
             /** EventMessage reminderOffsetSec. */
             public reminderOffsetSec?: (number|Long|null);
-
-            /** EventMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** EventMessage _isCanceled. */
-            public _isCanceled?: "isCanceled";
-
-            /** EventMessage _name. */
-            public _name?: "name";
-
-            /** EventMessage _description. */
-            public _description?: "description";
-
-            /** EventMessage _location. */
-            public _location?: "location";
-
-            /** EventMessage _joinLink. */
-            public _joinLink?: "joinLink";
-
-            /** EventMessage _startTime. */
-            public _startTime?: "startTime";
-
-            /** EventMessage _endTime. */
-            public _endTime?: "endTime";
-
-            /** EventMessage _extraGuestsAllowed. */
-            public _extraGuestsAllowed?: "extraGuestsAllowed";
-
-            /** EventMessage _isScheduleCall. */
-            public _isScheduleCall?: "isScheduleCall";
-
-            /** EventMessage _hasReminder. */
-            public _hasReminder?: "hasReminder";
-
-            /** EventMessage _reminderOffsetSec. */
-            public _reminderOffsetSec?: "reminderOffsetSec";
 
             /**
              * Creates a new EventMessage instance using the specified properties.
@@ -11740,15 +10929,6 @@ export namespace E2E {
 
             /** EventResponseMessage extraGuestCount. */
             public extraGuestCount?: (number|null);
-
-            /** EventResponseMessage _response. */
-            public _response?: "response";
-
-            /** EventResponseMessage _timestampMs. */
-            public _timestampMs?: "timestampMs";
-
-            /** EventResponseMessage _extraGuestCount. */
-            public _extraGuestCount?: "extraGuestCount";
 
             /**
              * Creates a new EventResponseMessage instance using the specified properties.
@@ -12044,99 +11224,6 @@ export namespace E2E {
             /** ExtendedTextMessage paymentExtendedMetadata. */
             public paymentExtendedMetadata?: (E2E.Message.IPaymentExtendedMetadata|null);
 
-            /** ExtendedTextMessage _text. */
-            public _text?: "text";
-
-            /** ExtendedTextMessage _matchedText. */
-            public _matchedText?: "matchedText";
-
-            /** ExtendedTextMessage _description. */
-            public _description?: "description";
-
-            /** ExtendedTextMessage _title. */
-            public _title?: "title";
-
-            /** ExtendedTextMessage _textArgb. */
-            public _textArgb?: "textArgb";
-
-            /** ExtendedTextMessage _backgroundArgb. */
-            public _backgroundArgb?: "backgroundArgb";
-
-            /** ExtendedTextMessage _font. */
-            public _font?: "font";
-
-            /** ExtendedTextMessage _previewType. */
-            public _previewType?: "previewType";
-
-            /** ExtendedTextMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** ExtendedTextMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** ExtendedTextMessage _doNotPlayInline. */
-            public _doNotPlayInline?: "doNotPlayInline";
-
-            /** ExtendedTextMessage _thumbnailDirectPath. */
-            public _thumbnailDirectPath?: "thumbnailDirectPath";
-
-            /** ExtendedTextMessage _thumbnailSha256. */
-            public _thumbnailSha256?: "thumbnailSha256";
-
-            /** ExtendedTextMessage _thumbnailEncSha256. */
-            public _thumbnailEncSha256?: "thumbnailEncSha256";
-
-            /** ExtendedTextMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** ExtendedTextMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** ExtendedTextMessage _thumbnailHeight. */
-            public _thumbnailHeight?: "thumbnailHeight";
-
-            /** ExtendedTextMessage _thumbnailWidth. */
-            public _thumbnailWidth?: "thumbnailWidth";
-
-            /** ExtendedTextMessage _inviteLinkGroupType. */
-            public _inviteLinkGroupType?: "inviteLinkGroupType";
-
-            /** ExtendedTextMessage _inviteLinkParentGroupSubjectV2. */
-            public _inviteLinkParentGroupSubjectV2?: "inviteLinkParentGroupSubjectV2";
-
-            /** ExtendedTextMessage _inviteLinkParentGroupThumbnailV2. */
-            public _inviteLinkParentGroupThumbnailV2?: "inviteLinkParentGroupThumbnailV2";
-
-            /** ExtendedTextMessage _inviteLinkGroupTypeV2. */
-            public _inviteLinkGroupTypeV2?: "inviteLinkGroupTypeV2";
-
-            /** ExtendedTextMessage _viewOnce. */
-            public _viewOnce?: "viewOnce";
-
-            /** ExtendedTextMessage _videoHeight. */
-            public _videoHeight?: "videoHeight";
-
-            /** ExtendedTextMessage _videoWidth. */
-            public _videoWidth?: "videoWidth";
-
-            /** ExtendedTextMessage _faviconMMSMetadata. */
-            public _faviconMMSMetadata?: "faviconMMSMetadata";
-
-            /** ExtendedTextMessage _linkPreviewMetadata. */
-            public _linkPreviewMetadata?: "linkPreviewMetadata";
-
-            /** ExtendedTextMessage _paymentLinkMetadata. */
-            public _paymentLinkMetadata?: "paymentLinkMetadata";
-
-            /** ExtendedTextMessage _videoContentUrl. */
-            public _videoContentUrl?: "videoContentUrl";
-
-            /** ExtendedTextMessage _musicMetadata. */
-            public _musicMetadata?: "musicMetadata";
-
-            /** ExtendedTextMessage _paymentExtendedMetadata. */
-            public _paymentExtendedMetadata?: "paymentExtendedMetadata";
-
             /**
              * Creates a new ExtendedTextMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -12248,11 +11335,120 @@ export namespace E2E {
             }
         }
 
+        /** Properties of a FullHistorySyncOnDemandConfig. */
+        interface IFullHistorySyncOnDemandConfig {
+
+            /** FullHistorySyncOnDemandConfig historyFromTimestamp */
+            historyFromTimestamp?: (number|Long|null);
+
+            /** FullHistorySyncOnDemandConfig historyDurationDays */
+            historyDurationDays?: (number|null);
+        }
+
+        /** Represents a FullHistorySyncOnDemandConfig. */
+        class FullHistorySyncOnDemandConfig implements IFullHistorySyncOnDemandConfig {
+
+            /**
+             * Constructs a new FullHistorySyncOnDemandConfig.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: E2E.Message.IFullHistorySyncOnDemandConfig);
+
+            /** FullHistorySyncOnDemandConfig historyFromTimestamp. */
+            public historyFromTimestamp?: (number|Long|null);
+
+            /** FullHistorySyncOnDemandConfig historyDurationDays. */
+            public historyDurationDays?: (number|null);
+
+            /**
+             * Creates a new FullHistorySyncOnDemandConfig instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns FullHistorySyncOnDemandConfig instance
+             */
+            public static create(properties?: E2E.Message.IFullHistorySyncOnDemandConfig): E2E.Message.FullHistorySyncOnDemandConfig;
+
+            /**
+             * Encodes the specified FullHistorySyncOnDemandConfig message. Does not implicitly {@link E2E.Message.FullHistorySyncOnDemandConfig.verify|verify} messages.
+             * @param message FullHistorySyncOnDemandConfig message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: E2E.Message.IFullHistorySyncOnDemandConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified FullHistorySyncOnDemandConfig message, length delimited. Does not implicitly {@link E2E.Message.FullHistorySyncOnDemandConfig.verify|verify} messages.
+             * @param message FullHistorySyncOnDemandConfig message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: E2E.Message.IFullHistorySyncOnDemandConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a FullHistorySyncOnDemandConfig message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns FullHistorySyncOnDemandConfig
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.FullHistorySyncOnDemandConfig;
+
+            /**
+             * Decodes a FullHistorySyncOnDemandConfig message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns FullHistorySyncOnDemandConfig
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.FullHistorySyncOnDemandConfig;
+
+            /**
+             * Verifies a FullHistorySyncOnDemandConfig message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a FullHistorySyncOnDemandConfig message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns FullHistorySyncOnDemandConfig
+             */
+            public static fromObject(object: { [k: string]: any }): E2E.Message.FullHistorySyncOnDemandConfig;
+
+            /**
+             * Creates a plain object from a FullHistorySyncOnDemandConfig message. Also converts values to other types if specified.
+             * @param message FullHistorySyncOnDemandConfig
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: E2E.Message.FullHistorySyncOnDemandConfig, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this FullHistorySyncOnDemandConfig to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FullHistorySyncOnDemandConfig
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a FullHistorySyncOnDemandRequestMetadata. */
         interface IFullHistorySyncOnDemandRequestMetadata {
 
             /** FullHistorySyncOnDemandRequestMetadata requestId */
             requestId?: (string|null);
+
+            /** FullHistorySyncOnDemandRequestMetadata businessProduct */
+            businessProduct?: (string|null);
+
+            /** FullHistorySyncOnDemandRequestMetadata opaqueClientData */
+            opaqueClientData?: (Uint8Array|null);
         }
 
         /** Represents a FullHistorySyncOnDemandRequestMetadata. */
@@ -12267,8 +11463,11 @@ export namespace E2E {
             /** FullHistorySyncOnDemandRequestMetadata requestId. */
             public requestId?: (string|null);
 
-            /** FullHistorySyncOnDemandRequestMetadata _requestId. */
-            public _requestId?: "requestId";
+            /** FullHistorySyncOnDemandRequestMetadata businessProduct. */
+            public businessProduct?: (string|null);
+
+            /** FullHistorySyncOnDemandRequestMetadata opaqueClientData. */
+            public opaqueClientData?: (Uint8Array|null);
 
             /**
              * Creates a new FullHistorySyncOnDemandRequestMetadata instance using the specified properties.
@@ -12366,9 +11565,6 @@ export namespace E2E {
 
             /** FutureProofMessage message. */
             public message?: (E2E.IMessage|null);
-
-            /** FutureProofMessage _message. */
-            public _message?: "message";
 
             /**
              * Creates a new FutureProofMessage instance using the specified properties.
@@ -12508,30 +11704,6 @@ export namespace E2E {
 
             /** GroupInviteMessage groupType. */
             public groupType?: (E2E.Message.GroupInviteMessage.GroupType|null);
-
-            /** GroupInviteMessage _groupJid. */
-            public _groupJid?: "groupJid";
-
-            /** GroupInviteMessage _inviteCode. */
-            public _inviteCode?: "inviteCode";
-
-            /** GroupInviteMessage _inviteExpiration. */
-            public _inviteExpiration?: "inviteExpiration";
-
-            /** GroupInviteMessage _groupName. */
-            public _groupName?: "groupName";
-
-            /** GroupInviteMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** GroupInviteMessage _caption. */
-            public _caption?: "caption";
-
-            /** GroupInviteMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** GroupInviteMessage _groupType. */
-            public _groupType?: "groupType";
 
             /**
              * Creates a new GroupInviteMessage instance using the specified properties.
@@ -12687,27 +11859,6 @@ export namespace E2E {
             /** HighlyStructuredMessage hydratedHsm. */
             public hydratedHsm?: (E2E.Message.ITemplateMessage|null);
 
-            /** HighlyStructuredMessage _namespace. */
-            public _namespace?: "namespace";
-
-            /** HighlyStructuredMessage _elementName. */
-            public _elementName?: "elementName";
-
-            /** HighlyStructuredMessage _fallbackLg. */
-            public _fallbackLg?: "fallbackLg";
-
-            /** HighlyStructuredMessage _fallbackLc. */
-            public _fallbackLc?: "fallbackLc";
-
-            /** HighlyStructuredMessage _deterministicLg. */
-            public _deterministicLg?: "deterministicLg";
-
-            /** HighlyStructuredMessage _deterministicLc. */
-            public _deterministicLc?: "deterministicLc";
-
-            /** HighlyStructuredMessage _hydratedHsm. */
-            public _hydratedHsm?: "hydratedHsm";
-
             /**
              * Creates a new HighlyStructuredMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -12819,9 +11970,6 @@ export namespace E2E {
                 /** HSMLocalizableParameter dateTime. */
                 public dateTime?: (E2E.Message.HighlyStructuredMessage.HSMLocalizableParameter.IHSMDateTime|null);
 
-                /** HSMLocalizableParameter _default. */
-                public _default?: "default";
-
                 /** HSMLocalizableParameter paramOneof. */
                 public paramOneof?: ("currency"|"dateTime");
 
@@ -12929,12 +12077,6 @@ export namespace E2E {
 
                     /** HSMCurrency amount1000. */
                     public amount1000?: (number|Long|null);
-
-                    /** HSMCurrency _currencyCode. */
-                    public _currencyCode?: "currencyCode";
-
-                    /** HSMCurrency _amount1000. */
-                    public _amount1000?: "amount1000";
 
                     /**
                      * Creates a new HSMCurrency instance using the specified properties.
@@ -13177,27 +12319,6 @@ export namespace E2E {
                         /** HSMDateTimeComponent calendar. */
                         public calendar?: (E2E.Message.HighlyStructuredMessage.HSMLocalizableParameter.HSMDateTime.HSMDateTimeComponent.CalendarType|null);
 
-                        /** HSMDateTimeComponent _dayOfWeek. */
-                        public _dayOfWeek?: "dayOfWeek";
-
-                        /** HSMDateTimeComponent _year. */
-                        public _year?: "year";
-
-                        /** HSMDateTimeComponent _month. */
-                        public _month?: "month";
-
-                        /** HSMDateTimeComponent _dayOfMonth. */
-                        public _dayOfMonth?: "dayOfMonth";
-
-                        /** HSMDateTimeComponent _hour. */
-                        public _hour?: "hour";
-
-                        /** HSMDateTimeComponent _minute. */
-                        public _minute?: "minute";
-
-                        /** HSMDateTimeComponent _calendar. */
-                        public _calendar?: "calendar";
-
                         /**
                          * Creates a new HSMDateTimeComponent instance using the specified properties.
                          * @param [properties] Properties to set
@@ -13315,9 +12436,6 @@ export namespace E2E {
                         /** HSMDateTimeUnixEpoch timestamp. */
                         public timestamp?: (number|Long|null);
 
-                        /** HSMDateTimeUnixEpoch _timestamp. */
-                        public _timestamp?: "timestamp";
-
                         /**
                          * Creates a new HSMDateTimeUnixEpoch instance using the specified properties.
                          * @param [properties] Properties to set
@@ -13417,9 +12535,6 @@ export namespace E2E {
 
             /** HistorySyncMessageAccessStatus completeAccessGranted. */
             public completeAccessGranted?: (boolean|null);
-
-            /** HistorySyncMessageAccessStatus _completeAccessGranted. */
-            public _completeAccessGranted?: "completeAccessGranted";
 
             /**
              * Creates a new HistorySyncMessageAccessStatus instance using the specified properties.
@@ -13602,51 +12717,6 @@ export namespace E2E {
             /** HistorySyncNotification messageAccessStatus. */
             public messageAccessStatus?: (E2E.Message.IHistorySyncMessageAccessStatus|null);
 
-            /** HistorySyncNotification _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** HistorySyncNotification _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** HistorySyncNotification _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** HistorySyncNotification _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** HistorySyncNotification _directPath. */
-            public _directPath?: "directPath";
-
-            /** HistorySyncNotification _syncType. */
-            public _syncType?: "syncType";
-
-            /** HistorySyncNotification _chunkOrder. */
-            public _chunkOrder?: "chunkOrder";
-
-            /** HistorySyncNotification _originalMessageId. */
-            public _originalMessageId?: "originalMessageId";
-
-            /** HistorySyncNotification _progress. */
-            public _progress?: "progress";
-
-            /** HistorySyncNotification _oldestMsgInChunkTimestampSec. */
-            public _oldestMsgInChunkTimestampSec?: "oldestMsgInChunkTimestampSec";
-
-            /** HistorySyncNotification _initialHistBootstrapInlinePayload. */
-            public _initialHistBootstrapInlinePayload?: "initialHistBootstrapInlinePayload";
-
-            /** HistorySyncNotification _peerDataRequestSessionId. */
-            public _peerDataRequestSessionId?: "peerDataRequestSessionId";
-
-            /** HistorySyncNotification _fullHistorySyncOnDemandRequestMetadata. */
-            public _fullHistorySyncOnDemandRequestMetadata?: "fullHistorySyncOnDemandRequestMetadata";
-
-            /** HistorySyncNotification _encHandle. */
-            public _encHandle?: "encHandle";
-
-            /** HistorySyncNotification _messageAccessStatus. */
-            public _messageAccessStatus?: "messageAccessStatus";
-
             /**
              * Creates a new HistorySyncNotification instance using the specified properties.
              * @param [properties] Properties to set
@@ -13828,9 +12898,6 @@ export namespace E2E {
             /** ImageMessage accessibilityLabel */
             accessibilityLabel?: (string|null);
 
-            /** ImageMessage mediaKeyDomain */
-            mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
             /** ImageMessage qrUrl */
             qrUrl?: (string|null);
         }
@@ -13931,95 +12998,8 @@ export namespace E2E {
             /** ImageMessage accessibilityLabel. */
             public accessibilityLabel?: (string|null);
 
-            /** ImageMessage mediaKeyDomain. */
-            public mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
             /** ImageMessage qrUrl. */
             public qrUrl?: (string|null);
-
-            /** ImageMessage _url. */
-            public _url?: "url";
-
-            /** ImageMessage _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** ImageMessage _caption. */
-            public _caption?: "caption";
-
-            /** ImageMessage _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** ImageMessage _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** ImageMessage _height. */
-            public _height?: "height";
-
-            /** ImageMessage _width. */
-            public _width?: "width";
-
-            /** ImageMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** ImageMessage _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** ImageMessage _directPath. */
-            public _directPath?: "directPath";
-
-            /** ImageMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** ImageMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** ImageMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** ImageMessage _firstScanSidecar. */
-            public _firstScanSidecar?: "firstScanSidecar";
-
-            /** ImageMessage _firstScanLength. */
-            public _firstScanLength?: "firstScanLength";
-
-            /** ImageMessage _experimentGroupId. */
-            public _experimentGroupId?: "experimentGroupId";
-
-            /** ImageMessage _scansSidecar. */
-            public _scansSidecar?: "scansSidecar";
-
-            /** ImageMessage _midQualityFileSha256. */
-            public _midQualityFileSha256?: "midQualityFileSha256";
-
-            /** ImageMessage _midQualityFileEncSha256. */
-            public _midQualityFileEncSha256?: "midQualityFileEncSha256";
-
-            /** ImageMessage _viewOnce. */
-            public _viewOnce?: "viewOnce";
-
-            /** ImageMessage _thumbnailDirectPath. */
-            public _thumbnailDirectPath?: "thumbnailDirectPath";
-
-            /** ImageMessage _thumbnailSha256. */
-            public _thumbnailSha256?: "thumbnailSha256";
-
-            /** ImageMessage _thumbnailEncSha256. */
-            public _thumbnailEncSha256?: "thumbnailEncSha256";
-
-            /** ImageMessage _staticUrl. */
-            public _staticUrl?: "staticUrl";
-
-            /** ImageMessage _imageSourceType. */
-            public _imageSourceType?: "imageSourceType";
-
-            /** ImageMessage _accessibilityLabel. */
-            public _accessibilityLabel?: "accessibilityLabel";
-
-            /** ImageMessage _mediaKeyDomain. */
-            public _mediaKeyDomain?: "mediaKeyDomain";
-
-            /** ImageMessage _qrUrl. */
-            public _qrUrl?: "qrUrl";
 
             /**
              * Creates a new ImageMessage instance using the specified properties.
@@ -14129,9 +13109,6 @@ export namespace E2E {
             /** InitialSecurityNotificationSettingSync securityNotificationEnabled. */
             public securityNotificationEnabled?: (boolean|null);
 
-            /** InitialSecurityNotificationSettingSync _securityNotificationEnabled. */
-            public _securityNotificationEnabled?: "securityNotificationEnabled";
-
             /**
              * Creates a new InitialSecurityNotificationSettingSync instance using the specified properties.
              * @param [properties] Properties to set
@@ -14210,6 +13187,15 @@ export namespace E2E {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** InsightDeliveryState enum. */
+        enum InsightDeliveryState {
+            SENT = 0,
+            DELIVERED = 1,
+            READ = 2,
+            REPLIED = 3,
+            QUICK_REPLIED = 4
+        }
+
         /** Properties of an InteractiveMessage. */
         interface IInteractiveMessage {
 
@@ -14221,6 +13207,9 @@ export namespace E2E {
 
             /** InteractiveMessage footer */
             footer?: (E2E.Message.InteractiveMessage.IFooter|null);
+
+            /** InteractiveMessage bloksWidget */
+            bloksWidget?: (E2E.Message.InteractiveMessage.IBloksWidget|null);
 
             /** InteractiveMessage contextInfo */
             contextInfo?: (E2E.IContextInfo|null);
@@ -14259,6 +13248,9 @@ export namespace E2E {
             /** InteractiveMessage footer. */
             public footer?: (E2E.Message.InteractiveMessage.IFooter|null);
 
+            /** InteractiveMessage bloksWidget. */
+            public bloksWidget?: (E2E.Message.InteractiveMessage.IBloksWidget|null);
+
             /** InteractiveMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
@@ -14276,21 +13268,6 @@ export namespace E2E {
 
             /** InteractiveMessage carouselMessage. */
             public carouselMessage?: (E2E.Message.InteractiveMessage.ICarouselMessage|null);
-
-            /** InteractiveMessage _header. */
-            public _header?: "header";
-
-            /** InteractiveMessage _body. */
-            public _body?: "body";
-
-            /** InteractiveMessage _footer. */
-            public _footer?: "footer";
-
-            /** InteractiveMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** InteractiveMessage _urlTrackingMap. */
-            public _urlTrackingMap?: "urlTrackingMap";
 
             /** InteractiveMessage interactiveMessage. */
             public interactiveMessage?: ("shopStorefrontMessage"|"collectionMessage"|"nativeFlowMessage"|"carouselMessage");
@@ -14375,6 +13352,115 @@ export namespace E2E {
 
         namespace InteractiveMessage {
 
+            /** Properties of a BloksWidget. */
+            interface IBloksWidget {
+
+                /** BloksWidget uuid */
+                uuid?: (string|null);
+
+                /** BloksWidget data */
+                data?: (string|null);
+
+                /** BloksWidget type */
+                type?: (string|null);
+            }
+
+            /** Represents a BloksWidget. */
+            class BloksWidget implements IBloksWidget {
+
+                /**
+                 * Constructs a new BloksWidget.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: E2E.Message.InteractiveMessage.IBloksWidget);
+
+                /** BloksWidget uuid. */
+                public uuid?: (string|null);
+
+                /** BloksWidget data. */
+                public data?: (string|null);
+
+                /** BloksWidget type. */
+                public type?: (string|null);
+
+                /**
+                 * Creates a new BloksWidget instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns BloksWidget instance
+                 */
+                public static create(properties?: E2E.Message.InteractiveMessage.IBloksWidget): E2E.Message.InteractiveMessage.BloksWidget;
+
+                /**
+                 * Encodes the specified BloksWidget message. Does not implicitly {@link E2E.Message.InteractiveMessage.BloksWidget.verify|verify} messages.
+                 * @param message BloksWidget message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: E2E.Message.InteractiveMessage.IBloksWidget, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified BloksWidget message, length delimited. Does not implicitly {@link E2E.Message.InteractiveMessage.BloksWidget.verify|verify} messages.
+                 * @param message BloksWidget message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: E2E.Message.InteractiveMessage.IBloksWidget, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a BloksWidget message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns BloksWidget
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.InteractiveMessage.BloksWidget;
+
+                /**
+                 * Decodes a BloksWidget message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns BloksWidget
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.InteractiveMessage.BloksWidget;
+
+                /**
+                 * Verifies a BloksWidget message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a BloksWidget message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns BloksWidget
+                 */
+                public static fromObject(object: { [k: string]: any }): E2E.Message.InteractiveMessage.BloksWidget;
+
+                /**
+                 * Creates a plain object from a BloksWidget message. Also converts values to other types if specified.
+                 * @param message BloksWidget
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: E2E.Message.InteractiveMessage.BloksWidget, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this BloksWidget to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for BloksWidget
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
             /** Properties of a Body. */
             interface IBody {
 
@@ -14393,9 +13479,6 @@ export namespace E2E {
 
                 /** Body text. */
                 public text?: (string|null);
-
-                /** Body _text. */
-                public _text?: "text";
 
                 /**
                  * Creates a new Body instance using the specified properties.
@@ -14505,12 +13588,6 @@ export namespace E2E {
 
                 /** CarouselMessage carouselCardType. */
                 public carouselCardType?: (E2E.Message.InteractiveMessage.CarouselMessage.CarouselCardType|null);
-
-                /** CarouselMessage _messageVersion. */
-                public _messageVersion?: "messageVersion";
-
-                /** CarouselMessage _carouselCardType. */
-                public _carouselCardType?: "carouselCardType";
 
                 /**
                  * Creates a new CarouselMessage instance using the specified properties.
@@ -14631,15 +13708,6 @@ export namespace E2E {
                 /** CollectionMessage messageVersion. */
                 public messageVersion?: (number|null);
 
-                /** CollectionMessage _bizJid. */
-                public _bizJid?: "bizJid";
-
-                /** CollectionMessage _id. */
-                public _id?: "id";
-
-                /** CollectionMessage _messageVersion. */
-                public _messageVersion?: "messageVersion";
-
                 /**
                  * Creates a new CollectionMessage instance using the specified properties.
                  * @param [properties] Properties to set
@@ -14749,12 +13817,6 @@ export namespace E2E {
                 /** Footer audioMessage. */
                 public audioMessage?: (E2E.Message.IAudioMessage|null);
 
-                /** Footer _text. */
-                public _text?: "text";
-
-                /** Footer _hasMediaAttachment. */
-                public _hasMediaAttachment?: "hasMediaAttachment";
-
                 /** Footer media. */
                 public media?: "audioMessage";
 
@@ -14848,6 +13910,9 @@ export namespace E2E {
                 /** Header hasMediaAttachment */
                 hasMediaAttachment?: (boolean|null);
 
+                /** Header bloksWidget */
+                bloksWidget?: (E2E.Message.InteractiveMessage.IBloksWidget|null);
+
                 /** Header documentMessage */
                 documentMessage?: (E2E.Message.IDocumentMessage|null);
 
@@ -14885,6 +13950,9 @@ export namespace E2E {
                 /** Header hasMediaAttachment. */
                 public hasMediaAttachment?: (boolean|null);
 
+                /** Header bloksWidget. */
+                public bloksWidget?: (E2E.Message.InteractiveMessage.IBloksWidget|null);
+
                 /** Header documentMessage. */
                 public documentMessage?: (E2E.Message.IDocumentMessage|null);
 
@@ -14902,15 +13970,6 @@ export namespace E2E {
 
                 /** Header productMessage. */
                 public productMessage?: (E2E.Message.IProductMessage|null);
-
-                /** Header _title. */
-                public _title?: "title";
-
-                /** Header _subtitle. */
-                public _subtitle?: "subtitle";
-
-                /** Header _hasMediaAttachment. */
-                public _hasMediaAttachment?: "hasMediaAttachment";
 
                 /** Header media. */
                 public media?: ("documentMessage"|"imageMessage"|"jpegThumbnail"|"videoMessage"|"locationMessage"|"productMessage");
@@ -15024,12 +14083,6 @@ export namespace E2E {
                 /** NativeFlowMessage messageVersion. */
                 public messageVersion?: (number|null);
 
-                /** NativeFlowMessage _messageParamsJson. */
-                public _messageParamsJson?: "messageParamsJson";
-
-                /** NativeFlowMessage _messageVersion. */
-                public _messageVersion?: "messageVersion";
-
                 /**
                  * Creates a new NativeFlowMessage instance using the specified properties.
                  * @param [properties] Properties to set
@@ -15134,12 +14187,6 @@ export namespace E2E {
 
                     /** NativeFlowButton buttonParamsJson. */
                     public buttonParamsJson?: (string|null);
-
-                    /** NativeFlowButton _name. */
-                    public _name?: "name";
-
-                    /** NativeFlowButton _buttonParamsJson. */
-                    public _buttonParamsJson?: "buttonParamsJson";
 
                     /**
                      * Creates a new NativeFlowButton instance using the specified properties.
@@ -15250,15 +14297,6 @@ export namespace E2E {
 
                 /** ShopMessage messageVersion. */
                 public messageVersion?: (number|null);
-
-                /** ShopMessage _id. */
-                public _id?: "id";
-
-                /** ShopMessage _surface. */
-                public _surface?: "surface";
-
-                /** ShopMessage _messageVersion. */
-                public _messageVersion?: "messageVersion";
 
                 /**
                  * Creates a new ShopMessage instance using the specified properties.
@@ -15381,12 +14419,6 @@ export namespace E2E {
             /** InteractiveResponseMessage nativeFlowResponseMessage. */
             public nativeFlowResponseMessage?: (E2E.Message.InteractiveResponseMessage.INativeFlowResponseMessage|null);
 
-            /** InteractiveResponseMessage _body. */
-            public _body?: "body";
-
-            /** InteractiveResponseMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /** InteractiveResponseMessage interactiveResponseMessage. */
             public interactiveResponseMessage?: "nativeFlowResponseMessage";
 
@@ -15494,12 +14526,6 @@ export namespace E2E {
 
                 /** Body format. */
                 public format?: (E2E.Message.InteractiveResponseMessage.Body.Format|null);
-
-                /** Body _text. */
-                public _text?: "text";
-
-                /** Body _format. */
-                public _format?: "format";
 
                 /**
                  * Creates a new Body instance using the specified properties.
@@ -15618,15 +14644,6 @@ export namespace E2E {
 
                 /** NativeFlowResponseMessage version. */
                 public version?: (number|null);
-
-                /** NativeFlowResponseMessage _name. */
-                public _name?: "name";
-
-                /** NativeFlowResponseMessage _paramsJson. */
-                public _paramsJson?: "paramsJson";
-
-                /** NativeFlowResponseMessage _version. */
-                public _version?: "version";
 
                 /**
                  * Creates a new NativeFlowResponseMessage instance using the specified properties.
@@ -15780,36 +14797,6 @@ export namespace E2E {
             /** InvoiceMessage attachmentJpegThumbnail. */
             public attachmentJpegThumbnail?: (Uint8Array|null);
 
-            /** InvoiceMessage _note. */
-            public _note?: "note";
-
-            /** InvoiceMessage _token. */
-            public _token?: "token";
-
-            /** InvoiceMessage _attachmentType. */
-            public _attachmentType?: "attachmentType";
-
-            /** InvoiceMessage _attachmentMimetype. */
-            public _attachmentMimetype?: "attachmentMimetype";
-
-            /** InvoiceMessage _attachmentMediaKey. */
-            public _attachmentMediaKey?: "attachmentMediaKey";
-
-            /** InvoiceMessage _attachmentMediaKeyTimestamp. */
-            public _attachmentMediaKeyTimestamp?: "attachmentMediaKeyTimestamp";
-
-            /** InvoiceMessage _attachmentFileSha256. */
-            public _attachmentFileSha256?: "attachmentFileSha256";
-
-            /** InvoiceMessage _attachmentFileEncSha256. */
-            public _attachmentFileEncSha256?: "attachmentFileEncSha256";
-
-            /** InvoiceMessage _attachmentDirectPath. */
-            public _attachmentDirectPath?: "attachmentDirectPath";
-
-            /** InvoiceMessage _attachmentJpegThumbnail. */
-            public _attachmentJpegThumbnail?: "attachmentJpegThumbnail";
-
             /**
              * Creates a new InvoiceMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -15927,15 +14914,6 @@ export namespace E2E {
 
             /** KeepInChatMessage timestampMs. */
             public timestampMs?: (number|Long|null);
-
-            /** KeepInChatMessage _key. */
-            public _key?: "key";
-
-            /** KeepInChatMessage _keepType. */
-            public _keepType?: "keepType";
-
-            /** KeepInChatMessage _timestampMs. */
-            public _timestampMs?: "timestampMs";
 
             /**
              * Creates a new KeepInChatMessage instance using the specified properties.
@@ -16081,33 +15059,6 @@ export namespace E2E {
 
             /** LinkPreviewMetadata videoContentCaption. */
             public videoContentCaption?: (string|null);
-
-            /** LinkPreviewMetadata _paymentLinkMetadata. */
-            public _paymentLinkMetadata?: "paymentLinkMetadata";
-
-            /** LinkPreviewMetadata _urlMetadata. */
-            public _urlMetadata?: "urlMetadata";
-
-            /** LinkPreviewMetadata _fbExperimentId. */
-            public _fbExperimentId?: "fbExperimentId";
-
-            /** LinkPreviewMetadata _linkMediaDuration. */
-            public _linkMediaDuration?: "linkMediaDuration";
-
-            /** LinkPreviewMetadata _socialMediaPostType. */
-            public _socialMediaPostType?: "socialMediaPostType";
-
-            /** LinkPreviewMetadata _linkInlineVideoMuted. */
-            public _linkInlineVideoMuted?: "linkInlineVideoMuted";
-
-            /** LinkPreviewMetadata _videoContentUrl. */
-            public _videoContentUrl?: "videoContentUrl";
-
-            /** LinkPreviewMetadata _musicMetadata. */
-            public _musicMetadata?: "musicMetadata";
-
-            /** LinkPreviewMetadata _videoContentCaption. */
-            public _videoContentCaption?: "videoContentCaption";
 
             /**
              * Creates a new LinkPreviewMetadata instance using the specified properties.
@@ -16261,27 +15212,6 @@ export namespace E2E {
             /** ListMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** ListMessage _title. */
-            public _title?: "title";
-
-            /** ListMessage _description. */
-            public _description?: "description";
-
-            /** ListMessage _buttonText. */
-            public _buttonText?: "buttonText";
-
-            /** ListMessage _listType. */
-            public _listType?: "listType";
-
-            /** ListMessage _productListInfo. */
-            public _productListInfo?: "productListInfo";
-
-            /** ListMessage _footerText. */
-            public _footerText?: "footerText";
-
-            /** ListMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new ListMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -16388,9 +15318,6 @@ export namespace E2E {
                 /** Product productId. */
                 public productId?: (string|null);
 
-                /** Product _productId. */
-                public _productId?: "productId";
-
                 /**
                  * Creates a new Product instance using the specified properties.
                  * @param [properties] Properties to set
@@ -16493,12 +15420,6 @@ export namespace E2E {
 
                 /** ProductListHeaderImage jpegThumbnail. */
                 public jpegThumbnail?: (Uint8Array|null);
-
-                /** ProductListHeaderImage _productId. */
-                public _productId?: "productId";
-
-                /** ProductListHeaderImage _jpegThumbnail. */
-                public _jpegThumbnail?: "jpegThumbnail";
 
                 /**
                  * Creates a new ProductListHeaderImage instance using the specified properties.
@@ -16609,12 +15530,6 @@ export namespace E2E {
                 /** ProductListInfo businessOwnerJid. */
                 public businessOwnerJid?: (string|null);
 
-                /** ProductListInfo _headerImage. */
-                public _headerImage?: "headerImage";
-
-                /** ProductListInfo _businessOwnerJid. */
-                public _businessOwnerJid?: "businessOwnerJid";
-
                 /**
                  * Creates a new ProductListInfo instance using the specified properties.
                  * @param [properties] Properties to set
@@ -16717,9 +15632,6 @@ export namespace E2E {
 
                 /** ProductSection products. */
                 public products: E2E.Message.ListMessage.IProduct[];
-
-                /** ProductSection _title. */
-                public _title?: "title";
 
                 /**
                  * Creates a new ProductSection instance using the specified properties.
@@ -16830,15 +15742,6 @@ export namespace E2E {
                 /** Row rowId. */
                 public rowId?: (string|null);
 
-                /** Row _title. */
-                public _title?: "title";
-
-                /** Row _description. */
-                public _description?: "description";
-
-                /** Row _rowId. */
-                public _rowId?: "rowId";
-
                 /**
                  * Creates a new Row instance using the specified properties.
                  * @param [properties] Properties to set
@@ -16941,9 +15844,6 @@ export namespace E2E {
 
                 /** Section rows. */
                 public rows: E2E.Message.ListMessage.IRow[];
-
-                /** Section _title. */
-                public _title?: "title";
 
                 /**
                  * Creates a new Section instance using the specified properties.
@@ -17067,21 +15967,6 @@ export namespace E2E {
             /** ListResponseMessage description. */
             public description?: (string|null);
 
-            /** ListResponseMessage _title. */
-            public _title?: "title";
-
-            /** ListResponseMessage _listType. */
-            public _listType?: "listType";
-
-            /** ListResponseMessage _singleSelectReply. */
-            public _singleSelectReply?: "singleSelectReply";
-
-            /** ListResponseMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** ListResponseMessage _description. */
-            public _description?: "description";
-
             /**
              * Creates a new ListResponseMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -17186,9 +16071,6 @@ export namespace E2E {
 
                 /** SingleSelectReply selectedRowId. */
                 public selectedRowId?: (string|null);
-
-                /** SingleSelectReply _selectedRowId. */
-                public _selectedRowId?: "selectedRowId";
 
                 /**
                  * Creates a new SingleSelectReply instance using the specified properties.
@@ -17341,36 +16223,6 @@ export namespace E2E {
 
             /** LiveLocationMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
-
-            /** LiveLocationMessage _degreesLatitude. */
-            public _degreesLatitude?: "degreesLatitude";
-
-            /** LiveLocationMessage _degreesLongitude. */
-            public _degreesLongitude?: "degreesLongitude";
-
-            /** LiveLocationMessage _accuracyInMeters. */
-            public _accuracyInMeters?: "accuracyInMeters";
-
-            /** LiveLocationMessage _speedInMps. */
-            public _speedInMps?: "speedInMps";
-
-            /** LiveLocationMessage _degreesClockwiseFromMagneticNorth. */
-            public _degreesClockwiseFromMagneticNorth?: "degreesClockwiseFromMagneticNorth";
-
-            /** LiveLocationMessage _caption. */
-            public _caption?: "caption";
-
-            /** LiveLocationMessage _sequenceNumber. */
-            public _sequenceNumber?: "sequenceNumber";
-
-            /** LiveLocationMessage _timeOffset. */
-            public _timeOffset?: "timeOffset";
-
-            /** LiveLocationMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** LiveLocationMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
 
             /**
              * Creates a new LiveLocationMessage instance using the specified properties.
@@ -17535,42 +16387,6 @@ export namespace E2E {
             /** LocationMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** LocationMessage _degreesLatitude. */
-            public _degreesLatitude?: "degreesLatitude";
-
-            /** LocationMessage _degreesLongitude. */
-            public _degreesLongitude?: "degreesLongitude";
-
-            /** LocationMessage _name. */
-            public _name?: "name";
-
-            /** LocationMessage _address. */
-            public _address?: "address";
-
-            /** LocationMessage _url. */
-            public _url?: "url";
-
-            /** LocationMessage _isLive. */
-            public _isLive?: "isLive";
-
-            /** LocationMessage _accuracyInMeters. */
-            public _accuracyInMeters?: "accuracyInMeters";
-
-            /** LocationMessage _speedInMps. */
-            public _speedInMps?: "speedInMps";
-
-            /** LocationMessage _degreesClockwiseFromMagneticNorth. */
-            public _degreesClockwiseFromMagneticNorth?: "degreesClockwiseFromMagneticNorth";
-
-            /** LocationMessage _comment. */
-            public _comment?: "comment";
-
-            /** LocationMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** LocationMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new LocationMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -17672,9 +16488,6 @@ export namespace E2E {
 
             /** MMSThumbnailMetadata thumbnailWidth */
             thumbnailWidth?: (number|null);
-
-            /** MMSThumbnailMetadata mediaKeyDomain */
-            mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
         }
 
         /** Represents a MMSThumbnailMetadata. */
@@ -17706,33 +16519,6 @@ export namespace E2E {
 
             /** MMSThumbnailMetadata thumbnailWidth. */
             public thumbnailWidth?: (number|null);
-
-            /** MMSThumbnailMetadata mediaKeyDomain. */
-            public mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
-            /** MMSThumbnailMetadata _thumbnailDirectPath. */
-            public _thumbnailDirectPath?: "thumbnailDirectPath";
-
-            /** MMSThumbnailMetadata _thumbnailSha256. */
-            public _thumbnailSha256?: "thumbnailSha256";
-
-            /** MMSThumbnailMetadata _thumbnailEncSha256. */
-            public _thumbnailEncSha256?: "thumbnailEncSha256";
-
-            /** MMSThumbnailMetadata _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** MMSThumbnailMetadata _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** MMSThumbnailMetadata _thumbnailHeight. */
-            public _thumbnailHeight?: "thumbnailHeight";
-
-            /** MMSThumbnailMetadata _thumbnailWidth. */
-            public _thumbnailWidth?: "thumbnailWidth";
-
-            /** MMSThumbnailMetadata _mediaKeyDomain. */
-            public _mediaKeyDomain?: "mediaKeyDomain";
 
             /**
              * Creates a new MMSThumbnailMetadata instance using the specified properties.
@@ -17812,15 +16598,6 @@ export namespace E2E {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
-        /** MediaKeyDomain enum. */
-        enum MediaKeyDomain {
-            UNSET = 0,
-            E2EE_CHAT = 1,
-            STATUS = 2,
-            CAPI = 3,
-            BOT = 4
-        }
-
         /** Properties of a MessageHistoryBundle. */
         interface IMessageHistoryBundle {
 
@@ -17881,30 +16658,6 @@ export namespace E2E {
 
             /** MessageHistoryBundle messageHistoryMetadata. */
             public messageHistoryMetadata?: (E2E.Message.IMessageHistoryMetadata|null);
-
-            /** MessageHistoryBundle _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** MessageHistoryBundle _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** MessageHistoryBundle _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** MessageHistoryBundle _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** MessageHistoryBundle _directPath. */
-            public _directPath?: "directPath";
-
-            /** MessageHistoryBundle _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** MessageHistoryBundle _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** MessageHistoryBundle _messageHistoryMetadata. */
-            public _messageHistoryMetadata?: "messageHistoryMetadata";
 
             /**
              * Creates a new MessageHistoryBundle instance using the specified properties.
@@ -17990,11 +16743,17 @@ export namespace E2E {
             /** MessageHistoryMetadata historyReceivers */
             historyReceivers?: (string[]|null);
 
-            /** MessageHistoryMetadata oldestMessageTimestamp */
-            oldestMessageTimestamp?: (number|Long|null);
+            /** MessageHistoryMetadata oldestMessageTimestampInWindow */
+            oldestMessageTimestampInWindow?: (number|Long|null);
 
             /** MessageHistoryMetadata messageCount */
             messageCount?: (number|Long|null);
+
+            /** MessageHistoryMetadata nonHistoryReceivers */
+            nonHistoryReceivers?: (string[]|null);
+
+            /** MessageHistoryMetadata oldestMessageTimestampInBundle */
+            oldestMessageTimestampInBundle?: (number|Long|null);
         }
 
         /** Represents a MessageHistoryMetadata. */
@@ -18009,17 +16768,17 @@ export namespace E2E {
             /** MessageHistoryMetadata historyReceivers. */
             public historyReceivers: string[];
 
-            /** MessageHistoryMetadata oldestMessageTimestamp. */
-            public oldestMessageTimestamp?: (number|Long|null);
+            /** MessageHistoryMetadata oldestMessageTimestampInWindow. */
+            public oldestMessageTimestampInWindow?: (number|Long|null);
 
             /** MessageHistoryMetadata messageCount. */
             public messageCount?: (number|Long|null);
 
-            /** MessageHistoryMetadata _oldestMessageTimestamp. */
-            public _oldestMessageTimestamp?: "oldestMessageTimestamp";
+            /** MessageHistoryMetadata nonHistoryReceivers. */
+            public nonHistoryReceivers: string[];
 
-            /** MessageHistoryMetadata _messageCount. */
-            public _messageCount?: "messageCount";
+            /** MessageHistoryMetadata oldestMessageTimestampInBundle. */
+            public oldestMessageTimestampInBundle?: (number|Long|null);
 
             /**
              * Creates a new MessageHistoryMetadata instance using the specified properties.
@@ -18123,12 +16882,6 @@ export namespace E2E {
 
             /** MessageHistoryNotice messageHistoryMetadata. */
             public messageHistoryMetadata?: (E2E.Message.IMessageHistoryMetadata|null);
-
-            /** MessageHistoryNotice _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** MessageHistoryNotice _messageHistoryMetadata. */
-            public _messageHistoryMetadata?: "messageHistoryMetadata";
 
             /**
              * Creates a new MessageHistoryNotice instance using the specified properties.
@@ -18257,24 +17010,6 @@ export namespace E2E {
             /** NewsletterAdminInviteMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** NewsletterAdminInviteMessage _newsletterJid. */
-            public _newsletterJid?: "newsletterJid";
-
-            /** NewsletterAdminInviteMessage _newsletterName. */
-            public _newsletterName?: "newsletterName";
-
-            /** NewsletterAdminInviteMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** NewsletterAdminInviteMessage _caption. */
-            public _caption?: "caption";
-
-            /** NewsletterAdminInviteMessage _inviteExpiration. */
-            public _inviteExpiration?: "inviteExpiration";
-
-            /** NewsletterAdminInviteMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new NewsletterAdminInviteMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -18395,21 +17130,6 @@ export namespace E2E {
 
             /** NewsletterFollowerInviteMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
-
-            /** NewsletterFollowerInviteMessage _newsletterJid. */
-            public _newsletterJid?: "newsletterJid";
-
-            /** NewsletterFollowerInviteMessage _newsletterName. */
-            public _newsletterName?: "newsletterName";
-
-            /** NewsletterFollowerInviteMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** NewsletterFollowerInviteMessage _caption. */
-            public _caption?: "caption";
-
-            /** NewsletterFollowerInviteMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
 
             /**
              * Creates a new NewsletterFollowerInviteMessage instance using the specified properties.
@@ -18592,51 +17312,6 @@ export namespace E2E {
             /** OrderMessage catalogType. */
             public catalogType?: (string|null);
 
-            /** OrderMessage _orderId. */
-            public _orderId?: "orderId";
-
-            /** OrderMessage _thumbnail. */
-            public _thumbnail?: "thumbnail";
-
-            /** OrderMessage _itemCount. */
-            public _itemCount?: "itemCount";
-
-            /** OrderMessage _status. */
-            public _status?: "status";
-
-            /** OrderMessage _surface. */
-            public _surface?: "surface";
-
-            /** OrderMessage _message. */
-            public _message?: "message";
-
-            /** OrderMessage _orderTitle. */
-            public _orderTitle?: "orderTitle";
-
-            /** OrderMessage _sellerJid. */
-            public _sellerJid?: "sellerJid";
-
-            /** OrderMessage _token. */
-            public _token?: "token";
-
-            /** OrderMessage _totalAmount1000. */
-            public _totalAmount1000?: "totalAmount1000";
-
-            /** OrderMessage _totalCurrencyCode. */
-            public _totalCurrencyCode?: "totalCurrencyCode";
-
-            /** OrderMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** OrderMessage _messageVersion. */
-            public _messageVersion?: "messageVersion";
-
-            /** OrderMessage _orderRequestMessageId. */
-            public _orderRequestMessageId?: "orderRequestMessageId";
-
-            /** OrderMessage _catalogType. */
-            public _catalogType?: "catalogType";
-
             /**
              * Creates a new OrderMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -18755,12 +17430,6 @@ export namespace E2E {
             /** PaymentExtendedMetadata platform. */
             public platform?: (string|null);
 
-            /** PaymentExtendedMetadata _type. */
-            public _type?: "type";
-
-            /** PaymentExtendedMetadata _platform. */
-            public _platform?: "platform";
-
             /**
              * Creates a new PaymentExtendedMetadata instance using the specified properties.
              * @param [properties] Properties to set
@@ -18847,6 +17516,15 @@ export namespace E2E {
 
             /** PaymentInviteMessage expiryTimestamp */
             expiryTimestamp?: (number|Long|null);
+
+            /** PaymentInviteMessage incentiveEligible */
+            incentiveEligible?: (boolean|null);
+
+            /** PaymentInviteMessage referralId */
+            referralId?: (string|null);
+
+            /** PaymentInviteMessage inviteType */
+            inviteType?: (E2E.Message.PaymentInviteMessage.InviteType|null);
         }
 
         /** Represents a PaymentInviteMessage. */
@@ -18864,11 +17542,14 @@ export namespace E2E {
             /** PaymentInviteMessage expiryTimestamp. */
             public expiryTimestamp?: (number|Long|null);
 
-            /** PaymentInviteMessage _serviceType. */
-            public _serviceType?: "serviceType";
+            /** PaymentInviteMessage incentiveEligible. */
+            public incentiveEligible?: (boolean|null);
 
-            /** PaymentInviteMessage _expiryTimestamp. */
-            public _expiryTimestamp?: "expiryTimestamp";
+            /** PaymentInviteMessage referralId. */
+            public referralId?: (string|null);
+
+            /** PaymentInviteMessage inviteType. */
+            public inviteType?: (E2E.Message.PaymentInviteMessage.InviteType|null);
 
             /**
              * Creates a new PaymentInviteMessage instance using the specified properties.
@@ -18950,6 +17631,12 @@ export namespace E2E {
 
         namespace PaymentInviteMessage {
 
+            /** InviteType enum. */
+            enum InviteType {
+                DEFAULT = 0,
+                MAPPER = 1
+            }
+
             /** ServiceType enum. */
             enum ServiceType {
                 UNKNOWN = 0,
@@ -18989,15 +17676,6 @@ export namespace E2E {
 
             /** PaymentLinkMetadata provider. */
             public provider?: (E2E.Message.PaymentLinkMetadata.IPaymentLinkProvider|null);
-
-            /** PaymentLinkMetadata _button. */
-            public _button?: "button";
-
-            /** PaymentLinkMetadata _header. */
-            public _header?: "header";
-
-            /** PaymentLinkMetadata _provider. */
-            public _provider?: "provider";
 
             /**
              * Creates a new PaymentLinkMetadata instance using the specified properties.
@@ -19098,9 +17776,6 @@ export namespace E2E {
                 /** PaymentLinkButton displayText. */
                 public displayText?: (string|null);
 
-                /** PaymentLinkButton _displayText. */
-                public _displayText?: "displayText";
-
                 /**
                  * Creates a new PaymentLinkButton instance using the specified properties.
                  * @param [properties] Properties to set
@@ -19197,9 +17872,6 @@ export namespace E2E {
 
                 /** PaymentLinkHeader headerType. */
                 public headerType?: (E2E.Message.PaymentLinkMetadata.PaymentLinkHeader.PaymentLinkHeaderType|null);
-
-                /** PaymentLinkHeader _headerType. */
-                public _headerType?: "headerType";
 
                 /**
                  * Creates a new PaymentLinkHeader instance using the specified properties.
@@ -19306,9 +17978,6 @@ export namespace E2E {
 
                 /** PaymentLinkProvider paramsJson. */
                 public paramsJson?: (string|null);
-
-                /** PaymentLinkProvider _paramsJson. */
-                public _paramsJson?: "paramsJson";
 
                 /**
                  * Creates a new PaymentLinkProvider instance using the specified properties.
@@ -19418,6 +18087,15 @@ export namespace E2E {
 
             /** PeerDataOperationRequestMessage galaxyFlowAction */
             galaxyFlowAction?: (E2E.Message.PeerDataOperationRequestMessage.IGalaxyFlowAction|null);
+
+            /** PeerDataOperationRequestMessage companionCanonicalUserNonceFetchRequest */
+            companionCanonicalUserNonceFetchRequest?: (E2E.Message.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest|null);
+
+            /** PeerDataOperationRequestMessage bizBroadcastInsightsContactListRequest */
+            bizBroadcastInsightsContactListRequest?: (E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest|null);
+
+            /** PeerDataOperationRequestMessage bizBroadcastInsightsRefreshRequest */
+            bizBroadcastInsightsRefreshRequest?: (E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest|null);
         }
 
         /** Represents a PeerDataOperationRequestMessage. */
@@ -19456,23 +18134,14 @@ export namespace E2E {
             /** PeerDataOperationRequestMessage galaxyFlowAction. */
             public galaxyFlowAction?: (E2E.Message.PeerDataOperationRequestMessage.IGalaxyFlowAction|null);
 
-            /** PeerDataOperationRequestMessage _peerDataOperationRequestType. */
-            public _peerDataOperationRequestType?: "peerDataOperationRequestType";
+            /** PeerDataOperationRequestMessage companionCanonicalUserNonceFetchRequest. */
+            public companionCanonicalUserNonceFetchRequest?: (E2E.Message.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest|null);
 
-            /** PeerDataOperationRequestMessage _historySyncOnDemandRequest. */
-            public _historySyncOnDemandRequest?: "historySyncOnDemandRequest";
+            /** PeerDataOperationRequestMessage bizBroadcastInsightsContactListRequest. */
+            public bizBroadcastInsightsContactListRequest?: (E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest|null);
 
-            /** PeerDataOperationRequestMessage _fullHistorySyncOnDemandRequest. */
-            public _fullHistorySyncOnDemandRequest?: "fullHistorySyncOnDemandRequest";
-
-            /** PeerDataOperationRequestMessage _syncdCollectionFatalRecoveryRequest. */
-            public _syncdCollectionFatalRecoveryRequest?: "syncdCollectionFatalRecoveryRequest";
-
-            /** PeerDataOperationRequestMessage _historySyncChunkRetryRequest. */
-            public _historySyncChunkRetryRequest?: "historySyncChunkRetryRequest";
-
-            /** PeerDataOperationRequestMessage _galaxyFlowAction. */
-            public _galaxyFlowAction?: "galaxyFlowAction";
+            /** PeerDataOperationRequestMessage bizBroadcastInsightsRefreshRequest. */
+            public bizBroadcastInsightsRefreshRequest?: (E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest|null);
 
             /**
              * Creates a new PeerDataOperationRequestMessage instance using the specified properties.
@@ -19554,6 +18223,297 @@ export namespace E2E {
 
         namespace PeerDataOperationRequestMessage {
 
+            /** Properties of a BizBroadcastInsightsContactListRequest. */
+            interface IBizBroadcastInsightsContactListRequest {
+
+                /** BizBroadcastInsightsContactListRequest campaignId */
+                campaignId?: (string|null);
+            }
+
+            /** Represents a BizBroadcastInsightsContactListRequest. */
+            class BizBroadcastInsightsContactListRequest implements IBizBroadcastInsightsContactListRequest {
+
+                /**
+                 * Constructs a new BizBroadcastInsightsContactListRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest);
+
+                /** BizBroadcastInsightsContactListRequest campaignId. */
+                public campaignId?: (string|null);
+
+                /**
+                 * Creates a new BizBroadcastInsightsContactListRequest instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns BizBroadcastInsightsContactListRequest instance
+                 */
+                public static create(properties?: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest;
+
+                /**
+                 * Encodes the specified BizBroadcastInsightsContactListRequest message. Does not implicitly {@link E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest.verify|verify} messages.
+                 * @param message BizBroadcastInsightsContactListRequest message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified BizBroadcastInsightsContactListRequest message, length delimited. Does not implicitly {@link E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest.verify|verify} messages.
+                 * @param message BizBroadcastInsightsContactListRequest message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a BizBroadcastInsightsContactListRequest message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns BizBroadcastInsightsContactListRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest;
+
+                /**
+                 * Decodes a BizBroadcastInsightsContactListRequest message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns BizBroadcastInsightsContactListRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest;
+
+                /**
+                 * Verifies a BizBroadcastInsightsContactListRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a BizBroadcastInsightsContactListRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns BizBroadcastInsightsContactListRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest;
+
+                /**
+                 * Creates a plain object from a BizBroadcastInsightsContactListRequest message. Also converts values to other types if specified.
+                 * @param message BizBroadcastInsightsContactListRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this BizBroadcastInsightsContactListRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for BizBroadcastInsightsContactListRequest
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a BizBroadcastInsightsRefreshRequest. */
+            interface IBizBroadcastInsightsRefreshRequest {
+
+                /** BizBroadcastInsightsRefreshRequest campaignId */
+                campaignId?: (string|null);
+            }
+
+            /** Represents a BizBroadcastInsightsRefreshRequest. */
+            class BizBroadcastInsightsRefreshRequest implements IBizBroadcastInsightsRefreshRequest {
+
+                /**
+                 * Constructs a new BizBroadcastInsightsRefreshRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest);
+
+                /** BizBroadcastInsightsRefreshRequest campaignId. */
+                public campaignId?: (string|null);
+
+                /**
+                 * Creates a new BizBroadcastInsightsRefreshRequest instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns BizBroadcastInsightsRefreshRequest instance
+                 */
+                public static create(properties?: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest;
+
+                /**
+                 * Encodes the specified BizBroadcastInsightsRefreshRequest message. Does not implicitly {@link E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest.verify|verify} messages.
+                 * @param message BizBroadcastInsightsRefreshRequest message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified BizBroadcastInsightsRefreshRequest message, length delimited. Does not implicitly {@link E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest.verify|verify} messages.
+                 * @param message BizBroadcastInsightsRefreshRequest message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: E2E.Message.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a BizBroadcastInsightsRefreshRequest message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns BizBroadcastInsightsRefreshRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest;
+
+                /**
+                 * Decodes a BizBroadcastInsightsRefreshRequest message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns BizBroadcastInsightsRefreshRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest;
+
+                /**
+                 * Verifies a BizBroadcastInsightsRefreshRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a BizBroadcastInsightsRefreshRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns BizBroadcastInsightsRefreshRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest;
+
+                /**
+                 * Creates a plain object from a BizBroadcastInsightsRefreshRequest message. Also converts values to other types if specified.
+                 * @param message BizBroadcastInsightsRefreshRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: E2E.Message.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this BizBroadcastInsightsRefreshRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for BizBroadcastInsightsRefreshRequest
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a CompanionCanonicalUserNonceFetchRequest. */
+            interface ICompanionCanonicalUserNonceFetchRequest {
+
+                /** CompanionCanonicalUserNonceFetchRequest registrationTraceId */
+                registrationTraceId?: (string|null);
+            }
+
+            /** Represents a CompanionCanonicalUserNonceFetchRequest. */
+            class CompanionCanonicalUserNonceFetchRequest implements ICompanionCanonicalUserNonceFetchRequest {
+
+                /**
+                 * Constructs a new CompanionCanonicalUserNonceFetchRequest.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: E2E.Message.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest);
+
+                /** CompanionCanonicalUserNonceFetchRequest registrationTraceId. */
+                public registrationTraceId?: (string|null);
+
+                /**
+                 * Creates a new CompanionCanonicalUserNonceFetchRequest instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns CompanionCanonicalUserNonceFetchRequest instance
+                 */
+                public static create(properties?: E2E.Message.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest): E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest;
+
+                /**
+                 * Encodes the specified CompanionCanonicalUserNonceFetchRequest message. Does not implicitly {@link E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest.verify|verify} messages.
+                 * @param message CompanionCanonicalUserNonceFetchRequest message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: E2E.Message.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified CompanionCanonicalUserNonceFetchRequest message, length delimited. Does not implicitly {@link E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest.verify|verify} messages.
+                 * @param message CompanionCanonicalUserNonceFetchRequest message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: E2E.Message.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a CompanionCanonicalUserNonceFetchRequest message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns CompanionCanonicalUserNonceFetchRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest;
+
+                /**
+                 * Decodes a CompanionCanonicalUserNonceFetchRequest message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns CompanionCanonicalUserNonceFetchRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest;
+
+                /**
+                 * Verifies a CompanionCanonicalUserNonceFetchRequest message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CompanionCanonicalUserNonceFetchRequest message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CompanionCanonicalUserNonceFetchRequest
+                 */
+                public static fromObject(object: { [k: string]: any }): E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest;
+
+                /**
+                 * Creates a plain object from a CompanionCanonicalUserNonceFetchRequest message. Also converts values to other types if specified.
+                 * @param message CompanionCanonicalUserNonceFetchRequest
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: E2E.Message.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CompanionCanonicalUserNonceFetchRequest to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for CompanionCanonicalUserNonceFetchRequest
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
             /** Properties of a FullHistorySyncOnDemandRequest. */
             interface IFullHistorySyncOnDemandRequest {
 
@@ -19562,6 +18522,9 @@ export namespace E2E {
 
                 /** FullHistorySyncOnDemandRequest historySyncConfig */
                 historySyncConfig?: (CompanionReg.DeviceProps.IHistorySyncConfig|null);
+
+                /** FullHistorySyncOnDemandRequest fullHistorySyncOnDemandConfig */
+                fullHistorySyncOnDemandConfig?: (E2E.Message.IFullHistorySyncOnDemandConfig|null);
             }
 
             /** Represents a FullHistorySyncOnDemandRequest. */
@@ -19579,11 +18542,8 @@ export namespace E2E {
                 /** FullHistorySyncOnDemandRequest historySyncConfig. */
                 public historySyncConfig?: (CompanionReg.DeviceProps.IHistorySyncConfig|null);
 
-                /** FullHistorySyncOnDemandRequest _requestMetadata. */
-                public _requestMetadata?: "requestMetadata";
-
-                /** FullHistorySyncOnDemandRequest _historySyncConfig. */
-                public _historySyncConfig?: "historySyncConfig";
+                /** FullHistorySyncOnDemandRequest fullHistorySyncOnDemandConfig. */
+                public fullHistorySyncOnDemandConfig?: (E2E.Message.IFullHistorySyncOnDemandConfig|null);
 
                 /**
                  * Creates a new FullHistorySyncOnDemandRequest instance using the specified properties.
@@ -19674,6 +18634,12 @@ export namespace E2E {
 
                 /** GalaxyFlowAction stanzaId */
                 stanzaId?: (string|null);
+
+                /** GalaxyFlowAction galaxyFlowDownloadRequestId */
+                galaxyFlowDownloadRequestId?: (string|null);
+
+                /** GalaxyFlowAction agmId */
+                agmId?: (string|null);
             }
 
             /** Represents a GalaxyFlowAction. */
@@ -19694,14 +18660,11 @@ export namespace E2E {
                 /** GalaxyFlowAction stanzaId. */
                 public stanzaId?: (string|null);
 
-                /** GalaxyFlowAction _type. */
-                public _type?: "type";
+                /** GalaxyFlowAction galaxyFlowDownloadRequestId. */
+                public galaxyFlowDownloadRequestId?: (string|null);
 
-                /** GalaxyFlowAction _flowId. */
-                public _flowId?: "flowId";
-
-                /** GalaxyFlowAction _stanzaId. */
-                public _stanzaId?: "stanzaId";
+                /** GalaxyFlowAction agmId. */
+                public agmId?: (string|null);
 
                 /**
                  * Creates a new GalaxyFlowAction instance using the specified properties.
@@ -19785,7 +18748,8 @@ export namespace E2E {
 
                 /** GalaxyFlowActionType enum. */
                 enum GalaxyFlowActionType {
-                    NOTIFY_LAUNCH = 1
+                    NOTIFY_LAUNCH = 1,
+                    DOWNLOAD_RESPONSES = 2
                 }
             }
 
@@ -19825,18 +18789,6 @@ export namespace E2E {
 
                 /** HistorySyncChunkRetryRequest regenerateChunk. */
                 public regenerateChunk?: (boolean|null);
-
-                /** HistorySyncChunkRetryRequest _syncType. */
-                public _syncType?: "syncType";
-
-                /** HistorySyncChunkRetryRequest _chunkOrder. */
-                public _chunkOrder?: "chunkOrder";
-
-                /** HistorySyncChunkRetryRequest _chunkNotificationId. */
-                public _chunkNotificationId?: "chunkNotificationId";
-
-                /** HistorySyncChunkRetryRequest _regenerateChunk. */
-                public _regenerateChunk?: "regenerateChunk";
 
                 /**
                  * Creates a new HistorySyncChunkRetryRequest instance using the specified properties.
@@ -19965,24 +18917,6 @@ export namespace E2E {
                 /** HistorySyncOnDemandRequest accountLid. */
                 public accountLid?: (string|null);
 
-                /** HistorySyncOnDemandRequest _chatJid. */
-                public _chatJid?: "chatJid";
-
-                /** HistorySyncOnDemandRequest _oldestMsgId. */
-                public _oldestMsgId?: "oldestMsgId";
-
-                /** HistorySyncOnDemandRequest _oldestMsgFromMe. */
-                public _oldestMsgFromMe?: "oldestMsgFromMe";
-
-                /** HistorySyncOnDemandRequest _onDemandMsgCount. */
-                public _onDemandMsgCount?: "onDemandMsgCount";
-
-                /** HistorySyncOnDemandRequest _oldestMsgTimestampMs. */
-                public _oldestMsgTimestampMs?: "oldestMsgTimestampMs";
-
-                /** HistorySyncOnDemandRequest _accountLid. */
-                public _accountLid?: "accountLid";
-
                 /**
                  * Creates a new HistorySyncOnDemandRequest instance using the specified properties.
                  * @param [properties] Properties to set
@@ -20080,9 +19014,6 @@ export namespace E2E {
                 /** PlaceholderMessageResendRequest messageKey. */
                 public messageKey?: (Protocol.IMessageKey|null);
 
-                /** PlaceholderMessageResendRequest _messageKey. */
-                public _messageKey?: "messageKey";
-
                 /**
                  * Creates a new PlaceholderMessageResendRequest instance using the specified properties.
                  * @param [properties] Properties to set
@@ -20179,9 +19110,6 @@ export namespace E2E {
 
                 /** RequestStickerReupload fileSha256. */
                 public fileSha256?: (string|null);
-
-                /** RequestStickerReupload _fileSha256. */
-                public _fileSha256?: "fileSha256";
 
                 /**
                  * Creates a new RequestStickerReupload instance using the specified properties.
@@ -20286,12 +19214,6 @@ export namespace E2E {
                 /** RequestUrlPreview includeHqThumbnail. */
                 public includeHqThumbnail?: (boolean|null);
 
-                /** RequestUrlPreview _url. */
-                public _url?: "url";
-
-                /** RequestUrlPreview _includeHqThumbnail. */
-                public _includeHqThumbnail?: "includeHqThumbnail";
-
                 /**
                  * Creates a new RequestUrlPreview instance using the specified properties.
                  * @param [properties] Properties to set
@@ -20394,12 +19316,6 @@ export namespace E2E {
 
                 /** SyncDCollectionFatalRecoveryRequest timestamp. */
                 public timestamp?: (number|Long|null);
-
-                /** SyncDCollectionFatalRecoveryRequest _collectionName. */
-                public _collectionName?: "collectionName";
-
-                /** SyncDCollectionFatalRecoveryRequest _timestamp. */
-                public _timestamp?: "timestamp";
 
                 /**
                  * Creates a new SyncDCollectionFatalRecoveryRequest instance using the specified properties.
@@ -20510,12 +19426,6 @@ export namespace E2E {
 
             /** PeerDataOperationRequestResponseMessage peerDataOperationResult. */
             public peerDataOperationResult: E2E.Message.PeerDataOperationRequestResponseMessage.IPeerDataOperationResult[];
-
-            /** PeerDataOperationRequestResponseMessage _peerDataOperationRequestType. */
-            public _peerDataOperationRequestType?: "peerDataOperationRequestType";
-
-            /** PeerDataOperationRequestResponseMessage _stanzaId. */
-            public _stanzaId?: "stanzaId";
 
             /**
              * Creates a new PeerDataOperationRequestResponseMessage instance using the specified properties.
@@ -20629,6 +19539,12 @@ export namespace E2E {
 
                 /** PeerDataOperationResult historySyncChunkRetryResponse */
                 historySyncChunkRetryResponse?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IHistorySyncChunkRetryResponse|null);
+
+                /** PeerDataOperationResult flowResponsesCsvBundle */
+                flowResponsesCsvBundle?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle|null);
+
+                /** PeerDataOperationResult bizBroadcastInsightsContactListResponse */
+                bizBroadcastInsightsContactListResponse?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse|null);
             }
 
             /** Represents a PeerDataOperationResult. */
@@ -20670,35 +19586,11 @@ export namespace E2E {
                 /** PeerDataOperationResult historySyncChunkRetryResponse. */
                 public historySyncChunkRetryResponse?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IHistorySyncChunkRetryResponse|null);
 
-                /** PeerDataOperationResult _mediaUploadResult. */
-                public _mediaUploadResult?: "mediaUploadResult";
+                /** PeerDataOperationResult flowResponsesCsvBundle. */
+                public flowResponsesCsvBundle?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle|null);
 
-                /** PeerDataOperationResult _stickerMessage. */
-                public _stickerMessage?: "stickerMessage";
-
-                /** PeerDataOperationResult _linkPreviewResponse. */
-                public _linkPreviewResponse?: "linkPreviewResponse";
-
-                /** PeerDataOperationResult _placeholderMessageResendResponse. */
-                public _placeholderMessageResendResponse?: "placeholderMessageResendResponse";
-
-                /** PeerDataOperationResult _waffleNonceFetchRequestResponse. */
-                public _waffleNonceFetchRequestResponse?: "waffleNonceFetchRequestResponse";
-
-                /** PeerDataOperationResult _fullHistorySyncOnDemandRequestResponse. */
-                public _fullHistorySyncOnDemandRequestResponse?: "fullHistorySyncOnDemandRequestResponse";
-
-                /** PeerDataOperationResult _companionMetaNonceFetchRequestResponse. */
-                public _companionMetaNonceFetchRequestResponse?: "companionMetaNonceFetchRequestResponse";
-
-                /** PeerDataOperationResult _syncdSnapshotFatalRecoveryResponse. */
-                public _syncdSnapshotFatalRecoveryResponse?: "syncdSnapshotFatalRecoveryResponse";
-
-                /** PeerDataOperationResult _companionCanonicalUserNonceFetchRequestResponse. */
-                public _companionCanonicalUserNonceFetchRequestResponse?: "companionCanonicalUserNonceFetchRequestResponse";
-
-                /** PeerDataOperationResult _historySyncChunkRetryResponse. */
-                public _historySyncChunkRetryResponse?: "historySyncChunkRetryResponse";
+                /** PeerDataOperationResult bizBroadcastInsightsContactListResponse. */
+                public bizBroadcastInsightsContactListResponse?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse|null);
 
                 /**
                  * Creates a new PeerDataOperationResult instance using the specified properties.
@@ -20780,6 +19672,218 @@ export namespace E2E {
 
             namespace PeerDataOperationResult {
 
+                /** Properties of a BizBroadcastInsightsContactListResponse. */
+                interface IBizBroadcastInsightsContactListResponse {
+
+                    /** BizBroadcastInsightsContactListResponse campaignId */
+                    campaignId?: (string|null);
+
+                    /** BizBroadcastInsightsContactListResponse timestampMs */
+                    timestampMs?: (number|Long|null);
+
+                    /** BizBroadcastInsightsContactListResponse contacts */
+                    contacts?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState[]|null);
+                }
+
+                /** Represents a BizBroadcastInsightsContactListResponse. */
+                class BizBroadcastInsightsContactListResponse implements IBizBroadcastInsightsContactListResponse {
+
+                    /**
+                     * Constructs a new BizBroadcastInsightsContactListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse);
+
+                    /** BizBroadcastInsightsContactListResponse campaignId. */
+                    public campaignId?: (string|null);
+
+                    /** BizBroadcastInsightsContactListResponse timestampMs. */
+                    public timestampMs?: (number|Long|null);
+
+                    /** BizBroadcastInsightsContactListResponse contacts. */
+                    public contacts: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState[];
+
+                    /**
+                     * Creates a new BizBroadcastInsightsContactListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BizBroadcastInsightsContactListResponse instance
+                     */
+                    public static create(properties?: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse;
+
+                    /**
+                     * Encodes the specified BizBroadcastInsightsContactListResponse message. Does not implicitly {@link E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse.verify|verify} messages.
+                     * @param message BizBroadcastInsightsContactListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BizBroadcastInsightsContactListResponse message, length delimited. Does not implicitly {@link E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse.verify|verify} messages.
+                     * @param message BizBroadcastInsightsContactListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BizBroadcastInsightsContactListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BizBroadcastInsightsContactListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse;
+
+                    /**
+                     * Decodes a BizBroadcastInsightsContactListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BizBroadcastInsightsContactListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse;
+
+                    /**
+                     * Verifies a BizBroadcastInsightsContactListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BizBroadcastInsightsContactListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BizBroadcastInsightsContactListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse;
+
+                    /**
+                     * Creates a plain object from a BizBroadcastInsightsContactListResponse message. Also converts values to other types if specified.
+                     * @param message BizBroadcastInsightsContactListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BizBroadcastInsightsContactListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BizBroadcastInsightsContactListResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a BizBroadcastInsightsContactState. */
+                interface IBizBroadcastInsightsContactState {
+
+                    /** BizBroadcastInsightsContactState contactJid */
+                    contactJid?: (string|null);
+
+                    /** BizBroadcastInsightsContactState state */
+                    state?: (E2E.Message.InsightDeliveryState|null);
+                }
+
+                /** Represents a BizBroadcastInsightsContactState. */
+                class BizBroadcastInsightsContactState implements IBizBroadcastInsightsContactState {
+
+                    /**
+                     * Constructs a new BizBroadcastInsightsContactState.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState);
+
+                    /** BizBroadcastInsightsContactState contactJid. */
+                    public contactJid?: (string|null);
+
+                    /** BizBroadcastInsightsContactState state. */
+                    public state?: (E2E.Message.InsightDeliveryState|null);
+
+                    /**
+                     * Creates a new BizBroadcastInsightsContactState instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BizBroadcastInsightsContactState instance
+                     */
+                    public static create(properties?: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState;
+
+                    /**
+                     * Encodes the specified BizBroadcastInsightsContactState message. Does not implicitly {@link E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState.verify|verify} messages.
+                     * @param message BizBroadcastInsightsContactState message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BizBroadcastInsightsContactState message, length delimited. Does not implicitly {@link E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState.verify|verify} messages.
+                     * @param message BizBroadcastInsightsContactState message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BizBroadcastInsightsContactState message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BizBroadcastInsightsContactState
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState;
+
+                    /**
+                     * Decodes a BizBroadcastInsightsContactState message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BizBroadcastInsightsContactState
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState;
+
+                    /**
+                     * Verifies a BizBroadcastInsightsContactState message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BizBroadcastInsightsContactState message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BizBroadcastInsightsContactState
+                     */
+                    public static fromObject(object: { [k: string]: any }): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState;
+
+                    /**
+                     * Creates a plain object from a BizBroadcastInsightsContactState message. Also converts values to other types if specified.
+                     * @param message BizBroadcastInsightsContactState
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BizBroadcastInsightsContactState to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for BizBroadcastInsightsContactState
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
                 /** Properties of a CompanionCanonicalUserNonceFetchResponse. */
                 interface ICompanionCanonicalUserNonceFetchResponse {
 
@@ -20810,15 +19914,6 @@ export namespace E2E {
 
                     /** CompanionCanonicalUserNonceFetchResponse forceRefresh. */
                     public forceRefresh?: (boolean|null);
-
-                    /** CompanionCanonicalUserNonceFetchResponse _nonce. */
-                    public _nonce?: "nonce";
-
-                    /** CompanionCanonicalUserNonceFetchResponse _waFbid. */
-                    public _waFbid?: "waFbid";
-
-                    /** CompanionCanonicalUserNonceFetchResponse _forceRefresh. */
-                    public _forceRefresh?: "forceRefresh";
 
                     /**
                      * Creates a new CompanionCanonicalUserNonceFetchResponse instance using the specified properties.
@@ -20917,9 +20012,6 @@ export namespace E2E {
                     /** CompanionMetaNonceFetchResponse nonce. */
                     public nonce?: (string|null);
 
-                    /** CompanionMetaNonceFetchResponse _nonce. */
-                    public _nonce?: "nonce";
-
                     /**
                      * Creates a new CompanionMetaNonceFetchResponse instance using the specified properties.
                      * @param [properties] Properties to set
@@ -20998,6 +20090,157 @@ export namespace E2E {
                     public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
+                /** Properties of a FlowResponsesCsvBundle. */
+                interface IFlowResponsesCsvBundle {
+
+                    /** FlowResponsesCsvBundle flowId */
+                    flowId?: (string|null);
+
+                    /** FlowResponsesCsvBundle galaxyFlowDownloadRequestId */
+                    galaxyFlowDownloadRequestId?: (string|null);
+
+                    /** FlowResponsesCsvBundle fileName */
+                    fileName?: (string|null);
+
+                    /** FlowResponsesCsvBundle mimetype */
+                    mimetype?: (string|null);
+
+                    /** FlowResponsesCsvBundle fileSha256 */
+                    fileSha256?: (Uint8Array|null);
+
+                    /** FlowResponsesCsvBundle mediaKey */
+                    mediaKey?: (Uint8Array|null);
+
+                    /** FlowResponsesCsvBundle fileEncSha256 */
+                    fileEncSha256?: (Uint8Array|null);
+
+                    /** FlowResponsesCsvBundle directPath */
+                    directPath?: (string|null);
+
+                    /** FlowResponsesCsvBundle mediaKeyTimestamp */
+                    mediaKeyTimestamp?: (number|Long|null);
+
+                    /** FlowResponsesCsvBundle fileLength */
+                    fileLength?: (number|Long|null);
+                }
+
+                /** Represents a FlowResponsesCsvBundle. */
+                class FlowResponsesCsvBundle implements IFlowResponsesCsvBundle {
+
+                    /**
+                     * Constructs a new FlowResponsesCsvBundle.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle);
+
+                    /** FlowResponsesCsvBundle flowId. */
+                    public flowId?: (string|null);
+
+                    /** FlowResponsesCsvBundle galaxyFlowDownloadRequestId. */
+                    public galaxyFlowDownloadRequestId?: (string|null);
+
+                    /** FlowResponsesCsvBundle fileName. */
+                    public fileName?: (string|null);
+
+                    /** FlowResponsesCsvBundle mimetype. */
+                    public mimetype?: (string|null);
+
+                    /** FlowResponsesCsvBundle fileSha256. */
+                    public fileSha256?: (Uint8Array|null);
+
+                    /** FlowResponsesCsvBundle mediaKey. */
+                    public mediaKey?: (Uint8Array|null);
+
+                    /** FlowResponsesCsvBundle fileEncSha256. */
+                    public fileEncSha256?: (Uint8Array|null);
+
+                    /** FlowResponsesCsvBundle directPath. */
+                    public directPath?: (string|null);
+
+                    /** FlowResponsesCsvBundle mediaKeyTimestamp. */
+                    public mediaKeyTimestamp?: (number|Long|null);
+
+                    /** FlowResponsesCsvBundle fileLength. */
+                    public fileLength?: (number|Long|null);
+
+                    /**
+                     * Creates a new FlowResponsesCsvBundle instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns FlowResponsesCsvBundle instance
+                     */
+                    public static create(properties?: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle;
+
+                    /**
+                     * Encodes the specified FlowResponsesCsvBundle message. Does not implicitly {@link E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle.verify|verify} messages.
+                     * @param message FlowResponsesCsvBundle message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified FlowResponsesCsvBundle message, length delimited. Does not implicitly {@link E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle.verify|verify} messages.
+                     * @param message FlowResponsesCsvBundle message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a FlowResponsesCsvBundle message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns FlowResponsesCsvBundle
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle;
+
+                    /**
+                     * Decodes a FlowResponsesCsvBundle message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns FlowResponsesCsvBundle
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle;
+
+                    /**
+                     * Verifies a FlowResponsesCsvBundle message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a FlowResponsesCsvBundle message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns FlowResponsesCsvBundle
+                     */
+                    public static fromObject(object: { [k: string]: any }): E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle;
+
+                    /**
+                     * Creates a plain object from a FlowResponsesCsvBundle message. Also converts values to other types if specified.
+                     * @param message FlowResponsesCsvBundle
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this FlowResponsesCsvBundle to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for FlowResponsesCsvBundle
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
                 /** Properties of a FullHistorySyncOnDemandRequestResponse. */
                 interface IFullHistorySyncOnDemandRequestResponse {
 
@@ -21022,12 +20265,6 @@ export namespace E2E {
 
                     /** FullHistorySyncOnDemandRequestResponse responseCode. */
                     public responseCode?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FullHistorySyncOnDemandResponseCode|null);
-
-                    /** FullHistorySyncOnDemandRequestResponse _requestMetadata. */
-                    public _requestMetadata?: "requestMetadata";
-
-                    /** FullHistorySyncOnDemandRequestResponse _responseCode. */
-                    public _responseCode?: "responseCode";
 
                     /**
                      * Creates a new FullHistorySyncOnDemandRequestResponse instance using the specified properties.
@@ -21160,21 +20397,6 @@ export namespace E2E {
 
                     /** HistorySyncChunkRetryResponse canRecover. */
                     public canRecover?: (boolean|null);
-
-                    /** HistorySyncChunkRetryResponse _syncType. */
-                    public _syncType?: "syncType";
-
-                    /** HistorySyncChunkRetryResponse _chunkOrder. */
-                    public _chunkOrder?: "chunkOrder";
-
-                    /** HistorySyncChunkRetryResponse _requestId. */
-                    public _requestId?: "requestId";
-
-                    /** HistorySyncChunkRetryResponse _responseCode. */
-                    public _responseCode?: "responseCode";
-
-                    /** HistorySyncChunkRetryResponse _canRecover. */
-                    public _canRecover?: "canRecover";
 
                     /**
                      * Creates a new HistorySyncChunkRetryResponse instance using the specified properties.
@@ -21325,30 +20547,6 @@ export namespace E2E {
                     /** LinkPreviewResponse previewMetadata. */
                     public previewMetadata?: (E2E.Message.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.LinkPreviewResponse.IPaymentLinkPreviewMetadata|null);
 
-                    /** LinkPreviewResponse _url. */
-                    public _url?: "url";
-
-                    /** LinkPreviewResponse _title. */
-                    public _title?: "title";
-
-                    /** LinkPreviewResponse _description. */
-                    public _description?: "description";
-
-                    /** LinkPreviewResponse _thumbData. */
-                    public _thumbData?: "thumbData";
-
-                    /** LinkPreviewResponse _matchText. */
-                    public _matchText?: "matchText";
-
-                    /** LinkPreviewResponse _previewType. */
-                    public _previewType?: "previewType";
-
-                    /** LinkPreviewResponse _hqThumbnail. */
-                    public _hqThumbnail?: "hqThumbnail";
-
-                    /** LinkPreviewResponse _previewMetadata. */
-                    public _previewMetadata?: "previewMetadata";
-
                     /**
                      * Creates a new LinkPreviewResponse instance using the specified properties.
                      * @param [properties] Properties to set
@@ -21484,27 +20682,6 @@ export namespace E2E {
                         /** LinkPreviewHighQualityThumbnail thumbHeight. */
                         public thumbHeight?: (number|null);
 
-                        /** LinkPreviewHighQualityThumbnail _directPath. */
-                        public _directPath?: "directPath";
-
-                        /** LinkPreviewHighQualityThumbnail _thumbHash. */
-                        public _thumbHash?: "thumbHash";
-
-                        /** LinkPreviewHighQualityThumbnail _encThumbHash. */
-                        public _encThumbHash?: "encThumbHash";
-
-                        /** LinkPreviewHighQualityThumbnail _mediaKey. */
-                        public _mediaKey?: "mediaKey";
-
-                        /** LinkPreviewHighQualityThumbnail _mediaKeyTimestampMs. */
-                        public _mediaKeyTimestampMs?: "mediaKeyTimestampMs";
-
-                        /** LinkPreviewHighQualityThumbnail _thumbWidth. */
-                        public _thumbWidth?: "thumbWidth";
-
-                        /** LinkPreviewHighQualityThumbnail _thumbHeight. */
-                        public _thumbHeight?: "thumbHeight";
-
                         /**
                          * Creates a new LinkPreviewHighQualityThumbnail instance using the specified properties.
                          * @param [properties] Properties to set
@@ -21591,6 +20768,15 @@ export namespace E2E {
 
                         /** PaymentLinkPreviewMetadata providerName */
                         providerName?: (string|null);
+
+                        /** PaymentLinkPreviewMetadata amount */
+                        amount?: (string|null);
+
+                        /** PaymentLinkPreviewMetadata offset */
+                        offset?: (string|null);
+
+                        /** PaymentLinkPreviewMetadata currency */
+                        currency?: (string|null);
                     }
 
                     /** Represents a PaymentLinkPreviewMetadata. */
@@ -21608,11 +20794,14 @@ export namespace E2E {
                         /** PaymentLinkPreviewMetadata providerName. */
                         public providerName?: (string|null);
 
-                        /** PaymentLinkPreviewMetadata _isBusinessVerified. */
-                        public _isBusinessVerified?: "isBusinessVerified";
+                        /** PaymentLinkPreviewMetadata amount. */
+                        public amount?: (string|null);
 
-                        /** PaymentLinkPreviewMetadata _providerName. */
-                        public _providerName?: "providerName";
+                        /** PaymentLinkPreviewMetadata offset. */
+                        public offset?: (string|null);
+
+                        /** PaymentLinkPreviewMetadata currency. */
+                        public currency?: (string|null);
 
                         /**
                          * Creates a new PaymentLinkPreviewMetadata instance using the specified properties.
@@ -21711,9 +20900,6 @@ export namespace E2E {
 
                     /** PlaceholderMessageResendResponse webMessageInfoBytes. */
                     public webMessageInfoBytes?: (Uint8Array|null);
-
-                    /** PlaceholderMessageResendResponse _webMessageInfoBytes. */
-                    public _webMessageInfoBytes?: "webMessageInfoBytes";
 
                     /**
                      * Creates a new PlaceholderMessageResendResponse instance using the specified properties.
@@ -21818,12 +21004,6 @@ export namespace E2E {
                     /** SyncDSnapshotFatalRecoveryResponse isCompressed. */
                     public isCompressed?: (boolean|null);
 
-                    /** SyncDSnapshotFatalRecoveryResponse _collectionSnapshot. */
-                    public _collectionSnapshot?: "collectionSnapshot";
-
-                    /** SyncDSnapshotFatalRecoveryResponse _isCompressed. */
-                    public _isCompressed?: "isCompressed";
-
                     /**
                      * Creates a new SyncDSnapshotFatalRecoveryResponse instance using the specified properties.
                      * @param [properties] Properties to set
@@ -21927,12 +21107,6 @@ export namespace E2E {
                     /** WaffleNonceFetchResponse waEntFbid. */
                     public waEntFbid?: (string|null);
 
-                    /** WaffleNonceFetchResponse _nonce. */
-                    public _nonce?: "nonce";
-
-                    /** WaffleNonceFetchResponse _waEntFbid. */
-                    public _waEntFbid?: "waEntFbid";
-
                     /**
                      * Creates a new WaffleNonceFetchResponse instance using the specified properties.
                      * @param [properties] Properties to set
@@ -22026,7 +21200,9 @@ export namespace E2E {
             COMPANION_SYNCD_SNAPSHOT_FATAL_RECOVERY = 8,
             COMPANION_CANONICAL_USER_NONCE_FETCH = 9,
             HISTORY_SYNC_CHUNK_RETRY = 10,
-            GALAXY_FLOW_ACTION = 11
+            GALAXY_FLOW_ACTION = 11,
+            BUSINESS_BROADCAST_INSIGHTS_DELIVERED_TO = 12,
+            BUSINESS_BROADCAST_INSIGHTS_REFRESH = 13
         }
 
         /** Properties of a PinInChatMessage. */
@@ -22059,15 +21235,6 @@ export namespace E2E {
 
             /** PinInChatMessage senderTimestampMs. */
             public senderTimestampMs?: (number|Long|null);
-
-            /** PinInChatMessage _key. */
-            public _key?: "key";
-
-            /** PinInChatMessage _type. */
-            public _type?: "type";
-
-            /** PinInChatMessage _senderTimestampMs. */
-            public _senderTimestampMs?: "senderTimestampMs";
 
             /**
              * Creates a new PinInChatMessage instance using the specified properties.
@@ -22176,9 +21343,6 @@ export namespace E2E {
             /** PlaceholderMessage type. */
             public type?: (E2E.Message.PlaceholderMessage.PlaceholderType|null);
 
-            /** PlaceholderMessage _type. */
-            public _type?: "type";
-
             /**
              * Creates a new PlaceholderMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -22265,6 +21429,109 @@ export namespace E2E {
             }
         }
 
+        /** Properties of a PollAddOptionMessage. */
+        interface IPollAddOptionMessage {
+
+            /** PollAddOptionMessage pollCreationMessageKey */
+            pollCreationMessageKey?: (Protocol.IMessageKey|null);
+
+            /** PollAddOptionMessage addOption */
+            addOption?: (E2E.Message.PollCreationMessage.IOption|null);
+        }
+
+        /** Represents a PollAddOptionMessage. */
+        class PollAddOptionMessage implements IPollAddOptionMessage {
+
+            /**
+             * Constructs a new PollAddOptionMessage.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: E2E.Message.IPollAddOptionMessage);
+
+            /** PollAddOptionMessage pollCreationMessageKey. */
+            public pollCreationMessageKey?: (Protocol.IMessageKey|null);
+
+            /** PollAddOptionMessage addOption. */
+            public addOption?: (E2E.Message.PollCreationMessage.IOption|null);
+
+            /**
+             * Creates a new PollAddOptionMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns PollAddOptionMessage instance
+             */
+            public static create(properties?: E2E.Message.IPollAddOptionMessage): E2E.Message.PollAddOptionMessage;
+
+            /**
+             * Encodes the specified PollAddOptionMessage message. Does not implicitly {@link E2E.Message.PollAddOptionMessage.verify|verify} messages.
+             * @param message PollAddOptionMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: E2E.Message.IPollAddOptionMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified PollAddOptionMessage message, length delimited. Does not implicitly {@link E2E.Message.PollAddOptionMessage.verify|verify} messages.
+             * @param message PollAddOptionMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: E2E.Message.IPollAddOptionMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a PollAddOptionMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns PollAddOptionMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): E2E.Message.PollAddOptionMessage;
+
+            /**
+             * Decodes a PollAddOptionMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns PollAddOptionMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): E2E.Message.PollAddOptionMessage;
+
+            /**
+             * Verifies a PollAddOptionMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a PollAddOptionMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns PollAddOptionMessage
+             */
+            public static fromObject(object: { [k: string]: any }): E2E.Message.PollAddOptionMessage;
+
+            /**
+             * Creates a plain object from a PollAddOptionMessage message. Also converts values to other types if specified.
+             * @param message PollAddOptionMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: E2E.Message.PollAddOptionMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this PollAddOptionMessage to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for PollAddOptionMessage
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** PollContentType enum. */
         enum PollContentType {
             UNKNOWN = 0,
@@ -22298,6 +21565,15 @@ export namespace E2E {
 
             /** PollCreationMessage correctAnswer */
             correctAnswer?: (E2E.Message.PollCreationMessage.IOption|null);
+
+            /** PollCreationMessage endTime */
+            endTime?: (number|Long|null);
+
+            /** PollCreationMessage hideParticipantName */
+            hideParticipantName?: (boolean|null);
+
+            /** PollCreationMessage allowAddOption */
+            allowAddOption?: (boolean|null);
         }
 
         /** Represents a PollCreationMessage. */
@@ -22333,26 +21609,14 @@ export namespace E2E {
             /** PollCreationMessage correctAnswer. */
             public correctAnswer?: (E2E.Message.PollCreationMessage.IOption|null);
 
-            /** PollCreationMessage _encKey. */
-            public _encKey?: "encKey";
+            /** PollCreationMessage endTime. */
+            public endTime?: (number|Long|null);
 
-            /** PollCreationMessage _name. */
-            public _name?: "name";
+            /** PollCreationMessage hideParticipantName. */
+            public hideParticipantName?: (boolean|null);
 
-            /** PollCreationMessage _selectableOptionsCount. */
-            public _selectableOptionsCount?: "selectableOptionsCount";
-
-            /** PollCreationMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** PollCreationMessage _pollContentType. */
-            public _pollContentType?: "pollContentType";
-
-            /** PollCreationMessage _pollType. */
-            public _pollType?: "pollType";
-
-            /** PollCreationMessage _correctAnswer. */
-            public _correctAnswer?: "correctAnswer";
+            /** PollCreationMessage allowAddOption. */
+            public allowAddOption?: (boolean|null);
 
             /**
              * Creates a new PollCreationMessage instance using the specified properties.
@@ -22459,12 +21723,6 @@ export namespace E2E {
                 /** Option optionHash. */
                 public optionHash?: (string|null);
 
-                /** Option _optionName. */
-                public _optionName?: "optionName";
-
-                /** Option _optionHash. */
-                public _optionHash?: "optionHash";
-
                 /**
                  * Creates a new Option instance using the specified properties.
                  * @param [properties] Properties to set
@@ -22568,12 +21826,6 @@ export namespace E2E {
 
             /** PollEncValue encIv. */
             public encIv?: (Uint8Array|null);
-
-            /** PollEncValue _encPayload. */
-            public _encPayload?: "encPayload";
-
-            /** PollEncValue _encIv. */
-            public _encIv?: "encIv";
 
             /**
              * Creates a new PollEncValue instance using the specified properties.
@@ -22690,15 +21942,6 @@ export namespace E2E {
             /** PollResultSnapshotMessage pollType. */
             public pollType?: (E2E.Message.PollType|null);
 
-            /** PollResultSnapshotMessage _name. */
-            public _name?: "name";
-
-            /** PollResultSnapshotMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** PollResultSnapshotMessage _pollType. */
-            public _pollType?: "pollType";
-
             /**
              * Creates a new PollResultSnapshotMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -22803,12 +22046,6 @@ export namespace E2E {
 
                 /** PollVote optionVoteCount. */
                 public optionVoteCount?: (number|Long|null);
-
-                /** PollVote _optionName. */
-                public _optionName?: "optionName";
-
-                /** PollVote _optionVoteCount. */
-                public _optionVoteCount?: "optionVoteCount";
 
                 /**
                  * Creates a new PollVote instance using the specified properties.
@@ -22931,18 +22168,6 @@ export namespace E2E {
 
             /** PollUpdateMessage senderTimestampMs. */
             public senderTimestampMs?: (number|Long|null);
-
-            /** PollUpdateMessage _pollCreationMessageKey. */
-            public _pollCreationMessageKey?: "pollCreationMessageKey";
-
-            /** PollUpdateMessage _vote. */
-            public _vote?: "vote";
-
-            /** PollUpdateMessage _metadata. */
-            public _metadata?: "metadata";
-
-            /** PollUpdateMessage _senderTimestampMs. */
-            public _senderTimestampMs?: "senderTimestampMs";
 
             /**
              * Creates a new PollUpdateMessage instance using the specified properties.
@@ -23259,24 +22484,6 @@ export namespace E2E {
             /** ProductMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** ProductMessage _product. */
-            public _product?: "product";
-
-            /** ProductMessage _businessOwnerJid. */
-            public _businessOwnerJid?: "businessOwnerJid";
-
-            /** ProductMessage _catalog. */
-            public _catalog?: "catalog";
-
-            /** ProductMessage _body. */
-            public _body?: "body";
-
-            /** ProductMessage _footer. */
-            public _footer?: "footer";
-
-            /** ProductMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new ProductMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -23387,15 +22594,6 @@ export namespace E2E {
 
                 /** CatalogSnapshot description. */
                 public description?: (string|null);
-
-                /** CatalogSnapshot _catalogImage. */
-                public _catalogImage?: "catalogImage";
-
-                /** CatalogSnapshot _title. */
-                public _title?: "title";
-
-                /** CatalogSnapshot _description. */
-                public _description?: "description";
 
                 /**
                  * Creates a new CatalogSnapshot instance using the specified properties.
@@ -23560,42 +22758,6 @@ export namespace E2E {
                 /** ProductSnapshot signedUrl. */
                 public signedUrl?: (string|null);
 
-                /** ProductSnapshot _productImage. */
-                public _productImage?: "productImage";
-
-                /** ProductSnapshot _productId. */
-                public _productId?: "productId";
-
-                /** ProductSnapshot _title. */
-                public _title?: "title";
-
-                /** ProductSnapshot _description. */
-                public _description?: "description";
-
-                /** ProductSnapshot _currencyCode. */
-                public _currencyCode?: "currencyCode";
-
-                /** ProductSnapshot _priceAmount1000. */
-                public _priceAmount1000?: "priceAmount1000";
-
-                /** ProductSnapshot _retailerId. */
-                public _retailerId?: "retailerId";
-
-                /** ProductSnapshot _url. */
-                public _url?: "url";
-
-                /** ProductSnapshot _productImageCount. */
-                public _productImageCount?: "productImageCount";
-
-                /** ProductSnapshot _firstImageId. */
-                public _firstImageId?: "firstImageId";
-
-                /** ProductSnapshot _salePriceAmount1000. */
-                public _salePriceAmount1000?: "salePriceAmount1000";
-
-                /** ProductSnapshot _signedUrl. */
-                public _signedUrl?: "signedUrl";
-
                 /**
                  * Creates a new ProductSnapshot instance using the specified properties.
                  * @param [properties] Properties to set
@@ -23749,6 +22911,12 @@ export namespace E2E {
 
             /** ProtocolMessage memberLabel */
             memberLabel?: (E2E.IMemberLabel|null);
+
+            /** ProtocolMessage aiMediaCollectionMessage */
+            aiMediaCollectionMessage?: (AICommon.IAIMediaCollectionMessage|null);
+
+            /** ProtocolMessage afterReadDuration */
+            afterReadDuration?: (number|null);
         }
 
         /** Represents a ProtocolMessage. */
@@ -23832,77 +23000,11 @@ export namespace E2E {
             /** ProtocolMessage memberLabel. */
             public memberLabel?: (E2E.IMemberLabel|null);
 
-            /** ProtocolMessage _key. */
-            public _key?: "key";
+            /** ProtocolMessage aiMediaCollectionMessage. */
+            public aiMediaCollectionMessage?: (AICommon.IAIMediaCollectionMessage|null);
 
-            /** ProtocolMessage _type. */
-            public _type?: "type";
-
-            /** ProtocolMessage _ephemeralExpiration. */
-            public _ephemeralExpiration?: "ephemeralExpiration";
-
-            /** ProtocolMessage _ephemeralSettingTimestamp. */
-            public _ephemeralSettingTimestamp?: "ephemeralSettingTimestamp";
-
-            /** ProtocolMessage _historySyncNotification. */
-            public _historySyncNotification?: "historySyncNotification";
-
-            /** ProtocolMessage _appStateSyncKeyShare. */
-            public _appStateSyncKeyShare?: "appStateSyncKeyShare";
-
-            /** ProtocolMessage _appStateSyncKeyRequest. */
-            public _appStateSyncKeyRequest?: "appStateSyncKeyRequest";
-
-            /** ProtocolMessage _initialSecurityNotificationSettingSync. */
-            public _initialSecurityNotificationSettingSync?: "initialSecurityNotificationSettingSync";
-
-            /** ProtocolMessage _appStateFatalExceptionNotification. */
-            public _appStateFatalExceptionNotification?: "appStateFatalExceptionNotification";
-
-            /** ProtocolMessage _disappearingMode. */
-            public _disappearingMode?: "disappearingMode";
-
-            /** ProtocolMessage _editedMessage. */
-            public _editedMessage?: "editedMessage";
-
-            /** ProtocolMessage _timestampMs. */
-            public _timestampMs?: "timestampMs";
-
-            /** ProtocolMessage _peerDataOperationRequestMessage. */
-            public _peerDataOperationRequestMessage?: "peerDataOperationRequestMessage";
-
-            /** ProtocolMessage _peerDataOperationRequestResponseMessage. */
-            public _peerDataOperationRequestResponseMessage?: "peerDataOperationRequestResponseMessage";
-
-            /** ProtocolMessage _botFeedbackMessage. */
-            public _botFeedbackMessage?: "botFeedbackMessage";
-
-            /** ProtocolMessage _invokerJid. */
-            public _invokerJid?: "invokerJid";
-
-            /** ProtocolMessage _requestWelcomeMessageMetadata. */
-            public _requestWelcomeMessageMetadata?: "requestWelcomeMessageMetadata";
-
-            /** ProtocolMessage _mediaNotifyMessage. */
-            public _mediaNotifyMessage?: "mediaNotifyMessage";
-
-            /** ProtocolMessage _cloudApiThreadControlNotification. */
-            public _cloudApiThreadControlNotification?: "cloudApiThreadControlNotification";
-
-            /** ProtocolMessage _lidMigrationMappingSyncMessage. */
-            public _lidMigrationMappingSyncMessage?: "lidMigrationMappingSyncMessage";
-
-            /** ProtocolMessage _limitSharing. */
-            public _limitSharing?: "limitSharing";
-
-            /** ProtocolMessage _aiPsiMetadata. */
-            public _aiPsiMetadata?: "aiPsiMetadata";
-
-            /** ProtocolMessage _aiQueryFanout. */
-            public _aiQueryFanout?: "aiQueryFanout";
-
-            /** ProtocolMessage _memberLabel. */
-            public _memberLabel?: "memberLabel";
+            /** ProtocolMessage afterReadDuration. */
+            public afterReadDuration?: (number|null);
 
             /**
              * Creates a new ProtocolMessage instance using the specified properties.
@@ -24011,7 +23113,10 @@ export namespace E2E {
                 LIMIT_SHARING = 27,
                 AI_PSI_METADATA = 28,
                 AI_QUERY_FANOUT = 29,
-                GROUP_MEMBER_LABEL_CHANGE = 30
+                GROUP_MEMBER_LABEL_CHANGE = 30,
+                AI_MEDIA_COLLECTION_MESSAGE = 31,
+                MESSAGE_UNSCHEDULE = 32,
+                BOT_UNLINK_MESSAGE = 33
             }
         }
 
@@ -24039,12 +23144,6 @@ export namespace E2E {
 
             /** QuestionResponseMessage text. */
             public text?: (string|null);
-
-            /** QuestionResponseMessage _key. */
-            public _key?: "key";
-
-            /** QuestionResponseMessage _text. */
-            public _text?: "text";
 
             /**
              * Creates a new QuestionResponseMessage instance using the specified properties.
@@ -24160,18 +23259,6 @@ export namespace E2E {
 
             /** ReactionMessage senderTimestampMs. */
             public senderTimestampMs?: (number|Long|null);
-
-            /** ReactionMessage _key. */
-            public _key?: "key";
-
-            /** ReactionMessage _text. */
-            public _text?: "text";
-
-            /** ReactionMessage _groupingKey. */
-            public _groupingKey?: "groupingKey";
-
-            /** ReactionMessage _senderTimestampMs. */
-            public _senderTimestampMs?: "senderTimestampMs";
 
             /**
              * Creates a new ReactionMessage instance using the specified properties.
@@ -24306,27 +23393,6 @@ export namespace E2E {
             /** RequestPaymentMessage background. */
             public background?: (E2E.IPaymentBackground|null);
 
-            /** RequestPaymentMessage _noteMessage. */
-            public _noteMessage?: "noteMessage";
-
-            /** RequestPaymentMessage _currencyCodeIso4217. */
-            public _currencyCodeIso4217?: "currencyCodeIso4217";
-
-            /** RequestPaymentMessage _amount1000. */
-            public _amount1000?: "amount1000";
-
-            /** RequestPaymentMessage _requestFrom. */
-            public _requestFrom?: "requestFrom";
-
-            /** RequestPaymentMessage _expiryTimestamp. */
-            public _expiryTimestamp?: "expiryTimestamp";
-
-            /** RequestPaymentMessage _amount. */
-            public _amount?: "amount";
-
-            /** RequestPaymentMessage _background. */
-            public _background?: "background";
-
             /**
              * Creates a new RequestPaymentMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -24424,9 +23490,6 @@ export namespace E2E {
             /** RequestPhoneNumberMessage contextInfo. */
             public contextInfo?: (E2E.IContextInfo|null);
 
-            /** RequestPhoneNumberMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
             /**
              * Creates a new RequestPhoneNumberMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -24510,6 +23573,12 @@ export namespace E2E {
 
             /** RequestWelcomeMessageMetadata localChatState */
             localChatState?: (E2E.Message.RequestWelcomeMessageMetadata.LocalChatState|null);
+
+            /** RequestWelcomeMessageMetadata welcomeTrigger */
+            welcomeTrigger?: (E2E.Message.RequestWelcomeMessageMetadata.WelcomeTrigger|null);
+
+            /** RequestWelcomeMessageMetadata botAgentMetadata */
+            botAgentMetadata?: (AICommon.IBotAgentMetadata|null);
         }
 
         /** Represents a RequestWelcomeMessageMetadata. */
@@ -24524,8 +23593,11 @@ export namespace E2E {
             /** RequestWelcomeMessageMetadata localChatState. */
             public localChatState?: (E2E.Message.RequestWelcomeMessageMetadata.LocalChatState|null);
 
-            /** RequestWelcomeMessageMetadata _localChatState. */
-            public _localChatState?: "localChatState";
+            /** RequestWelcomeMessageMetadata welcomeTrigger. */
+            public welcomeTrigger?: (E2E.Message.RequestWelcomeMessageMetadata.WelcomeTrigger|null);
+
+            /** RequestWelcomeMessageMetadata botAgentMetadata. */
+            public botAgentMetadata?: (AICommon.IBotAgentMetadata|null);
 
             /**
              * Creates a new RequestWelcomeMessageMetadata instance using the specified properties.
@@ -24612,6 +23684,12 @@ export namespace E2E {
                 EMPTY = 0,
                 NON_EMPTY = 1
             }
+
+            /** WelcomeTrigger enum. */
+            enum WelcomeTrigger {
+                CHAT_OPEN = 0,
+                COMPANION_PAIRING = 1
+            }
         }
 
         /** Properties of a ScheduledCallCreationMessage. */
@@ -24644,15 +23722,6 @@ export namespace E2E {
 
             /** ScheduledCallCreationMessage title. */
             public title?: (string|null);
-
-            /** ScheduledCallCreationMessage _scheduledTimestampMs. */
-            public _scheduledTimestampMs?: "scheduledTimestampMs";
-
-            /** ScheduledCallCreationMessage _callType. */
-            public _callType?: "callType";
-
-            /** ScheduledCallCreationMessage _title. */
-            public _title?: "title";
 
             /**
              * Creates a new ScheduledCallCreationMessage instance using the specified properties.
@@ -24767,12 +23836,6 @@ export namespace E2E {
             /** ScheduledCallEditMessage editType. */
             public editType?: (E2E.Message.ScheduledCallEditMessage.EditType|null);
 
-            /** ScheduledCallEditMessage _key. */
-            public _key?: "key";
-
-            /** ScheduledCallEditMessage _editType. */
-            public _editType?: "editType";
-
             /**
              * Creates a new ScheduledCallEditMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -24874,6 +23937,9 @@ export namespace E2E {
 
             /** SecretEncryptedMessage secretEncType */
             secretEncType?: (E2E.Message.SecretEncryptedMessage.SecretEncType|null);
+
+            /** SecretEncryptedMessage remoteKeyId */
+            remoteKeyId?: (string|null);
         }
 
         /** Represents a SecretEncryptedMessage. */
@@ -24897,17 +23963,8 @@ export namespace E2E {
             /** SecretEncryptedMessage secretEncType. */
             public secretEncType?: (E2E.Message.SecretEncryptedMessage.SecretEncType|null);
 
-            /** SecretEncryptedMessage _targetMessageKey. */
-            public _targetMessageKey?: "targetMessageKey";
-
-            /** SecretEncryptedMessage _encPayload. */
-            public _encPayload?: "encPayload";
-
-            /** SecretEncryptedMessage _encIv. */
-            public _encIv?: "encIv";
-
-            /** SecretEncryptedMessage _secretEncType. */
-            public _secretEncType?: "secretEncType";
+            /** SecretEncryptedMessage remoteKeyId. */
+            public remoteKeyId?: (string|null);
 
             /**
              * Creates a new SecretEncryptedMessage instance using the specified properties.
@@ -24993,7 +24050,10 @@ export namespace E2E {
             enum SecretEncType {
                 UNKNOWN = 0,
                 EVENT_EDIT = 1,
-                MESSAGE_EDIT = 2
+                MESSAGE_EDIT = 2,
+                MESSAGE_SCHEDULE = 3,
+                POLL_EDIT = 4,
+                POLL_ADD_OPTION = 5
             }
         }
 
@@ -25033,18 +24093,6 @@ export namespace E2E {
 
             /** SendPaymentMessage transactionData. */
             public transactionData?: (string|null);
-
-            /** SendPaymentMessage _noteMessage. */
-            public _noteMessage?: "noteMessage";
-
-            /** SendPaymentMessage _requestMessageKey. */
-            public _requestMessageKey?: "requestMessageKey";
-
-            /** SendPaymentMessage _background. */
-            public _background?: "background";
-
-            /** SendPaymentMessage _transactionData. */
-            public _transactionData?: "transactionData";
 
             /**
              * Creates a new SendPaymentMessage instance using the specified properties.
@@ -25148,12 +24196,6 @@ export namespace E2E {
 
             /** SenderKeyDistributionMessage axolotlSenderKeyDistributionMessage. */
             public axolotlSenderKeyDistributionMessage?: (Uint8Array|null);
-
-            /** SenderKeyDistributionMessage _groupId. */
-            public _groupId?: "groupId";
-
-            /** SenderKeyDistributionMessage _axolotlSenderKeyDistributionMessage. */
-            public _axolotlSenderKeyDistributionMessage?: "axolotlSenderKeyDistributionMessage";
 
             /**
              * Creates a new SenderKeyDistributionMessage instance using the specified properties.
@@ -25263,15 +24305,6 @@ export namespace E2E {
 
             /** StatusNotificationMessage type. */
             public type?: (E2E.Message.StatusNotificationMessage.StatusNotificationType|null);
-
-            /** StatusNotificationMessage _responseMessageKey. */
-            public _responseMessageKey?: "responseMessageKey";
-
-            /** StatusNotificationMessage _originalMessageKey. */
-            public _originalMessageKey?: "originalMessageKey";
-
-            /** StatusNotificationMessage _type. */
-            public _type?: "type";
 
             /**
              * Creates a new StatusNotificationMessage instance using the specified properties.
@@ -25387,12 +24420,6 @@ export namespace E2E {
             /** StatusQuestionAnswerMessage text. */
             public text?: (string|null);
 
-            /** StatusQuestionAnswerMessage _key. */
-            public _key?: "key";
-
-            /** StatusQuestionAnswerMessage _text. */
-            public _text?: "text";
-
             /**
              * Creates a new StatusQuestionAnswerMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -25507,18 +24534,6 @@ export namespace E2E {
 
             /** StatusQuotedMessage originalStatusId. */
             public originalStatusId?: (Protocol.IMessageKey|null);
-
-            /** StatusQuotedMessage _type. */
-            public _type?: "type";
-
-            /** StatusQuotedMessage _text. */
-            public _text?: "text";
-
-            /** StatusQuotedMessage _thumbnail. */
-            public _thumbnail?: "thumbnail";
-
-            /** StatusQuotedMessage _originalStatusId. */
-            public _originalStatusId?: "originalStatusId";
 
             /**
              * Creates a new StatusQuotedMessage instance using the specified properties.
@@ -25636,15 +24651,6 @@ export namespace E2E {
 
             /** StatusStickerInteractionMessage type. */
             public type?: (E2E.Message.StatusStickerInteractionMessage.StatusStickerType|null);
-
-            /** StatusStickerInteractionMessage _key. */
-            public _key?: "key";
-
-            /** StatusStickerInteractionMessage _stickerKey. */
-            public _stickerKey?: "stickerKey";
-
-            /** StatusStickerInteractionMessage _type. */
-            public _type?: "type";
 
             /**
              * Creates a new StatusStickerInteractionMessage instance using the specified properties.
@@ -25796,8 +24802,8 @@ export namespace E2E {
             /** StickerMessage accessibilityLabel */
             accessibilityLabel?: (string|null);
 
-            /** StickerMessage mediaKeyDomain */
-            mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
+            /** StickerMessage premium */
+            premium?: (number|null);
         }
 
         /** Represents a StickerMessage. */
@@ -25869,71 +24875,8 @@ export namespace E2E {
             /** StickerMessage accessibilityLabel. */
             public accessibilityLabel?: (string|null);
 
-            /** StickerMessage mediaKeyDomain. */
-            public mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
-            /** StickerMessage _url. */
-            public _url?: "url";
-
-            /** StickerMessage _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** StickerMessage _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** StickerMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** StickerMessage _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** StickerMessage _height. */
-            public _height?: "height";
-
-            /** StickerMessage _width. */
-            public _width?: "width";
-
-            /** StickerMessage _directPath. */
-            public _directPath?: "directPath";
-
-            /** StickerMessage _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** StickerMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** StickerMessage _firstFrameLength. */
-            public _firstFrameLength?: "firstFrameLength";
-
-            /** StickerMessage _firstFrameSidecar. */
-            public _firstFrameSidecar?: "firstFrameSidecar";
-
-            /** StickerMessage _isAnimated. */
-            public _isAnimated?: "isAnimated";
-
-            /** StickerMessage _pngThumbnail. */
-            public _pngThumbnail?: "pngThumbnail";
-
-            /** StickerMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** StickerMessage _stickerSentTs. */
-            public _stickerSentTs?: "stickerSentTs";
-
-            /** StickerMessage _isAvatar. */
-            public _isAvatar?: "isAvatar";
-
-            /** StickerMessage _isAiSticker. */
-            public _isAiSticker?: "isAiSticker";
-
-            /** StickerMessage _isLottie. */
-            public _isLottie?: "isLottie";
-
-            /** StickerMessage _accessibilityLabel. */
-            public _accessibilityLabel?: "accessibilityLabel";
-
-            /** StickerMessage _mediaKeyDomain. */
-            public _mediaKeyDomain?: "mediaKeyDomain";
+            /** StickerMessage premium. */
+            public premium?: (number|null);
 
             /**
              * Creates a new StickerMessage instance using the specified properties.
@@ -26158,69 +25101,6 @@ export namespace E2E {
             /** StickerPackMessage stickerPackOrigin. */
             public stickerPackOrigin?: (E2E.Message.StickerPackMessage.StickerPackOrigin|null);
 
-            /** StickerPackMessage _stickerPackId. */
-            public _stickerPackId?: "stickerPackId";
-
-            /** StickerPackMessage _name. */
-            public _name?: "name";
-
-            /** StickerPackMessage _publisher. */
-            public _publisher?: "publisher";
-
-            /** StickerPackMessage _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** StickerPackMessage _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** StickerPackMessage _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** StickerPackMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** StickerPackMessage _directPath. */
-            public _directPath?: "directPath";
-
-            /** StickerPackMessage _caption. */
-            public _caption?: "caption";
-
-            /** StickerPackMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** StickerPackMessage _packDescription. */
-            public _packDescription?: "packDescription";
-
-            /** StickerPackMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** StickerPackMessage _trayIconFileName. */
-            public _trayIconFileName?: "trayIconFileName";
-
-            /** StickerPackMessage _thumbnailDirectPath. */
-            public _thumbnailDirectPath?: "thumbnailDirectPath";
-
-            /** StickerPackMessage _thumbnailSha256. */
-            public _thumbnailSha256?: "thumbnailSha256";
-
-            /** StickerPackMessage _thumbnailEncSha256. */
-            public _thumbnailEncSha256?: "thumbnailEncSha256";
-
-            /** StickerPackMessage _thumbnailHeight. */
-            public _thumbnailHeight?: "thumbnailHeight";
-
-            /** StickerPackMessage _thumbnailWidth. */
-            public _thumbnailWidth?: "thumbnailWidth";
-
-            /** StickerPackMessage _imageDataHash. */
-            public _imageDataHash?: "imageDataHash";
-
-            /** StickerPackMessage _stickerPackSize. */
-            public _stickerPackSize?: "stickerPackSize";
-
-            /** StickerPackMessage _stickerPackOrigin. */
-            public _stickerPackOrigin?: "stickerPackOrigin";
-
             /**
              * Creates a new StickerPackMessage instance using the specified properties.
              * @param [properties] Properties to set
@@ -26321,6 +25201,9 @@ export namespace E2E {
 
                 /** Sticker mimetype */
                 mimetype?: (string|null);
+
+                /** Sticker premium */
+                premium?: (number|null);
             }
 
             /** Represents a Sticker. */
@@ -26350,20 +25233,8 @@ export namespace E2E {
                 /** Sticker mimetype. */
                 public mimetype?: (string|null);
 
-                /** Sticker _fileName. */
-                public _fileName?: "fileName";
-
-                /** Sticker _isAnimated. */
-                public _isAnimated?: "isAnimated";
-
-                /** Sticker _accessibilityLabel. */
-                public _accessibilityLabel?: "accessibilityLabel";
-
-                /** Sticker _isLottie. */
-                public _isLottie?: "isLottie";
-
-                /** Sticker _mimetype. */
-                public _mimetype?: "mimetype";
+                /** Sticker premium. */
+                public premium?: (number|null);
 
                 /**
                  * Creates a new Sticker instance using the specified properties.
@@ -26481,12 +25352,6 @@ export namespace E2E {
 
             /** StickerSyncRMRMessage requestTimestamp. */
             public requestTimestamp?: (number|Long|null);
-
-            /** StickerSyncRMRMessage _rmrSource. */
-            public _rmrSource?: "rmrSource";
-
-            /** StickerSyncRMRMessage _requestTimestamp. */
-            public _requestTimestamp?: "requestTimestamp";
 
             /**
              * Creates a new StickerSyncRMRMessage instance using the specified properties.
@@ -26608,21 +25473,6 @@ export namespace E2E {
 
             /** TemplateButtonReplyMessage selectedCarouselCardIndex. */
             public selectedCarouselCardIndex?: (number|null);
-
-            /** TemplateButtonReplyMessage _selectedId. */
-            public _selectedId?: "selectedId";
-
-            /** TemplateButtonReplyMessage _selectedDisplayText. */
-            public _selectedDisplayText?: "selectedDisplayText";
-
-            /** TemplateButtonReplyMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** TemplateButtonReplyMessage _selectedIndex. */
-            public _selectedIndex?: "selectedIndex";
-
-            /** TemplateButtonReplyMessage _selectedCarouselCardIndex. */
-            public _selectedCarouselCardIndex?: "selectedCarouselCardIndex";
 
             /**
              * Creates a new TemplateButtonReplyMessage instance using the specified properties.
@@ -26750,15 +25600,6 @@ export namespace E2E {
 
             /** TemplateMessage interactiveMessageTemplate. */
             public interactiveMessageTemplate?: (E2E.Message.IInteractiveMessage|null);
-
-            /** TemplateMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** TemplateMessage _hydratedTemplate. */
-            public _hydratedTemplate?: "hydratedTemplate";
-
-            /** TemplateMessage _templateId. */
-            public _templateId?: "templateId";
 
             /** TemplateMessage format. */
             public format?: ("fourRowTemplate"|"hydratedFourRowTemplate"|"interactiveMessageTemplate");
@@ -26903,12 +25744,6 @@ export namespace E2E {
 
                 /** FourRowTemplate locationMessage. */
                 public locationMessage?: (E2E.Message.ILocationMessage|null);
-
-                /** FourRowTemplate _content. */
-                public _content?: "content";
-
-                /** FourRowTemplate _footer. */
-                public _footer?: "footer";
 
                 /** FourRowTemplate title. */
                 public title?: ("documentMessage"|"highlyStructuredMessage"|"imageMessage"|"videoMessage"|"locationMessage");
@@ -27064,18 +25899,6 @@ export namespace E2E {
                 /** HydratedFourRowTemplate locationMessage. */
                 public locationMessage?: (E2E.Message.ILocationMessage|null);
 
-                /** HydratedFourRowTemplate _hydratedContentText. */
-                public _hydratedContentText?: "hydratedContentText";
-
-                /** HydratedFourRowTemplate _hydratedFooterText. */
-                public _hydratedFooterText?: "hydratedFooterText";
-
-                /** HydratedFourRowTemplate _templateId. */
-                public _templateId?: "templateId";
-
-                /** HydratedFourRowTemplate _maskLinkedDevices. */
-                public _maskLinkedDevices?: "maskLinkedDevices";
-
                 /** HydratedFourRowTemplate title. */
                 public title?: ("documentMessage"|"hydratedTitleText"|"imageMessage"|"videoMessage"|"locationMessage");
 
@@ -27176,9 +25999,6 @@ export namespace E2E {
 
             /** URLMetadata fbExperimentId. */
             public fbExperimentId?: (number|null);
-
-            /** URLMetadata _fbExperimentId. */
-            public _fbExperimentId?: "fbExperimentId";
 
             /**
              * Creates a new URLMetadata instance using the specified properties.
@@ -27294,18 +26114,6 @@ export namespace E2E {
 
             /** VideoEndCard profilePictureUrl. */
             public profilePictureUrl?: (string|null);
-
-            /** VideoEndCard _username. */
-            public _username?: "username";
-
-            /** VideoEndCard _caption. */
-            public _caption?: "caption";
-
-            /** VideoEndCard _thumbnailImageUrl. */
-            public _thumbnailImageUrl?: "thumbnailImageUrl";
-
-            /** VideoEndCard _profilePictureUrl. */
-            public _profilePictureUrl?: "profilePictureUrl";
 
             /**
              * Creates a new VideoEndCard instance using the specified properties.
@@ -27477,9 +26285,6 @@ export namespace E2E {
 
             /** VideoMessage videoSourceType */
             videoSourceType?: (E2E.Message.VideoMessage.VideoSourceType|null);
-
-            /** VideoMessage mediaKeyDomain */
-            mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
         }
 
         /** Represents a VideoMessage. */
@@ -27580,93 +26385,6 @@ export namespace E2E {
 
             /** VideoMessage videoSourceType. */
             public videoSourceType?: (E2E.Message.VideoMessage.VideoSourceType|null);
-
-            /** VideoMessage mediaKeyDomain. */
-            public mediaKeyDomain?: (E2E.Message.MediaKeyDomain|null);
-
-            /** VideoMessage _url. */
-            public _url?: "url";
-
-            /** VideoMessage _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** VideoMessage _fileSha256. */
-            public _fileSha256?: "fileSha256";
-
-            /** VideoMessage _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** VideoMessage _seconds. */
-            public _seconds?: "seconds";
-
-            /** VideoMessage _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** VideoMessage _caption. */
-            public _caption?: "caption";
-
-            /** VideoMessage _gifPlayback. */
-            public _gifPlayback?: "gifPlayback";
-
-            /** VideoMessage _height. */
-            public _height?: "height";
-
-            /** VideoMessage _width. */
-            public _width?: "width";
-
-            /** VideoMessage _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** VideoMessage _directPath. */
-            public _directPath?: "directPath";
-
-            /** VideoMessage _mediaKeyTimestamp. */
-            public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-            /** VideoMessage _jpegThumbnail. */
-            public _jpegThumbnail?: "jpegThumbnail";
-
-            /** VideoMessage _contextInfo. */
-            public _contextInfo?: "contextInfo";
-
-            /** VideoMessage _streamingSidecar. */
-            public _streamingSidecar?: "streamingSidecar";
-
-            /** VideoMessage _gifAttribution. */
-            public _gifAttribution?: "gifAttribution";
-
-            /** VideoMessage _viewOnce. */
-            public _viewOnce?: "viewOnce";
-
-            /** VideoMessage _thumbnailDirectPath. */
-            public _thumbnailDirectPath?: "thumbnailDirectPath";
-
-            /** VideoMessage _thumbnailSha256. */
-            public _thumbnailSha256?: "thumbnailSha256";
-
-            /** VideoMessage _thumbnailEncSha256. */
-            public _thumbnailEncSha256?: "thumbnailEncSha256";
-
-            /** VideoMessage _staticUrl. */
-            public _staticUrl?: "staticUrl";
-
-            /** VideoMessage _accessibilityLabel. */
-            public _accessibilityLabel?: "accessibilityLabel";
-
-            /** VideoMessage _externalShareFullVideoDurationInSeconds. */
-            public _externalShareFullVideoDurationInSeconds?: "externalShareFullVideoDurationInSeconds";
-
-            /** VideoMessage _motionPhotoPresentationOffsetMs. */
-            public _motionPhotoPresentationOffsetMs?: "motionPhotoPresentationOffsetMs";
-
-            /** VideoMessage _metadataUrl. */
-            public _metadataUrl?: "metadataUrl";
-
-            /** VideoMessage _videoSourceType. */
-            public _videoSourceType?: "videoSourceType";
-
-            /** VideoMessage _mediaKeyDomain. */
-            public _mediaKeyDomain?: "mediaKeyDomain";
 
             /**
              * Creates a new VideoMessage instance using the specified properties.
@@ -27776,6 +26494,13 @@ export namespace E2E {
         WEBVIEW = 0,
         SYSTEM = 1
     }
+
+    /** MediaKeyDomain enum. */
+    enum MediaKeyDomain {
+        MEDIA_KEY_DOMAIN_UNKNOWN = 0,
+        MEDIA_KEY_DOMAIN_E2EE = 1,
+        MEDIA_KEY_DOMAIN_NON_E2EE = 2
+    }
 }
 
 /** Namespace Protocol. */
@@ -27817,18 +26542,6 @@ export namespace Protocol {
 
         /** LimitSharing initiatedByMe. */
         public initiatedByMe?: (boolean|null);
-
-        /** LimitSharing _sharingLimited. */
-        public _sharingLimited?: "sharingLimited";
-
-        /** LimitSharing _trigger. */
-        public _trigger?: "trigger";
-
-        /** LimitSharing _limitSharingSettingTimestamp. */
-        public _limitSharingSettingTimestamp?: "limitSharingSettingTimestamp";
-
-        /** LimitSharing _initiatedByMe. */
-        public _initiatedByMe?: "initiatedByMe";
 
         /**
          * Creates a new LimitSharing instance using the specified properties.
@@ -27956,18 +26669,6 @@ export namespace Protocol {
         /** MessageKey participant. */
         public participant?: (string|null);
 
-        /** MessageKey _remoteJid. */
-        public _remoteJid?: "remoteJid";
-
-        /** MessageKey _fromMe. */
-        public _fromMe?: "fromMe";
-
-        /** MessageKey _id. */
-        public _id?: "id";
-
-        /** MessageKey _participant. */
-        public _participant?: "participant";
-
         /**
          * Creates a new MessageKey instance using the specified properties.
          * @param [properties] Properties to set
@@ -28047,8 +26748,3180 @@ export namespace Protocol {
     }
 }
 
+/** Namespace AICommonDeprecated. */
+export namespace AICommonDeprecated {
+
+    /** Properties of a AIRichResponseSubMessage. */
+    interface IAIRichResponseSubMessage {
+
+        /** AIRichResponseSubMessage messageType */
+        messageType?: (AICommonDeprecated.AIRichResponseSubMessageType|null);
+
+        /** AIRichResponseSubMessage gridImageMetadata */
+        gridImageMetadata?: (AICommonDeprecated.IAIRichResponseGridImageMetadata|null);
+
+        /** AIRichResponseSubMessage messageText */
+        messageText?: (string|null);
+
+        /** AIRichResponseSubMessage imageMetadata */
+        imageMetadata?: (AICommonDeprecated.IAIRichResponseInlineImageMetadata|null);
+
+        /** AIRichResponseSubMessage codeMetadata */
+        codeMetadata?: (AICommonDeprecated.IAIRichResponseCodeMetadata|null);
+
+        /** AIRichResponseSubMessage tableMetadata */
+        tableMetadata?: (AICommonDeprecated.IAIRichResponseTableMetadata|null);
+
+        /** AIRichResponseSubMessage dynamicMetadata */
+        dynamicMetadata?: (AICommonDeprecated.IAIRichResponseDynamicMetadata|null);
+
+        /** AIRichResponseSubMessage latexMetadata */
+        latexMetadata?: (AICommonDeprecated.IAIRichResponseLatexMetadata|null);
+
+        /** AIRichResponseSubMessage mapMetadata */
+        mapMetadata?: (AICommonDeprecated.IAIRichResponseMapMetadata|null);
+
+        /** AIRichResponseSubMessage contentItemsMetadata */
+        contentItemsMetadata?: (AICommonDeprecated.IAIRichResponseContentItemsMetadata|null);
+    }
+
+    /** Represents a AIRichResponseSubMessage. */
+    class AIRichResponseSubMessage implements IAIRichResponseSubMessage {
+
+        /**
+         * Constructs a new AIRichResponseSubMessage.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseSubMessage);
+
+        /** AIRichResponseSubMessage messageType. */
+        public messageType?: (AICommonDeprecated.AIRichResponseSubMessageType|null);
+
+        /** AIRichResponseSubMessage gridImageMetadata. */
+        public gridImageMetadata?: (AICommonDeprecated.IAIRichResponseGridImageMetadata|null);
+
+        /** AIRichResponseSubMessage messageText. */
+        public messageText?: (string|null);
+
+        /** AIRichResponseSubMessage imageMetadata. */
+        public imageMetadata?: (AICommonDeprecated.IAIRichResponseInlineImageMetadata|null);
+
+        /** AIRichResponseSubMessage codeMetadata. */
+        public codeMetadata?: (AICommonDeprecated.IAIRichResponseCodeMetadata|null);
+
+        /** AIRichResponseSubMessage tableMetadata. */
+        public tableMetadata?: (AICommonDeprecated.IAIRichResponseTableMetadata|null);
+
+        /** AIRichResponseSubMessage dynamicMetadata. */
+        public dynamicMetadata?: (AICommonDeprecated.IAIRichResponseDynamicMetadata|null);
+
+        /** AIRichResponseSubMessage latexMetadata. */
+        public latexMetadata?: (AICommonDeprecated.IAIRichResponseLatexMetadata|null);
+
+        /** AIRichResponseSubMessage mapMetadata. */
+        public mapMetadata?: (AICommonDeprecated.IAIRichResponseMapMetadata|null);
+
+        /** AIRichResponseSubMessage contentItemsMetadata. */
+        public contentItemsMetadata?: (AICommonDeprecated.IAIRichResponseContentItemsMetadata|null);
+
+        /**
+         * Creates a new AIRichResponseSubMessage instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseSubMessage instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseSubMessage): AICommonDeprecated.AIRichResponseSubMessage;
+
+        /**
+         * Encodes the specified AIRichResponseSubMessage message. Does not implicitly {@link AICommonDeprecated.AIRichResponseSubMessage.verify|verify} messages.
+         * @param message AIRichResponseSubMessage message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseSubMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseSubMessage message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseSubMessage.verify|verify} messages.
+         * @param message AIRichResponseSubMessage message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseSubMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseSubMessage message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseSubMessage
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseSubMessage;
+
+        /**
+         * Decodes a AIRichResponseSubMessage message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseSubMessage
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseSubMessage;
+
+        /**
+         * Verifies a AIRichResponseSubMessage message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseSubMessage message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseSubMessage
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseSubMessage;
+
+        /**
+         * Creates a plain object from a AIRichResponseSubMessage message. Also converts values to other types if specified.
+         * @param message AIRichResponseSubMessage
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseSubMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseSubMessage to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseSubMessage
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a AIRichResponseContentItemsMetadata. */
+    interface IAIRichResponseContentItemsMetadata {
+
+        /** AIRichResponseContentItemsMetadata itemsMetadata */
+        itemsMetadata?: (AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata[]|null);
+
+        /** AIRichResponseContentItemsMetadata contentType */
+        contentType?: (AICommonDeprecated.AIRichResponseContentItemsMetadata.ContentType|null);
+    }
+
+    /** Represents a AIRichResponseContentItemsMetadata. */
+    class AIRichResponseContentItemsMetadata implements IAIRichResponseContentItemsMetadata {
+
+        /**
+         * Constructs a new AIRichResponseContentItemsMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseContentItemsMetadata);
+
+        /** AIRichResponseContentItemsMetadata itemsMetadata. */
+        public itemsMetadata: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata[];
+
+        /** AIRichResponseContentItemsMetadata contentType. */
+        public contentType?: (AICommonDeprecated.AIRichResponseContentItemsMetadata.ContentType|null);
+
+        /**
+         * Creates a new AIRichResponseContentItemsMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseContentItemsMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseContentItemsMetadata): AICommonDeprecated.AIRichResponseContentItemsMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseContentItemsMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseContentItemsMetadata.verify|verify} messages.
+         * @param message AIRichResponseContentItemsMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseContentItemsMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseContentItemsMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseContentItemsMetadata.verify|verify} messages.
+         * @param message AIRichResponseContentItemsMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseContentItemsMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseContentItemsMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseContentItemsMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseContentItemsMetadata;
+
+        /**
+         * Decodes a AIRichResponseContentItemsMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseContentItemsMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseContentItemsMetadata;
+
+        /**
+         * Verifies a AIRichResponseContentItemsMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseContentItemsMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseContentItemsMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseContentItemsMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseContentItemsMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseContentItemsMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseContentItemsMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseContentItemsMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseContentItemsMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseContentItemsMetadata {
+
+        /** Properties of a AIRichResponseContentItemMetadata. */
+        interface IAIRichResponseContentItemMetadata {
+
+            /** AIRichResponseContentItemMetadata reelItem */
+            reelItem?: (AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem|null);
+        }
+
+        /** Represents a AIRichResponseContentItemMetadata. */
+        class AIRichResponseContentItemMetadata implements IAIRichResponseContentItemMetadata {
+
+            /**
+             * Constructs a new AIRichResponseContentItemMetadata.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata);
+
+            /** AIRichResponseContentItemMetadata reelItem. */
+            public reelItem?: (AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem|null);
+
+            /** AIRichResponseContentItemMetadata aIRichResponseContentItem. */
+            public aIRichResponseContentItem?: "reelItem";
+
+            /**
+             * Creates a new AIRichResponseContentItemMetadata instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AIRichResponseContentItemMetadata instance
+             */
+            public static create(properties?: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
+
+            /**
+             * Encodes the specified AIRichResponseContentItemMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata.verify|verify} messages.
+             * @param message AIRichResponseContentItemMetadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AIRichResponseContentItemMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata.verify|verify} messages.
+             * @param message AIRichResponseContentItemMetadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a AIRichResponseContentItemMetadata message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AIRichResponseContentItemMetadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
+
+            /**
+             * Decodes a AIRichResponseContentItemMetadata message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AIRichResponseContentItemMetadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
+
+            /**
+             * Verifies a AIRichResponseContentItemMetadata message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a AIRichResponseContentItemMetadata message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AIRichResponseContentItemMetadata
+             */
+            public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
+
+            /**
+             * Creates a plain object from a AIRichResponseContentItemMetadata message. Also converts values to other types if specified.
+             * @param message AIRichResponseContentItemMetadata
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AIRichResponseContentItemMetadata to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AIRichResponseContentItemMetadata
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a AIRichResponseReelItem. */
+        interface IAIRichResponseReelItem {
+
+            /** AIRichResponseReelItem title */
+            title?: (string|null);
+
+            /** AIRichResponseReelItem profileIconUrl */
+            profileIconUrl?: (string|null);
+
+            /** AIRichResponseReelItem thumbnailUrl */
+            thumbnailUrl?: (string|null);
+
+            /** AIRichResponseReelItem videoUrl */
+            videoUrl?: (string|null);
+        }
+
+        /** Represents a AIRichResponseReelItem. */
+        class AIRichResponseReelItem implements IAIRichResponseReelItem {
+
+            /**
+             * Constructs a new AIRichResponseReelItem.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem);
+
+            /** AIRichResponseReelItem title. */
+            public title?: (string|null);
+
+            /** AIRichResponseReelItem profileIconUrl. */
+            public profileIconUrl?: (string|null);
+
+            /** AIRichResponseReelItem thumbnailUrl. */
+            public thumbnailUrl?: (string|null);
+
+            /** AIRichResponseReelItem videoUrl. */
+            public videoUrl?: (string|null);
+
+            /**
+             * Creates a new AIRichResponseReelItem instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AIRichResponseReelItem instance
+             */
+            public static create(properties?: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
+
+            /**
+             * Encodes the specified AIRichResponseReelItem message. Does not implicitly {@link AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem.verify|verify} messages.
+             * @param message AIRichResponseReelItem message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AIRichResponseReelItem message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem.verify|verify} messages.
+             * @param message AIRichResponseReelItem message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: AICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a AIRichResponseReelItem message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AIRichResponseReelItem
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
+
+            /**
+             * Decodes a AIRichResponseReelItem message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AIRichResponseReelItem
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
+
+            /**
+             * Verifies a AIRichResponseReelItem message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a AIRichResponseReelItem message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AIRichResponseReelItem
+             */
+            public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
+
+            /**
+             * Creates a plain object from a AIRichResponseReelItem message. Also converts values to other types if specified.
+             * @param message AIRichResponseReelItem
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: AICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AIRichResponseReelItem to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AIRichResponseReelItem
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** ContentType enum. */
+        enum ContentType {
+            DEFAULT = 0,
+            CAROUSEL = 1
+        }
+    }
+
+    /** Properties of a AIRichResponseMapMetadata. */
+    interface IAIRichResponseMapMetadata {
+
+        /** AIRichResponseMapMetadata centerLatitude */
+        centerLatitude?: (number|null);
+
+        /** AIRichResponseMapMetadata centerLongitude */
+        centerLongitude?: (number|null);
+
+        /** AIRichResponseMapMetadata latitudeDelta */
+        latitudeDelta?: (number|null);
+
+        /** AIRichResponseMapMetadata longitudeDelta */
+        longitudeDelta?: (number|null);
+
+        /** AIRichResponseMapMetadata annotations */
+        annotations?: (AICommonDeprecated.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation[]|null);
+
+        /** AIRichResponseMapMetadata showInfoList */
+        showInfoList?: (boolean|null);
+    }
+
+    /** Represents a AIRichResponseMapMetadata. */
+    class AIRichResponseMapMetadata implements IAIRichResponseMapMetadata {
+
+        /**
+         * Constructs a new AIRichResponseMapMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseMapMetadata);
+
+        /** AIRichResponseMapMetadata centerLatitude. */
+        public centerLatitude?: (number|null);
+
+        /** AIRichResponseMapMetadata centerLongitude. */
+        public centerLongitude?: (number|null);
+
+        /** AIRichResponseMapMetadata latitudeDelta. */
+        public latitudeDelta?: (number|null);
+
+        /** AIRichResponseMapMetadata longitudeDelta. */
+        public longitudeDelta?: (number|null);
+
+        /** AIRichResponseMapMetadata annotations. */
+        public annotations: AICommonDeprecated.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation[];
+
+        /** AIRichResponseMapMetadata showInfoList. */
+        public showInfoList?: (boolean|null);
+
+        /**
+         * Creates a new AIRichResponseMapMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseMapMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseMapMetadata): AICommonDeprecated.AIRichResponseMapMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseMapMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseMapMetadata.verify|verify} messages.
+         * @param message AIRichResponseMapMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseMapMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseMapMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseMapMetadata.verify|verify} messages.
+         * @param message AIRichResponseMapMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseMapMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseMapMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseMapMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseMapMetadata;
+
+        /**
+         * Decodes a AIRichResponseMapMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseMapMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseMapMetadata;
+
+        /**
+         * Verifies a AIRichResponseMapMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseMapMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseMapMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseMapMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseMapMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseMapMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseMapMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseMapMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseMapMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseMapMetadata {
+
+        /** Properties of a AIRichResponseMapAnnotation. */
+        interface IAIRichResponseMapAnnotation {
+
+            /** AIRichResponseMapAnnotation annotationNumber */
+            annotationNumber?: (number|null);
+
+            /** AIRichResponseMapAnnotation latitude */
+            latitude?: (number|null);
+
+            /** AIRichResponseMapAnnotation longitude */
+            longitude?: (number|null);
+
+            /** AIRichResponseMapAnnotation title */
+            title?: (string|null);
+
+            /** AIRichResponseMapAnnotation body */
+            body?: (string|null);
+        }
+
+        /** Represents a AIRichResponseMapAnnotation. */
+        class AIRichResponseMapAnnotation implements IAIRichResponseMapAnnotation {
+
+            /**
+             * Constructs a new AIRichResponseMapAnnotation.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: AICommonDeprecated.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation);
+
+            /** AIRichResponseMapAnnotation annotationNumber. */
+            public annotationNumber?: (number|null);
+
+            /** AIRichResponseMapAnnotation latitude. */
+            public latitude?: (number|null);
+
+            /** AIRichResponseMapAnnotation longitude. */
+            public longitude?: (number|null);
+
+            /** AIRichResponseMapAnnotation title. */
+            public title?: (string|null);
+
+            /** AIRichResponseMapAnnotation body. */
+            public body?: (string|null);
+
+            /**
+             * Creates a new AIRichResponseMapAnnotation instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AIRichResponseMapAnnotation instance
+             */
+            public static create(properties?: AICommonDeprecated.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation): AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
+
+            /**
+             * Encodes the specified AIRichResponseMapAnnotation message. Does not implicitly {@link AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation.verify|verify} messages.
+             * @param message AIRichResponseMapAnnotation message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: AICommonDeprecated.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AIRichResponseMapAnnotation message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation.verify|verify} messages.
+             * @param message AIRichResponseMapAnnotation message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: AICommonDeprecated.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a AIRichResponseMapAnnotation message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AIRichResponseMapAnnotation
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
+
+            /**
+             * Decodes a AIRichResponseMapAnnotation message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AIRichResponseMapAnnotation
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
+
+            /**
+             * Verifies a AIRichResponseMapAnnotation message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a AIRichResponseMapAnnotation message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AIRichResponseMapAnnotation
+             */
+            public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
+
+            /**
+             * Creates a plain object from a AIRichResponseMapAnnotation message. Also converts values to other types if specified.
+             * @param message AIRichResponseMapAnnotation
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: AICommonDeprecated.AIRichResponseMapMetadata.AIRichResponseMapAnnotation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AIRichResponseMapAnnotation to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AIRichResponseMapAnnotation
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+    }
+
+    /** Properties of a AIRichResponseLatexMetadata. */
+    interface IAIRichResponseLatexMetadata {
+
+        /** AIRichResponseLatexMetadata text */
+        text?: (string|null);
+
+        /** AIRichResponseLatexMetadata expressions */
+        expressions?: (AICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression[]|null);
+    }
+
+    /** Represents a AIRichResponseLatexMetadata. */
+    class AIRichResponseLatexMetadata implements IAIRichResponseLatexMetadata {
+
+        /**
+         * Constructs a new AIRichResponseLatexMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseLatexMetadata);
+
+        /** AIRichResponseLatexMetadata text. */
+        public text?: (string|null);
+
+        /** AIRichResponseLatexMetadata expressions. */
+        public expressions: AICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression[];
+
+        /**
+         * Creates a new AIRichResponseLatexMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseLatexMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseLatexMetadata): AICommonDeprecated.AIRichResponseLatexMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseLatexMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseLatexMetadata.verify|verify} messages.
+         * @param message AIRichResponseLatexMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseLatexMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseLatexMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseLatexMetadata.verify|verify} messages.
+         * @param message AIRichResponseLatexMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseLatexMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseLatexMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseLatexMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseLatexMetadata;
+
+        /**
+         * Decodes a AIRichResponseLatexMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseLatexMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseLatexMetadata;
+
+        /**
+         * Verifies a AIRichResponseLatexMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseLatexMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseLatexMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseLatexMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseLatexMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseLatexMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseLatexMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseLatexMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseLatexMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseLatexMetadata {
+
+        /** Properties of a AIRichResponseLatexExpression. */
+        interface IAIRichResponseLatexExpression {
+
+            /** AIRichResponseLatexExpression latexExpression */
+            latexExpression?: (string|null);
+
+            /** AIRichResponseLatexExpression url */
+            url?: (string|null);
+
+            /** AIRichResponseLatexExpression width */
+            width?: (number|null);
+
+            /** AIRichResponseLatexExpression height */
+            height?: (number|null);
+
+            /** AIRichResponseLatexExpression fontHeight */
+            fontHeight?: (number|null);
+
+            /** AIRichResponseLatexExpression imageTopPadding */
+            imageTopPadding?: (number|null);
+
+            /** AIRichResponseLatexExpression imageLeadingPadding */
+            imageLeadingPadding?: (number|null);
+
+            /** AIRichResponseLatexExpression imageBottomPadding */
+            imageBottomPadding?: (number|null);
+
+            /** AIRichResponseLatexExpression imageTrailingPadding */
+            imageTrailingPadding?: (number|null);
+        }
+
+        /** Represents a AIRichResponseLatexExpression. */
+        class AIRichResponseLatexExpression implements IAIRichResponseLatexExpression {
+
+            /**
+             * Constructs a new AIRichResponseLatexExpression.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: AICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression);
+
+            /** AIRichResponseLatexExpression latexExpression. */
+            public latexExpression?: (string|null);
+
+            /** AIRichResponseLatexExpression url. */
+            public url?: (string|null);
+
+            /** AIRichResponseLatexExpression width. */
+            public width?: (number|null);
+
+            /** AIRichResponseLatexExpression height. */
+            public height?: (number|null);
+
+            /** AIRichResponseLatexExpression fontHeight. */
+            public fontHeight?: (number|null);
+
+            /** AIRichResponseLatexExpression imageTopPadding. */
+            public imageTopPadding?: (number|null);
+
+            /** AIRichResponseLatexExpression imageLeadingPadding. */
+            public imageLeadingPadding?: (number|null);
+
+            /** AIRichResponseLatexExpression imageBottomPadding. */
+            public imageBottomPadding?: (number|null);
+
+            /** AIRichResponseLatexExpression imageTrailingPadding. */
+            public imageTrailingPadding?: (number|null);
+
+            /**
+             * Creates a new AIRichResponseLatexExpression instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AIRichResponseLatexExpression instance
+             */
+            public static create(properties?: AICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression): AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
+
+            /**
+             * Encodes the specified AIRichResponseLatexExpression message. Does not implicitly {@link AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression.verify|verify} messages.
+             * @param message AIRichResponseLatexExpression message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: AICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AIRichResponseLatexExpression message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression.verify|verify} messages.
+             * @param message AIRichResponseLatexExpression message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: AICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a AIRichResponseLatexExpression message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AIRichResponseLatexExpression
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
+
+            /**
+             * Decodes a AIRichResponseLatexExpression message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AIRichResponseLatexExpression
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
+
+            /**
+             * Verifies a AIRichResponseLatexExpression message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a AIRichResponseLatexExpression message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AIRichResponseLatexExpression
+             */
+            public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
+
+            /**
+             * Creates a plain object from a AIRichResponseLatexExpression message. Also converts values to other types if specified.
+             * @param message AIRichResponseLatexExpression
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: AICommonDeprecated.AIRichResponseLatexMetadata.AIRichResponseLatexExpression, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AIRichResponseLatexExpression to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AIRichResponseLatexExpression
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+    }
+
+    /** Properties of a AIRichResponseDynamicMetadata. */
+    interface IAIRichResponseDynamicMetadata {
+
+        /** AIRichResponseDynamicMetadata type */
+        type?: (AICommonDeprecated.AIRichResponseDynamicMetadata.AIRichResponseDynamicMetadataType|null);
+
+        /** AIRichResponseDynamicMetadata version */
+        version?: (number|Long|null);
+
+        /** AIRichResponseDynamicMetadata url */
+        url?: (string|null);
+
+        /** AIRichResponseDynamicMetadata loopCount */
+        loopCount?: (number|null);
+    }
+
+    /** Represents a AIRichResponseDynamicMetadata. */
+    class AIRichResponseDynamicMetadata implements IAIRichResponseDynamicMetadata {
+
+        /**
+         * Constructs a new AIRichResponseDynamicMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseDynamicMetadata);
+
+        /** AIRichResponseDynamicMetadata type. */
+        public type?: (AICommonDeprecated.AIRichResponseDynamicMetadata.AIRichResponseDynamicMetadataType|null);
+
+        /** AIRichResponseDynamicMetadata version. */
+        public version?: (number|Long|null);
+
+        /** AIRichResponseDynamicMetadata url. */
+        public url?: (string|null);
+
+        /** AIRichResponseDynamicMetadata loopCount. */
+        public loopCount?: (number|null);
+
+        /**
+         * Creates a new AIRichResponseDynamicMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseDynamicMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseDynamicMetadata): AICommonDeprecated.AIRichResponseDynamicMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseDynamicMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseDynamicMetadata.verify|verify} messages.
+         * @param message AIRichResponseDynamicMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseDynamicMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseDynamicMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseDynamicMetadata.verify|verify} messages.
+         * @param message AIRichResponseDynamicMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseDynamicMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseDynamicMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseDynamicMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseDynamicMetadata;
+
+        /**
+         * Decodes a AIRichResponseDynamicMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseDynamicMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseDynamicMetadata;
+
+        /**
+         * Verifies a AIRichResponseDynamicMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseDynamicMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseDynamicMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseDynamicMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseDynamicMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseDynamicMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseDynamicMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseDynamicMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseDynamicMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseDynamicMetadata {
+
+        /** AIRichResponseDynamicMetadataType enum. */
+        enum AIRichResponseDynamicMetadataType {
+            AI_RICH_RESPONSE_DYNAMIC_METADATA_TYPE_UNKNOWN = 0,
+            AI_RICH_RESPONSE_DYNAMIC_METADATA_TYPE_IMAGE = 1,
+            AI_RICH_RESPONSE_DYNAMIC_METADATA_TYPE_GIF = 2
+        }
+    }
+
+    /** Properties of a AIRichResponseTableMetadata. */
+    interface IAIRichResponseTableMetadata {
+
+        /** AIRichResponseTableMetadata rows */
+        rows?: (AICommonDeprecated.AIRichResponseTableMetadata.IAIRichResponseTableRow[]|null);
+
+        /** AIRichResponseTableMetadata title */
+        title?: (string|null);
+    }
+
+    /** Represents a AIRichResponseTableMetadata. */
+    class AIRichResponseTableMetadata implements IAIRichResponseTableMetadata {
+
+        /**
+         * Constructs a new AIRichResponseTableMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseTableMetadata);
+
+        /** AIRichResponseTableMetadata rows. */
+        public rows: AICommonDeprecated.AIRichResponseTableMetadata.IAIRichResponseTableRow[];
+
+        /** AIRichResponseTableMetadata title. */
+        public title?: (string|null);
+
+        /**
+         * Creates a new AIRichResponseTableMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseTableMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseTableMetadata): AICommonDeprecated.AIRichResponseTableMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseTableMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseTableMetadata.verify|verify} messages.
+         * @param message AIRichResponseTableMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseTableMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseTableMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseTableMetadata.verify|verify} messages.
+         * @param message AIRichResponseTableMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseTableMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseTableMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseTableMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseTableMetadata;
+
+        /**
+         * Decodes a AIRichResponseTableMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseTableMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseTableMetadata;
+
+        /**
+         * Verifies a AIRichResponseTableMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseTableMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseTableMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseTableMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseTableMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseTableMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseTableMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseTableMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseTableMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseTableMetadata {
+
+        /** Properties of a AIRichResponseTableRow. */
+        interface IAIRichResponseTableRow {
+
+            /** AIRichResponseTableRow items */
+            items?: (string[]|null);
+
+            /** AIRichResponseTableRow isHeading */
+            isHeading?: (boolean|null);
+        }
+
+        /** Represents a AIRichResponseTableRow. */
+        class AIRichResponseTableRow implements IAIRichResponseTableRow {
+
+            /**
+             * Constructs a new AIRichResponseTableRow.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: AICommonDeprecated.AIRichResponseTableMetadata.IAIRichResponseTableRow);
+
+            /** AIRichResponseTableRow items. */
+            public items: string[];
+
+            /** AIRichResponseTableRow isHeading. */
+            public isHeading?: (boolean|null);
+
+            /**
+             * Creates a new AIRichResponseTableRow instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AIRichResponseTableRow instance
+             */
+            public static create(properties?: AICommonDeprecated.AIRichResponseTableMetadata.IAIRichResponseTableRow): AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow;
+
+            /**
+             * Encodes the specified AIRichResponseTableRow message. Does not implicitly {@link AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow.verify|verify} messages.
+             * @param message AIRichResponseTableRow message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: AICommonDeprecated.AIRichResponseTableMetadata.IAIRichResponseTableRow, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AIRichResponseTableRow message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow.verify|verify} messages.
+             * @param message AIRichResponseTableRow message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: AICommonDeprecated.AIRichResponseTableMetadata.IAIRichResponseTableRow, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a AIRichResponseTableRow message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AIRichResponseTableRow
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow;
+
+            /**
+             * Decodes a AIRichResponseTableRow message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AIRichResponseTableRow
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow;
+
+            /**
+             * Verifies a AIRichResponseTableRow message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a AIRichResponseTableRow message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AIRichResponseTableRow
+             */
+            public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow;
+
+            /**
+             * Creates a plain object from a AIRichResponseTableRow message. Also converts values to other types if specified.
+             * @param message AIRichResponseTableRow
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: AICommonDeprecated.AIRichResponseTableMetadata.AIRichResponseTableRow, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AIRichResponseTableRow to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AIRichResponseTableRow
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+    }
+
+    /** Properties of a AIRichResponseCodeMetadata. */
+    interface IAIRichResponseCodeMetadata {
+
+        /** AIRichResponseCodeMetadata codeLanguage */
+        codeLanguage?: (string|null);
+
+        /** AIRichResponseCodeMetadata codeBlocks */
+        codeBlocks?: (AICommonDeprecated.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock[]|null);
+    }
+
+    /** Represents a AIRichResponseCodeMetadata. */
+    class AIRichResponseCodeMetadata implements IAIRichResponseCodeMetadata {
+
+        /**
+         * Constructs a new AIRichResponseCodeMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseCodeMetadata);
+
+        /** AIRichResponseCodeMetadata codeLanguage. */
+        public codeLanguage?: (string|null);
+
+        /** AIRichResponseCodeMetadata codeBlocks. */
+        public codeBlocks: AICommonDeprecated.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock[];
+
+        /**
+         * Creates a new AIRichResponseCodeMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseCodeMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseCodeMetadata): AICommonDeprecated.AIRichResponseCodeMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseCodeMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseCodeMetadata.verify|verify} messages.
+         * @param message AIRichResponseCodeMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseCodeMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseCodeMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseCodeMetadata.verify|verify} messages.
+         * @param message AIRichResponseCodeMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseCodeMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseCodeMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseCodeMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseCodeMetadata;
+
+        /**
+         * Decodes a AIRichResponseCodeMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseCodeMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseCodeMetadata;
+
+        /**
+         * Verifies a AIRichResponseCodeMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseCodeMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseCodeMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseCodeMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseCodeMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseCodeMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseCodeMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseCodeMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseCodeMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseCodeMetadata {
+
+        /** Properties of a AIRichResponseCodeBlock. */
+        interface IAIRichResponseCodeBlock {
+
+            /** AIRichResponseCodeBlock highlightType */
+            highlightType?: (AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeHighlightType|null);
+
+            /** AIRichResponseCodeBlock codeContent */
+            codeContent?: (string|null);
+        }
+
+        /** Represents a AIRichResponseCodeBlock. */
+        class AIRichResponseCodeBlock implements IAIRichResponseCodeBlock {
+
+            /**
+             * Constructs a new AIRichResponseCodeBlock.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: AICommonDeprecated.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock);
+
+            /** AIRichResponseCodeBlock highlightType. */
+            public highlightType?: (AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeHighlightType|null);
+
+            /** AIRichResponseCodeBlock codeContent. */
+            public codeContent?: (string|null);
+
+            /**
+             * Creates a new AIRichResponseCodeBlock instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AIRichResponseCodeBlock instance
+             */
+            public static create(properties?: AICommonDeprecated.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock): AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
+
+            /**
+             * Encodes the specified AIRichResponseCodeBlock message. Does not implicitly {@link AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock.verify|verify} messages.
+             * @param message AIRichResponseCodeBlock message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: AICommonDeprecated.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AIRichResponseCodeBlock message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock.verify|verify} messages.
+             * @param message AIRichResponseCodeBlock message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: AICommonDeprecated.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a AIRichResponseCodeBlock message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AIRichResponseCodeBlock
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
+
+            /**
+             * Decodes a AIRichResponseCodeBlock message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AIRichResponseCodeBlock
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
+
+            /**
+             * Verifies a AIRichResponseCodeBlock message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a AIRichResponseCodeBlock message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AIRichResponseCodeBlock
+             */
+            public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
+
+            /**
+             * Creates a plain object from a AIRichResponseCodeBlock message. Also converts values to other types if specified.
+             * @param message AIRichResponseCodeBlock
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: AICommonDeprecated.AIRichResponseCodeMetadata.AIRichResponseCodeBlock, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AIRichResponseCodeBlock to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AIRichResponseCodeBlock
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** AIRichResponseCodeHighlightType enum. */
+        enum AIRichResponseCodeHighlightType {
+            AI_RICH_RESPONSE_CODE_HIGHLIGHT_DEFAULT = 0,
+            AI_RICH_RESPONSE_CODE_HIGHLIGHT_KEYWORD = 1,
+            AI_RICH_RESPONSE_CODE_HIGHLIGHT_METHOD = 2,
+            AI_RICH_RESPONSE_CODE_HIGHLIGHT_STRING = 3,
+            AI_RICH_RESPONSE_CODE_HIGHLIGHT_NUMBER = 4,
+            AI_RICH_RESPONSE_CODE_HIGHLIGHT_COMMENT = 5
+        }
+    }
+
+    /** Properties of a AIRichResponseInlineImageMetadata. */
+    interface IAIRichResponseInlineImageMetadata {
+
+        /** AIRichResponseInlineImageMetadata imageUrl */
+        imageUrl?: (AICommonDeprecated.IAIRichResponseImageURL|null);
+
+        /** AIRichResponseInlineImageMetadata imageText */
+        imageText?: (string|null);
+
+        /** AIRichResponseInlineImageMetadata alignment */
+        alignment?: (AICommonDeprecated.AIRichResponseInlineImageMetadata.AIRichResponseImageAlignment|null);
+
+        /** AIRichResponseInlineImageMetadata tapLinkUrl */
+        tapLinkUrl?: (string|null);
+    }
+
+    /** Represents a AIRichResponseInlineImageMetadata. */
+    class AIRichResponseInlineImageMetadata implements IAIRichResponseInlineImageMetadata {
+
+        /**
+         * Constructs a new AIRichResponseInlineImageMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseInlineImageMetadata);
+
+        /** AIRichResponseInlineImageMetadata imageUrl. */
+        public imageUrl?: (AICommonDeprecated.IAIRichResponseImageURL|null);
+
+        /** AIRichResponseInlineImageMetadata imageText. */
+        public imageText?: (string|null);
+
+        /** AIRichResponseInlineImageMetadata alignment. */
+        public alignment?: (AICommonDeprecated.AIRichResponseInlineImageMetadata.AIRichResponseImageAlignment|null);
+
+        /** AIRichResponseInlineImageMetadata tapLinkUrl. */
+        public tapLinkUrl?: (string|null);
+
+        /**
+         * Creates a new AIRichResponseInlineImageMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseInlineImageMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseInlineImageMetadata): AICommonDeprecated.AIRichResponseInlineImageMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseInlineImageMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseInlineImageMetadata.verify|verify} messages.
+         * @param message AIRichResponseInlineImageMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseInlineImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseInlineImageMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseInlineImageMetadata.verify|verify} messages.
+         * @param message AIRichResponseInlineImageMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseInlineImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseInlineImageMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseInlineImageMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseInlineImageMetadata;
+
+        /**
+         * Decodes a AIRichResponseInlineImageMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseInlineImageMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseInlineImageMetadata;
+
+        /**
+         * Verifies a AIRichResponseInlineImageMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseInlineImageMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseInlineImageMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseInlineImageMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseInlineImageMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseInlineImageMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseInlineImageMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseInlineImageMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseInlineImageMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace AIRichResponseInlineImageMetadata {
+
+        /** AIRichResponseImageAlignment enum. */
+        enum AIRichResponseImageAlignment {
+            AI_RICH_RESPONSE_IMAGE_LAYOUT_LEADING_ALIGNED = 0,
+            AI_RICH_RESPONSE_IMAGE_LAYOUT_TRAILING_ALIGNED = 1,
+            AI_RICH_RESPONSE_IMAGE_LAYOUT_CENTER_ALIGNED = 2
+        }
+    }
+
+    /** Properties of a AIRichResponseGridImageMetadata. */
+    interface IAIRichResponseGridImageMetadata {
+
+        /** AIRichResponseGridImageMetadata gridImageUrl */
+        gridImageUrl?: (AICommonDeprecated.IAIRichResponseImageURL|null);
+
+        /** AIRichResponseGridImageMetadata imageUrls */
+        imageUrls?: (AICommonDeprecated.IAIRichResponseImageURL[]|null);
+    }
+
+    /** Represents a AIRichResponseGridImageMetadata. */
+    class AIRichResponseGridImageMetadata implements IAIRichResponseGridImageMetadata {
+
+        /**
+         * Constructs a new AIRichResponseGridImageMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseGridImageMetadata);
+
+        /** AIRichResponseGridImageMetadata gridImageUrl. */
+        public gridImageUrl?: (AICommonDeprecated.IAIRichResponseImageURL|null);
+
+        /** AIRichResponseGridImageMetadata imageUrls. */
+        public imageUrls: AICommonDeprecated.IAIRichResponseImageURL[];
+
+        /**
+         * Creates a new AIRichResponseGridImageMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseGridImageMetadata instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseGridImageMetadata): AICommonDeprecated.AIRichResponseGridImageMetadata;
+
+        /**
+         * Encodes the specified AIRichResponseGridImageMetadata message. Does not implicitly {@link AICommonDeprecated.AIRichResponseGridImageMetadata.verify|verify} messages.
+         * @param message AIRichResponseGridImageMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseGridImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseGridImageMetadata message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseGridImageMetadata.verify|verify} messages.
+         * @param message AIRichResponseGridImageMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseGridImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseGridImageMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseGridImageMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseGridImageMetadata;
+
+        /**
+         * Decodes a AIRichResponseGridImageMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseGridImageMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseGridImageMetadata;
+
+        /**
+         * Verifies a AIRichResponseGridImageMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseGridImageMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseGridImageMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseGridImageMetadata;
+
+        /**
+         * Creates a plain object from a AIRichResponseGridImageMetadata message. Also converts values to other types if specified.
+         * @param message AIRichResponseGridImageMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseGridImageMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseGridImageMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseGridImageMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a AIRichResponseImageURL. */
+    interface IAIRichResponseImageURL {
+
+        /** AIRichResponseImageURL imagePreviewUrl */
+        imagePreviewUrl?: (string|null);
+
+        /** AIRichResponseImageURL imageHighResUrl */
+        imageHighResUrl?: (string|null);
+
+        /** AIRichResponseImageURL sourceUrl */
+        sourceUrl?: (string|null);
+    }
+
+    /** Represents a AIRichResponseImageURL. */
+    class AIRichResponseImageURL implements IAIRichResponseImageURL {
+
+        /**
+         * Constructs a new AIRichResponseImageURL.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommonDeprecated.IAIRichResponseImageURL);
+
+        /** AIRichResponseImageURL imagePreviewUrl. */
+        public imagePreviewUrl?: (string|null);
+
+        /** AIRichResponseImageURL imageHighResUrl. */
+        public imageHighResUrl?: (string|null);
+
+        /** AIRichResponseImageURL sourceUrl. */
+        public sourceUrl?: (string|null);
+
+        /**
+         * Creates a new AIRichResponseImageURL instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIRichResponseImageURL instance
+         */
+        public static create(properties?: AICommonDeprecated.IAIRichResponseImageURL): AICommonDeprecated.AIRichResponseImageURL;
+
+        /**
+         * Encodes the specified AIRichResponseImageURL message. Does not implicitly {@link AICommonDeprecated.AIRichResponseImageURL.verify|verify} messages.
+         * @param message AIRichResponseImageURL message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommonDeprecated.IAIRichResponseImageURL, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIRichResponseImageURL message, length delimited. Does not implicitly {@link AICommonDeprecated.AIRichResponseImageURL.verify|verify} messages.
+         * @param message AIRichResponseImageURL message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommonDeprecated.IAIRichResponseImageURL, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIRichResponseImageURL message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIRichResponseImageURL
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommonDeprecated.AIRichResponseImageURL;
+
+        /**
+         * Decodes a AIRichResponseImageURL message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIRichResponseImageURL
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommonDeprecated.AIRichResponseImageURL;
+
+        /**
+         * Verifies a AIRichResponseImageURL message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIRichResponseImageURL message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIRichResponseImageURL
+         */
+        public static fromObject(object: { [k: string]: any }): AICommonDeprecated.AIRichResponseImageURL;
+
+        /**
+         * Creates a plain object from a AIRichResponseImageURL message. Also converts values to other types if specified.
+         * @param message AIRichResponseImageURL
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommonDeprecated.AIRichResponseImageURL, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIRichResponseImageURL to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIRichResponseImageURL
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** AIRichResponseSubMessageType enum. */
+    enum AIRichResponseSubMessageType {
+        AI_RICH_RESPONSE_UNKNOWN = 0,
+        AI_RICH_RESPONSE_GRID_IMAGE = 1,
+        AI_RICH_RESPONSE_TEXT = 2,
+        AI_RICH_RESPONSE_INLINE_IMAGE = 3,
+        AI_RICH_RESPONSE_TABLE = 4,
+        AI_RICH_RESPONSE_CODE = 5,
+        AI_RICH_RESPONSE_DYNAMIC = 6,
+        AI_RICH_RESPONSE_MAP = 7,
+        AI_RICH_RESPONSE_LATEX = 8,
+        AI_RICH_RESPONSE_CONTENT_ITEMS = 9
+    }
+
+    /** AIRichResponseMessageType enum. */
+    enum AIRichResponseMessageType {
+        AI_RICH_RESPONSE_TYPE_UNKNOWN = 0,
+        AI_RICH_RESPONSE_TYPE_STANDARD = 1
+    }
+}
+
+/** Namespace StatusAttributions. */
+export namespace StatusAttributions {
+
+    /** Properties of a StatusAttribution. */
+    interface IStatusAttribution {
+
+        /** StatusAttribution type */
+        type?: (StatusAttributions.StatusAttribution.Type|null);
+
+        /** StatusAttribution actionUrl */
+        actionUrl?: (string|null);
+
+        /** StatusAttribution statusReshare */
+        statusReshare?: (StatusAttributions.StatusAttribution.IStatusReshare|null);
+
+        /** StatusAttribution externalShare */
+        externalShare?: (StatusAttributions.StatusAttribution.IExternalShare|null);
+
+        /** StatusAttribution music */
+        music?: (StatusAttributions.StatusAttribution.IMusic|null);
+
+        /** StatusAttribution groupStatus */
+        groupStatus?: (StatusAttributions.StatusAttribution.IGroupStatus|null);
+
+        /** StatusAttribution rlAttribution */
+        rlAttribution?: (StatusAttributions.StatusAttribution.IRLAttribution|null);
+
+        /** StatusAttribution aiCreatedAttribution */
+        aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
+    }
+
+    /** Represents a StatusAttribution. */
+    class StatusAttribution implements IStatusAttribution {
+
+        /**
+         * Constructs a new StatusAttribution.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: StatusAttributions.IStatusAttribution);
+
+        /** StatusAttribution type. */
+        public type?: (StatusAttributions.StatusAttribution.Type|null);
+
+        /** StatusAttribution actionUrl. */
+        public actionUrl?: (string|null);
+
+        /** StatusAttribution statusReshare. */
+        public statusReshare?: (StatusAttributions.StatusAttribution.IStatusReshare|null);
+
+        /** StatusAttribution externalShare. */
+        public externalShare?: (StatusAttributions.StatusAttribution.IExternalShare|null);
+
+        /** StatusAttribution music. */
+        public music?: (StatusAttributions.StatusAttribution.IMusic|null);
+
+        /** StatusAttribution groupStatus. */
+        public groupStatus?: (StatusAttributions.StatusAttribution.IGroupStatus|null);
+
+        /** StatusAttribution rlAttribution. */
+        public rlAttribution?: (StatusAttributions.StatusAttribution.IRLAttribution|null);
+
+        /** StatusAttribution aiCreatedAttribution. */
+        public aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
+
+        /** StatusAttribution attributionData. */
+        public attributionData?: ("statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution"|"aiCreatedAttribution");
+
+        /**
+         * Creates a new StatusAttribution instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns StatusAttribution instance
+         */
+        public static create(properties?: StatusAttributions.IStatusAttribution): StatusAttributions.StatusAttribution;
+
+        /**
+         * Encodes the specified StatusAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.verify|verify} messages.
+         * @param message StatusAttribution message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: StatusAttributions.IStatusAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified StatusAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.verify|verify} messages.
+         * @param message StatusAttribution message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: StatusAttributions.IStatusAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a StatusAttribution message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns StatusAttribution
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution;
+
+        /**
+         * Decodes a StatusAttribution message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns StatusAttribution
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution;
+
+        /**
+         * Verifies a StatusAttribution message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a StatusAttribution message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns StatusAttribution
+         */
+        public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution;
+
+        /**
+         * Creates a plain object from a StatusAttribution message. Also converts values to other types if specified.
+         * @param message StatusAttribution
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: StatusAttributions.StatusAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this StatusAttribution to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for StatusAttribution
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace StatusAttribution {
+
+        /** Properties of an AiCreatedAttribution. */
+        interface IAiCreatedAttribution {
+
+            /** AiCreatedAttribution source */
+            source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
+        }
+
+        /** Represents an AiCreatedAttribution. */
+        class AiCreatedAttribution implements IAiCreatedAttribution {
+
+            /**
+             * Constructs a new AiCreatedAttribution.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IAiCreatedAttribution);
+
+            /** AiCreatedAttribution source. */
+            public source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
+
+            /**
+             * Creates a new AiCreatedAttribution instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AiCreatedAttribution instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IAiCreatedAttribution): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Encodes the specified AiCreatedAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
+             * @param message AiCreatedAttribution message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IAiCreatedAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AiCreatedAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
+             * @param message AiCreatedAttribution message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IAiCreatedAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AiCreatedAttribution message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AiCreatedAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Decodes an AiCreatedAttribution message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AiCreatedAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Verifies an AiCreatedAttribution message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AiCreatedAttribution message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AiCreatedAttribution
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.AiCreatedAttribution;
+
+            /**
+             * Creates a plain object from an AiCreatedAttribution message. Also converts values to other types if specified.
+             * @param message AiCreatedAttribution
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.AiCreatedAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AiCreatedAttribution to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AiCreatedAttribution
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace AiCreatedAttribution {
+
+            /** Source enum. */
+            enum Source {
+                UNKNOWN = 0,
+                STATUS_MIMICRY = 1
+            }
+        }
+
+        /** Properties of an ExternalShare. */
+        interface IExternalShare {
+
+            /** ExternalShare actionUrl */
+            actionUrl?: (string|null);
+
+            /** ExternalShare source */
+            source?: (StatusAttributions.StatusAttribution.ExternalShare.Source|null);
+
+            /** ExternalShare duration */
+            duration?: (number|null);
+
+            /** ExternalShare actionFallbackUrl */
+            actionFallbackUrl?: (string|null);
+        }
+
+        /** Represents an ExternalShare. */
+        class ExternalShare implements IExternalShare {
+
+            /**
+             * Constructs a new ExternalShare.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IExternalShare);
+
+            /** ExternalShare actionUrl. */
+            public actionUrl?: (string|null);
+
+            /** ExternalShare source. */
+            public source?: (StatusAttributions.StatusAttribution.ExternalShare.Source|null);
+
+            /** ExternalShare duration. */
+            public duration?: (number|null);
+
+            /** ExternalShare actionFallbackUrl. */
+            public actionFallbackUrl?: (string|null);
+
+            /**
+             * Creates a new ExternalShare instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ExternalShare instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IExternalShare): StatusAttributions.StatusAttribution.ExternalShare;
+
+            /**
+             * Encodes the specified ExternalShare message. Does not implicitly {@link StatusAttributions.StatusAttribution.ExternalShare.verify|verify} messages.
+             * @param message ExternalShare message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IExternalShare, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ExternalShare message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.ExternalShare.verify|verify} messages.
+             * @param message ExternalShare message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IExternalShare, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an ExternalShare message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ExternalShare
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.ExternalShare;
+
+            /**
+             * Decodes an ExternalShare message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ExternalShare
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.ExternalShare;
+
+            /**
+             * Verifies an ExternalShare message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an ExternalShare message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ExternalShare
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.ExternalShare;
+
+            /**
+             * Creates a plain object from an ExternalShare message. Also converts values to other types if specified.
+             * @param message ExternalShare
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.ExternalShare, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ExternalShare to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ExternalShare
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace ExternalShare {
+
+            /** Source enum. */
+            enum Source {
+                UNKNOWN = 0,
+                INSTAGRAM = 1,
+                FACEBOOK = 2,
+                MESSENGER = 3,
+                SPOTIFY = 4,
+                YOUTUBE = 5,
+                PINTEREST = 6,
+                THREADS = 7,
+                APPLE_MUSIC = 8,
+                SHARECHAT = 9,
+                GOOGLE_PHOTOS = 10,
+                SOUNDCLOUD = 11
+            }
+        }
+
+        /** Properties of a GroupStatus. */
+        interface IGroupStatus {
+
+            /** GroupStatus authorJid */
+            authorJid?: (string|null);
+        }
+
+        /** Represents a GroupStatus. */
+        class GroupStatus implements IGroupStatus {
+
+            /**
+             * Constructs a new GroupStatus.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IGroupStatus);
+
+            /** GroupStatus authorJid. */
+            public authorJid?: (string|null);
+
+            /**
+             * Creates a new GroupStatus instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns GroupStatus instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IGroupStatus): StatusAttributions.StatusAttribution.GroupStatus;
+
+            /**
+             * Encodes the specified GroupStatus message. Does not implicitly {@link StatusAttributions.StatusAttribution.GroupStatus.verify|verify} messages.
+             * @param message GroupStatus message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IGroupStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GroupStatus message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.GroupStatus.verify|verify} messages.
+             * @param message GroupStatus message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IGroupStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GroupStatus message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns GroupStatus
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.GroupStatus;
+
+            /**
+             * Decodes a GroupStatus message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns GroupStatus
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.GroupStatus;
+
+            /**
+             * Verifies a GroupStatus message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GroupStatus message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GroupStatus
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.GroupStatus;
+
+            /**
+             * Creates a plain object from a GroupStatus message. Also converts values to other types if specified.
+             * @param message GroupStatus
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.GroupStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GroupStatus to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for GroupStatus
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a Music. */
+        interface IMusic {
+
+            /** Music authorName */
+            authorName?: (string|null);
+
+            /** Music songId */
+            songId?: (string|null);
+
+            /** Music title */
+            title?: (string|null);
+
+            /** Music author */
+            author?: (string|null);
+
+            /** Music artistAttribution */
+            artistAttribution?: (string|null);
+
+            /** Music isExplicit */
+            isExplicit?: (boolean|null);
+        }
+
+        /** Represents a Music. */
+        class Music implements IMusic {
+
+            /**
+             * Constructs a new Music.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IMusic);
+
+            /** Music authorName. */
+            public authorName?: (string|null);
+
+            /** Music songId. */
+            public songId?: (string|null);
+
+            /** Music title. */
+            public title?: (string|null);
+
+            /** Music author. */
+            public author?: (string|null);
+
+            /** Music artistAttribution. */
+            public artistAttribution?: (string|null);
+
+            /** Music isExplicit. */
+            public isExplicit?: (boolean|null);
+
+            /**
+             * Creates a new Music instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns Music instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IMusic): StatusAttributions.StatusAttribution.Music;
+
+            /**
+             * Encodes the specified Music message. Does not implicitly {@link StatusAttributions.StatusAttribution.Music.verify|verify} messages.
+             * @param message Music message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IMusic, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Music message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.Music.verify|verify} messages.
+             * @param message Music message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IMusic, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Music message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Music
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.Music;
+
+            /**
+             * Decodes a Music message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Music
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.Music;
+
+            /**
+             * Verifies a Music message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Music message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Music
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.Music;
+
+            /**
+             * Creates a plain object from a Music message. Also converts values to other types if specified.
+             * @param message Music
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.Music, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Music to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Music
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a RLAttribution. */
+        interface IRLAttribution {
+
+            /** RLAttribution source */
+            source?: (StatusAttributions.StatusAttribution.RLAttribution.Source|null);
+        }
+
+        /** Represents a RLAttribution. */
+        class RLAttribution implements IRLAttribution {
+
+            /**
+             * Constructs a new RLAttribution.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IRLAttribution);
+
+            /** RLAttribution source. */
+            public source?: (StatusAttributions.StatusAttribution.RLAttribution.Source|null);
+
+            /**
+             * Creates a new RLAttribution instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns RLAttribution instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IRLAttribution): StatusAttributions.StatusAttribution.RLAttribution;
+
+            /**
+             * Encodes the specified RLAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.RLAttribution.verify|verify} messages.
+             * @param message RLAttribution message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IRLAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified RLAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.RLAttribution.verify|verify} messages.
+             * @param message RLAttribution message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IRLAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a RLAttribution message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns RLAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.RLAttribution;
+
+            /**
+             * Decodes a RLAttribution message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns RLAttribution
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.RLAttribution;
+
+            /**
+             * Verifies a RLAttribution message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a RLAttribution message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns RLAttribution
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.RLAttribution;
+
+            /**
+             * Creates a plain object from a RLAttribution message. Also converts values to other types if specified.
+             * @param message RLAttribution
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.RLAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this RLAttribution to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for RLAttribution
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace RLAttribution {
+
+            /** Source enum. */
+            enum Source {
+                UNKNOWN = 0,
+                RAY_BAN_META_GLASSES = 1,
+                OAKLEY_META_GLASSES = 2,
+                HYPERNOVA_GLASSES = 3
+            }
+        }
+
+        /** Properties of a StatusReshare. */
+        interface IStatusReshare {
+
+            /** StatusReshare source */
+            source?: (StatusAttributions.StatusAttribution.StatusReshare.Source|null);
+
+            /** StatusReshare metadata */
+            metadata?: (StatusAttributions.StatusAttribution.StatusReshare.IMetadata|null);
+        }
+
+        /** Represents a StatusReshare. */
+        class StatusReshare implements IStatusReshare {
+
+            /**
+             * Constructs a new StatusReshare.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: StatusAttributions.StatusAttribution.IStatusReshare);
+
+            /** StatusReshare source. */
+            public source?: (StatusAttributions.StatusAttribution.StatusReshare.Source|null);
+
+            /** StatusReshare metadata. */
+            public metadata?: (StatusAttributions.StatusAttribution.StatusReshare.IMetadata|null);
+
+            /**
+             * Creates a new StatusReshare instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns StatusReshare instance
+             */
+            public static create(properties?: StatusAttributions.StatusAttribution.IStatusReshare): StatusAttributions.StatusAttribution.StatusReshare;
+
+            /**
+             * Encodes the specified StatusReshare message. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.verify|verify} messages.
+             * @param message StatusReshare message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: StatusAttributions.StatusAttribution.IStatusReshare, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified StatusReshare message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.verify|verify} messages.
+             * @param message StatusReshare message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IStatusReshare, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a StatusReshare message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns StatusReshare
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.StatusReshare;
+
+            /**
+             * Decodes a StatusReshare message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns StatusReshare
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.StatusReshare;
+
+            /**
+             * Verifies a StatusReshare message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a StatusReshare message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns StatusReshare
+             */
+            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.StatusReshare;
+
+            /**
+             * Creates a plain object from a StatusReshare message. Also converts values to other types if specified.
+             * @param message StatusReshare
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: StatusAttributions.StatusAttribution.StatusReshare, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this StatusReshare to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for StatusReshare
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace StatusReshare {
+
+            /** Properties of a Metadata. */
+            interface IMetadata {
+
+                /** Metadata duration */
+                duration?: (number|null);
+
+                /** Metadata channelJid */
+                channelJid?: (string|null);
+
+                /** Metadata channelMessageId */
+                channelMessageId?: (number|null);
+
+                /** Metadata hasMultipleReshares */
+                hasMultipleReshares?: (boolean|null);
+            }
+
+            /** Represents a Metadata. */
+            class Metadata implements IMetadata {
+
+                /**
+                 * Constructs a new Metadata.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: StatusAttributions.StatusAttribution.StatusReshare.IMetadata);
+
+                /** Metadata duration. */
+                public duration?: (number|null);
+
+                /** Metadata channelJid. */
+                public channelJid?: (string|null);
+
+                /** Metadata channelMessageId. */
+                public channelMessageId?: (number|null);
+
+                /** Metadata hasMultipleReshares. */
+                public hasMultipleReshares?: (boolean|null);
+
+                /**
+                 * Creates a new Metadata instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns Metadata instance
+                 */
+                public static create(properties?: StatusAttributions.StatusAttribution.StatusReshare.IMetadata): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
+
+                /**
+                 * Encodes the specified Metadata message. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.Metadata.verify|verify} messages.
+                 * @param message Metadata message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: StatusAttributions.StatusAttribution.StatusReshare.IMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified Metadata message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.Metadata.verify|verify} messages.
+                 * @param message Metadata message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: StatusAttributions.StatusAttribution.StatusReshare.IMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a Metadata message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns Metadata
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
+
+                /**
+                 * Decodes a Metadata message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns Metadata
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
+
+                /**
+                 * Verifies a Metadata message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Metadata message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Metadata
+                 */
+                public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
+
+                /**
+                 * Creates a plain object from a Metadata message. Also converts values to other types if specified.
+                 * @param message Metadata
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: StatusAttributions.StatusAttribution.StatusReshare.Metadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Metadata to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for Metadata
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Source enum. */
+            enum Source {
+                UNKNOWN = 0,
+                INTERNAL_RESHARE = 1,
+                MENTION_RESHARE = 2,
+                CHANNEL_RESHARE = 3,
+                FORWARD = 4
+            }
+        }
+
+        /** Type enum. */
+        enum Type {
+            UNKNOWN = 0,
+            RESHARE = 1,
+            EXTERNAL_SHARE = 2,
+            MUSIC = 3,
+            STATUS_MENTION = 4,
+            GROUP_STATUS = 5,
+            RL_ATTRIBUTION = 6,
+            AI_CREATED = 7,
+            LAYOUTS = 8,
+            NEWSLETTER_STATUS = 9,
+            STATUS_CLOSE_SHARING = 10
+        }
+    }
+}
+
 /** Namespace AICommon. */
 export namespace AICommon {
+
+    /** Properties of a BotAgentDeepLinkMetadata. */
+    interface IBotAgentDeepLinkMetadata {
+
+        /** BotAgentDeepLinkMetadata token */
+        token?: (string|null);
+    }
+
+    /** Represents a BotAgentDeepLinkMetadata. */
+    class BotAgentDeepLinkMetadata implements IBotAgentDeepLinkMetadata {
+
+        /**
+         * Constructs a new BotAgentDeepLinkMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommon.IBotAgentDeepLinkMetadata);
+
+        /** BotAgentDeepLinkMetadata token. */
+        public token?: (string|null);
+
+        /**
+         * Creates a new BotAgentDeepLinkMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns BotAgentDeepLinkMetadata instance
+         */
+        public static create(properties?: AICommon.IBotAgentDeepLinkMetadata): AICommon.BotAgentDeepLinkMetadata;
+
+        /**
+         * Encodes the specified BotAgentDeepLinkMetadata message. Does not implicitly {@link AICommon.BotAgentDeepLinkMetadata.verify|verify} messages.
+         * @param message BotAgentDeepLinkMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommon.IBotAgentDeepLinkMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified BotAgentDeepLinkMetadata message, length delimited. Does not implicitly {@link AICommon.BotAgentDeepLinkMetadata.verify|verify} messages.
+         * @param message BotAgentDeepLinkMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommon.IBotAgentDeepLinkMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a BotAgentDeepLinkMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns BotAgentDeepLinkMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.BotAgentDeepLinkMetadata;
+
+        /**
+         * Decodes a BotAgentDeepLinkMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns BotAgentDeepLinkMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.BotAgentDeepLinkMetadata;
+
+        /**
+         * Verifies a BotAgentDeepLinkMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a BotAgentDeepLinkMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns BotAgentDeepLinkMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommon.BotAgentDeepLinkMetadata;
+
+        /**
+         * Creates a plain object from a BotAgentDeepLinkMetadata message. Also converts values to other types if specified.
+         * @param message BotAgentDeepLinkMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommon.BotAgentDeepLinkMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this BotAgentDeepLinkMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for BotAgentDeepLinkMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a BotAgentMetadata. */
+    interface IBotAgentMetadata {
+
+        /** BotAgentMetadata deepLinkMetadata */
+        deepLinkMetadata?: (AICommon.IBotAgentDeepLinkMetadata|null);
+    }
+
+    /** Represents a BotAgentMetadata. */
+    class BotAgentMetadata implements IBotAgentMetadata {
+
+        /**
+         * Constructs a new BotAgentMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommon.IBotAgentMetadata);
+
+        /** BotAgentMetadata deepLinkMetadata. */
+        public deepLinkMetadata?: (AICommon.IBotAgentDeepLinkMetadata|null);
+
+        /**
+         * Creates a new BotAgentMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns BotAgentMetadata instance
+         */
+        public static create(properties?: AICommon.IBotAgentMetadata): AICommon.BotAgentMetadata;
+
+        /**
+         * Encodes the specified BotAgentMetadata message. Does not implicitly {@link AICommon.BotAgentMetadata.verify|verify} messages.
+         * @param message BotAgentMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommon.IBotAgentMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified BotAgentMetadata message, length delimited. Does not implicitly {@link AICommon.BotAgentMetadata.verify|verify} messages.
+         * @param message BotAgentMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommon.IBotAgentMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a BotAgentMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns BotAgentMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.BotAgentMetadata;
+
+        /**
+         * Decodes a BotAgentMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns BotAgentMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.BotAgentMetadata;
+
+        /**
+         * Verifies a BotAgentMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a BotAgentMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns BotAgentMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommon.BotAgentMetadata;
+
+        /**
+         * Creates a plain object from a BotAgentMetadata message. Also converts values to other types if specified.
+         * @param message BotAgentMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommon.BotAgentMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this BotAgentMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for BotAgentMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a BotInfrastructureDiagnostics. */
+    interface IBotInfrastructureDiagnostics {
+
+        /** BotInfrastructureDiagnostics botBackend */
+        botBackend?: (AICommon.BotInfrastructureDiagnostics.BotBackend|null);
+
+        /** BotInfrastructureDiagnostics toolsUsed */
+        toolsUsed?: (string[]|null);
+
+        /** BotInfrastructureDiagnostics isThinking */
+        isThinking?: (boolean|null);
+    }
+
+    /** Represents a BotInfrastructureDiagnostics. */
+    class BotInfrastructureDiagnostics implements IBotInfrastructureDiagnostics {
+
+        /**
+         * Constructs a new BotInfrastructureDiagnostics.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommon.IBotInfrastructureDiagnostics);
+
+        /** BotInfrastructureDiagnostics botBackend. */
+        public botBackend?: (AICommon.BotInfrastructureDiagnostics.BotBackend|null);
+
+        /** BotInfrastructureDiagnostics toolsUsed. */
+        public toolsUsed: string[];
+
+        /** BotInfrastructureDiagnostics isThinking. */
+        public isThinking?: (boolean|null);
+
+        /**
+         * Creates a new BotInfrastructureDiagnostics instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns BotInfrastructureDiagnostics instance
+         */
+        public static create(properties?: AICommon.IBotInfrastructureDiagnostics): AICommon.BotInfrastructureDiagnostics;
+
+        /**
+         * Encodes the specified BotInfrastructureDiagnostics message. Does not implicitly {@link AICommon.BotInfrastructureDiagnostics.verify|verify} messages.
+         * @param message BotInfrastructureDiagnostics message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommon.IBotInfrastructureDiagnostics, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified BotInfrastructureDiagnostics message, length delimited. Does not implicitly {@link AICommon.BotInfrastructureDiagnostics.verify|verify} messages.
+         * @param message BotInfrastructureDiagnostics message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommon.IBotInfrastructureDiagnostics, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a BotInfrastructureDiagnostics message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns BotInfrastructureDiagnostics
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.BotInfrastructureDiagnostics;
+
+        /**
+         * Decodes a BotInfrastructureDiagnostics message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns BotInfrastructureDiagnostics
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.BotInfrastructureDiagnostics;
+
+        /**
+         * Verifies a BotInfrastructureDiagnostics message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a BotInfrastructureDiagnostics message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns BotInfrastructureDiagnostics
+         */
+        public static fromObject(object: { [k: string]: any }): AICommon.BotInfrastructureDiagnostics;
+
+        /**
+         * Creates a plain object from a BotInfrastructureDiagnostics message. Also converts values to other types if specified.
+         * @param message BotInfrastructureDiagnostics
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommon.BotInfrastructureDiagnostics, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this BotInfrastructureDiagnostics to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for BotInfrastructureDiagnostics
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace BotInfrastructureDiagnostics {
+
+        /** BotBackend enum. */
+        enum BotBackend {
+            AAPI = 0,
+            CLIPPY = 1
+        }
+    }
 
     /** Properties of a AIHomeState. */
     interface IAIHomeState {
@@ -28080,9 +29953,6 @@ export namespace AICommon {
 
         /** AIHomeState conversationOptions. */
         public conversationOptions: AICommon.AIHomeState.IAIHomeOption[];
-
-        /** AIHomeState _lastFetchTime. */
-        public _lastFetchTime?: "lastFetchTime";
 
         /**
          * Creates a new AIHomeState instance using the specified properties.
@@ -28187,6 +30057,9 @@ export namespace AICommon {
 
             /** AIHomeOption imageBackgroundColor */
             imageBackgroundColor?: (string|null);
+
+            /** AIHomeOption cardTypeId */
+            cardTypeId?: (string|null);
         }
 
         /** Represents a AIHomeOption. */
@@ -28219,26 +30092,8 @@ export namespace AICommon {
             /** AIHomeOption imageBackgroundColor. */
             public imageBackgroundColor?: (string|null);
 
-            /** AIHomeOption _type. */
-            public _type?: "type";
-
-            /** AIHomeOption _title. */
-            public _title?: "title";
-
-            /** AIHomeOption _promptText. */
-            public _promptText?: "promptText";
-
-            /** AIHomeOption _sessionId. */
-            public _sessionId?: "sessionId";
-
-            /** AIHomeOption _imageWdsIdentifier. */
-            public _imageWdsIdentifier?: "imageWdsIdentifier";
-
-            /** AIHomeOption _imageTintColor. */
-            public _imageTintColor?: "imageTintColor";
-
-            /** AIHomeOption _imageBackgroundColor. */
-            public _imageBackgroundColor?: "imageBackgroundColor";
+            /** AIHomeOption cardTypeId. */
+            public cardTypeId?: (string|null);
 
             /**
              * Creates a new AIHomeOption instance using the specified properties.
@@ -28325,7 +30180,8 @@ export namespace AICommon {
                 PROMPT = 0,
                 CREATE_IMAGE = 1,
                 ANIMATE_PHOTO = 2,
-                ANALYZE_FILE = 3
+                ANALYZE_FILE = 3,
+                COLLABORATE = 4
             }
         }
     }
@@ -28348,9 +30204,6 @@ export namespace AICommon {
 
         /** BotDocumentMessageMetadata pluginType. */
         public pluginType?: (AICommon.BotDocumentMessageMetadata.DocumentPluginType|null);
-
-        /** BotDocumentMessageMetadata _pluginType. */
-        public _pluginType?: "pluginType";
 
         /**
          * Creates a new BotDocumentMessageMetadata instance using the specified properties.
@@ -28470,15 +30323,6 @@ export namespace AICommon {
         /** SessionTransparencyMetadata sessionTransparencyType. */
         public sessionTransparencyType?: (AICommon.SessionTransparencyType|null);
 
-        /** SessionTransparencyMetadata _disclaimerText. */
-        public _disclaimerText?: "disclaimerText";
-
-        /** SessionTransparencyMetadata _hcaId. */
-        public _hcaId?: "hcaId";
-
-        /** SessionTransparencyMetadata _sessionTransparencyType. */
-        public _sessionTransparencyType?: "sessionTransparencyType";
-
         /**
          * Creates a new SessionTransparencyMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -28582,12 +30426,6 @@ export namespace AICommon {
         /** AIRegenerateMetadata responseTimestampMs. */
         public responseTimestampMs?: (number|Long|null);
 
-        /** AIRegenerateMetadata _messageKey. */
-        public _messageKey?: "messageKey";
-
-        /** AIRegenerateMetadata _responseTimestampMs. */
-        public _responseTimestampMs?: "responseTimestampMs";
-
         /**
          * Creates a new AIRegenerateMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -28666,1091 +30504,6 @@ export namespace AICommon {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a AIRichResponseSubMessage. */
-    interface IAIRichResponseSubMessage {
-
-        /** AIRichResponseSubMessage messageType */
-        messageType?: (AICommon.AIRichResponseSubMessageType|null);
-
-        /** AIRichResponseSubMessage gridImageMetadata */
-        gridImageMetadata?: (AICommon.IAIRichResponseGridImageMetadata|null);
-
-        /** AIRichResponseSubMessage messageText */
-        messageText?: (string|null);
-
-        /** AIRichResponseSubMessage imageMetadata */
-        imageMetadata?: (AICommon.IAIRichResponseInlineImageMetadata|null);
-
-        /** AIRichResponseSubMessage codeMetadata */
-        codeMetadata?: (AICommon.IAIRichResponseCodeMetadata|null);
-
-        /** AIRichResponseSubMessage tableMetadata */
-        tableMetadata?: (AICommon.IAIRichResponseTableMetadata|null);
-
-        /** AIRichResponseSubMessage dynamicMetadata */
-        dynamicMetadata?: (AICommon.IAIRichResponseDynamicMetadata|null);
-
-        /** AIRichResponseSubMessage latexMetadata */
-        latexMetadata?: (AICommon.IAIRichResponseLatexMetadata|null);
-
-        /** AIRichResponseSubMessage mapMetadata */
-        mapMetadata?: (AICommon.IAIRichResponseMapMetadata|null);
-
-        /** AIRichResponseSubMessage contentItemsMetadata */
-        contentItemsMetadata?: (AICommon.IAIRichResponseContentItemsMetadata|null);
-    }
-
-    /** Represents a AIRichResponseSubMessage. */
-    class AIRichResponseSubMessage implements IAIRichResponseSubMessage {
-
-        /**
-         * Constructs a new AIRichResponseSubMessage.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseSubMessage);
-
-        /** AIRichResponseSubMessage messageType. */
-        public messageType?: (AICommon.AIRichResponseSubMessageType|null);
-
-        /** AIRichResponseSubMessage gridImageMetadata. */
-        public gridImageMetadata?: (AICommon.IAIRichResponseGridImageMetadata|null);
-
-        /** AIRichResponseSubMessage messageText. */
-        public messageText?: (string|null);
-
-        /** AIRichResponseSubMessage imageMetadata. */
-        public imageMetadata?: (AICommon.IAIRichResponseInlineImageMetadata|null);
-
-        /** AIRichResponseSubMessage codeMetadata. */
-        public codeMetadata?: (AICommon.IAIRichResponseCodeMetadata|null);
-
-        /** AIRichResponseSubMessage tableMetadata. */
-        public tableMetadata?: (AICommon.IAIRichResponseTableMetadata|null);
-
-        /** AIRichResponseSubMessage dynamicMetadata. */
-        public dynamicMetadata?: (AICommon.IAIRichResponseDynamicMetadata|null);
-
-        /** AIRichResponseSubMessage latexMetadata. */
-        public latexMetadata?: (AICommon.IAIRichResponseLatexMetadata|null);
-
-        /** AIRichResponseSubMessage mapMetadata. */
-        public mapMetadata?: (AICommon.IAIRichResponseMapMetadata|null);
-
-        /** AIRichResponseSubMessage contentItemsMetadata. */
-        public contentItemsMetadata?: (AICommon.IAIRichResponseContentItemsMetadata|null);
-
-        /** AIRichResponseSubMessage _messageType. */
-        public _messageType?: "messageType";
-
-        /** AIRichResponseSubMessage _gridImageMetadata. */
-        public _gridImageMetadata?: "gridImageMetadata";
-
-        /** AIRichResponseSubMessage _messageText. */
-        public _messageText?: "messageText";
-
-        /** AIRichResponseSubMessage _imageMetadata. */
-        public _imageMetadata?: "imageMetadata";
-
-        /** AIRichResponseSubMessage _codeMetadata. */
-        public _codeMetadata?: "codeMetadata";
-
-        /** AIRichResponseSubMessage _tableMetadata. */
-        public _tableMetadata?: "tableMetadata";
-
-        /** AIRichResponseSubMessage _dynamicMetadata. */
-        public _dynamicMetadata?: "dynamicMetadata";
-
-        /** AIRichResponseSubMessage _latexMetadata. */
-        public _latexMetadata?: "latexMetadata";
-
-        /** AIRichResponseSubMessage _mapMetadata. */
-        public _mapMetadata?: "mapMetadata";
-
-        /** AIRichResponseSubMessage _contentItemsMetadata. */
-        public _contentItemsMetadata?: "contentItemsMetadata";
-
-        /**
-         * Creates a new AIRichResponseSubMessage instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseSubMessage instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseSubMessage): AICommon.AIRichResponseSubMessage;
-
-        /**
-         * Encodes the specified AIRichResponseSubMessage message. Does not implicitly {@link AICommon.AIRichResponseSubMessage.verify|verify} messages.
-         * @param message AIRichResponseSubMessage message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseSubMessage, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseSubMessage message, length delimited. Does not implicitly {@link AICommon.AIRichResponseSubMessage.verify|verify} messages.
-         * @param message AIRichResponseSubMessage message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseSubMessage, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseSubMessage message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseSubMessage
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseSubMessage;
-
-        /**
-         * Decodes a AIRichResponseSubMessage message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseSubMessage
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseSubMessage;
-
-        /**
-         * Verifies a AIRichResponseSubMessage message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseSubMessage message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseSubMessage
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseSubMessage;
-
-        /**
-         * Creates a plain object from a AIRichResponseSubMessage message. Also converts values to other types if specified.
-         * @param message AIRichResponseSubMessage
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseSubMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseSubMessage to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseSubMessage
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    /** Properties of a AIRichResponseContentItemsMetadata. */
-    interface IAIRichResponseContentItemsMetadata {
-
-        /** AIRichResponseContentItemsMetadata itemsMetadata */
-        itemsMetadata?: (AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata[]|null);
-
-        /** AIRichResponseContentItemsMetadata contentType */
-        contentType?: (AICommon.AIRichResponseContentItemsMetadata.ContentType|null);
-    }
-
-    /** Represents a AIRichResponseContentItemsMetadata. */
-    class AIRichResponseContentItemsMetadata implements IAIRichResponseContentItemsMetadata {
-
-        /**
-         * Constructs a new AIRichResponseContentItemsMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseContentItemsMetadata);
-
-        /** AIRichResponseContentItemsMetadata itemsMetadata. */
-        public itemsMetadata: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata[];
-
-        /** AIRichResponseContentItemsMetadata contentType. */
-        public contentType?: (AICommon.AIRichResponseContentItemsMetadata.ContentType|null);
-
-        /** AIRichResponseContentItemsMetadata _contentType. */
-        public _contentType?: "contentType";
-
-        /**
-         * Creates a new AIRichResponseContentItemsMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseContentItemsMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseContentItemsMetadata): AICommon.AIRichResponseContentItemsMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseContentItemsMetadata message. Does not implicitly {@link AICommon.AIRichResponseContentItemsMetadata.verify|verify} messages.
-         * @param message AIRichResponseContentItemsMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseContentItemsMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseContentItemsMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseContentItemsMetadata.verify|verify} messages.
-         * @param message AIRichResponseContentItemsMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseContentItemsMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseContentItemsMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseContentItemsMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseContentItemsMetadata;
-
-        /**
-         * Decodes a AIRichResponseContentItemsMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseContentItemsMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseContentItemsMetadata;
-
-        /**
-         * Verifies a AIRichResponseContentItemsMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseContentItemsMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseContentItemsMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseContentItemsMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseContentItemsMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseContentItemsMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseContentItemsMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseContentItemsMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseContentItemsMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseContentItemsMetadata {
-
-        /** Properties of a AIRichResponseContentItemMetadata. */
-        interface IAIRichResponseContentItemMetadata {
-
-            /** AIRichResponseContentItemMetadata reelItem */
-            reelItem?: (AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem|null);
-        }
-
-        /** Represents a AIRichResponseContentItemMetadata. */
-        class AIRichResponseContentItemMetadata implements IAIRichResponseContentItemMetadata {
-
-            /**
-             * Constructs a new AIRichResponseContentItemMetadata.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata);
-
-            /** AIRichResponseContentItemMetadata reelItem. */
-            public reelItem?: (AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem|null);
-
-            /** AIRichResponseContentItemMetadata aIRichResponseContentItem. */
-            public aIRichResponseContentItem?: "reelItem";
-
-            /**
-             * Creates a new AIRichResponseContentItemMetadata instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AIRichResponseContentItemMetadata instance
-             */
-            public static create(properties?: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
-
-            /**
-             * Encodes the specified AIRichResponseContentItemMetadata message. Does not implicitly {@link AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata.verify|verify} messages.
-             * @param message AIRichResponseContentItemMetadata message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AIRichResponseContentItemMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata.verify|verify} messages.
-             * @param message AIRichResponseContentItemMetadata message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseContentItemMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a AIRichResponseContentItemMetadata message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AIRichResponseContentItemMetadata
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
-
-            /**
-             * Decodes a AIRichResponseContentItemMetadata message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AIRichResponseContentItemMetadata
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
-
-            /**
-             * Verifies a AIRichResponseContentItemMetadata message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a AIRichResponseContentItemMetadata message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AIRichResponseContentItemMetadata
-             */
-            public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata;
-
-            /**
-             * Creates a plain object from a AIRichResponseContentItemMetadata message. Also converts values to other types if specified.
-             * @param message AIRichResponseContentItemMetadata
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: AICommon.AIRichResponseContentItemsMetadata.AIRichResponseContentItemMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AIRichResponseContentItemMetadata to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AIRichResponseContentItemMetadata
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        /** Properties of a AIRichResponseReelItem. */
-        interface IAIRichResponseReelItem {
-
-            /** AIRichResponseReelItem title */
-            title?: (string|null);
-
-            /** AIRichResponseReelItem profileIconUrl */
-            profileIconUrl?: (string|null);
-
-            /** AIRichResponseReelItem thumbnailUrl */
-            thumbnailUrl?: (string|null);
-
-            /** AIRichResponseReelItem videoUrl */
-            videoUrl?: (string|null);
-        }
-
-        /** Represents a AIRichResponseReelItem. */
-        class AIRichResponseReelItem implements IAIRichResponseReelItem {
-
-            /**
-             * Constructs a new AIRichResponseReelItem.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem);
-
-            /** AIRichResponseReelItem title. */
-            public title?: (string|null);
-
-            /** AIRichResponseReelItem profileIconUrl. */
-            public profileIconUrl?: (string|null);
-
-            /** AIRichResponseReelItem thumbnailUrl. */
-            public thumbnailUrl?: (string|null);
-
-            /** AIRichResponseReelItem videoUrl. */
-            public videoUrl?: (string|null);
-
-            /** AIRichResponseReelItem _title. */
-            public _title?: "title";
-
-            /** AIRichResponseReelItem _profileIconUrl. */
-            public _profileIconUrl?: "profileIconUrl";
-
-            /** AIRichResponseReelItem _thumbnailUrl. */
-            public _thumbnailUrl?: "thumbnailUrl";
-
-            /** AIRichResponseReelItem _videoUrl. */
-            public _videoUrl?: "videoUrl";
-
-            /**
-             * Creates a new AIRichResponseReelItem instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AIRichResponseReelItem instance
-             */
-            public static create(properties?: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
-
-            /**
-             * Encodes the specified AIRichResponseReelItem message. Does not implicitly {@link AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem.verify|verify} messages.
-             * @param message AIRichResponseReelItem message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AIRichResponseReelItem message, length delimited. Does not implicitly {@link AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem.verify|verify} messages.
-             * @param message AIRichResponseReelItem message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: AICommon.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a AIRichResponseReelItem message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AIRichResponseReelItem
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
-
-            /**
-             * Decodes a AIRichResponseReelItem message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AIRichResponseReelItem
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
-
-            /**
-             * Verifies a AIRichResponseReelItem message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a AIRichResponseReelItem message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AIRichResponseReelItem
-             */
-            public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
-
-            /**
-             * Creates a plain object from a AIRichResponseReelItem message. Also converts values to other types if specified.
-             * @param message AIRichResponseReelItem
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: AICommon.AIRichResponseContentItemsMetadata.AIRichResponseReelItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AIRichResponseReelItem to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AIRichResponseReelItem
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        /** ContentType enum. */
-        enum ContentType {
-            DEFAULT = 0,
-            CAROUSEL = 1
-        }
-    }
-
-    /** Properties of a AIRichResponseMapMetadata. */
-    interface IAIRichResponseMapMetadata {
-
-        /** AIRichResponseMapMetadata centerLatitude */
-        centerLatitude?: (number|null);
-
-        /** AIRichResponseMapMetadata centerLongitude */
-        centerLongitude?: (number|null);
-
-        /** AIRichResponseMapMetadata latitudeDelta */
-        latitudeDelta?: (number|null);
-
-        /** AIRichResponseMapMetadata longitudeDelta */
-        longitudeDelta?: (number|null);
-
-        /** AIRichResponseMapMetadata annotations */
-        annotations?: (AICommon.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation[]|null);
-
-        /** AIRichResponseMapMetadata showInfoList */
-        showInfoList?: (boolean|null);
-    }
-
-    /** Represents a AIRichResponseMapMetadata. */
-    class AIRichResponseMapMetadata implements IAIRichResponseMapMetadata {
-
-        /**
-         * Constructs a new AIRichResponseMapMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseMapMetadata);
-
-        /** AIRichResponseMapMetadata centerLatitude. */
-        public centerLatitude?: (number|null);
-
-        /** AIRichResponseMapMetadata centerLongitude. */
-        public centerLongitude?: (number|null);
-
-        /** AIRichResponseMapMetadata latitudeDelta. */
-        public latitudeDelta?: (number|null);
-
-        /** AIRichResponseMapMetadata longitudeDelta. */
-        public longitudeDelta?: (number|null);
-
-        /** AIRichResponseMapMetadata annotations. */
-        public annotations: AICommon.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation[];
-
-        /** AIRichResponseMapMetadata showInfoList. */
-        public showInfoList?: (boolean|null);
-
-        /** AIRichResponseMapMetadata _centerLatitude. */
-        public _centerLatitude?: "centerLatitude";
-
-        /** AIRichResponseMapMetadata _centerLongitude. */
-        public _centerLongitude?: "centerLongitude";
-
-        /** AIRichResponseMapMetadata _latitudeDelta. */
-        public _latitudeDelta?: "latitudeDelta";
-
-        /** AIRichResponseMapMetadata _longitudeDelta. */
-        public _longitudeDelta?: "longitudeDelta";
-
-        /** AIRichResponseMapMetadata _showInfoList. */
-        public _showInfoList?: "showInfoList";
-
-        /**
-         * Creates a new AIRichResponseMapMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseMapMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseMapMetadata): AICommon.AIRichResponseMapMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseMapMetadata message. Does not implicitly {@link AICommon.AIRichResponseMapMetadata.verify|verify} messages.
-         * @param message AIRichResponseMapMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseMapMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseMapMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseMapMetadata.verify|verify} messages.
-         * @param message AIRichResponseMapMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseMapMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseMapMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseMapMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseMapMetadata;
-
-        /**
-         * Decodes a AIRichResponseMapMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseMapMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseMapMetadata;
-
-        /**
-         * Verifies a AIRichResponseMapMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseMapMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseMapMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseMapMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseMapMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseMapMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseMapMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseMapMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseMapMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseMapMetadata {
-
-        /** Properties of a AIRichResponseMapAnnotation. */
-        interface IAIRichResponseMapAnnotation {
-
-            /** AIRichResponseMapAnnotation annotationNumber */
-            annotationNumber?: (number|null);
-
-            /** AIRichResponseMapAnnotation latitude */
-            latitude?: (number|null);
-
-            /** AIRichResponseMapAnnotation longitude */
-            longitude?: (number|null);
-
-            /** AIRichResponseMapAnnotation title */
-            title?: (string|null);
-
-            /** AIRichResponseMapAnnotation body */
-            body?: (string|null);
-        }
-
-        /** Represents a AIRichResponseMapAnnotation. */
-        class AIRichResponseMapAnnotation implements IAIRichResponseMapAnnotation {
-
-            /**
-             * Constructs a new AIRichResponseMapAnnotation.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: AICommon.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation);
-
-            /** AIRichResponseMapAnnotation annotationNumber. */
-            public annotationNumber?: (number|null);
-
-            /** AIRichResponseMapAnnotation latitude. */
-            public latitude?: (number|null);
-
-            /** AIRichResponseMapAnnotation longitude. */
-            public longitude?: (number|null);
-
-            /** AIRichResponseMapAnnotation title. */
-            public title?: (string|null);
-
-            /** AIRichResponseMapAnnotation body. */
-            public body?: (string|null);
-
-            /** AIRichResponseMapAnnotation _annotationNumber. */
-            public _annotationNumber?: "annotationNumber";
-
-            /** AIRichResponseMapAnnotation _latitude. */
-            public _latitude?: "latitude";
-
-            /** AIRichResponseMapAnnotation _longitude. */
-            public _longitude?: "longitude";
-
-            /** AIRichResponseMapAnnotation _title. */
-            public _title?: "title";
-
-            /** AIRichResponseMapAnnotation _body. */
-            public _body?: "body";
-
-            /**
-             * Creates a new AIRichResponseMapAnnotation instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AIRichResponseMapAnnotation instance
-             */
-            public static create(properties?: AICommon.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation): AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
-
-            /**
-             * Encodes the specified AIRichResponseMapAnnotation message. Does not implicitly {@link AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation.verify|verify} messages.
-             * @param message AIRichResponseMapAnnotation message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: AICommon.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AIRichResponseMapAnnotation message, length delimited. Does not implicitly {@link AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation.verify|verify} messages.
-             * @param message AIRichResponseMapAnnotation message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: AICommon.AIRichResponseMapMetadata.IAIRichResponseMapAnnotation, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a AIRichResponseMapAnnotation message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AIRichResponseMapAnnotation
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
-
-            /**
-             * Decodes a AIRichResponseMapAnnotation message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AIRichResponseMapAnnotation
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
-
-            /**
-             * Verifies a AIRichResponseMapAnnotation message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a AIRichResponseMapAnnotation message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AIRichResponseMapAnnotation
-             */
-            public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation;
-
-            /**
-             * Creates a plain object from a AIRichResponseMapAnnotation message. Also converts values to other types if specified.
-             * @param message AIRichResponseMapAnnotation
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: AICommon.AIRichResponseMapMetadata.AIRichResponseMapAnnotation, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AIRichResponseMapAnnotation to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AIRichResponseMapAnnotation
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-    }
-
-    /** Properties of a AIRichResponseLatexMetadata. */
-    interface IAIRichResponseLatexMetadata {
-
-        /** AIRichResponseLatexMetadata text */
-        text?: (string|null);
-
-        /** AIRichResponseLatexMetadata expressions */
-        expressions?: (AICommon.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression[]|null);
-    }
-
-    /** Represents a AIRichResponseLatexMetadata. */
-    class AIRichResponseLatexMetadata implements IAIRichResponseLatexMetadata {
-
-        /**
-         * Constructs a new AIRichResponseLatexMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseLatexMetadata);
-
-        /** AIRichResponseLatexMetadata text. */
-        public text?: (string|null);
-
-        /** AIRichResponseLatexMetadata expressions. */
-        public expressions: AICommon.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression[];
-
-        /** AIRichResponseLatexMetadata _text. */
-        public _text?: "text";
-
-        /**
-         * Creates a new AIRichResponseLatexMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseLatexMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseLatexMetadata): AICommon.AIRichResponseLatexMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseLatexMetadata message. Does not implicitly {@link AICommon.AIRichResponseLatexMetadata.verify|verify} messages.
-         * @param message AIRichResponseLatexMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseLatexMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseLatexMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseLatexMetadata.verify|verify} messages.
-         * @param message AIRichResponseLatexMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseLatexMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseLatexMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseLatexMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseLatexMetadata;
-
-        /**
-         * Decodes a AIRichResponseLatexMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseLatexMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseLatexMetadata;
-
-        /**
-         * Verifies a AIRichResponseLatexMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseLatexMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseLatexMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseLatexMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseLatexMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseLatexMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseLatexMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseLatexMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseLatexMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseLatexMetadata {
-
-        /** Properties of a AIRichResponseLatexExpression. */
-        interface IAIRichResponseLatexExpression {
-
-            /** AIRichResponseLatexExpression latexExpression */
-            latexExpression?: (string|null);
-
-            /** AIRichResponseLatexExpression url */
-            url?: (string|null);
-
-            /** AIRichResponseLatexExpression width */
-            width?: (number|null);
-
-            /** AIRichResponseLatexExpression height */
-            height?: (number|null);
-
-            /** AIRichResponseLatexExpression fontHeight */
-            fontHeight?: (number|null);
-
-            /** AIRichResponseLatexExpression imageTopPadding */
-            imageTopPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression imageLeadingPadding */
-            imageLeadingPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression imageBottomPadding */
-            imageBottomPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression imageTrailingPadding */
-            imageTrailingPadding?: (number|null);
-        }
-
-        /** Represents a AIRichResponseLatexExpression. */
-        class AIRichResponseLatexExpression implements IAIRichResponseLatexExpression {
-
-            /**
-             * Constructs a new AIRichResponseLatexExpression.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: AICommon.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression);
-
-            /** AIRichResponseLatexExpression latexExpression. */
-            public latexExpression?: (string|null);
-
-            /** AIRichResponseLatexExpression url. */
-            public url?: (string|null);
-
-            /** AIRichResponseLatexExpression width. */
-            public width?: (number|null);
-
-            /** AIRichResponseLatexExpression height. */
-            public height?: (number|null);
-
-            /** AIRichResponseLatexExpression fontHeight. */
-            public fontHeight?: (number|null);
-
-            /** AIRichResponseLatexExpression imageTopPadding. */
-            public imageTopPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression imageLeadingPadding. */
-            public imageLeadingPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression imageBottomPadding. */
-            public imageBottomPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression imageTrailingPadding. */
-            public imageTrailingPadding?: (number|null);
-
-            /** AIRichResponseLatexExpression _latexExpression. */
-            public _latexExpression?: "latexExpression";
-
-            /** AIRichResponseLatexExpression _url. */
-            public _url?: "url";
-
-            /** AIRichResponseLatexExpression _width. */
-            public _width?: "width";
-
-            /** AIRichResponseLatexExpression _height. */
-            public _height?: "height";
-
-            /** AIRichResponseLatexExpression _fontHeight. */
-            public _fontHeight?: "fontHeight";
-
-            /** AIRichResponseLatexExpression _imageTopPadding. */
-            public _imageTopPadding?: "imageTopPadding";
-
-            /** AIRichResponseLatexExpression _imageLeadingPadding. */
-            public _imageLeadingPadding?: "imageLeadingPadding";
-
-            /** AIRichResponseLatexExpression _imageBottomPadding. */
-            public _imageBottomPadding?: "imageBottomPadding";
-
-            /** AIRichResponseLatexExpression _imageTrailingPadding. */
-            public _imageTrailingPadding?: "imageTrailingPadding";
-
-            /**
-             * Creates a new AIRichResponseLatexExpression instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AIRichResponseLatexExpression instance
-             */
-            public static create(properties?: AICommon.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression): AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
-
-            /**
-             * Encodes the specified AIRichResponseLatexExpression message. Does not implicitly {@link AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression.verify|verify} messages.
-             * @param message AIRichResponseLatexExpression message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: AICommon.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AIRichResponseLatexExpression message, length delimited. Does not implicitly {@link AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression.verify|verify} messages.
-             * @param message AIRichResponseLatexExpression message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: AICommon.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a AIRichResponseLatexExpression message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AIRichResponseLatexExpression
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
-
-            /**
-             * Decodes a AIRichResponseLatexExpression message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AIRichResponseLatexExpression
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
-
-            /**
-             * Verifies a AIRichResponseLatexExpression message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a AIRichResponseLatexExpression message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AIRichResponseLatexExpression
-             */
-            public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression;
-
-            /**
-             * Creates a plain object from a AIRichResponseLatexExpression message. Also converts values to other types if specified.
-             * @param message AIRichResponseLatexExpression
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: AICommon.AIRichResponseLatexMetadata.AIRichResponseLatexExpression, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AIRichResponseLatexExpression to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AIRichResponseLatexExpression
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-    }
-
     /** Properties of a AIRichResponseUnifiedResponse. */
     interface IAIRichResponseUnifiedResponse {
 
@@ -29769,9 +30522,6 @@ export namespace AICommon {
 
         /** AIRichResponseUnifiedResponse data. */
         public data?: (Uint8Array|null);
-
-        /** AIRichResponseUnifiedResponse _data. */
-        public _data?: "data";
 
         /**
          * Creates a new AIRichResponseUnifiedResponse instance using the specified properties.
@@ -29851,947 +30601,6 @@ export namespace AICommon {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a AIRichResponseDynamicMetadata. */
-    interface IAIRichResponseDynamicMetadata {
-
-        /** AIRichResponseDynamicMetadata type */
-        type?: (AICommon.AIRichResponseDynamicMetadata.AIRichResponseDynamicMetadataType|null);
-
-        /** AIRichResponseDynamicMetadata version */
-        version?: (number|Long|null);
-
-        /** AIRichResponseDynamicMetadata url */
-        url?: (string|null);
-
-        /** AIRichResponseDynamicMetadata loopCount */
-        loopCount?: (number|null);
-    }
-
-    /** Represents a AIRichResponseDynamicMetadata. */
-    class AIRichResponseDynamicMetadata implements IAIRichResponseDynamicMetadata {
-
-        /**
-         * Constructs a new AIRichResponseDynamicMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseDynamicMetadata);
-
-        /** AIRichResponseDynamicMetadata type. */
-        public type?: (AICommon.AIRichResponseDynamicMetadata.AIRichResponseDynamicMetadataType|null);
-
-        /** AIRichResponseDynamicMetadata version. */
-        public version?: (number|Long|null);
-
-        /** AIRichResponseDynamicMetadata url. */
-        public url?: (string|null);
-
-        /** AIRichResponseDynamicMetadata loopCount. */
-        public loopCount?: (number|null);
-
-        /** AIRichResponseDynamicMetadata _type. */
-        public _type?: "type";
-
-        /** AIRichResponseDynamicMetadata _version. */
-        public _version?: "version";
-
-        /** AIRichResponseDynamicMetadata _url. */
-        public _url?: "url";
-
-        /** AIRichResponseDynamicMetadata _loopCount. */
-        public _loopCount?: "loopCount";
-
-        /**
-         * Creates a new AIRichResponseDynamicMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseDynamicMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseDynamicMetadata): AICommon.AIRichResponseDynamicMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseDynamicMetadata message. Does not implicitly {@link AICommon.AIRichResponseDynamicMetadata.verify|verify} messages.
-         * @param message AIRichResponseDynamicMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseDynamicMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseDynamicMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseDynamicMetadata.verify|verify} messages.
-         * @param message AIRichResponseDynamicMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseDynamicMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseDynamicMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseDynamicMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseDynamicMetadata;
-
-        /**
-         * Decodes a AIRichResponseDynamicMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseDynamicMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseDynamicMetadata;
-
-        /**
-         * Verifies a AIRichResponseDynamicMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseDynamicMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseDynamicMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseDynamicMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseDynamicMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseDynamicMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseDynamicMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseDynamicMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseDynamicMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseDynamicMetadata {
-
-        /** AIRichResponseDynamicMetadataType enum. */
-        enum AIRichResponseDynamicMetadataType {
-            AI_RICH_RESPONSE_DYNAMIC_METADATA_TYPE_UNKNOWN = 0,
-            AI_RICH_RESPONSE_DYNAMIC_METADATA_TYPE_IMAGE = 1,
-            AI_RICH_RESPONSE_DYNAMIC_METADATA_TYPE_GIF = 2
-        }
-    }
-
-    /** Properties of a AIRichResponseTableMetadata. */
-    interface IAIRichResponseTableMetadata {
-
-        /** AIRichResponseTableMetadata rows */
-        rows?: (AICommon.AIRichResponseTableMetadata.IAIRichResponseTableRow[]|null);
-
-        /** AIRichResponseTableMetadata title */
-        title?: (string|null);
-    }
-
-    /** Represents a AIRichResponseTableMetadata. */
-    class AIRichResponseTableMetadata implements IAIRichResponseTableMetadata {
-
-        /**
-         * Constructs a new AIRichResponseTableMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseTableMetadata);
-
-        /** AIRichResponseTableMetadata rows. */
-        public rows: AICommon.AIRichResponseTableMetadata.IAIRichResponseTableRow[];
-
-        /** AIRichResponseTableMetadata title. */
-        public title?: (string|null);
-
-        /** AIRichResponseTableMetadata _title. */
-        public _title?: "title";
-
-        /**
-         * Creates a new AIRichResponseTableMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseTableMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseTableMetadata): AICommon.AIRichResponseTableMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseTableMetadata message. Does not implicitly {@link AICommon.AIRichResponseTableMetadata.verify|verify} messages.
-         * @param message AIRichResponseTableMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseTableMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseTableMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseTableMetadata.verify|verify} messages.
-         * @param message AIRichResponseTableMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseTableMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseTableMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseTableMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseTableMetadata;
-
-        /**
-         * Decodes a AIRichResponseTableMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseTableMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseTableMetadata;
-
-        /**
-         * Verifies a AIRichResponseTableMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseTableMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseTableMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseTableMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseTableMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseTableMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseTableMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseTableMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseTableMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseTableMetadata {
-
-        /** Properties of a AIRichResponseTableRow. */
-        interface IAIRichResponseTableRow {
-
-            /** AIRichResponseTableRow items */
-            items?: (string[]|null);
-
-            /** AIRichResponseTableRow isHeading */
-            isHeading?: (boolean|null);
-        }
-
-        /** Represents a AIRichResponseTableRow. */
-        class AIRichResponseTableRow implements IAIRichResponseTableRow {
-
-            /**
-             * Constructs a new AIRichResponseTableRow.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: AICommon.AIRichResponseTableMetadata.IAIRichResponseTableRow);
-
-            /** AIRichResponseTableRow items. */
-            public items: string[];
-
-            /** AIRichResponseTableRow isHeading. */
-            public isHeading?: (boolean|null);
-
-            /** AIRichResponseTableRow _isHeading. */
-            public _isHeading?: "isHeading";
-
-            /**
-             * Creates a new AIRichResponseTableRow instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AIRichResponseTableRow instance
-             */
-            public static create(properties?: AICommon.AIRichResponseTableMetadata.IAIRichResponseTableRow): AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow;
-
-            /**
-             * Encodes the specified AIRichResponseTableRow message. Does not implicitly {@link AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow.verify|verify} messages.
-             * @param message AIRichResponseTableRow message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: AICommon.AIRichResponseTableMetadata.IAIRichResponseTableRow, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AIRichResponseTableRow message, length delimited. Does not implicitly {@link AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow.verify|verify} messages.
-             * @param message AIRichResponseTableRow message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: AICommon.AIRichResponseTableMetadata.IAIRichResponseTableRow, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a AIRichResponseTableRow message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AIRichResponseTableRow
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow;
-
-            /**
-             * Decodes a AIRichResponseTableRow message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AIRichResponseTableRow
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow;
-
-            /**
-             * Verifies a AIRichResponseTableRow message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a AIRichResponseTableRow message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AIRichResponseTableRow
-             */
-            public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow;
-
-            /**
-             * Creates a plain object from a AIRichResponseTableRow message. Also converts values to other types if specified.
-             * @param message AIRichResponseTableRow
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: AICommon.AIRichResponseTableMetadata.AIRichResponseTableRow, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AIRichResponseTableRow to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AIRichResponseTableRow
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-    }
-
-    /** Properties of a AIRichResponseCodeMetadata. */
-    interface IAIRichResponseCodeMetadata {
-
-        /** AIRichResponseCodeMetadata codeLanguage */
-        codeLanguage?: (string|null);
-
-        /** AIRichResponseCodeMetadata codeBlocks */
-        codeBlocks?: (AICommon.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock[]|null);
-    }
-
-    /** Represents a AIRichResponseCodeMetadata. */
-    class AIRichResponseCodeMetadata implements IAIRichResponseCodeMetadata {
-
-        /**
-         * Constructs a new AIRichResponseCodeMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseCodeMetadata);
-
-        /** AIRichResponseCodeMetadata codeLanguage. */
-        public codeLanguage?: (string|null);
-
-        /** AIRichResponseCodeMetadata codeBlocks. */
-        public codeBlocks: AICommon.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock[];
-
-        /** AIRichResponseCodeMetadata _codeLanguage. */
-        public _codeLanguage?: "codeLanguage";
-
-        /**
-         * Creates a new AIRichResponseCodeMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseCodeMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseCodeMetadata): AICommon.AIRichResponseCodeMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseCodeMetadata message. Does not implicitly {@link AICommon.AIRichResponseCodeMetadata.verify|verify} messages.
-         * @param message AIRichResponseCodeMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseCodeMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseCodeMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseCodeMetadata.verify|verify} messages.
-         * @param message AIRichResponseCodeMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseCodeMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseCodeMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseCodeMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseCodeMetadata;
-
-        /**
-         * Decodes a AIRichResponseCodeMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseCodeMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseCodeMetadata;
-
-        /**
-         * Verifies a AIRichResponseCodeMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseCodeMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseCodeMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseCodeMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseCodeMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseCodeMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseCodeMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseCodeMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseCodeMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseCodeMetadata {
-
-        /** Properties of a AIRichResponseCodeBlock. */
-        interface IAIRichResponseCodeBlock {
-
-            /** AIRichResponseCodeBlock highlightType */
-            highlightType?: (AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeHighlightType|null);
-
-            /** AIRichResponseCodeBlock codeContent */
-            codeContent?: (string|null);
-        }
-
-        /** Represents a AIRichResponseCodeBlock. */
-        class AIRichResponseCodeBlock implements IAIRichResponseCodeBlock {
-
-            /**
-             * Constructs a new AIRichResponseCodeBlock.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: AICommon.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock);
-
-            /** AIRichResponseCodeBlock highlightType. */
-            public highlightType?: (AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeHighlightType|null);
-
-            /** AIRichResponseCodeBlock codeContent. */
-            public codeContent?: (string|null);
-
-            /** AIRichResponseCodeBlock _highlightType. */
-            public _highlightType?: "highlightType";
-
-            /** AIRichResponseCodeBlock _codeContent. */
-            public _codeContent?: "codeContent";
-
-            /**
-             * Creates a new AIRichResponseCodeBlock instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AIRichResponseCodeBlock instance
-             */
-            public static create(properties?: AICommon.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock): AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
-
-            /**
-             * Encodes the specified AIRichResponseCodeBlock message. Does not implicitly {@link AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock.verify|verify} messages.
-             * @param message AIRichResponseCodeBlock message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: AICommon.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AIRichResponseCodeBlock message, length delimited. Does not implicitly {@link AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock.verify|verify} messages.
-             * @param message AIRichResponseCodeBlock message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: AICommon.AIRichResponseCodeMetadata.IAIRichResponseCodeBlock, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a AIRichResponseCodeBlock message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AIRichResponseCodeBlock
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
-
-            /**
-             * Decodes a AIRichResponseCodeBlock message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AIRichResponseCodeBlock
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
-
-            /**
-             * Verifies a AIRichResponseCodeBlock message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a AIRichResponseCodeBlock message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AIRichResponseCodeBlock
-             */
-            public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock;
-
-            /**
-             * Creates a plain object from a AIRichResponseCodeBlock message. Also converts values to other types if specified.
-             * @param message AIRichResponseCodeBlock
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: AICommon.AIRichResponseCodeMetadata.AIRichResponseCodeBlock, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AIRichResponseCodeBlock to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AIRichResponseCodeBlock
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        /** AIRichResponseCodeHighlightType enum. */
-        enum AIRichResponseCodeHighlightType {
-            AI_RICH_RESPONSE_CODE_HIGHLIGHT_DEFAULT = 0,
-            AI_RICH_RESPONSE_CODE_HIGHLIGHT_KEYWORD = 1,
-            AI_RICH_RESPONSE_CODE_HIGHLIGHT_METHOD = 2,
-            AI_RICH_RESPONSE_CODE_HIGHLIGHT_STRING = 3,
-            AI_RICH_RESPONSE_CODE_HIGHLIGHT_NUMBER = 4,
-            AI_RICH_RESPONSE_CODE_HIGHLIGHT_COMMENT = 5
-        }
-    }
-
-    /** Properties of a AIRichResponseInlineImageMetadata. */
-    interface IAIRichResponseInlineImageMetadata {
-
-        /** AIRichResponseInlineImageMetadata imageUrl */
-        imageUrl?: (AICommon.IAIRichResponseImageURL|null);
-
-        /** AIRichResponseInlineImageMetadata imageText */
-        imageText?: (string|null);
-
-        /** AIRichResponseInlineImageMetadata alignment */
-        alignment?: (AICommon.AIRichResponseInlineImageMetadata.AIRichResponseImageAlignment|null);
-
-        /** AIRichResponseInlineImageMetadata tapLinkUrl */
-        tapLinkUrl?: (string|null);
-    }
-
-    /** Represents a AIRichResponseInlineImageMetadata. */
-    class AIRichResponseInlineImageMetadata implements IAIRichResponseInlineImageMetadata {
-
-        /**
-         * Constructs a new AIRichResponseInlineImageMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseInlineImageMetadata);
-
-        /** AIRichResponseInlineImageMetadata imageUrl. */
-        public imageUrl?: (AICommon.IAIRichResponseImageURL|null);
-
-        /** AIRichResponseInlineImageMetadata imageText. */
-        public imageText?: (string|null);
-
-        /** AIRichResponseInlineImageMetadata alignment. */
-        public alignment?: (AICommon.AIRichResponseInlineImageMetadata.AIRichResponseImageAlignment|null);
-
-        /** AIRichResponseInlineImageMetadata tapLinkUrl. */
-        public tapLinkUrl?: (string|null);
-
-        /** AIRichResponseInlineImageMetadata _imageUrl. */
-        public _imageUrl?: "imageUrl";
-
-        /** AIRichResponseInlineImageMetadata _imageText. */
-        public _imageText?: "imageText";
-
-        /** AIRichResponseInlineImageMetadata _alignment. */
-        public _alignment?: "alignment";
-
-        /** AIRichResponseInlineImageMetadata _tapLinkUrl. */
-        public _tapLinkUrl?: "tapLinkUrl";
-
-        /**
-         * Creates a new AIRichResponseInlineImageMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseInlineImageMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseInlineImageMetadata): AICommon.AIRichResponseInlineImageMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseInlineImageMetadata message. Does not implicitly {@link AICommon.AIRichResponseInlineImageMetadata.verify|verify} messages.
-         * @param message AIRichResponseInlineImageMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseInlineImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseInlineImageMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseInlineImageMetadata.verify|verify} messages.
-         * @param message AIRichResponseInlineImageMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseInlineImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseInlineImageMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseInlineImageMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseInlineImageMetadata;
-
-        /**
-         * Decodes a AIRichResponseInlineImageMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseInlineImageMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseInlineImageMetadata;
-
-        /**
-         * Verifies a AIRichResponseInlineImageMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseInlineImageMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseInlineImageMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseInlineImageMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseInlineImageMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseInlineImageMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseInlineImageMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseInlineImageMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseInlineImageMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace AIRichResponseInlineImageMetadata {
-
-        /** AIRichResponseImageAlignment enum. */
-        enum AIRichResponseImageAlignment {
-            AI_RICH_RESPONSE_IMAGE_LAYOUT_LEADING_ALIGNED = 0,
-            AI_RICH_RESPONSE_IMAGE_LAYOUT_TRAILING_ALIGNED = 1,
-            AI_RICH_RESPONSE_IMAGE_LAYOUT_CENTER_ALIGNED = 2
-        }
-    }
-
-    /** Properties of a AIRichResponseGridImageMetadata. */
-    interface IAIRichResponseGridImageMetadata {
-
-        /** AIRichResponseGridImageMetadata gridImageUrl */
-        gridImageUrl?: (AICommon.IAIRichResponseImageURL|null);
-
-        /** AIRichResponseGridImageMetadata imageUrls */
-        imageUrls?: (AICommon.IAIRichResponseImageURL[]|null);
-    }
-
-    /** Represents a AIRichResponseGridImageMetadata. */
-    class AIRichResponseGridImageMetadata implements IAIRichResponseGridImageMetadata {
-
-        /**
-         * Constructs a new AIRichResponseGridImageMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseGridImageMetadata);
-
-        /** AIRichResponseGridImageMetadata gridImageUrl. */
-        public gridImageUrl?: (AICommon.IAIRichResponseImageURL|null);
-
-        /** AIRichResponseGridImageMetadata imageUrls. */
-        public imageUrls: AICommon.IAIRichResponseImageURL[];
-
-        /** AIRichResponseGridImageMetadata _gridImageUrl. */
-        public _gridImageUrl?: "gridImageUrl";
-
-        /**
-         * Creates a new AIRichResponseGridImageMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseGridImageMetadata instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseGridImageMetadata): AICommon.AIRichResponseGridImageMetadata;
-
-        /**
-         * Encodes the specified AIRichResponseGridImageMetadata message. Does not implicitly {@link AICommon.AIRichResponseGridImageMetadata.verify|verify} messages.
-         * @param message AIRichResponseGridImageMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseGridImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseGridImageMetadata message, length delimited. Does not implicitly {@link AICommon.AIRichResponseGridImageMetadata.verify|verify} messages.
-         * @param message AIRichResponseGridImageMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseGridImageMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseGridImageMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseGridImageMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseGridImageMetadata;
-
-        /**
-         * Decodes a AIRichResponseGridImageMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseGridImageMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseGridImageMetadata;
-
-        /**
-         * Verifies a AIRichResponseGridImageMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseGridImageMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseGridImageMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseGridImageMetadata;
-
-        /**
-         * Creates a plain object from a AIRichResponseGridImageMetadata message. Also converts values to other types if specified.
-         * @param message AIRichResponseGridImageMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseGridImageMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseGridImageMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseGridImageMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    /** Properties of a AIRichResponseImageURL. */
-    interface IAIRichResponseImageURL {
-
-        /** AIRichResponseImageURL imagePreviewUrl */
-        imagePreviewUrl?: (string|null);
-
-        /** AIRichResponseImageURL imageHighResUrl */
-        imageHighResUrl?: (string|null);
-
-        /** AIRichResponseImageURL sourceUrl */
-        sourceUrl?: (string|null);
-    }
-
-    /** Represents a AIRichResponseImageURL. */
-    class AIRichResponseImageURL implements IAIRichResponseImageURL {
-
-        /**
-         * Constructs a new AIRichResponseImageURL.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IAIRichResponseImageURL);
-
-        /** AIRichResponseImageURL imagePreviewUrl. */
-        public imagePreviewUrl?: (string|null);
-
-        /** AIRichResponseImageURL imageHighResUrl. */
-        public imageHighResUrl?: (string|null);
-
-        /** AIRichResponseImageURL sourceUrl. */
-        public sourceUrl?: (string|null);
-
-        /** AIRichResponseImageURL _imagePreviewUrl. */
-        public _imagePreviewUrl?: "imagePreviewUrl";
-
-        /** AIRichResponseImageURL _imageHighResUrl. */
-        public _imageHighResUrl?: "imageHighResUrl";
-
-        /** AIRichResponseImageURL _sourceUrl. */
-        public _sourceUrl?: "sourceUrl";
-
-        /**
-         * Creates a new AIRichResponseImageURL instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns AIRichResponseImageURL instance
-         */
-        public static create(properties?: AICommon.IAIRichResponseImageURL): AICommon.AIRichResponseImageURL;
-
-        /**
-         * Encodes the specified AIRichResponseImageURL message. Does not implicitly {@link AICommon.AIRichResponseImageURL.verify|verify} messages.
-         * @param message AIRichResponseImageURL message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IAIRichResponseImageURL, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified AIRichResponseImageURL message, length delimited. Does not implicitly {@link AICommon.AIRichResponseImageURL.verify|verify} messages.
-         * @param message AIRichResponseImageURL message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IAIRichResponseImageURL, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a AIRichResponseImageURL message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns AIRichResponseImageURL
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIRichResponseImageURL;
-
-        /**
-         * Decodes a AIRichResponseImageURL message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns AIRichResponseImageURL
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIRichResponseImageURL;
-
-        /**
-         * Verifies a AIRichResponseImageURL message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a AIRichResponseImageURL message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns AIRichResponseImageURL
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.AIRichResponseImageURL;
-
-        /**
-         * Creates a plain object from a AIRichResponseImageURL message. Also converts values to other types if specified.
-         * @param message AIRichResponseImageURL
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.AIRichResponseImageURL, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this AIRichResponseImageURL to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for AIRichResponseImageURL
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
     /** Properties of a BotMessageSharingInfo. */
     interface IBotMessageSharingInfo {
 
@@ -30816,12 +30625,6 @@ export namespace AICommon {
 
         /** BotMessageSharingInfo forwardScore. */
         public forwardScore?: (number|null);
-
-        /** BotMessageSharingInfo _botEntryPointOrigin. */
-        public _botEntryPointOrigin?: "botEntryPointOrigin";
-
-        /** BotMessageSharingInfo _forwardScore. */
-        public _forwardScore?: "forwardScore";
 
         /**
          * Creates a new BotMessageSharingInfo instance using the specified properties.
@@ -30931,15 +30734,6 @@ export namespace AICommon {
 
         /** ForwardedAIBotMessageInfo creatorName. */
         public creatorName?: (string|null);
-
-        /** ForwardedAIBotMessageInfo _botName. */
-        public _botName?: "botName";
-
-        /** ForwardedAIBotMessageInfo _botJid. */
-        public _botJid?: "botJid";
-
-        /** ForwardedAIBotMessageInfo _creatorName. */
-        public _creatorName?: "creatorName";
 
         /**
          * Creates a new ForwardedAIBotMessageInfo instance using the specified properties.
@@ -31073,27 +30867,6 @@ export namespace AICommon {
 
         /** BotFeedbackMessage sideBySideSurveyMetadata. */
         public sideBySideSurveyMetadata?: (AICommon.BotFeedbackMessage.ISideBySideSurveyMetadata|null);
-
-        /** BotFeedbackMessage _messageKey. */
-        public _messageKey?: "messageKey";
-
-        /** BotFeedbackMessage _kind. */
-        public _kind?: "kind";
-
-        /** BotFeedbackMessage _text. */
-        public _text?: "text";
-
-        /** BotFeedbackMessage _kindNegative. */
-        public _kindNegative?: "kindNegative";
-
-        /** BotFeedbackMessage _kindPositive. */
-        public _kindPositive?: "kindPositive";
-
-        /** BotFeedbackMessage _kindReport. */
-        public _kindReport?: "kindReport";
-
-        /** BotFeedbackMessage _sideBySideSurveyMetadata. */
-        public _sideBySideSurveyMetadata?: "sideBySideSurveyMetadata";
 
         /**
          * Creates a new BotFeedbackMessage instance using the specified properties.
@@ -31285,33 +31058,6 @@ export namespace AICommon {
             /** SideBySideSurveyMetadata metaAiAnalyticsData. */
             public metaAiAnalyticsData?: (AICommon.BotFeedbackMessage.SideBySideSurveyMetadata.ISidebySideSurveyMetaAiAnalyticsData|null);
 
-            /** SideBySideSurveyMetadata _selectedRequestId. */
-            public _selectedRequestId?: "selectedRequestId";
-
-            /** SideBySideSurveyMetadata _surveyId. */
-            public _surveyId?: "surveyId";
-
-            /** SideBySideSurveyMetadata _simonSessionFbid. */
-            public _simonSessionFbid?: "simonSessionFbid";
-
-            /** SideBySideSurveyMetadata _responseOtid. */
-            public _responseOtid?: "responseOtid";
-
-            /** SideBySideSurveyMetadata _responseTimestampMsString. */
-            public _responseTimestampMsString?: "responseTimestampMsString";
-
-            /** SideBySideSurveyMetadata _isSelectedResponsePrimary. */
-            public _isSelectedResponsePrimary?: "isSelectedResponsePrimary";
-
-            /** SideBySideSurveyMetadata _messageIdToEdit. */
-            public _messageIdToEdit?: "messageIdToEdit";
-
-            /** SideBySideSurveyMetadata _analyticsData. */
-            public _analyticsData?: "analyticsData";
-
-            /** SideBySideSurveyMetadata _metaAiAnalyticsData. */
-            public _metaAiAnalyticsData?: "metaAiAnalyticsData";
-
             /**
              * Creates a new SideBySideSurveyMetadata instance using the specified properties.
              * @param [properties] Properties to set
@@ -31422,15 +31168,6 @@ export namespace AICommon {
 
                 /** SideBySideSurveyAnalyticsData simonSessionFbid. */
                 public simonSessionFbid?: (string|null);
-
-                /** SideBySideSurveyAnalyticsData _tessaEvent. */
-                public _tessaEvent?: "tessaEvent";
-
-                /** SideBySideSurveyAnalyticsData _tessaSessionFbid. */
-                public _tessaSessionFbid?: "tessaSessionFbid";
-
-                /** SideBySideSurveyAnalyticsData _simonSessionFbid. */
-                public _simonSessionFbid?: "simonSessionFbid";
 
                 /**
                  * Creates a new SideBySideSurveyAnalyticsData instance using the specified properties.
@@ -31577,33 +31314,6 @@ export namespace AICommon {
                 /** SidebySideSurveyMetaAiAnalyticsData abandonEvent. */
                 public abandonEvent?: (AICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyAbandonEventData|null);
 
-                /** SidebySideSurveyMetaAiAnalyticsData _surveyId. */
-                public _surveyId?: "surveyId";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _primaryResponseId. */
-                public _primaryResponseId?: "primaryResponseId";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _testArmName. */
-                public _testArmName?: "testArmName";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _timestampMsString. */
-                public _timestampMsString?: "timestampMsString";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _ctaImpressionEvent. */
-                public _ctaImpressionEvent?: "ctaImpressionEvent";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _ctaClickEvent. */
-                public _ctaClickEvent?: "ctaClickEvent";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _cardImpressionEvent. */
-                public _cardImpressionEvent?: "cardImpressionEvent";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _responseEvent. */
-                public _responseEvent?: "responseEvent";
-
-                /** SidebySideSurveyMetaAiAnalyticsData _abandonEvent. */
-                public _abandonEvent?: "abandonEvent";
-
                 /**
                  * Creates a new SidebySideSurveyMetaAiAnalyticsData instance using the specified properties.
                  * @param [properties] Properties to set
@@ -31702,9 +31412,6 @@ export namespace AICommon {
 
                     /** SideBySideSurveyAbandonEventData abandonDwellTimeMsString. */
                     public abandonDwellTimeMsString?: (string|null);
-
-                    /** SideBySideSurveyAbandonEventData _abandonDwellTimeMsString. */
-                    public _abandonDwellTimeMsString?: "abandonDwellTimeMsString";
 
                     /**
                      * Creates a new SideBySideSurveyAbandonEventData instance using the specified properties.
@@ -31809,12 +31516,6 @@ export namespace AICommon {
                     /** SideBySideSurveyCTAClickEventData clickDwellTimeMsString. */
                     public clickDwellTimeMsString?: (string|null);
 
-                    /** SideBySideSurveyCTAClickEventData _isSurveyExpired. */
-                    public _isSurveyExpired?: "isSurveyExpired";
-
-                    /** SideBySideSurveyCTAClickEventData _clickDwellTimeMsString. */
-                    public _clickDwellTimeMsString?: "clickDwellTimeMsString";
-
                     /**
                      * Creates a new SideBySideSurveyCTAClickEventData instance using the specified properties.
                      * @param [properties] Properties to set
@@ -31911,9 +31612,6 @@ export namespace AICommon {
 
                     /** SideBySideSurveyCTAImpressionEventData isSurveyExpired. */
                     public isSurveyExpired?: (boolean|null);
-
-                    /** SideBySideSurveyCTAImpressionEventData _isSurveyExpired. */
-                    public _isSurveyExpired?: "isSurveyExpired";
 
                     /**
                      * Creates a new SideBySideSurveyCTAImpressionEventData instance using the specified properties.
@@ -32109,12 +31807,6 @@ export namespace AICommon {
                     /** SideBySideSurveyResponseEventData selectedResponseId. */
                     public selectedResponseId?: (string|null);
 
-                    /** SideBySideSurveyResponseEventData _responseDwellTimeMsString. */
-                    public _responseDwellTimeMsString?: "responseDwellTimeMsString";
-
-                    /** SideBySideSurveyResponseEventData _selectedResponseId. */
-                    public _selectedResponseId?: "selectedResponseId";
-
                     /**
                      * Creates a new SideBySideSurveyResponseEventData instance using the specified properties.
                      * @param [properties] Properties to set
@@ -32215,9 +31907,6 @@ export namespace AICommon {
         /** BotGroupParticipantMetadata botFbid. */
         public botFbid?: (string|null);
 
-        /** BotGroupParticipantMetadata _botFbid. */
-        public _botFbid?: "botFbid";
-
         /**
          * Creates a new BotGroupParticipantMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -32290,6 +31979,109 @@ export namespace AICommon {
 
         /**
          * Gets the default type url for BotGroupParticipantMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a BotRenderingConfigMetadata. */
+    interface IBotRenderingConfigMetadata {
+
+        /** BotRenderingConfigMetadata bloksVersioningId */
+        bloksVersioningId?: (string|null);
+
+        /** BotRenderingConfigMetadata pixelDensity */
+        pixelDensity?: (number|null);
+    }
+
+    /** Represents a BotRenderingConfigMetadata. */
+    class BotRenderingConfigMetadata implements IBotRenderingConfigMetadata {
+
+        /**
+         * Constructs a new BotRenderingConfigMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommon.IBotRenderingConfigMetadata);
+
+        /** BotRenderingConfigMetadata bloksVersioningId. */
+        public bloksVersioningId?: (string|null);
+
+        /** BotRenderingConfigMetadata pixelDensity. */
+        public pixelDensity?: (number|null);
+
+        /**
+         * Creates a new BotRenderingConfigMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns BotRenderingConfigMetadata instance
+         */
+        public static create(properties?: AICommon.IBotRenderingConfigMetadata): AICommon.BotRenderingConfigMetadata;
+
+        /**
+         * Encodes the specified BotRenderingConfigMetadata message. Does not implicitly {@link AICommon.BotRenderingConfigMetadata.verify|verify} messages.
+         * @param message BotRenderingConfigMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommon.IBotRenderingConfigMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified BotRenderingConfigMetadata message, length delimited. Does not implicitly {@link AICommon.BotRenderingConfigMetadata.verify|verify} messages.
+         * @param message BotRenderingConfigMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommon.IBotRenderingConfigMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a BotRenderingConfigMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns BotRenderingConfigMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.BotRenderingConfigMetadata;
+
+        /**
+         * Decodes a BotRenderingConfigMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns BotRenderingConfigMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.BotRenderingConfigMetadata;
+
+        /**
+         * Verifies a BotRenderingConfigMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a BotRenderingConfigMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns BotRenderingConfigMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommon.BotRenderingConfigMetadata;
+
+        /**
+         * Creates a plain object from a BotRenderingConfigMetadata message. Also converts values to other types if specified.
+         * @param message BotRenderingConfigMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommon.BotRenderingConfigMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this BotRenderingConfigMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for BotRenderingConfigMetadata
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
@@ -32396,9 +32188,6 @@ export namespace AICommon {
     /** Properties of a BotMetadata. */
     interface IBotMetadata {
 
-        /** BotMetadata avatarMetadata */
-        avatarMetadata?: (AICommon.IBotAvatarMetadata|null);
-
         /** BotMetadata personaId */
         personaId?: (string|null);
 
@@ -32501,6 +32290,15 @@ export namespace AICommon {
         /** BotMetadata botGroupMetadata */
         botGroupMetadata?: (AICommon.IBotGroupMetadata|null);
 
+        /** BotMetadata botRenderingConfigMetadata */
+        botRenderingConfigMetadata?: (AICommon.IBotRenderingConfigMetadata|null);
+
+        /** BotMetadata botInfrastructureDiagnostics */
+        botInfrastructureDiagnostics?: (AICommon.IBotInfrastructureDiagnostics|null);
+
+        /** BotMetadata aiMediaCollectionMetadata */
+        aiMediaCollectionMetadata?: (AICommon.IAIMediaCollectionMetadata|null);
+
         /** BotMetadata internalMetadata */
         internalMetadata?: (Uint8Array|null);
     }
@@ -32513,9 +32311,6 @@ export namespace AICommon {
          * @param [properties] Properties to set
          */
         constructor(properties?: AICommon.IBotMetadata);
-
-        /** BotMetadata avatarMetadata. */
-        public avatarMetadata?: (AICommon.IBotAvatarMetadata|null);
 
         /** BotMetadata personaId. */
         public personaId?: (string|null);
@@ -32619,116 +32414,17 @@ export namespace AICommon {
         /** BotMetadata botGroupMetadata. */
         public botGroupMetadata?: (AICommon.IBotGroupMetadata|null);
 
+        /** BotMetadata botRenderingConfigMetadata. */
+        public botRenderingConfigMetadata?: (AICommon.IBotRenderingConfigMetadata|null);
+
+        /** BotMetadata botInfrastructureDiagnostics. */
+        public botInfrastructureDiagnostics?: (AICommon.IBotInfrastructureDiagnostics|null);
+
+        /** BotMetadata aiMediaCollectionMetadata. */
+        public aiMediaCollectionMetadata?: (AICommon.IAIMediaCollectionMetadata|null);
+
         /** BotMetadata internalMetadata. */
         public internalMetadata?: (Uint8Array|null);
-
-        /** BotMetadata _avatarMetadata. */
-        public _avatarMetadata?: "avatarMetadata";
-
-        /** BotMetadata _personaId. */
-        public _personaId?: "personaId";
-
-        /** BotMetadata _pluginMetadata. */
-        public _pluginMetadata?: "pluginMetadata";
-
-        /** BotMetadata _suggestedPromptMetadata. */
-        public _suggestedPromptMetadata?: "suggestedPromptMetadata";
-
-        /** BotMetadata _invokerJid. */
-        public _invokerJid?: "invokerJid";
-
-        /** BotMetadata _sessionMetadata. */
-        public _sessionMetadata?: "sessionMetadata";
-
-        /** BotMetadata _memuMetadata. */
-        public _memuMetadata?: "memuMetadata";
-
-        /** BotMetadata _timezone. */
-        public _timezone?: "timezone";
-
-        /** BotMetadata _reminderMetadata. */
-        public _reminderMetadata?: "reminderMetadata";
-
-        /** BotMetadata _modelMetadata. */
-        public _modelMetadata?: "modelMetadata";
-
-        /** BotMetadata _messageDisclaimerText. */
-        public _messageDisclaimerText?: "messageDisclaimerText";
-
-        /** BotMetadata _progressIndicatorMetadata. */
-        public _progressIndicatorMetadata?: "progressIndicatorMetadata";
-
-        /** BotMetadata _capabilityMetadata. */
-        public _capabilityMetadata?: "capabilityMetadata";
-
-        /** BotMetadata _imagineMetadata. */
-        public _imagineMetadata?: "imagineMetadata";
-
-        /** BotMetadata _memoryMetadata. */
-        public _memoryMetadata?: "memoryMetadata";
-
-        /** BotMetadata _renderingMetadata. */
-        public _renderingMetadata?: "renderingMetadata";
-
-        /** BotMetadata _botMetricsMetadata. */
-        public _botMetricsMetadata?: "botMetricsMetadata";
-
-        /** BotMetadata _botLinkedAccountsMetadata. */
-        public _botLinkedAccountsMetadata?: "botLinkedAccountsMetadata";
-
-        /** BotMetadata _richResponseSourcesMetadata. */
-        public _richResponseSourcesMetadata?: "richResponseSourcesMetadata";
-
-        /** BotMetadata _aiConversationContext. */
-        public _aiConversationContext?: "aiConversationContext";
-
-        /** BotMetadata _botPromotionMessageMetadata. */
-        public _botPromotionMessageMetadata?: "botPromotionMessageMetadata";
-
-        /** BotMetadata _botModeSelectionMetadata. */
-        public _botModeSelectionMetadata?: "botModeSelectionMetadata";
-
-        /** BotMetadata _botQuotaMetadata. */
-        public _botQuotaMetadata?: "botQuotaMetadata";
-
-        /** BotMetadata _botAgeCollectionMetadata. */
-        public _botAgeCollectionMetadata?: "botAgeCollectionMetadata";
-
-        /** BotMetadata _conversationStarterPromptId. */
-        public _conversationStarterPromptId?: "conversationStarterPromptId";
-
-        /** BotMetadata _botResponseId. */
-        public _botResponseId?: "botResponseId";
-
-        /** BotMetadata _verificationMetadata. */
-        public _verificationMetadata?: "verificationMetadata";
-
-        /** BotMetadata _unifiedResponseMutation. */
-        public _unifiedResponseMutation?: "unifiedResponseMutation";
-
-        /** BotMetadata _botMessageOriginMetadata. */
-        public _botMessageOriginMetadata?: "botMessageOriginMetadata";
-
-        /** BotMetadata _inThreadSurveyMetadata. */
-        public _inThreadSurveyMetadata?: "inThreadSurveyMetadata";
-
-        /** BotMetadata _botThreadInfo. */
-        public _botThreadInfo?: "botThreadInfo";
-
-        /** BotMetadata _regenerateMetadata. */
-        public _regenerateMetadata?: "regenerateMetadata";
-
-        /** BotMetadata _sessionTransparencyMetadata. */
-        public _sessionTransparencyMetadata?: "sessionTransparencyMetadata";
-
-        /** BotMetadata _botDocumentMessageMetadata. */
-        public _botDocumentMessageMetadata?: "botDocumentMessageMetadata";
-
-        /** BotMetadata _botGroupMetadata. */
-        public _botGroupMetadata?: "botGroupMetadata";
-
-        /** BotMetadata _internalMetadata. */
-        public _internalMetadata?: "internalMetadata";
 
         /**
          * Creates a new BotMetadata instance using the specified properties.
@@ -32808,6 +32504,218 @@ export namespace AICommon {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    /** Properties of a AIMediaCollectionMessage. */
+    interface IAIMediaCollectionMessage {
+
+        /** AIMediaCollectionMessage collectionId */
+        collectionId?: (string|null);
+
+        /** AIMediaCollectionMessage expectedMediaCount */
+        expectedMediaCount?: (number|null);
+
+        /** AIMediaCollectionMessage hasGlobalCaption */
+        hasGlobalCaption?: (boolean|null);
+    }
+
+    /** Represents a AIMediaCollectionMessage. */
+    class AIMediaCollectionMessage implements IAIMediaCollectionMessage {
+
+        /**
+         * Constructs a new AIMediaCollectionMessage.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommon.IAIMediaCollectionMessage);
+
+        /** AIMediaCollectionMessage collectionId. */
+        public collectionId?: (string|null);
+
+        /** AIMediaCollectionMessage expectedMediaCount. */
+        public expectedMediaCount?: (number|null);
+
+        /** AIMediaCollectionMessage hasGlobalCaption. */
+        public hasGlobalCaption?: (boolean|null);
+
+        /**
+         * Creates a new AIMediaCollectionMessage instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIMediaCollectionMessage instance
+         */
+        public static create(properties?: AICommon.IAIMediaCollectionMessage): AICommon.AIMediaCollectionMessage;
+
+        /**
+         * Encodes the specified AIMediaCollectionMessage message. Does not implicitly {@link AICommon.AIMediaCollectionMessage.verify|verify} messages.
+         * @param message AIMediaCollectionMessage message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommon.IAIMediaCollectionMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIMediaCollectionMessage message, length delimited. Does not implicitly {@link AICommon.AIMediaCollectionMessage.verify|verify} messages.
+         * @param message AIMediaCollectionMessage message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommon.IAIMediaCollectionMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIMediaCollectionMessage message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIMediaCollectionMessage
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIMediaCollectionMessage;
+
+        /**
+         * Decodes a AIMediaCollectionMessage message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIMediaCollectionMessage
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIMediaCollectionMessage;
+
+        /**
+         * Verifies a AIMediaCollectionMessage message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIMediaCollectionMessage message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIMediaCollectionMessage
+         */
+        public static fromObject(object: { [k: string]: any }): AICommon.AIMediaCollectionMessage;
+
+        /**
+         * Creates a plain object from a AIMediaCollectionMessage message. Also converts values to other types if specified.
+         * @param message AIMediaCollectionMessage
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommon.AIMediaCollectionMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIMediaCollectionMessage to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIMediaCollectionMessage
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a AIMediaCollectionMetadata. */
+    interface IAIMediaCollectionMetadata {
+
+        /** AIMediaCollectionMetadata collectionId */
+        collectionId?: (string|null);
+
+        /** AIMediaCollectionMetadata uploadOrderIndex */
+        uploadOrderIndex?: (number|null);
+    }
+
+    /** Represents a AIMediaCollectionMetadata. */
+    class AIMediaCollectionMetadata implements IAIMediaCollectionMetadata {
+
+        /**
+         * Constructs a new AIMediaCollectionMetadata.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: AICommon.IAIMediaCollectionMetadata);
+
+        /** AIMediaCollectionMetadata collectionId. */
+        public collectionId?: (string|null);
+
+        /** AIMediaCollectionMetadata uploadOrderIndex. */
+        public uploadOrderIndex?: (number|null);
+
+        /**
+         * Creates a new AIMediaCollectionMetadata instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns AIMediaCollectionMetadata instance
+         */
+        public static create(properties?: AICommon.IAIMediaCollectionMetadata): AICommon.AIMediaCollectionMetadata;
+
+        /**
+         * Encodes the specified AIMediaCollectionMetadata message. Does not implicitly {@link AICommon.AIMediaCollectionMetadata.verify|verify} messages.
+         * @param message AIMediaCollectionMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: AICommon.IAIMediaCollectionMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified AIMediaCollectionMetadata message, length delimited. Does not implicitly {@link AICommon.AIMediaCollectionMetadata.verify|verify} messages.
+         * @param message AIMediaCollectionMetadata message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: AICommon.IAIMediaCollectionMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a AIMediaCollectionMetadata message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns AIMediaCollectionMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.AIMediaCollectionMetadata;
+
+        /**
+         * Decodes a AIMediaCollectionMetadata message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns AIMediaCollectionMetadata
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.AIMediaCollectionMetadata;
+
+        /**
+         * Verifies a AIMediaCollectionMetadata message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a AIMediaCollectionMetadata message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AIMediaCollectionMetadata
+         */
+        public static fromObject(object: { [k: string]: any }): AICommon.AIMediaCollectionMetadata;
+
+        /**
+         * Creates a plain object from a AIMediaCollectionMetadata message. Also converts values to other types if specified.
+         * @param message AIMediaCollectionMetadata
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: AICommon.AIMediaCollectionMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AIMediaCollectionMetadata to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for AIMediaCollectionMetadata
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of a AIThreadInfo. */
     interface IAIThreadInfo {
 
@@ -32832,12 +32740,6 @@ export namespace AICommon {
 
         /** AIThreadInfo clientInfo. */
         public clientInfo?: (AICommon.AIThreadInfo.IAIThreadClientInfo|null);
-
-        /** AIThreadInfo _serverInfo. */
-        public _serverInfo?: "serverInfo";
-
-        /** AIThreadInfo _clientInfo. */
-        public _clientInfo?: "clientInfo";
 
         /**
          * Creates a new AIThreadInfo instance using the specified properties.
@@ -32924,6 +32826,9 @@ export namespace AICommon {
 
             /** AIThreadClientInfo type */
             type?: (AICommon.AIThreadInfo.AIThreadClientInfo.AIThreadType|null);
+
+            /** AIThreadClientInfo sourceChatJid */
+            sourceChatJid?: (string|null);
         }
 
         /** Represents a AIThreadClientInfo. */
@@ -32938,8 +32843,8 @@ export namespace AICommon {
             /** AIThreadClientInfo type. */
             public type?: (AICommon.AIThreadInfo.AIThreadClientInfo.AIThreadType|null);
 
-            /** AIThreadClientInfo _type. */
-            public _type?: "type";
+            /** AIThreadClientInfo sourceChatJid. */
+            public sourceChatJid?: (string|null);
 
             /**
              * Creates a new AIThreadClientInfo instance using the specified properties.
@@ -33025,7 +32930,8 @@ export namespace AICommon {
             enum AIThreadType {
                 UNKNOWN = 0,
                 DEFAULT = 1,
-                INCOGNITO = 2
+                INCOGNITO = 2,
+                SIDE_CHAT = 3
             }
         }
 
@@ -33047,9 +32953,6 @@ export namespace AICommon {
 
             /** AIThreadServerInfo title. */
             public title?: (string|null);
-
-            /** AIThreadServerInfo _title. */
-            public _title?: "title";
 
             /**
              * Creates a new AIThreadServerInfo instance using the specified properties.
@@ -33154,9 +33057,6 @@ export namespace AICommon {
 
         /** BotUnifiedResponseMutation mediaDetailsMetadataList. */
         public mediaDetailsMetadataList: AICommon.BotUnifiedResponseMutation.IMediaDetailsMetadata[];
-
-        /** BotUnifiedResponseMutation _sbsMetadata. */
-        public _sbsMetadata?: "sbsMetadata";
 
         /**
          * Creates a new BotUnifiedResponseMutation instance using the specified properties.
@@ -33269,15 +33169,6 @@ export namespace AICommon {
             /** MediaDetailsMetadata previewMedia. */
             public previewMedia?: (AICommon.IBotMediaMetadata|null);
 
-            /** MediaDetailsMetadata _id. */
-            public _id?: "id";
-
-            /** MediaDetailsMetadata _highResMedia. */
-            public _highResMedia?: "highResMedia";
-
-            /** MediaDetailsMetadata _previewMedia. */
-            public _previewMedia?: "previewMedia";
-
             /**
              * Creates a new MediaDetailsMetadata instance using the specified properties.
              * @param [properties] Properties to set
@@ -33381,12 +33272,6 @@ export namespace AICommon {
             /** SideBySideMetadata surveyCtaHasRendered. */
             public surveyCtaHasRendered?: (boolean|null);
 
-            /** SideBySideMetadata _primaryResponseId. */
-            public _primaryResponseId?: "primaryResponseId";
-
-            /** SideBySideMetadata _surveyCtaHasRendered. */
-            public _surveyCtaHasRendered?: "surveyCtaHasRendered";
-
             /**
              * Creates a new SideBySideMetadata instance using the specified properties.
              * @param [properties] Properties to set
@@ -33484,9 +33369,6 @@ export namespace AICommon {
 
         /** BotMessageOrigin type. */
         public type?: (AICommon.BotMessageOrigin.BotMessageOriginType|null);
-
-        /** BotMessageOrigin _type. */
-        public _type?: "type";
 
         /**
          * Creates a new BotMessageOrigin instance using the specified properties.
@@ -33792,54 +33674,6 @@ export namespace AICommon {
         /** InThreadSurveyMetadata startQuestionIndex. */
         public startQuestionIndex?: (number|null);
 
-        /** InThreadSurveyMetadata _tessaSessionId. */
-        public _tessaSessionId?: "tessaSessionId";
-
-        /** InThreadSurveyMetadata _simonSessionId. */
-        public _simonSessionId?: "simonSessionId";
-
-        /** InThreadSurveyMetadata _simonSurveyId. */
-        public _simonSurveyId?: "simonSurveyId";
-
-        /** InThreadSurveyMetadata _tessaRootId. */
-        public _tessaRootId?: "tessaRootId";
-
-        /** InThreadSurveyMetadata _requestId. */
-        public _requestId?: "requestId";
-
-        /** InThreadSurveyMetadata _tessaEvent. */
-        public _tessaEvent?: "tessaEvent";
-
-        /** InThreadSurveyMetadata _invitationHeaderText. */
-        public _invitationHeaderText?: "invitationHeaderText";
-
-        /** InThreadSurveyMetadata _invitationBodyText. */
-        public _invitationBodyText?: "invitationBodyText";
-
-        /** InThreadSurveyMetadata _invitationCtaText. */
-        public _invitationCtaText?: "invitationCtaText";
-
-        /** InThreadSurveyMetadata _invitationCtaUrl. */
-        public _invitationCtaUrl?: "invitationCtaUrl";
-
-        /** InThreadSurveyMetadata _surveyTitle. */
-        public _surveyTitle?: "surveyTitle";
-
-        /** InThreadSurveyMetadata _surveyContinueButtonText. */
-        public _surveyContinueButtonText?: "surveyContinueButtonText";
-
-        /** InThreadSurveyMetadata _surveySubmitButtonText. */
-        public _surveySubmitButtonText?: "surveySubmitButtonText";
-
-        /** InThreadSurveyMetadata _privacyStatementFull. */
-        public _privacyStatementFull?: "privacyStatementFull";
-
-        /** InThreadSurveyMetadata _feedbackToastText. */
-        public _feedbackToastText?: "feedbackToastText";
-
-        /** InThreadSurveyMetadata _startQuestionIndex. */
-        public _startQuestionIndex?: "startQuestionIndex";
-
         /**
          * Creates a new InThreadSurveyMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -33951,15 +33785,6 @@ export namespace AICommon {
             /** InThreadSurveyOption textTranslated. */
             public textTranslated?: (string|null);
 
-            /** InThreadSurveyOption _stringValue. */
-            public _stringValue?: "stringValue";
-
-            /** InThreadSurveyOption _numericValue. */
-            public _numericValue?: "numericValue";
-
-            /** InThreadSurveyOption _textTranslated. */
-            public _textTranslated?: "textTranslated";
-
             /**
              * Creates a new InThreadSurveyOption instance using the specified properties.
              * @param [properties] Properties to set
@@ -34062,12 +33887,6 @@ export namespace AICommon {
 
             /** InThreadSurveyPrivacyStatementPart url. */
             public url?: (string|null);
-
-            /** InThreadSurveyPrivacyStatementPart _text. */
-            public _text?: "text";
-
-            /** InThreadSurveyPrivacyStatementPart _url. */
-            public _url?: "url";
 
             /**
              * Creates a new InThreadSurveyPrivacyStatementPart instance using the specified properties.
@@ -34177,12 +33996,6 @@ export namespace AICommon {
 
             /** InThreadSurveyQuestion questionOptions. */
             public questionOptions: AICommon.InThreadSurveyMetadata.IInThreadSurveyOption[];
-
-            /** InThreadSurveyQuestion _questionText. */
-            public _questionText?: "questionText";
-
-            /** InThreadSurveyQuestion _questionId. */
-            public _questionId?: "questionId";
 
             /**
              * Creates a new InThreadSurveyQuestion instance using the specified properties.
@@ -34417,27 +34230,6 @@ export namespace AICommon {
             /** BotSourceItem sourceTitle. */
             public sourceTitle?: (string|null);
 
-            /** BotSourceItem _provider. */
-            public _provider?: "provider";
-
-            /** BotSourceItem _thumbnailCdnUrl. */
-            public _thumbnailCdnUrl?: "thumbnailCdnUrl";
-
-            /** BotSourceItem _sourceProviderUrl. */
-            public _sourceProviderUrl?: "sourceProviderUrl";
-
-            /** BotSourceItem _sourceQuery. */
-            public _sourceQuery?: "sourceQuery";
-
-            /** BotSourceItem _faviconCdnUrl. */
-            public _faviconCdnUrl?: "faviconCdnUrl";
-
-            /** BotSourceItem _citationNumber. */
-            public _citationNumber?: "citationNumber";
-
-            /** BotSourceItem _sourceTitle. */
-            public _sourceTitle?: "sourceTitle";
-
             /**
              * Creates a new BotSourceItem instance using the specified properties.
              * @param [properties] Properties to set
@@ -34560,15 +34352,6 @@ export namespace AICommon {
         /** BotAgeCollectionMetadata ageCollectionType. */
         public ageCollectionType?: (AICommon.BotAgeCollectionMetadata.AgeCollectionType|null);
 
-        /** BotAgeCollectionMetadata _ageCollectionEligible. */
-        public _ageCollectionEligible?: "ageCollectionEligible";
-
-        /** BotAgeCollectionMetadata _shouldTriggerAgeCollectionOnClient. */
-        public _shouldTriggerAgeCollectionOnClient?: "shouldTriggerAgeCollectionOnClient";
-
-        /** BotAgeCollectionMetadata _ageCollectionType. */
-        public _ageCollectionType?: "ageCollectionType";
-
         /**
          * Creates a new BotAgeCollectionMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -34661,6 +34444,9 @@ export namespace AICommon {
 
         /** BotImagineMetadata imagineType */
         imagineType?: (AICommon.BotImagineMetadata.ImagineType|null);
+
+        /** BotImagineMetadata shortPrompt */
+        shortPrompt?: (string|null);
     }
 
     /** Represents a BotImagineMetadata. */
@@ -34675,8 +34461,8 @@ export namespace AICommon {
         /** BotImagineMetadata imagineType. */
         public imagineType?: (AICommon.BotImagineMetadata.ImagineType|null);
 
-        /** BotImagineMetadata _imagineType. */
-        public _imagineType?: "imagineType";
+        /** BotImagineMetadata shortPrompt. */
+        public shortPrompt?: (string|null);
 
         /**
          * Creates a new BotImagineMetadata instance using the specified properties.
@@ -34898,15 +34684,6 @@ export namespace AICommon {
             /** BotFeatureQuotaMetadata expirationTimestamp. */
             public expirationTimestamp?: (number|Long|null);
 
-            /** BotFeatureQuotaMetadata _featureType. */
-            public _featureType?: "featureType";
-
-            /** BotFeatureQuotaMetadata _remainingQuota. */
-            public _remainingQuota?: "remainingQuota";
-
-            /** BotFeatureQuotaMetadata _expirationTimestamp. */
-            public _expirationTimestamp?: "expirationTimestamp";
-
             /**
              * Creates a new BotFeatureQuotaMetadata instance using the specified properties.
              * @param [properties] Properties to set
@@ -35000,6 +34777,9 @@ export namespace AICommon {
 
         /** BotModeSelectionMetadata mode */
         mode?: (AICommon.BotModeSelectionMetadata.BotUserSelectionMode[]|null);
+
+        /** BotModeSelectionMetadata overrideMode */
+        overrideMode?: (number[]|null);
     }
 
     /** Represents a BotModeSelectionMetadata. */
@@ -35013,6 +34793,9 @@ export namespace AICommon {
 
         /** BotModeSelectionMetadata mode. */
         public mode: AICommon.BotModeSelectionMetadata.BotUserSelectionMode[];
+
+        /** BotModeSelectionMetadata overrideMode. */
+        public overrideMode: number[];
 
         /**
          * Creates a new BotModeSelectionMetadata instance using the specified properties.
@@ -35096,8 +34879,8 @@ export namespace AICommon {
 
         /** BotUserSelectionMode enum. */
         enum BotUserSelectionMode {
-            UNKNOWN_MODE = 0,
-            REASONING_MODE = 1
+            DEFAULT_MODE = 0,
+            THINK_HARD_MODE = 1
         }
     }
 
@@ -35251,7 +35034,19 @@ export namespace AICommon {
             RICH_RESPONSE_IN_APP_SURVEY = 46,
             AI_RESPONSE_MODEL_BRANDING = 47,
             SESSION_TRANSPARENCY_SYSTEM_MESSAGE = 48,
-            RICH_RESPONSE_UR_REASONING = 49
+            RICH_RESPONSE_UR_REASONING = 49,
+            RICH_RESPONSE_UR_ZEITGEIST_CITATIONS = 50,
+            RICH_RESPONSE_UR_ZEITGEIST_CAROUSEL = 51,
+            AI_IMAGINE_LOADING_INDICATOR = 52,
+            RICH_RESPONSE_UR_IMAGINE = 53,
+            AI_IMAGINE_UR_TO_NATIVE_LOADING_INDICATOR = 54,
+            RICH_RESPONSE_UR_BLOKS_ENABLED = 55,
+            RICH_RESPONSE_INLINE_LINKS_ENABLED = 56,
+            RICH_RESPONSE_UR_IMAGINE_VIDEO = 57,
+            JSON_PATCH_STREAMING = 58,
+            AI_TAB_FORCE_CLIPPY = 59,
+            UNIFIED_RESPONSE_EMBEDDED_SCREENS = 60,
+            AI_SUBSCRIPTION_ENABLED = 61
         }
     }
 
@@ -35263,6 +35058,9 @@ export namespace AICommon {
 
         /** BotProgressIndicatorMetadata stepsMetadata */
         stepsMetadata?: (AICommon.BotProgressIndicatorMetadata.IBotPlanningStepMetadata[]|null);
+
+        /** BotProgressIndicatorMetadata estimatedCompletionTime */
+        estimatedCompletionTime?: (number|Long|null);
     }
 
     /** Represents a BotProgressIndicatorMetadata. */
@@ -35280,8 +35078,8 @@ export namespace AICommon {
         /** BotProgressIndicatorMetadata stepsMetadata. */
         public stepsMetadata: AICommon.BotProgressIndicatorMetadata.IBotPlanningStepMetadata[];
 
-        /** BotProgressIndicatorMetadata _progressDescription. */
-        public _progressDescription?: "progressDescription";
+        /** BotProgressIndicatorMetadata estimatedCompletionTime. */
+        public estimatedCompletionTime?: (number|Long|null);
 
         /**
          * Creates a new BotProgressIndicatorMetadata instance using the specified properties.
@@ -35418,21 +35216,6 @@ export namespace AICommon {
             /** BotPlanningStepMetadata sections. */
             public sections: AICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningStepSectionMetadata[];
 
-            /** BotPlanningStepMetadata _statusTitle. */
-            public _statusTitle?: "statusTitle";
-
-            /** BotPlanningStepMetadata _statusBody. */
-            public _statusBody?: "statusBody";
-
-            /** BotPlanningStepMetadata _status. */
-            public _status?: "status";
-
-            /** BotPlanningStepMetadata _isReasoning. */
-            public _isReasoning?: "isReasoning";
-
-            /** BotPlanningStepMetadata _isEnhancedSearch. */
-            public _isEnhancedSearch?: "isEnhancedSearch";
-
             /**
              * Creates a new BotPlanningStepMetadata instance using the specified properties.
              * @param [properties] Properties to set
@@ -35550,18 +35333,6 @@ export namespace AICommon {
                 /** BotPlanningSearchSourceMetadata favIconUrl. */
                 public favIconUrl?: (string|null);
 
-                /** BotPlanningSearchSourceMetadata _title. */
-                public _title?: "title";
-
-                /** BotPlanningSearchSourceMetadata _provider. */
-                public _provider?: "provider";
-
-                /** BotPlanningSearchSourceMetadata _sourceUrl. */
-                public _sourceUrl?: "sourceUrl";
-
-                /** BotPlanningSearchSourceMetadata _favIconUrl. */
-                public _favIconUrl?: "favIconUrl";
-
                 /**
                  * Creates a new BotPlanningSearchSourceMetadata instance using the specified properties.
                  * @param [properties] Properties to set
@@ -35670,15 +35441,6 @@ export namespace AICommon {
 
                 /** BotPlanningSearchSourcesMetadata sourceUrl. */
                 public sourceUrl?: (string|null);
-
-                /** BotPlanningSearchSourcesMetadata _sourceTitle. */
-                public _sourceTitle?: "sourceTitle";
-
-                /** BotPlanningSearchSourcesMetadata _provider. */
-                public _provider?: "provider";
-
-                /** BotPlanningSearchSourcesMetadata _sourceUrl. */
-                public _sourceUrl?: "sourceUrl";
 
                 /**
                  * Creates a new BotPlanningSearchSourcesMetadata instance using the specified properties.
@@ -35799,12 +35561,6 @@ export namespace AICommon {
 
                 /** BotPlanningStepSectionMetadata sourcesMetadata. */
                 public sourcesMetadata: AICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourceMetadata[];
-
-                /** BotPlanningStepSectionMetadata _sectionTitle. */
-                public _sectionTitle?: "sectionTitle";
-
-                /** BotPlanningStepSectionMetadata _sectionBody. */
-                public _sectionBody?: "sectionBody";
 
                 /**
                  * Creates a new BotPlanningStepSectionMetadata instance using the specified properties.
@@ -35932,15 +35688,6 @@ export namespace AICommon {
 
         /** BotModelMetadata modelNameOverride. */
         public modelNameOverride?: (string|null);
-
-        /** BotModelMetadata _modelType. */
-        public _modelType?: "modelType";
-
-        /** BotModelMetadata _premiumModelStatus. */
-        public _premiumModelStatus?: "premiumModelStatus";
-
-        /** BotModelMetadata _modelNameOverride. */
-        public _modelNameOverride?: "modelNameOverride";
 
         /**
          * Creates a new BotModelMetadata instance using the specified properties.
@@ -36079,21 +35826,6 @@ export namespace AICommon {
 
         /** BotReminderMetadata frequency. */
         public frequency?: (AICommon.BotReminderMetadata.ReminderFrequency|null);
-
-        /** BotReminderMetadata _requestMessageKey. */
-        public _requestMessageKey?: "requestMessageKey";
-
-        /** BotReminderMetadata _action. */
-        public _action?: "action";
-
-        /** BotReminderMetadata _name. */
-        public _name?: "name";
-
-        /** BotReminderMetadata _nextTriggerTimestamp. */
-        public _nextTriggerTimestamp?: "nextTriggerTimestamp";
-
-        /** BotReminderMetadata _frequency. */
-        public _frequency?: "frequency";
 
         /**
          * Creates a new BotReminderMetadata instance using the specified properties.
@@ -36345,27 +36077,6 @@ export namespace AICommon {
         /** BotMediaMetadata orientationType. */
         public orientationType?: (AICommon.BotMediaMetadata.OrientationType|null);
 
-        /** BotMediaMetadata _fileSha256. */
-        public _fileSha256?: "fileSha256";
-
-        /** BotMediaMetadata _mediaKey. */
-        public _mediaKey?: "mediaKey";
-
-        /** BotMediaMetadata _fileEncSha256. */
-        public _fileEncSha256?: "fileEncSha256";
-
-        /** BotMediaMetadata _directPath. */
-        public _directPath?: "directPath";
-
-        /** BotMediaMetadata _mediaKeyTimestamp. */
-        public _mediaKeyTimestamp?: "mediaKeyTimestamp";
-
-        /** BotMediaMetadata _mimetype. */
-        public _mimetype?: "mimetype";
-
-        /** BotMediaMetadata _orientationType. */
-        public _orientationType?: "orientationType";
-
         /**
          * Creates a new BotMediaMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -36479,12 +36190,6 @@ export namespace AICommon {
         /** BotSessionMetadata sessionSource. */
         public sessionSource?: (AICommon.BotSessionSource|null);
 
-        /** BotSessionMetadata _sessionId. */
-        public _sessionId?: "sessionId";
-
-        /** BotSessionMetadata _sessionSource. */
-        public _sessionSource?: "sessionSource";
-
         /**
          * Creates a new BotSessionMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -36593,15 +36298,6 @@ export namespace AICommon {
 
         /** BotMetricsMetadata threadOrigin. */
         public threadOrigin?: (AICommon.BotMetricsThreadEntryPoint|null);
-
-        /** BotMetricsMetadata _destinationId. */
-        public _destinationId?: "destinationId";
-
-        /** BotMetricsMetadata _destinationEntryPoint. */
-        public _destinationEntryPoint?: "destinationEntryPoint";
-
-        /** BotMetricsMetadata _threadOrigin. */
-        public _threadOrigin?: "threadOrigin";
 
         /**
          * Creates a new BotMetricsMetadata instance using the specified properties.
@@ -36805,9 +36501,6 @@ export namespace AICommon {
             /** Keyword associatedPrompts. */
             public associatedPrompts: string[];
 
-            /** Keyword _value. */
-            public _value?: "value";
-
             /**
              * Creates a new Keyword instance using the specified properties.
              * @param [properties] Properties to set
@@ -36911,12 +36604,6 @@ export namespace AICommon {
 
         /** BotPromotionMessageMetadata buttonTitle. */
         public buttonTitle?: (string|null);
-
-        /** BotPromotionMessageMetadata _promotionType. */
-        public _promotionType?: "promotionType";
-
-        /** BotPromotionMessageMetadata _buttonTitle. */
-        public _buttonTitle?: "buttonTitle";
 
         /**
          * Creates a new BotPromotionMessageMetadata instance using the specified properties.
@@ -37043,15 +36730,6 @@ export namespace AICommon {
         /** BotSignatureVerificationUseCaseProof certificateChain. */
         public certificateChain: Uint8Array[];
 
-        /** BotSignatureVerificationUseCaseProof _version. */
-        public _version?: "version";
-
-        /** BotSignatureVerificationUseCaseProof _useCase. */
-        public _useCase?: "useCase";
-
-        /** BotSignatureVerificationUseCaseProof _signature. */
-        public _signature?: "signature";
-
         /**
          * Creates a new BotSignatureVerificationUseCaseProof instance using the specified properties.
          * @param [properties] Properties to set
@@ -37135,7 +36813,8 @@ export namespace AICommon {
         /** BotSignatureUseCase enum. */
         enum BotSignatureUseCase {
             UNSPECIFIED = 0,
-            WA_BOT_MSG = 1
+            WA_BOT_MSG = 1,
+            WA_TEE_BOT_MSG = 2
         }
     }
 
@@ -37261,12 +36940,6 @@ export namespace AICommon {
         /** BotMemoryFact factId. */
         public factId?: (string|null);
 
-        /** BotMemoryFact _fact. */
-        public _fact?: "fact";
-
-        /** BotMemoryFact _factId. */
-        public _factId?: "factId";
-
         /**
          * Creates a new BotMemoryFact instance using the specified properties.
          * @param [properties] Properties to set
@@ -37376,9 +37049,6 @@ export namespace AICommon {
         /** BotMemoryMetadata disclaimer. */
         public disclaimer?: (string|null);
 
-        /** BotMemoryMetadata _disclaimer. */
-        public _disclaimer?: "disclaimer";
-
         /**
          * Creates a new BotMemoryMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -37475,9 +37145,6 @@ export namespace AICommon {
 
         /** BotLinkedAccount type. */
         public type?: (AICommon.BotLinkedAccount.BotLinkedAccountType|null);
-
-        /** BotLinkedAccount _type. */
-        public _type?: "type";
 
         /**
          * Creates a new BotLinkedAccount instance using the specified properties.
@@ -37596,12 +37263,6 @@ export namespace AICommon {
         /** BotLinkedAccountsMetadata acErrorCode. */
         public acErrorCode?: (number|null);
 
-        /** BotLinkedAccountsMetadata _acAuthTokens. */
-        public _acAuthTokens?: "acAuthTokens";
-
-        /** BotLinkedAccountsMetadata _acErrorCode. */
-        public _acErrorCode?: "acErrorCode";
-
         /**
          * Creates a new BotLinkedAccountsMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -37704,12 +37365,6 @@ export namespace AICommon {
 
         /** BotPromptSuggestion promptId. */
         public promptId?: (string|null);
-
-        /** BotPromptSuggestion _prompt. */
-        public _prompt?: "prompt";
-
-        /** BotPromptSuggestion _promptId. */
-        public _promptId?: "promptId";
 
         /**
          * Creates a new BotPromptSuggestion instance using the specified properties.
@@ -37923,15 +37578,6 @@ export namespace AICommon {
         /** BotSuggestedPromptMetadata selectedPromptId. */
         public selectedPromptId?: (string|null);
 
-        /** BotSuggestedPromptMetadata _selectedPromptIndex. */
-        public _selectedPromptIndex?: "selectedPromptIndex";
-
-        /** BotSuggestedPromptMetadata _promptSuggestions. */
-        public _promptSuggestions?: "promptSuggestions";
-
-        /** BotSuggestedPromptMetadata _selectedPromptId. */
-        public _selectedPromptId?: "selectedPromptId";
-
         /**
          * Creates a new BotSuggestedPromptMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -38095,42 +37741,6 @@ export namespace AICommon {
         /** BotPluginMetadata faviconCdnUrl. */
         public faviconCdnUrl?: (string|null);
 
-        /** BotPluginMetadata _provider. */
-        public _provider?: "provider";
-
-        /** BotPluginMetadata _pluginType. */
-        public _pluginType?: "pluginType";
-
-        /** BotPluginMetadata _thumbnailCdnUrl. */
-        public _thumbnailCdnUrl?: "thumbnailCdnUrl";
-
-        /** BotPluginMetadata _profilePhotoCdnUrl. */
-        public _profilePhotoCdnUrl?: "profilePhotoCdnUrl";
-
-        /** BotPluginMetadata _searchProviderUrl. */
-        public _searchProviderUrl?: "searchProviderUrl";
-
-        /** BotPluginMetadata _referenceIndex. */
-        public _referenceIndex?: "referenceIndex";
-
-        /** BotPluginMetadata _expectedLinksCount. */
-        public _expectedLinksCount?: "expectedLinksCount";
-
-        /** BotPluginMetadata _searchQuery. */
-        public _searchQuery?: "searchQuery";
-
-        /** BotPluginMetadata _parentPluginMessageKey. */
-        public _parentPluginMessageKey?: "parentPluginMessageKey";
-
-        /** BotPluginMetadata _deprecatedField. */
-        public _deprecatedField?: "deprecatedField";
-
-        /** BotPluginMetadata _parentPluginType. */
-        public _parentPluginType?: "parentPluginType";
-
-        /** BotPluginMetadata _faviconCdnUrl. */
-        public _faviconCdnUrl?: "faviconCdnUrl";
-
         /**
          * Creates a new BotPluginMetadata instance using the specified properties.
          * @param [properties] Properties to set
@@ -38227,166 +37837,10 @@ export namespace AICommon {
         }
     }
 
-    /** Properties of a BotAvatarMetadata. */
-    interface IBotAvatarMetadata {
-
-        /** BotAvatarMetadata sentiment */
-        sentiment?: (number|null);
-
-        /** BotAvatarMetadata behaviorGraph */
-        behaviorGraph?: (string|null);
-
-        /** BotAvatarMetadata action */
-        action?: (number|null);
-
-        /** BotAvatarMetadata intensity */
-        intensity?: (number|null);
-
-        /** BotAvatarMetadata wordCount */
-        wordCount?: (number|null);
-    }
-
-    /** Represents a BotAvatarMetadata. */
-    class BotAvatarMetadata implements IBotAvatarMetadata {
-
-        /**
-         * Constructs a new BotAvatarMetadata.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: AICommon.IBotAvatarMetadata);
-
-        /** BotAvatarMetadata sentiment. */
-        public sentiment?: (number|null);
-
-        /** BotAvatarMetadata behaviorGraph. */
-        public behaviorGraph?: (string|null);
-
-        /** BotAvatarMetadata action. */
-        public action?: (number|null);
-
-        /** BotAvatarMetadata intensity. */
-        public intensity?: (number|null);
-
-        /** BotAvatarMetadata wordCount. */
-        public wordCount?: (number|null);
-
-        /** BotAvatarMetadata _sentiment. */
-        public _sentiment?: "sentiment";
-
-        /** BotAvatarMetadata _behaviorGraph. */
-        public _behaviorGraph?: "behaviorGraph";
-
-        /** BotAvatarMetadata _action. */
-        public _action?: "action";
-
-        /** BotAvatarMetadata _intensity. */
-        public _intensity?: "intensity";
-
-        /** BotAvatarMetadata _wordCount. */
-        public _wordCount?: "wordCount";
-
-        /**
-         * Creates a new BotAvatarMetadata instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns BotAvatarMetadata instance
-         */
-        public static create(properties?: AICommon.IBotAvatarMetadata): AICommon.BotAvatarMetadata;
-
-        /**
-         * Encodes the specified BotAvatarMetadata message. Does not implicitly {@link AICommon.BotAvatarMetadata.verify|verify} messages.
-         * @param message BotAvatarMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: AICommon.IBotAvatarMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified BotAvatarMetadata message, length delimited. Does not implicitly {@link AICommon.BotAvatarMetadata.verify|verify} messages.
-         * @param message BotAvatarMetadata message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: AICommon.IBotAvatarMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a BotAvatarMetadata message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns BotAvatarMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AICommon.BotAvatarMetadata;
-
-        /**
-         * Decodes a BotAvatarMetadata message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns BotAvatarMetadata
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AICommon.BotAvatarMetadata;
-
-        /**
-         * Verifies a BotAvatarMetadata message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a BotAvatarMetadata message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns BotAvatarMetadata
-         */
-        public static fromObject(object: { [k: string]: any }): AICommon.BotAvatarMetadata;
-
-        /**
-         * Creates a plain object from a BotAvatarMetadata message. Also converts values to other types if specified.
-         * @param message BotAvatarMetadata
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: AICommon.BotAvatarMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this BotAvatarMetadata to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for BotAvatarMetadata
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
     /** SessionTransparencyType enum. */
     enum SessionTransparencyType {
         UNKNOWN_TYPE = 0,
         NY_AI_SAFETY_DISCLAIMER = 1
-    }
-
-    /** AIRichResponseSubMessageType enum. */
-    enum AIRichResponseSubMessageType {
-        AI_RICH_RESPONSE_UNKNOWN = 0,
-        AI_RICH_RESPONSE_GRID_IMAGE = 1,
-        AI_RICH_RESPONSE_TEXT = 2,
-        AI_RICH_RESPONSE_INLINE_IMAGE = 3,
-        AI_RICH_RESPONSE_TABLE = 4,
-        AI_RICH_RESPONSE_CODE = 5,
-        AI_RICH_RESPONSE_DYNAMIC = 6,
-        AI_RICH_RESPONSE_MAP = 7,
-        AI_RICH_RESPONSE_LATEX = 8,
-        AI_RICH_RESPONSE_CONTENT_ITEMS = 9
-    }
-
-    /** AIRichResponseMessageType enum. */
-    enum AIRichResponseMessageType {
-        AI_RICH_RESPONSE_TYPE_UNKNOWN = 0,
-        AI_RICH_RESPONSE_TYPE_STANDARD = 1
     }
 
     /** BotSessionSource enum. */
@@ -38397,7 +37851,8 @@ export namespace AICommon {
         USER_INPUT = 3,
         EMU_FLASH = 4,
         EMU_FLASH_FOLLOWUP = 5,
-        VOICE = 6
+        VOICE = 6,
+        AI_HOME_SESSION = 7
     }
 
     /** BotMetricsThreadEntryPoint enum. */
@@ -38449,1033 +37904,15 @@ export namespace AICommon {
         ATTACHMENT_TRAY_1_ON_1_CHAT = 35,
         ATTACHMENT_TRAY_GROUP_CHAT = 36,
         ASK_META_AI_MEDIA_VIEWER_1ON1 = 37,
-        ASK_META_AI_MEDIA_VIEWER_GROUP = 38
-    }
-}
-
-/** Namespace StatusAttributions. */
-export namespace StatusAttributions {
-
-    /** Properties of a StatusAttribution. */
-    interface IStatusAttribution {
-
-        /** StatusAttribution type */
-        type?: (StatusAttributions.StatusAttribution.Type|null);
-
-        /** StatusAttribution actionUrl */
-        actionUrl?: (string|null);
-
-        /** StatusAttribution statusReshare */
-        statusReshare?: (StatusAttributions.StatusAttribution.IStatusReshare|null);
-
-        /** StatusAttribution externalShare */
-        externalShare?: (StatusAttributions.StatusAttribution.IExternalShare|null);
-
-        /** StatusAttribution music */
-        music?: (StatusAttributions.StatusAttribution.IMusic|null);
-
-        /** StatusAttribution groupStatus */
-        groupStatus?: (StatusAttributions.StatusAttribution.IGroupStatus|null);
-
-        /** StatusAttribution rlAttribution */
-        rlAttribution?: (StatusAttributions.StatusAttribution.IRLAttribution|null);
-
-        /** StatusAttribution aiCreatedAttribution */
-        aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
-    }
-
-    /** Represents a StatusAttribution. */
-    class StatusAttribution implements IStatusAttribution {
-
-        /**
-         * Constructs a new StatusAttribution.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: StatusAttributions.IStatusAttribution);
-
-        /** StatusAttribution type. */
-        public type?: (StatusAttributions.StatusAttribution.Type|null);
-
-        /** StatusAttribution actionUrl. */
-        public actionUrl?: (string|null);
-
-        /** StatusAttribution statusReshare. */
-        public statusReshare?: (StatusAttributions.StatusAttribution.IStatusReshare|null);
-
-        /** StatusAttribution externalShare. */
-        public externalShare?: (StatusAttributions.StatusAttribution.IExternalShare|null);
-
-        /** StatusAttribution music. */
-        public music?: (StatusAttributions.StatusAttribution.IMusic|null);
-
-        /** StatusAttribution groupStatus. */
-        public groupStatus?: (StatusAttributions.StatusAttribution.IGroupStatus|null);
-
-        /** StatusAttribution rlAttribution. */
-        public rlAttribution?: (StatusAttributions.StatusAttribution.IRLAttribution|null);
-
-        /** StatusAttribution aiCreatedAttribution. */
-        public aiCreatedAttribution?: (StatusAttributions.StatusAttribution.IAiCreatedAttribution|null);
-
-        /** StatusAttribution _type. */
-        public _type?: "type";
-
-        /** StatusAttribution _actionUrl. */
-        public _actionUrl?: "actionUrl";
-
-        /** StatusAttribution attributionData. */
-        public attributionData?: ("statusReshare"|"externalShare"|"music"|"groupStatus"|"rlAttribution"|"aiCreatedAttribution");
-
-        /**
-         * Creates a new StatusAttribution instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns StatusAttribution instance
-         */
-        public static create(properties?: StatusAttributions.IStatusAttribution): StatusAttributions.StatusAttribution;
-
-        /**
-         * Encodes the specified StatusAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.verify|verify} messages.
-         * @param message StatusAttribution message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: StatusAttributions.IStatusAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified StatusAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.verify|verify} messages.
-         * @param message StatusAttribution message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: StatusAttributions.IStatusAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a StatusAttribution message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns StatusAttribution
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution;
-
-        /**
-         * Decodes a StatusAttribution message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns StatusAttribution
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution;
-
-        /**
-         * Verifies a StatusAttribution message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a StatusAttribution message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns StatusAttribution
-         */
-        public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution;
-
-        /**
-         * Creates a plain object from a StatusAttribution message. Also converts values to other types if specified.
-         * @param message StatusAttribution
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: StatusAttributions.StatusAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this StatusAttribution to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for StatusAttribution
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    namespace StatusAttribution {
-
-        /** Properties of an AiCreatedAttribution. */
-        interface IAiCreatedAttribution {
-
-            /** AiCreatedAttribution source */
-            source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
-        }
-
-        /** Represents an AiCreatedAttribution. */
-        class AiCreatedAttribution implements IAiCreatedAttribution {
-
-            /**
-             * Constructs a new AiCreatedAttribution.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: StatusAttributions.StatusAttribution.IAiCreatedAttribution);
-
-            /** AiCreatedAttribution source. */
-            public source?: (StatusAttributions.StatusAttribution.AiCreatedAttribution.Source|null);
-
-            /** AiCreatedAttribution _source. */
-            public _source?: "source";
-
-            /**
-             * Creates a new AiCreatedAttribution instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns AiCreatedAttribution instance
-             */
-            public static create(properties?: StatusAttributions.StatusAttribution.IAiCreatedAttribution): StatusAttributions.StatusAttribution.AiCreatedAttribution;
-
-            /**
-             * Encodes the specified AiCreatedAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
-             * @param message AiCreatedAttribution message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: StatusAttributions.StatusAttribution.IAiCreatedAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AiCreatedAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.AiCreatedAttribution.verify|verify} messages.
-             * @param message AiCreatedAttribution message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IAiCreatedAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an AiCreatedAttribution message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AiCreatedAttribution
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.AiCreatedAttribution;
-
-            /**
-             * Decodes an AiCreatedAttribution message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AiCreatedAttribution
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.AiCreatedAttribution;
-
-            /**
-             * Verifies an AiCreatedAttribution message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an AiCreatedAttribution message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AiCreatedAttribution
-             */
-            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.AiCreatedAttribution;
-
-            /**
-             * Creates a plain object from an AiCreatedAttribution message. Also converts values to other types if specified.
-             * @param message AiCreatedAttribution
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: StatusAttributions.StatusAttribution.AiCreatedAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AiCreatedAttribution to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for AiCreatedAttribution
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        namespace AiCreatedAttribution {
-
-            /** Source enum. */
-            enum Source {
-                UNKNOWN = 0,
-                STATUS_MIMICRY = 1
-            }
-        }
-
-        /** Properties of an ExternalShare. */
-        interface IExternalShare {
-
-            /** ExternalShare actionUrl */
-            actionUrl?: (string|null);
-
-            /** ExternalShare source */
-            source?: (StatusAttributions.StatusAttribution.ExternalShare.Source|null);
-
-            /** ExternalShare duration */
-            duration?: (number|null);
-
-            /** ExternalShare actionFallbackUrl */
-            actionFallbackUrl?: (string|null);
-        }
-
-        /** Represents an ExternalShare. */
-        class ExternalShare implements IExternalShare {
-
-            /**
-             * Constructs a new ExternalShare.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: StatusAttributions.StatusAttribution.IExternalShare);
-
-            /** ExternalShare actionUrl. */
-            public actionUrl?: (string|null);
-
-            /** ExternalShare source. */
-            public source?: (StatusAttributions.StatusAttribution.ExternalShare.Source|null);
-
-            /** ExternalShare duration. */
-            public duration?: (number|null);
-
-            /** ExternalShare actionFallbackUrl. */
-            public actionFallbackUrl?: (string|null);
-
-            /** ExternalShare _actionUrl. */
-            public _actionUrl?: "actionUrl";
-
-            /** ExternalShare _source. */
-            public _source?: "source";
-
-            /** ExternalShare _duration. */
-            public _duration?: "duration";
-
-            /** ExternalShare _actionFallbackUrl. */
-            public _actionFallbackUrl?: "actionFallbackUrl";
-
-            /**
-             * Creates a new ExternalShare instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns ExternalShare instance
-             */
-            public static create(properties?: StatusAttributions.StatusAttribution.IExternalShare): StatusAttributions.StatusAttribution.ExternalShare;
-
-            /**
-             * Encodes the specified ExternalShare message. Does not implicitly {@link StatusAttributions.StatusAttribution.ExternalShare.verify|verify} messages.
-             * @param message ExternalShare message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: StatusAttributions.StatusAttribution.IExternalShare, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified ExternalShare message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.ExternalShare.verify|verify} messages.
-             * @param message ExternalShare message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IExternalShare, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an ExternalShare message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns ExternalShare
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.ExternalShare;
-
-            /**
-             * Decodes an ExternalShare message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns ExternalShare
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.ExternalShare;
-
-            /**
-             * Verifies an ExternalShare message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an ExternalShare message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns ExternalShare
-             */
-            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.ExternalShare;
-
-            /**
-             * Creates a plain object from an ExternalShare message. Also converts values to other types if specified.
-             * @param message ExternalShare
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: StatusAttributions.StatusAttribution.ExternalShare, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this ExternalShare to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for ExternalShare
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        namespace ExternalShare {
-
-            /** Source enum. */
-            enum Source {
-                UNKNOWN = 0,
-                INSTAGRAM = 1,
-                FACEBOOK = 2,
-                MESSENGER = 3,
-                SPOTIFY = 4,
-                YOUTUBE = 5,
-                PINTEREST = 6,
-                THREADS = 7,
-                APPLE_MUSIC = 8,
-                SHARECHAT = 9,
-                GOOGLE_PHOTOS = 10
-            }
-        }
-
-        /** Properties of a GroupStatus. */
-        interface IGroupStatus {
-
-            /** GroupStatus authorJid */
-            authorJid?: (string|null);
-        }
-
-        /** Represents a GroupStatus. */
-        class GroupStatus implements IGroupStatus {
-
-            /**
-             * Constructs a new GroupStatus.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: StatusAttributions.StatusAttribution.IGroupStatus);
-
-            /** GroupStatus authorJid. */
-            public authorJid?: (string|null);
-
-            /** GroupStatus _authorJid. */
-            public _authorJid?: "authorJid";
-
-            /**
-             * Creates a new GroupStatus instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns GroupStatus instance
-             */
-            public static create(properties?: StatusAttributions.StatusAttribution.IGroupStatus): StatusAttributions.StatusAttribution.GroupStatus;
-
-            /**
-             * Encodes the specified GroupStatus message. Does not implicitly {@link StatusAttributions.StatusAttribution.GroupStatus.verify|verify} messages.
-             * @param message GroupStatus message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: StatusAttributions.StatusAttribution.IGroupStatus, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified GroupStatus message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.GroupStatus.verify|verify} messages.
-             * @param message GroupStatus message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IGroupStatus, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a GroupStatus message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns GroupStatus
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.GroupStatus;
-
-            /**
-             * Decodes a GroupStatus message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns GroupStatus
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.GroupStatus;
-
-            /**
-             * Verifies a GroupStatus message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a GroupStatus message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns GroupStatus
-             */
-            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.GroupStatus;
-
-            /**
-             * Creates a plain object from a GroupStatus message. Also converts values to other types if specified.
-             * @param message GroupStatus
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: StatusAttributions.StatusAttribution.GroupStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this GroupStatus to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for GroupStatus
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        /** Properties of a Music. */
-        interface IMusic {
-
-            /** Music authorName */
-            authorName?: (string|null);
-
-            /** Music songId */
-            songId?: (string|null);
-
-            /** Music title */
-            title?: (string|null);
-
-            /** Music author */
-            author?: (string|null);
-
-            /** Music artistAttribution */
-            artistAttribution?: (string|null);
-
-            /** Music isExplicit */
-            isExplicit?: (boolean|null);
-        }
-
-        /** Represents a Music. */
-        class Music implements IMusic {
-
-            /**
-             * Constructs a new Music.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: StatusAttributions.StatusAttribution.IMusic);
-
-            /** Music authorName. */
-            public authorName?: (string|null);
-
-            /** Music songId. */
-            public songId?: (string|null);
-
-            /** Music title. */
-            public title?: (string|null);
-
-            /** Music author. */
-            public author?: (string|null);
-
-            /** Music artistAttribution. */
-            public artistAttribution?: (string|null);
-
-            /** Music isExplicit. */
-            public isExplicit?: (boolean|null);
-
-            /** Music _authorName. */
-            public _authorName?: "authorName";
-
-            /** Music _songId. */
-            public _songId?: "songId";
-
-            /** Music _title. */
-            public _title?: "title";
-
-            /** Music _author. */
-            public _author?: "author";
-
-            /** Music _artistAttribution. */
-            public _artistAttribution?: "artistAttribution";
-
-            /** Music _isExplicit. */
-            public _isExplicit?: "isExplicit";
-
-            /**
-             * Creates a new Music instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns Music instance
-             */
-            public static create(properties?: StatusAttributions.StatusAttribution.IMusic): StatusAttributions.StatusAttribution.Music;
-
-            /**
-             * Encodes the specified Music message. Does not implicitly {@link StatusAttributions.StatusAttribution.Music.verify|verify} messages.
-             * @param message Music message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: StatusAttributions.StatusAttribution.IMusic, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Music message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.Music.verify|verify} messages.
-             * @param message Music message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IMusic, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Music message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Music
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.Music;
-
-            /**
-             * Decodes a Music message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Music
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.Music;
-
-            /**
-             * Verifies a Music message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Music message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Music
-             */
-            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.Music;
-
-            /**
-             * Creates a plain object from a Music message. Also converts values to other types if specified.
-             * @param message Music
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: StatusAttributions.StatusAttribution.Music, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Music to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for Music
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        /** Properties of a RLAttribution. */
-        interface IRLAttribution {
-
-            /** RLAttribution source */
-            source?: (StatusAttributions.StatusAttribution.RLAttribution.Source|null);
-        }
-
-        /** Represents a RLAttribution. */
-        class RLAttribution implements IRLAttribution {
-
-            /**
-             * Constructs a new RLAttribution.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: StatusAttributions.StatusAttribution.IRLAttribution);
-
-            /** RLAttribution source. */
-            public source?: (StatusAttributions.StatusAttribution.RLAttribution.Source|null);
-
-            /** RLAttribution _source. */
-            public _source?: "source";
-
-            /**
-             * Creates a new RLAttribution instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns RLAttribution instance
-             */
-            public static create(properties?: StatusAttributions.StatusAttribution.IRLAttribution): StatusAttributions.StatusAttribution.RLAttribution;
-
-            /**
-             * Encodes the specified RLAttribution message. Does not implicitly {@link StatusAttributions.StatusAttribution.RLAttribution.verify|verify} messages.
-             * @param message RLAttribution message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: StatusAttributions.StatusAttribution.IRLAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified RLAttribution message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.RLAttribution.verify|verify} messages.
-             * @param message RLAttribution message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IRLAttribution, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a RLAttribution message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns RLAttribution
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.RLAttribution;
-
-            /**
-             * Decodes a RLAttribution message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns RLAttribution
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.RLAttribution;
-
-            /**
-             * Verifies a RLAttribution message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a RLAttribution message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns RLAttribution
-             */
-            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.RLAttribution;
-
-            /**
-             * Creates a plain object from a RLAttribution message. Also converts values to other types if specified.
-             * @param message RLAttribution
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: StatusAttributions.StatusAttribution.RLAttribution, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this RLAttribution to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for RLAttribution
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        namespace RLAttribution {
-
-            /** Source enum. */
-            enum Source {
-                UNKNOWN = 0,
-                RAY_BAN_META_GLASSES = 1,
-                OAKLEY_META_GLASSES = 2,
-                HYPERNOVA_GLASSES = 3
-            }
-        }
-
-        /** Properties of a StatusReshare. */
-        interface IStatusReshare {
-
-            /** StatusReshare source */
-            source?: (StatusAttributions.StatusAttribution.StatusReshare.Source|null);
-
-            /** StatusReshare metadata */
-            metadata?: (StatusAttributions.StatusAttribution.StatusReshare.IMetadata|null);
-        }
-
-        /** Represents a StatusReshare. */
-        class StatusReshare implements IStatusReshare {
-
-            /**
-             * Constructs a new StatusReshare.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: StatusAttributions.StatusAttribution.IStatusReshare);
-
-            /** StatusReshare source. */
-            public source?: (StatusAttributions.StatusAttribution.StatusReshare.Source|null);
-
-            /** StatusReshare metadata. */
-            public metadata?: (StatusAttributions.StatusAttribution.StatusReshare.IMetadata|null);
-
-            /** StatusReshare _source. */
-            public _source?: "source";
-
-            /** StatusReshare _metadata. */
-            public _metadata?: "metadata";
-
-            /**
-             * Creates a new StatusReshare instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns StatusReshare instance
-             */
-            public static create(properties?: StatusAttributions.StatusAttribution.IStatusReshare): StatusAttributions.StatusAttribution.StatusReshare;
-
-            /**
-             * Encodes the specified StatusReshare message. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.verify|verify} messages.
-             * @param message StatusReshare message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: StatusAttributions.StatusAttribution.IStatusReshare, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified StatusReshare message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.verify|verify} messages.
-             * @param message StatusReshare message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: StatusAttributions.StatusAttribution.IStatusReshare, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a StatusReshare message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns StatusReshare
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.StatusReshare;
-
-            /**
-             * Decodes a StatusReshare message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns StatusReshare
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.StatusReshare;
-
-            /**
-             * Verifies a StatusReshare message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a StatusReshare message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns StatusReshare
-             */
-            public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.StatusReshare;
-
-            /**
-             * Creates a plain object from a StatusReshare message. Also converts values to other types if specified.
-             * @param message StatusReshare
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: StatusAttributions.StatusAttribution.StatusReshare, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this StatusReshare to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the default type url for StatusReshare
-             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-             * @returns The default type url
-             */
-            public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        namespace StatusReshare {
-
-            /** Properties of a Metadata. */
-            interface IMetadata {
-
-                /** Metadata duration */
-                duration?: (number|null);
-
-                /** Metadata channelJid */
-                channelJid?: (string|null);
-
-                /** Metadata channelMessageId */
-                channelMessageId?: (number|null);
-
-                /** Metadata hasMultipleReshares */
-                hasMultipleReshares?: (boolean|null);
-            }
-
-            /** Represents a Metadata. */
-            class Metadata implements IMetadata {
-
-                /**
-                 * Constructs a new Metadata.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: StatusAttributions.StatusAttribution.StatusReshare.IMetadata);
-
-                /** Metadata duration. */
-                public duration?: (number|null);
-
-                /** Metadata channelJid. */
-                public channelJid?: (string|null);
-
-                /** Metadata channelMessageId. */
-                public channelMessageId?: (number|null);
-
-                /** Metadata hasMultipleReshares. */
-                public hasMultipleReshares?: (boolean|null);
-
-                /** Metadata _duration. */
-                public _duration?: "duration";
-
-                /** Metadata _channelJid. */
-                public _channelJid?: "channelJid";
-
-                /** Metadata _channelMessageId. */
-                public _channelMessageId?: "channelMessageId";
-
-                /** Metadata _hasMultipleReshares. */
-                public _hasMultipleReshares?: "hasMultipleReshares";
-
-                /**
-                 * Creates a new Metadata instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns Metadata instance
-                 */
-                public static create(properties?: StatusAttributions.StatusAttribution.StatusReshare.IMetadata): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
-
-                /**
-                 * Encodes the specified Metadata message. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.Metadata.verify|verify} messages.
-                 * @param message Metadata message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: StatusAttributions.StatusAttribution.StatusReshare.IMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Metadata message, length delimited. Does not implicitly {@link StatusAttributions.StatusAttribution.StatusReshare.Metadata.verify|verify} messages.
-                 * @param message Metadata message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: StatusAttributions.StatusAttribution.StatusReshare.IMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Metadata message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Metadata
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
-
-                /**
-                 * Decodes a Metadata message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Metadata
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
-
-                /**
-                 * Verifies a Metadata message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Metadata message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Metadata
-                 */
-                public static fromObject(object: { [k: string]: any }): StatusAttributions.StatusAttribution.StatusReshare.Metadata;
-
-                /**
-                 * Creates a plain object from a Metadata message. Also converts values to other types if specified.
-                 * @param message Metadata
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: StatusAttributions.StatusAttribution.StatusReshare.Metadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Metadata to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the default type url for Metadata
-                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-                 * @returns The default type url
-                 */
-                public static getTypeUrl(typeUrlPrefix?: string): string;
-            }
-
-            /** Source enum. */
-            enum Source {
-                UNKNOWN = 0,
-                INTERNAL_RESHARE = 1,
-                MENTION_RESHARE = 2,
-                CHANNEL_RESHARE = 3,
-                FORWARD = 4
-            }
-        }
-
-        /** Type enum. */
-        enum Type {
-            UNKNOWN = 0,
-            RESHARE = 1,
-            EXTERNAL_SHARE = 2,
-            MUSIC = 3,
-            STATUS_MENTION = 4,
-            GROUP_STATUS = 5,
-            RL_ATTRIBUTION = 6,
-            AI_CREATED = 7,
-            LAYOUTS = 8
-        }
+        ASK_META_AI_MEDIA_VIEWER_GROUP = 38,
+        MEDIA_PICKER_1_ON_1_CHAT = 39,
+        MEDIA_PICKER_GROUP_CHAT = 40,
+        ASK_META_AI_NO_SEARCH_RESULTS = 41,
+        META_AI_SETTINGS = 45,
+        WEB_INTRO_PANEL = 46,
+        WEB_NAVIGATION_BAR = 47,
+        GROUP_MEMBER = 54,
+        CHATLIST_SEARCH = 55
     }
 }
 
@@ -39512,15 +37949,6 @@ export namespace Adv {
 
         /** ADVSignedDeviceIdentityHMAC accountType. */
         public accountType?: (Adv.ADVEncryptionType|null);
-
-        /** ADVSignedDeviceIdentityHMAC _details. */
-        public _details?: "details";
-
-        /** ADVSignedDeviceIdentityHMAC _hmac. */
-        public _hmac?: "hmac";
-
-        /** ADVSignedDeviceIdentityHMAC _accountType. */
-        public _accountType?: "accountType";
 
         /**
          * Creates a new ADVSignedDeviceIdentityHMAC instance using the specified properties.
@@ -39636,18 +38064,6 @@ export namespace Adv {
 
         /** ADVSignedDeviceIdentity deviceSignature. */
         public deviceSignature?: (Uint8Array|null);
-
-        /** ADVSignedDeviceIdentity _details. */
-        public _details?: "details";
-
-        /** ADVSignedDeviceIdentity _accountSignatureKey. */
-        public _accountSignatureKey?: "accountSignatureKey";
-
-        /** ADVSignedDeviceIdentity _accountSignature. */
-        public _accountSignature?: "accountSignature";
-
-        /** ADVSignedDeviceIdentity _deviceSignature. */
-        public _deviceSignature?: "deviceSignature";
 
         /**
          * Creates a new ADVSignedDeviceIdentity instance using the specified properties.
@@ -39770,21 +38186,6 @@ export namespace Adv {
         /** ADVDeviceIdentity deviceType. */
         public deviceType?: (Adv.ADVEncryptionType|null);
 
-        /** ADVDeviceIdentity _rawId. */
-        public _rawId?: "rawId";
-
-        /** ADVDeviceIdentity _timestamp. */
-        public _timestamp?: "timestamp";
-
-        /** ADVDeviceIdentity _keyIndex. */
-        public _keyIndex?: "keyIndex";
-
-        /** ADVDeviceIdentity _accountType. */
-        public _accountType?: "accountType";
-
-        /** ADVDeviceIdentity _deviceType. */
-        public _deviceType?: "deviceType";
-
         /**
          * Creates a new ADVDeviceIdentity instance using the specified properties.
          * @param [properties] Properties to set
@@ -39893,15 +38294,6 @@ export namespace Adv {
 
         /** ADVSignedKeyIndexList accountSignatureKey. */
         public accountSignatureKey?: (Uint8Array|null);
-
-        /** ADVSignedKeyIndexList _details. */
-        public _details?: "details";
-
-        /** ADVSignedKeyIndexList _accountSignature. */
-        public _accountSignature?: "accountSignature";
-
-        /** ADVSignedKeyIndexList _accountSignatureKey. */
-        public _accountSignatureKey?: "accountSignatureKey";
 
         /**
          * Creates a new ADVSignedKeyIndexList instance using the specified properties.
@@ -40024,18 +38416,6 @@ export namespace Adv {
         /** ADVKeyIndexList accountType. */
         public accountType?: (Adv.ADVEncryptionType|null);
 
-        /** ADVKeyIndexList _rawId. */
-        public _rawId?: "rawId";
-
-        /** ADVKeyIndexList _timestamp. */
-        public _timestamp?: "timestamp";
-
-        /** ADVKeyIndexList _currentIndex. */
-        public _currentIndex?: "currentIndex";
-
-        /** ADVKeyIndexList _accountType. */
-        public _accountType?: "accountType";
-
         /**
          * Creates a new ADVKeyIndexList instance using the specified properties.
          * @param [properties] Properties to set
@@ -40138,6 +38518,9 @@ export namespace CompanionReg {
 
         /** ClientPairingProps isHsThumbnailSyncEnabled */
         isHsThumbnailSyncEnabled?: (boolean|null);
+
+        /** ClientPairingProps subscriptionSyncPayload */
+        subscriptionSyncPayload?: (Uint8Array|null);
     }
 
     /** Represents a ClientPairingProps. */
@@ -40161,17 +38544,8 @@ export namespace CompanionReg {
         /** ClientPairingProps isHsThumbnailSyncEnabled. */
         public isHsThumbnailSyncEnabled?: (boolean|null);
 
-        /** ClientPairingProps _isChatDbLidMigrated. */
-        public _isChatDbLidMigrated?: "isChatDbLidMigrated";
-
-        /** ClientPairingProps _isSyncdPureLidSession. */
-        public _isSyncdPureLidSession?: "isSyncdPureLidSession";
-
-        /** ClientPairingProps _isSyncdSnapshotRecoveryEnabled. */
-        public _isSyncdSnapshotRecoveryEnabled?: "isSyncdSnapshotRecoveryEnabled";
-
-        /** ClientPairingProps _isHsThumbnailSyncEnabled. */
-        public _isHsThumbnailSyncEnabled?: "isHsThumbnailSyncEnabled";
+        /** ClientPairingProps subscriptionSyncPayload. */
+        public subscriptionSyncPayload?: (Uint8Array|null);
 
         /**
          * Creates a new ClientPairingProps instance using the specified properties.
@@ -40275,12 +38649,6 @@ export namespace CompanionReg {
 
         /** EncryptedPairingRequest iv. */
         public iv?: (Uint8Array|null);
-
-        /** EncryptedPairingRequest _encryptedPayload. */
-        public _encryptedPayload?: "encryptedPayload";
-
-        /** EncryptedPairingRequest _iv. */
-        public _iv?: "iv";
 
         /**
          * Creates a new EncryptedPairingRequest instance using the specified properties.
@@ -40391,15 +38759,6 @@ export namespace CompanionReg {
         /** PairingRequest advSecret. */
         public advSecret?: (Uint8Array|null);
 
-        /** PairingRequest _companionPublicKey. */
-        public _companionPublicKey?: "companionPublicKey";
-
-        /** PairingRequest _companionIdentityKey. */
-        public _companionIdentityKey?: "companionIdentityKey";
-
-        /** PairingRequest _advSecret. */
-        public _advSecret?: "advSecret";
-
         /**
          * Creates a new PairingRequest instance using the specified properties.
          * @param [properties] Properties to set
@@ -40502,12 +38861,6 @@ export namespace CompanionReg {
 
         /** PrimaryEphemeralIdentity nonce. */
         public nonce?: (Uint8Array|null);
-
-        /** PrimaryEphemeralIdentity _publicKey. */
-        public _publicKey?: "publicKey";
-
-        /** PrimaryEphemeralIdentity _nonce. */
-        public _nonce?: "nonce";
 
         /**
          * Creates a new PrimaryEphemeralIdentity instance using the specified properties.
@@ -40612,12 +38965,6 @@ export namespace CompanionReg {
         /** ProloguePayload commitment. */
         public commitment?: (CompanionReg.ICompanionCommitment|null);
 
-        /** ProloguePayload _companionEphemeralIdentity. */
-        public _companionEphemeralIdentity?: "companionEphemeralIdentity";
-
-        /** ProloguePayload _commitment. */
-        public _commitment?: "commitment";
-
         /**
          * Creates a new ProloguePayload instance using the specified properties.
          * @param [properties] Properties to set
@@ -40714,9 +39061,6 @@ export namespace CompanionReg {
 
         /** CompanionCommitment hash. */
         public hash?: (Uint8Array|null);
-
-        /** CompanionCommitment _hash. */
-        public _hash?: "hash";
 
         /**
          * Creates a new CompanionCommitment instance using the specified properties.
@@ -40826,15 +39170,6 @@ export namespace CompanionReg {
 
         /** CompanionEphemeralIdentity ref. */
         public ref?: (string|null);
-
-        /** CompanionEphemeralIdentity _publicKey. */
-        public _publicKey?: "publicKey";
-
-        /** CompanionEphemeralIdentity _deviceType. */
-        public _deviceType?: "deviceType";
-
-        /** CompanionEphemeralIdentity _ref. */
-        public _ref?: "ref";
 
         /**
          * Creates a new CompanionEphemeralIdentity instance using the specified properties.
@@ -40956,21 +39291,6 @@ export namespace CompanionReg {
 
         /** DeviceProps historySyncConfig. */
         public historySyncConfig?: (CompanionReg.DeviceProps.IHistorySyncConfig|null);
-
-        /** DeviceProps _os. */
-        public _os?: "os";
-
-        /** DeviceProps _version. */
-        public _version?: "version";
-
-        /** DeviceProps _platformType. */
-        public _platformType?: "platformType";
-
-        /** DeviceProps _requireFullSync. */
-        public _requireFullSync?: "requireFullSync";
-
-        /** DeviceProps _historySyncConfig. */
-        public _historySyncConfig?: "historySyncConfig";
 
         /**
          * Creates a new DeviceProps instance using the specified properties.
@@ -41094,21 +39414,6 @@ export namespace CompanionReg {
 
             /** AppVersion quinary. */
             public quinary?: (number|null);
-
-            /** AppVersion _primary. */
-            public _primary?: "primary";
-
-            /** AppVersion _secondary. */
-            public _secondary?: "secondary";
-
-            /** AppVersion _tertiary. */
-            public _tertiary?: "tertiary";
-
-            /** AppVersion _quaternary. */
-            public _quaternary?: "quaternary";
-
-            /** AppVersion _quinary. */
-            public _quinary?: "quinary";
 
             /**
              * Creates a new AppVersion instance using the specified properties.
@@ -41247,6 +39552,15 @@ export namespace CompanionReg {
 
             /** HistorySyncConfig thumbnailSyncDaysLimit */
             thumbnailSyncDaysLimit?: (number|null);
+
+            /** HistorySyncConfig initialSyncMaxMessagesPerChat */
+            initialSyncMaxMessagesPerChat?: (number|null);
+
+            /** HistorySyncConfig supportManusHistory */
+            supportManusHistory?: (boolean|null);
+
+            /** HistorySyncConfig supportHatchHistory */
+            supportHatchHistory?: (boolean|null);
         }
 
         /** Represents a HistorySyncConfig. */
@@ -41315,62 +39629,14 @@ export namespace CompanionReg {
             /** HistorySyncConfig thumbnailSyncDaysLimit. */
             public thumbnailSyncDaysLimit?: (number|null);
 
-            /** HistorySyncConfig _fullSyncDaysLimit. */
-            public _fullSyncDaysLimit?: "fullSyncDaysLimit";
+            /** HistorySyncConfig initialSyncMaxMessagesPerChat. */
+            public initialSyncMaxMessagesPerChat?: (number|null);
 
-            /** HistorySyncConfig _fullSyncSizeMbLimit. */
-            public _fullSyncSizeMbLimit?: "fullSyncSizeMbLimit";
+            /** HistorySyncConfig supportManusHistory. */
+            public supportManusHistory?: (boolean|null);
 
-            /** HistorySyncConfig _storageQuotaMb. */
-            public _storageQuotaMb?: "storageQuotaMb";
-
-            /** HistorySyncConfig _inlineInitialPayloadInE2EeMsg. */
-            public _inlineInitialPayloadInE2EeMsg?: "inlineInitialPayloadInE2EeMsg";
-
-            /** HistorySyncConfig _recentSyncDaysLimit. */
-            public _recentSyncDaysLimit?: "recentSyncDaysLimit";
-
-            /** HistorySyncConfig _supportCallLogHistory. */
-            public _supportCallLogHistory?: "supportCallLogHistory";
-
-            /** HistorySyncConfig _supportBotUserAgentChatHistory. */
-            public _supportBotUserAgentChatHistory?: "supportBotUserAgentChatHistory";
-
-            /** HistorySyncConfig _supportCagReactionsAndPolls. */
-            public _supportCagReactionsAndPolls?: "supportCagReactionsAndPolls";
-
-            /** HistorySyncConfig _supportBizHostedMsg. */
-            public _supportBizHostedMsg?: "supportBizHostedMsg";
-
-            /** HistorySyncConfig _supportRecentSyncChunkMessageCountTuning. */
-            public _supportRecentSyncChunkMessageCountTuning?: "supportRecentSyncChunkMessageCountTuning";
-
-            /** HistorySyncConfig _supportHostedGroupMsg. */
-            public _supportHostedGroupMsg?: "supportHostedGroupMsg";
-
-            /** HistorySyncConfig _supportFbidBotChatHistory. */
-            public _supportFbidBotChatHistory?: "supportFbidBotChatHistory";
-
-            /** HistorySyncConfig _supportAddOnHistorySyncMigration. */
-            public _supportAddOnHistorySyncMigration?: "supportAddOnHistorySyncMigration";
-
-            /** HistorySyncConfig _supportMessageAssociation. */
-            public _supportMessageAssociation?: "supportMessageAssociation";
-
-            /** HistorySyncConfig _supportGroupHistory. */
-            public _supportGroupHistory?: "supportGroupHistory";
-
-            /** HistorySyncConfig _onDemandReady. */
-            public _onDemandReady?: "onDemandReady";
-
-            /** HistorySyncConfig _supportGuestChat. */
-            public _supportGuestChat?: "supportGuestChat";
-
-            /** HistorySyncConfig _completeOnDemandReady. */
-            public _completeOnDemandReady?: "completeOnDemandReady";
-
-            /** HistorySyncConfig _thumbnailSyncDaysLimit. */
-            public _thumbnailSyncDaysLimit?: "thumbnailSyncDaysLimit";
+            /** HistorySyncConfig supportHatchHistory. */
+            public supportHatchHistory?: (boolean|null);
 
             /**
              * Creates a new HistorySyncConfig instance using the specified properties.
@@ -41503,9 +39769,6 @@ export namespace MmsRetry {
         /** ServerErrorReceipt stanzaId. */
         public stanzaId?: (string|null);
 
-        /** ServerErrorReceipt _stanzaId. */
-        public _stanzaId?: "stanzaId";
-
         /**
          * Creates a new ServerErrorReceipt instance using the specified properties.
          * @param [properties] Properties to set
@@ -41620,18 +39883,6 @@ export namespace MmsRetry {
 
         /** MediaRetryNotification messageSecret. */
         public messageSecret?: (Uint8Array|null);
-
-        /** MediaRetryNotification _stanzaId. */
-        public _stanzaId?: "stanzaId";
-
-        /** MediaRetryNotification _directPath. */
-        public _directPath?: "directPath";
-
-        /** MediaRetryNotification _result. */
-        public _result?: "result";
-
-        /** MediaRetryNotification _messageSecret. */
-        public _messageSecret?: "messageSecret";
 
         /**
          * Creates a new MediaRetryNotification instance using the specified properties.
