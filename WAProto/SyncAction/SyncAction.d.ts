@@ -82,39 +82,6 @@ export namespace SyncAction {
         /** PatchDebugData isSenderPrimary. */
         public isSenderPrimary?: (boolean|null);
 
-        /** PatchDebugData _currentLthash. */
-        public _currentLthash?: "currentLthash";
-
-        /** PatchDebugData _newLthash. */
-        public _newLthash?: "newLthash";
-
-        /** PatchDebugData _patchVersion. */
-        public _patchVersion?: "patchVersion";
-
-        /** PatchDebugData _collectionName. */
-        public _collectionName?: "collectionName";
-
-        /** PatchDebugData _firstFourBytesFromAHashOfSnapshotMacKey. */
-        public _firstFourBytesFromAHashOfSnapshotMacKey?: "firstFourBytesFromAHashOfSnapshotMacKey";
-
-        /** PatchDebugData _newLthashSubtract. */
-        public _newLthashSubtract?: "newLthashSubtract";
-
-        /** PatchDebugData _numberAdd. */
-        public _numberAdd?: "numberAdd";
-
-        /** PatchDebugData _numberRemove. */
-        public _numberRemove?: "numberRemove";
-
-        /** PatchDebugData _numberOverride. */
-        public _numberOverride?: "numberOverride";
-
-        /** PatchDebugData _senderPlatform. */
-        public _senderPlatform?: "senderPlatform";
-
-        /** PatchDebugData _isSenderPrimary. */
-        public _isSenderPrimary?: "isSenderPrimary";
-
         /**
          * Creates a new PatchDebugData instance using the specified properties.
          * @param [properties] Properties to set
@@ -248,18 +215,6 @@ export namespace SyncAction {
 
         /** SyncActionData version. */
         public version?: (number|null);
-
-        /** SyncActionData _index. */
-        public _index?: "index";
-
-        /** SyncActionData _value. */
-        public _value?: "value";
-
-        /** SyncActionData _padding. */
-        public _padding?: "padding";
-
-        /** SyncActionData _version. */
-        public _version?: "version";
 
         /**
          * Creates a new SyncActionData instance using the specified properties.
@@ -548,6 +503,27 @@ export namespace SyncAction {
 
         /** SyncActionValue settingsSyncAction */
         settingsSyncAction?: (SyncAction.SyncActionValue.ISettingsSyncAction|null);
+
+        /** SyncActionValue outContactAction */
+        outContactAction?: (SyncAction.SyncActionValue.IOutContactAction|null);
+
+        /** SyncActionValue nctSaltSyncAction */
+        nctSaltSyncAction?: (SyncAction.SyncActionValue.INctSaltSyncAction|null);
+
+        /** SyncActionValue businessBroadcastCampaignAction */
+        businessBroadcastCampaignAction?: (SyncAction.SyncActionValue.IBusinessBroadcastCampaignAction|null);
+
+        /** SyncActionValue businessBroadcastInsightsAction */
+        businessBroadcastInsightsAction?: (SyncAction.SyncActionValue.IBusinessBroadcastInsightsAction|null);
+
+        /** SyncActionValue customerDataAction */
+        customerDataAction?: (SyncAction.SyncActionValue.ICustomerDataAction|null);
+
+        /** SyncActionValue subscriptionsSyncV2Action */
+        subscriptionsSyncV2Action?: (SyncAction.SyncActionValue.ISubscriptionsSyncV2Action|null);
+
+        /** SyncActionValue threadPinAction */
+        threadPinAction?: (SyncAction.SyncActionValue.IThreadPinAction|null);
     }
 
     /** Represents a SyncActionValue. */
@@ -766,212 +742,26 @@ export namespace SyncAction {
         /** SyncActionValue settingsSyncAction. */
         public settingsSyncAction?: (SyncAction.SyncActionValue.ISettingsSyncAction|null);
 
-        /** SyncActionValue _timestamp. */
-        public _timestamp?: "timestamp";
+        /** SyncActionValue outContactAction. */
+        public outContactAction?: (SyncAction.SyncActionValue.IOutContactAction|null);
 
-        /** SyncActionValue _starAction. */
-        public _starAction?: "starAction";
+        /** SyncActionValue nctSaltSyncAction. */
+        public nctSaltSyncAction?: (SyncAction.SyncActionValue.INctSaltSyncAction|null);
 
-        /** SyncActionValue _contactAction. */
-        public _contactAction?: "contactAction";
+        /** SyncActionValue businessBroadcastCampaignAction. */
+        public businessBroadcastCampaignAction?: (SyncAction.SyncActionValue.IBusinessBroadcastCampaignAction|null);
 
-        /** SyncActionValue _muteAction. */
-        public _muteAction?: "muteAction";
+        /** SyncActionValue businessBroadcastInsightsAction. */
+        public businessBroadcastInsightsAction?: (SyncAction.SyncActionValue.IBusinessBroadcastInsightsAction|null);
 
-        /** SyncActionValue _pinAction. */
-        public _pinAction?: "pinAction";
+        /** SyncActionValue customerDataAction. */
+        public customerDataAction?: (SyncAction.SyncActionValue.ICustomerDataAction|null);
 
-        /** SyncActionValue _pushNameSetting. */
-        public _pushNameSetting?: "pushNameSetting";
+        /** SyncActionValue subscriptionsSyncV2Action. */
+        public subscriptionsSyncV2Action?: (SyncAction.SyncActionValue.ISubscriptionsSyncV2Action|null);
 
-        /** SyncActionValue _quickReplyAction. */
-        public _quickReplyAction?: "quickReplyAction";
-
-        /** SyncActionValue _recentEmojiWeightsAction. */
-        public _recentEmojiWeightsAction?: "recentEmojiWeightsAction";
-
-        /** SyncActionValue _labelEditAction. */
-        public _labelEditAction?: "labelEditAction";
-
-        /** SyncActionValue _labelAssociationAction. */
-        public _labelAssociationAction?: "labelAssociationAction";
-
-        /** SyncActionValue _localeSetting. */
-        public _localeSetting?: "localeSetting";
-
-        /** SyncActionValue _archiveChatAction. */
-        public _archiveChatAction?: "archiveChatAction";
-
-        /** SyncActionValue _deleteMessageForMeAction. */
-        public _deleteMessageForMeAction?: "deleteMessageForMeAction";
-
-        /** SyncActionValue _keyExpiration. */
-        public _keyExpiration?: "keyExpiration";
-
-        /** SyncActionValue _markChatAsReadAction. */
-        public _markChatAsReadAction?: "markChatAsReadAction";
-
-        /** SyncActionValue _clearChatAction. */
-        public _clearChatAction?: "clearChatAction";
-
-        /** SyncActionValue _deleteChatAction. */
-        public _deleteChatAction?: "deleteChatAction";
-
-        /** SyncActionValue _unarchiveChatsSetting. */
-        public _unarchiveChatsSetting?: "unarchiveChatsSetting";
-
-        /** SyncActionValue _primaryFeature. */
-        public _primaryFeature?: "primaryFeature";
-
-        /** SyncActionValue _androidUnsupportedActions. */
-        public _androidUnsupportedActions?: "androidUnsupportedActions";
-
-        /** SyncActionValue _agentAction. */
-        public _agentAction?: "agentAction";
-
-        /** SyncActionValue _subscriptionAction. */
-        public _subscriptionAction?: "subscriptionAction";
-
-        /** SyncActionValue _userStatusMuteAction. */
-        public _userStatusMuteAction?: "userStatusMuteAction";
-
-        /** SyncActionValue _timeFormatAction. */
-        public _timeFormatAction?: "timeFormatAction";
-
-        /** SyncActionValue _nuxAction. */
-        public _nuxAction?: "nuxAction";
-
-        /** SyncActionValue _primaryVersionAction. */
-        public _primaryVersionAction?: "primaryVersionAction";
-
-        /** SyncActionValue _stickerAction. */
-        public _stickerAction?: "stickerAction";
-
-        /** SyncActionValue _removeRecentStickerAction. */
-        public _removeRecentStickerAction?: "removeRecentStickerAction";
-
-        /** SyncActionValue _chatAssignment. */
-        public _chatAssignment?: "chatAssignment";
-
-        /** SyncActionValue _chatAssignmentOpenedStatus. */
-        public _chatAssignmentOpenedStatus?: "chatAssignmentOpenedStatus";
-
-        /** SyncActionValue _pnForLidChatAction. */
-        public _pnForLidChatAction?: "pnForLidChatAction";
-
-        /** SyncActionValue _marketingMessageAction. */
-        public _marketingMessageAction?: "marketingMessageAction";
-
-        /** SyncActionValue _marketingMessageBroadcastAction. */
-        public _marketingMessageBroadcastAction?: "marketingMessageBroadcastAction";
-
-        /** SyncActionValue _externalWebBetaAction. */
-        public _externalWebBetaAction?: "externalWebBetaAction";
-
-        /** SyncActionValue _privacySettingRelayAllCalls. */
-        public _privacySettingRelayAllCalls?: "privacySettingRelayAllCalls";
-
-        /** SyncActionValue _callLogAction. */
-        public _callLogAction?: "callLogAction";
-
-        /** SyncActionValue _ugcBot. */
-        public _ugcBot?: "ugcBot";
-
-        /** SyncActionValue _statusPrivacy. */
-        public _statusPrivacy?: "statusPrivacy";
-
-        /** SyncActionValue _botWelcomeRequestAction. */
-        public _botWelcomeRequestAction?: "botWelcomeRequestAction";
-
-        /** SyncActionValue _deleteIndividualCallLog. */
-        public _deleteIndividualCallLog?: "deleteIndividualCallLog";
-
-        /** SyncActionValue _labelReorderingAction. */
-        public _labelReorderingAction?: "labelReorderingAction";
-
-        /** SyncActionValue _paymentInfoAction. */
-        public _paymentInfoAction?: "paymentInfoAction";
-
-        /** SyncActionValue _customPaymentMethodsAction. */
-        public _customPaymentMethodsAction?: "customPaymentMethodsAction";
-
-        /** SyncActionValue _lockChatAction. */
-        public _lockChatAction?: "lockChatAction";
-
-        /** SyncActionValue _chatLockSettings. */
-        public _chatLockSettings?: "chatLockSettings";
-
-        /** SyncActionValue _wamoUserIdentifierAction. */
-        public _wamoUserIdentifierAction?: "wamoUserIdentifierAction";
-
-        /** SyncActionValue _privacySettingDisableLinkPreviewsAction. */
-        public _privacySettingDisableLinkPreviewsAction?: "privacySettingDisableLinkPreviewsAction";
-
-        /** SyncActionValue _deviceCapabilities. */
-        public _deviceCapabilities?: "deviceCapabilities";
-
-        /** SyncActionValue _noteEditAction. */
-        public _noteEditAction?: "noteEditAction";
-
-        /** SyncActionValue _favoritesAction. */
-        public _favoritesAction?: "favoritesAction";
-
-        /** SyncActionValue _merchantPaymentPartnerAction. */
-        public _merchantPaymentPartnerAction?: "merchantPaymentPartnerAction";
-
-        /** SyncActionValue _waffleAccountLinkStateAction. */
-        public _waffleAccountLinkStateAction?: "waffleAccountLinkStateAction";
-
-        /** SyncActionValue _usernameChatStartMode. */
-        public _usernameChatStartMode?: "usernameChatStartMode";
-
-        /** SyncActionValue _notificationActivitySettingAction. */
-        public _notificationActivitySettingAction?: "notificationActivitySettingAction";
-
-        /** SyncActionValue _lidContactAction. */
-        public _lidContactAction?: "lidContactAction";
-
-        /** SyncActionValue _ctwaPerCustomerDataSharingAction. */
-        public _ctwaPerCustomerDataSharingAction?: "ctwaPerCustomerDataSharingAction";
-
-        /** SyncActionValue _paymentTosAction. */
-        public _paymentTosAction?: "paymentTosAction";
-
-        /** SyncActionValue _privacySettingChannelsPersonalisedRecommendationAction. */
-        public _privacySettingChannelsPersonalisedRecommendationAction?: "privacySettingChannelsPersonalisedRecommendationAction";
-
-        /** SyncActionValue _detectedOutcomesStatusAction. */
-        public _detectedOutcomesStatusAction?: "detectedOutcomesStatusAction";
-
-        /** SyncActionValue _maibaAiFeaturesControlAction. */
-        public _maibaAiFeaturesControlAction?: "maibaAiFeaturesControlAction";
-
-        /** SyncActionValue _businessBroadcastListAction. */
-        public _businessBroadcastListAction?: "businessBroadcastListAction";
-
-        /** SyncActionValue _musicUserIdAction. */
-        public _musicUserIdAction?: "musicUserIdAction";
-
-        /** SyncActionValue _statusPostOptInNotificationPreferencesAction. */
-        public _statusPostOptInNotificationPreferencesAction?: "statusPostOptInNotificationPreferencesAction";
-
-        /** SyncActionValue _avatarUpdatedAction. */
-        public _avatarUpdatedAction?: "avatarUpdatedAction";
-
-        /** SyncActionValue _privateProcessingSettingAction. */
-        public _privateProcessingSettingAction?: "privateProcessingSettingAction";
-
-        /** SyncActionValue _newsletterSavedInterestsAction. */
-        public _newsletterSavedInterestsAction?: "newsletterSavedInterestsAction";
-
-        /** SyncActionValue _aiThreadRenameAction. */
-        public _aiThreadRenameAction?: "aiThreadRenameAction";
-
-        /** SyncActionValue _interactiveMessageAction. */
-        public _interactiveMessageAction?: "interactiveMessageAction";
-
-        /** SyncActionValue _settingsSyncAction. */
-        public _settingsSyncAction?: "settingsSyncAction";
+        /** SyncActionValue threadPinAction. */
+        public threadPinAction?: (SyncAction.SyncActionValue.IThreadPinAction|null);
 
         /**
          * Creates a new SyncActionValue instance using the specified properties.
@@ -1084,15 +874,6 @@ export namespace SyncAction {
             /** AgentAction isDeleted. */
             public isDeleted?: (boolean|null);
 
-            /** AgentAction _name. */
-            public _name?: "name";
-
-            /** AgentAction _deviceID. */
-            public _deviceID?: "deviceID";
-
-            /** AgentAction _isDeleted. */
-            public _isDeleted?: "isDeleted";
-
             /**
              * Creates a new AgentAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -1190,9 +971,6 @@ export namespace SyncAction {
             /** AiThreadRenameAction newTitle. */
             public newTitle?: (string|null);
 
-            /** AiThreadRenameAction _newTitle. */
-            public _newTitle?: "newTitle";
-
             /**
              * Creates a new AiThreadRenameAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -1289,9 +1067,6 @@ export namespace SyncAction {
 
             /** AndroidUnsupportedActions allowed. */
             public allowed?: (boolean|null);
-
-            /** AndroidUnsupportedActions _allowed. */
-            public _allowed?: "allowed";
 
             /**
              * Creates a new AndroidUnsupportedActions instance using the specified properties.
@@ -1396,12 +1171,6 @@ export namespace SyncAction {
             /** ArchiveChatAction messageRange. */
             public messageRange?: (SyncAction.SyncActionValue.ISyncActionMessageRange|null);
 
-            /** ArchiveChatAction _archived. */
-            public _archived?: "archived";
-
-            /** ArchiveChatAction _messageRange. */
-            public _messageRange?: "messageRange";
-
             /**
              * Creates a new ArchiveChatAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -1504,9 +1273,6 @@ export namespace SyncAction {
 
             /** AvatarUpdatedAction recentAvatarStickers. */
             public recentAvatarStickers: SyncAction.SyncActionValue.IStickerAction[];
-
-            /** AvatarUpdatedAction _eventType. */
-            public _eventType?: "eventType";
 
             /**
              * Creates a new AvatarUpdatedAction instance using the specified properties.
@@ -1615,9 +1381,6 @@ export namespace SyncAction {
             /** BotWelcomeRequestAction isSent. */
             public isSent?: (boolean|null);
 
-            /** BotWelcomeRequestAction _isSent. */
-            public _isSent?: "isSent";
-
             /**
              * Creates a new BotWelcomeRequestAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -1721,12 +1484,6 @@ export namespace SyncAction {
             /** BroadcastListParticipant pnJid. */
             public pnJid?: (string|null);
 
-            /** BroadcastListParticipant _lidJid. */
-            public _lidJid?: "lidJid";
-
-            /** BroadcastListParticipant _pnJid. */
-            public _pnJid?: "pnJid";
-
             /**
              * Creates a new BroadcastListParticipant instance using the specified properties.
              * @param [properties] Properties to set
@@ -1824,9 +1581,6 @@ export namespace SyncAction {
             /** BusinessBroadcastAssociationAction deleted. */
             public deleted?: (boolean|null);
 
-            /** BusinessBroadcastAssociationAction _deleted. */
-            public _deleted?: "deleted";
-
             /**
              * Creates a new BusinessBroadcastAssociationAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -1905,6 +1659,281 @@ export namespace SyncAction {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of a BusinessBroadcastCampaignAction. */
+        interface IBusinessBroadcastCampaignAction {
+
+            /** BusinessBroadcastCampaignAction deviceId */
+            deviceId?: (number|null);
+
+            /** BusinessBroadcastCampaignAction adId */
+            adId?: (string|null);
+
+            /** BusinessBroadcastCampaignAction name */
+            name?: (string|null);
+
+            /** BusinessBroadcastCampaignAction msgId */
+            msgId?: (string|null);
+
+            /** BusinessBroadcastCampaignAction broadcastJid */
+            broadcastJid?: (string|null);
+
+            /** BusinessBroadcastCampaignAction reservedQuota */
+            reservedQuota?: (number|null);
+
+            /** BusinessBroadcastCampaignAction scheduledTimestamp */
+            scheduledTimestamp?: (number|Long|null);
+
+            /** BusinessBroadcastCampaignAction createTimestamp */
+            createTimestamp?: (number|Long|null);
+
+            /** BusinessBroadcastCampaignAction status */
+            status?: (SyncAction.SyncActionValue.BusinessBroadcastCampaignStatus|null);
+        }
+
+        /** Represents a BusinessBroadcastCampaignAction. */
+        class BusinessBroadcastCampaignAction implements IBusinessBroadcastCampaignAction {
+
+            /**
+             * Constructs a new BusinessBroadcastCampaignAction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.IBusinessBroadcastCampaignAction);
+
+            /** BusinessBroadcastCampaignAction deviceId. */
+            public deviceId?: (number|null);
+
+            /** BusinessBroadcastCampaignAction adId. */
+            public adId?: (string|null);
+
+            /** BusinessBroadcastCampaignAction name. */
+            public name?: (string|null);
+
+            /** BusinessBroadcastCampaignAction msgId. */
+            public msgId?: (string|null);
+
+            /** BusinessBroadcastCampaignAction broadcastJid. */
+            public broadcastJid?: (string|null);
+
+            /** BusinessBroadcastCampaignAction reservedQuota. */
+            public reservedQuota?: (number|null);
+
+            /** BusinessBroadcastCampaignAction scheduledTimestamp. */
+            public scheduledTimestamp?: (number|Long|null);
+
+            /** BusinessBroadcastCampaignAction createTimestamp. */
+            public createTimestamp?: (number|Long|null);
+
+            /** BusinessBroadcastCampaignAction status. */
+            public status?: (SyncAction.SyncActionValue.BusinessBroadcastCampaignStatus|null);
+
+            /**
+             * Creates a new BusinessBroadcastCampaignAction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns BusinessBroadcastCampaignAction instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.IBusinessBroadcastCampaignAction): SyncAction.SyncActionValue.BusinessBroadcastCampaignAction;
+
+            /**
+             * Encodes the specified BusinessBroadcastCampaignAction message. Does not implicitly {@link SyncAction.SyncActionValue.BusinessBroadcastCampaignAction.verify|verify} messages.
+             * @param message BusinessBroadcastCampaignAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.IBusinessBroadcastCampaignAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified BusinessBroadcastCampaignAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.BusinessBroadcastCampaignAction.verify|verify} messages.
+             * @param message BusinessBroadcastCampaignAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.IBusinessBroadcastCampaignAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a BusinessBroadcastCampaignAction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns BusinessBroadcastCampaignAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.BusinessBroadcastCampaignAction;
+
+            /**
+             * Decodes a BusinessBroadcastCampaignAction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns BusinessBroadcastCampaignAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.BusinessBroadcastCampaignAction;
+
+            /**
+             * Verifies a BusinessBroadcastCampaignAction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a BusinessBroadcastCampaignAction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns BusinessBroadcastCampaignAction
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.BusinessBroadcastCampaignAction;
+
+            /**
+             * Creates a plain object from a BusinessBroadcastCampaignAction message. Also converts values to other types if specified.
+             * @param message BusinessBroadcastCampaignAction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.BusinessBroadcastCampaignAction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this BusinessBroadcastCampaignAction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for BusinessBroadcastCampaignAction
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** BusinessBroadcastCampaignStatus enum. */
+        enum BusinessBroadcastCampaignStatus {
+            DRAFT = 1,
+            SCHEDULED = 2,
+            PROCESSING = 3,
+            FAILED = 4,
+            SENT = 5
+        }
+
+        /** Properties of a BusinessBroadcastInsightsAction. */
+        interface IBusinessBroadcastInsightsAction {
+
+            /** BusinessBroadcastInsightsAction recipientCount */
+            recipientCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction deliveredCount */
+            deliveredCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction readCount */
+            readCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction repliedCount */
+            repliedCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction quickReplyCount */
+            quickReplyCount?: (number|null);
+        }
+
+        /** Represents a BusinessBroadcastInsightsAction. */
+        class BusinessBroadcastInsightsAction implements IBusinessBroadcastInsightsAction {
+
+            /**
+             * Constructs a new BusinessBroadcastInsightsAction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.IBusinessBroadcastInsightsAction);
+
+            /** BusinessBroadcastInsightsAction recipientCount. */
+            public recipientCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction deliveredCount. */
+            public deliveredCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction readCount. */
+            public readCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction repliedCount. */
+            public repliedCount?: (number|null);
+
+            /** BusinessBroadcastInsightsAction quickReplyCount. */
+            public quickReplyCount?: (number|null);
+
+            /**
+             * Creates a new BusinessBroadcastInsightsAction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns BusinessBroadcastInsightsAction instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.IBusinessBroadcastInsightsAction): SyncAction.SyncActionValue.BusinessBroadcastInsightsAction;
+
+            /**
+             * Encodes the specified BusinessBroadcastInsightsAction message. Does not implicitly {@link SyncAction.SyncActionValue.BusinessBroadcastInsightsAction.verify|verify} messages.
+             * @param message BusinessBroadcastInsightsAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.IBusinessBroadcastInsightsAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified BusinessBroadcastInsightsAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.BusinessBroadcastInsightsAction.verify|verify} messages.
+             * @param message BusinessBroadcastInsightsAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.IBusinessBroadcastInsightsAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a BusinessBroadcastInsightsAction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns BusinessBroadcastInsightsAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.BusinessBroadcastInsightsAction;
+
+            /**
+             * Decodes a BusinessBroadcastInsightsAction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns BusinessBroadcastInsightsAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.BusinessBroadcastInsightsAction;
+
+            /**
+             * Verifies a BusinessBroadcastInsightsAction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a BusinessBroadcastInsightsAction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns BusinessBroadcastInsightsAction
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.BusinessBroadcastInsightsAction;
+
+            /**
+             * Creates a plain object from a BusinessBroadcastInsightsAction message. Also converts values to other types if specified.
+             * @param message BusinessBroadcastInsightsAction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.BusinessBroadcastInsightsAction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this BusinessBroadcastInsightsAction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for BusinessBroadcastInsightsAction
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a BusinessBroadcastListAction. */
         interface IBusinessBroadcastListAction {
 
@@ -1916,6 +1945,12 @@ export namespace SyncAction {
 
             /** BusinessBroadcastListAction listName */
             listName?: (string|null);
+
+            /** BusinessBroadcastListAction labelIds */
+            labelIds?: (string[]|null);
+
+            /** BusinessBroadcastListAction audienceExpression */
+            audienceExpression?: (string|null);
         }
 
         /** Represents a BusinessBroadcastListAction. */
@@ -1936,11 +1971,11 @@ export namespace SyncAction {
             /** BusinessBroadcastListAction listName. */
             public listName?: (string|null);
 
-            /** BusinessBroadcastListAction _deleted. */
-            public _deleted?: "deleted";
+            /** BusinessBroadcastListAction labelIds. */
+            public labelIds: string[];
 
-            /** BusinessBroadcastListAction _listName. */
-            public _listName?: "listName";
+            /** BusinessBroadcastListAction audienceExpression. */
+            public audienceExpression?: (string|null);
 
             /**
              * Creates a new BusinessBroadcastListAction instance using the specified properties.
@@ -2039,9 +2074,6 @@ export namespace SyncAction {
             /** CallLogAction callLogRecord. */
             public callLogRecord?: (SyncAction.ICallLogRecord|null);
 
-            /** CallLogAction _callLogRecord. */
-            public _callLogRecord?: "callLogRecord";
-
             /**
              * Creates a new CallLogAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -2138,9 +2170,6 @@ export namespace SyncAction {
 
             /** ChatAssignmentAction deviceAgentID. */
             public deviceAgentID?: (string|null);
-
-            /** ChatAssignmentAction _deviceAgentID. */
-            public _deviceAgentID?: "deviceAgentID";
 
             /**
              * Creates a new ChatAssignmentAction instance using the specified properties.
@@ -2239,9 +2268,6 @@ export namespace SyncAction {
             /** ChatAssignmentOpenedStatusAction chatOpened. */
             public chatOpened?: (boolean|null);
 
-            /** ChatAssignmentOpenedStatusAction _chatOpened. */
-            public _chatOpened?: "chatOpened";
-
             /**
              * Creates a new ChatAssignmentOpenedStatusAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -2338,9 +2364,6 @@ export namespace SyncAction {
 
             /** ClearChatAction messageRange. */
             public messageRange?: (SyncAction.SyncActionValue.ISyncActionMessageRange|null);
-
-            /** ClearChatAction _messageRange. */
-            public _messageRange?: "messageRange";
 
             /**
              * Creates a new ClearChatAction instance using the specified properties.
@@ -2469,24 +2492,6 @@ export namespace SyncAction {
             /** ContactAction username. */
             public username?: (string|null);
 
-            /** ContactAction _fullName. */
-            public _fullName?: "fullName";
-
-            /** ContactAction _firstName. */
-            public _firstName?: "firstName";
-
-            /** ContactAction _lidJid. */
-            public _lidJid?: "lidJid";
-
-            /** ContactAction _saveOnPrimaryAddressbook. */
-            public _saveOnPrimaryAddressbook?: "saveOnPrimaryAddressbook";
-
-            /** ContactAction _pnJid. */
-            public _pnJid?: "pnJid";
-
-            /** ContactAction _username. */
-            public _username?: "username";
-
             /**
              * Creates a new ContactAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -2583,9 +2588,6 @@ export namespace SyncAction {
 
             /** CtwaPerCustomerDataSharingAction isCtwaPerCustomerDataSharingEnabled. */
             public isCtwaPerCustomerDataSharingEnabled?: (boolean|null);
-
-            /** CtwaPerCustomerDataSharingAction _isCtwaPerCustomerDataSharingEnabled. */
-            public _isCtwaPerCustomerDataSharingEnabled?: "isCtwaPerCustomerDataSharingEnabled";
 
             /**
              * Creates a new CtwaPerCustomerDataSharingAction instance using the specified properties.
@@ -2702,15 +2704,6 @@ export namespace SyncAction {
             /** CustomPaymentMethod metadata. */
             public metadata: SyncAction.SyncActionValue.ICustomPaymentMethodMetadata[];
 
-            /** CustomPaymentMethod _credentialId. */
-            public _credentialId?: "credentialId";
-
-            /** CustomPaymentMethod _country. */
-            public _country?: "country";
-
-            /** CustomPaymentMethod _type. */
-            public _type?: "type";
-
             /**
              * Creates a new CustomPaymentMethod instance using the specified properties.
              * @param [properties] Properties to set
@@ -2813,12 +2806,6 @@ export namespace SyncAction {
 
             /** CustomPaymentMethodMetadata value. */
             public value?: (string|null);
-
-            /** CustomPaymentMethodMetadata _key. */
-            public _key?: "key";
-
-            /** CustomPaymentMethodMetadata _value. */
-            public _value?: "value";
 
             /**
              * Creates a new CustomPaymentMethodMetadata instance using the specified properties.
@@ -2995,6 +2982,163 @@ export namespace SyncAction {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of a CustomerDataAction. */
+        interface ICustomerDataAction {
+
+            /** CustomerDataAction chatJid */
+            chatJid?: (string|null);
+
+            /** CustomerDataAction contactType */
+            contactType?: (number|null);
+
+            /** CustomerDataAction email */
+            email?: (string|null);
+
+            /** CustomerDataAction altPhoneNumbers */
+            altPhoneNumbers?: (string|null);
+
+            /** CustomerDataAction birthday */
+            birthday?: (number|Long|null);
+
+            /** CustomerDataAction address */
+            address?: (string|null);
+
+            /** CustomerDataAction acquisitionSource */
+            acquisitionSource?: (number|null);
+
+            /** CustomerDataAction leadStage */
+            leadStage?: (number|null);
+
+            /** CustomerDataAction lastOrder */
+            lastOrder?: (number|Long|null);
+
+            /** CustomerDataAction createdAt */
+            createdAt?: (number|Long|null);
+
+            /** CustomerDataAction modifiedAt */
+            modifiedAt?: (number|Long|null);
+        }
+
+        /** Represents a CustomerDataAction. */
+        class CustomerDataAction implements ICustomerDataAction {
+
+            /**
+             * Constructs a new CustomerDataAction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.ICustomerDataAction);
+
+            /** CustomerDataAction chatJid. */
+            public chatJid?: (string|null);
+
+            /** CustomerDataAction contactType. */
+            public contactType?: (number|null);
+
+            /** CustomerDataAction email. */
+            public email?: (string|null);
+
+            /** CustomerDataAction altPhoneNumbers. */
+            public altPhoneNumbers?: (string|null);
+
+            /** CustomerDataAction birthday. */
+            public birthday?: (number|Long|null);
+
+            /** CustomerDataAction address. */
+            public address?: (string|null);
+
+            /** CustomerDataAction acquisitionSource. */
+            public acquisitionSource?: (number|null);
+
+            /** CustomerDataAction leadStage. */
+            public leadStage?: (number|null);
+
+            /** CustomerDataAction lastOrder. */
+            public lastOrder?: (number|Long|null);
+
+            /** CustomerDataAction createdAt. */
+            public createdAt?: (number|Long|null);
+
+            /** CustomerDataAction modifiedAt. */
+            public modifiedAt?: (number|Long|null);
+
+            /**
+             * Creates a new CustomerDataAction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns CustomerDataAction instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.ICustomerDataAction): SyncAction.SyncActionValue.CustomerDataAction;
+
+            /**
+             * Encodes the specified CustomerDataAction message. Does not implicitly {@link SyncAction.SyncActionValue.CustomerDataAction.verify|verify} messages.
+             * @param message CustomerDataAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.ICustomerDataAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified CustomerDataAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.CustomerDataAction.verify|verify} messages.
+             * @param message CustomerDataAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.ICustomerDataAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a CustomerDataAction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns CustomerDataAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.CustomerDataAction;
+
+            /**
+             * Decodes a CustomerDataAction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns CustomerDataAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.CustomerDataAction;
+
+            /**
+             * Verifies a CustomerDataAction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a CustomerDataAction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns CustomerDataAction
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.CustomerDataAction;
+
+            /**
+             * Creates a plain object from a CustomerDataAction message. Also converts values to other types if specified.
+             * @param message CustomerDataAction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.CustomerDataAction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this CustomerDataAction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for CustomerDataAction
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a DeleteChatAction. */
         interface IDeleteChatAction {
 
@@ -3013,9 +3157,6 @@ export namespace SyncAction {
 
             /** DeleteChatAction messageRange. */
             public messageRange?: (SyncAction.SyncActionValue.ISyncActionMessageRange|null);
-
-            /** DeleteChatAction _messageRange. */
-            public _messageRange?: "messageRange";
 
             /**
              * Creates a new DeleteChatAction instance using the specified properties.
@@ -3120,12 +3261,6 @@ export namespace SyncAction {
             /** DeleteIndividualCallLogAction isIncoming. */
             public isIncoming?: (boolean|null);
 
-            /** DeleteIndividualCallLogAction _peerJid. */
-            public _peerJid?: "peerJid";
-
-            /** DeleteIndividualCallLogAction _isIncoming. */
-            public _isIncoming?: "isIncoming";
-
             /**
              * Creates a new DeleteIndividualCallLogAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -3229,12 +3364,6 @@ export namespace SyncAction {
             /** DeleteMessageForMeAction messageTimestamp. */
             public messageTimestamp?: (number|Long|null);
 
-            /** DeleteMessageForMeAction _deleteMedia. */
-            public _deleteMedia?: "deleteMedia";
-
-            /** DeleteMessageForMeAction _messageTimestamp. */
-            public _messageTimestamp?: "messageTimestamp";
-
             /**
              * Creates a new DeleteMessageForMeAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -3332,9 +3461,6 @@ export namespace SyncAction {
             /** DetectedOutcomesStatusAction isEnabled. */
             public isEnabled?: (boolean|null);
 
-            /** DetectedOutcomesStatusAction _isEnabled. */
-            public _isEnabled?: "isEnabled";
-
             /**
              * Creates a new DetectedOutcomesStatusAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -3431,9 +3557,6 @@ export namespace SyncAction {
 
             /** ExternalWebBetaAction isOptIn. */
             public isOptIn?: (boolean|null);
-
-            /** ExternalWebBetaAction _isOptIn. */
-            public _isOptIn?: "isOptIn";
 
             /**
              * Creates a new ExternalWebBetaAction instance using the specified properties.
@@ -3631,9 +3754,6 @@ export namespace SyncAction {
                 /** Favorite id. */
                 public id?: (string|null);
 
-                /** Favorite _id. */
-                public _id?: "id";
-
                 /**
                  * Creates a new Favorite instance using the specified properties.
                  * @param [properties] Properties to set
@@ -3718,6 +3838,9 @@ export namespace SyncAction {
 
             /** InteractiveMessageAction type */
             type?: (SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode|null);
+
+            /** InteractiveMessageAction agmId */
+            agmId?: (string|null);
         }
 
         /** Represents an InteractiveMessageAction. */
@@ -3732,8 +3855,8 @@ export namespace SyncAction {
             /** InteractiveMessageAction type. */
             public type?: (SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode|null);
 
-            /** InteractiveMessageAction _type. */
-            public _type?: "type";
+            /** InteractiveMessageAction agmId. */
+            public agmId?: (string|null);
 
             /**
              * Creates a new InteractiveMessageAction instance using the specified properties.
@@ -3840,9 +3963,6 @@ export namespace SyncAction {
             /** KeyExpiration expiredKeyEpoch. */
             public expiredKeyEpoch?: (number|null);
 
-            /** KeyExpiration _expiredKeyEpoch. */
-            public _expiredKeyEpoch?: "expiredKeyEpoch";
-
             /**
              * Creates a new KeyExpiration instance using the specified properties.
              * @param [properties] Properties to set
@@ -3939,9 +4059,6 @@ export namespace SyncAction {
 
             /** LabelAssociationAction labeled. */
             public labeled?: (boolean|null);
-
-            /** LabelAssociationAction _labeled. */
-            public _labeled?: "labeled";
 
             /**
              * Creates a new LabelAssociationAction instance using the specified properties.
@@ -4088,33 +4205,6 @@ export namespace SyncAction {
             /** LabelEditAction muteEndTimeMs. */
             public muteEndTimeMs?: (number|Long|null);
 
-            /** LabelEditAction _name. */
-            public _name?: "name";
-
-            /** LabelEditAction _color. */
-            public _color?: "color";
-
-            /** LabelEditAction _predefinedId. */
-            public _predefinedId?: "predefinedId";
-
-            /** LabelEditAction _deleted. */
-            public _deleted?: "deleted";
-
-            /** LabelEditAction _orderIndex. */
-            public _orderIndex?: "orderIndex";
-
-            /** LabelEditAction _isActive. */
-            public _isActive?: "isActive";
-
-            /** LabelEditAction _type. */
-            public _type?: "type";
-
-            /** LabelEditAction _isImmutable. */
-            public _isImmutable?: "isImmutable";
-
-            /** LabelEditAction _muteEndTimeMs. */
-            public _muteEndTimeMs?: "muteEndTimeMs";
-
             /**
              * Creates a new LabelEditAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -4206,7 +4296,8 @@ export namespace SyncAction {
                 COMMUNITY = 6,
                 SERVER_ASSIGNED = 7,
                 DRAFTED = 8,
-                AI_HANDOFF = 9
+                AI_HANDOFF = 9,
+                CHANNELS = 10
             }
         }
 
@@ -4338,15 +4429,6 @@ export namespace SyncAction {
             /** LidContactAction username. */
             public username?: (string|null);
 
-            /** LidContactAction _fullName. */
-            public _fullName?: "fullName";
-
-            /** LidContactAction _firstName. */
-            public _firstName?: "firstName";
-
-            /** LidContactAction _username. */
-            public _username?: "username";
-
             /**
              * Creates a new LidContactAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -4443,9 +4525,6 @@ export namespace SyncAction {
 
             /** LocaleSetting locale. */
             public locale?: (string|null);
-
-            /** LocaleSetting _locale. */
-            public _locale?: "locale";
 
             /**
              * Creates a new LocaleSetting instance using the specified properties.
@@ -4544,9 +4623,6 @@ export namespace SyncAction {
             /** LockChatAction locked. */
             public locked?: (boolean|null);
 
-            /** LockChatAction _locked. */
-            public _locked?: "locked";
-
             /**
              * Creates a new LockChatAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -4643,9 +4719,6 @@ export namespace SyncAction {
 
             /** MaibaAIFeaturesControlAction aiFeatureStatus. */
             public aiFeatureStatus?: (SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.MaibaAIFeatureStatus|null);
-
-            /** MaibaAIFeaturesControlAction _aiFeatureStatus. */
-            public _aiFeatureStatus?: "aiFeatureStatus";
 
             /**
              * Creates a new MaibaAIFeaturesControlAction instance using the specified properties.
@@ -4759,12 +4832,6 @@ export namespace SyncAction {
 
             /** MarkChatAsReadAction messageRange. */
             public messageRange?: (SyncAction.SyncActionValue.ISyncActionMessageRange|null);
-
-            /** MarkChatAsReadAction _read. */
-            public _read?: "read";
-
-            /** MarkChatAsReadAction _messageRange. */
-            public _messageRange?: "messageRange";
 
             /**
              * Creates a new MarkChatAsReadAction instance using the specified properties.
@@ -4899,27 +4966,6 @@ export namespace SyncAction {
             /** MarketingMessageAction mediaId. */
             public mediaId?: (string|null);
 
-            /** MarketingMessageAction _name. */
-            public _name?: "name";
-
-            /** MarketingMessageAction _message. */
-            public _message?: "message";
-
-            /** MarketingMessageAction _type. */
-            public _type?: "type";
-
-            /** MarketingMessageAction _createdAt. */
-            public _createdAt?: "createdAt";
-
-            /** MarketingMessageAction _lastSentAt. */
-            public _lastSentAt?: "lastSentAt";
-
-            /** MarketingMessageAction _isDeleted. */
-            public _isDeleted?: "isDeleted";
-
-            /** MarketingMessageAction _mediaId. */
-            public _mediaId?: "mediaId";
-
             /**
              * Creates a new MarketingMessageAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -5024,9 +5070,6 @@ export namespace SyncAction {
 
             /** MarketingMessageBroadcastAction repliedCount. */
             public repliedCount?: (number|null);
-
-            /** MarketingMessageBroadcastAction _repliedCount. */
-            public _repliedCount?: "repliedCount";
 
             /**
              * Creates a new MarketingMessageBroadcastAction instance using the specified properties.
@@ -5143,18 +5186,6 @@ export namespace SyncAction {
             /** MerchantPaymentPartnerAction credentialId. */
             public credentialId?: (string|null);
 
-            /** MerchantPaymentPartnerAction _status. */
-            public _status?: "status";
-
-            /** MerchantPaymentPartnerAction _country. */
-            public _country?: "country";
-
-            /** MerchantPaymentPartnerAction _gatewayName. */
-            public _gatewayName?: "gatewayName";
-
-            /** MerchantPaymentPartnerAction _credentialId. */
-            public _credentialId?: "credentialId";
-
             /**
              * Creates a new MerchantPaymentPartnerAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -5267,9 +5298,6 @@ export namespace SyncAction {
             /** MusicUserIdAction musicUserIdMap. */
             public musicUserIdMap: { [k: string]: string };
 
-            /** MusicUserIdAction _musicUserId. */
-            public _musicUserId?: "musicUserId";
-
             /**
              * Creates a new MusicUserIdAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -5359,6 +5387,9 @@ export namespace SyncAction {
 
             /** MuteAction autoMuted */
             autoMuted?: (boolean|null);
+
+            /** MuteAction muteEveryoneMentionEndTimestamp */
+            muteEveryoneMentionEndTimestamp?: (number|Long|null);
         }
 
         /** Represents a MuteAction. */
@@ -5379,14 +5410,8 @@ export namespace SyncAction {
             /** MuteAction autoMuted. */
             public autoMuted?: (boolean|null);
 
-            /** MuteAction _muted. */
-            public _muted?: "muted";
-
-            /** MuteAction _muteEndTimestamp. */
-            public _muteEndTimestamp?: "muteEndTimestamp";
-
-            /** MuteAction _autoMuted. */
-            public _autoMuted?: "autoMuted";
+            /** MuteAction muteEveryoneMentionEndTimestamp. */
+            public muteEveryoneMentionEndTimestamp?: (number|Long|null);
 
             /**
              * Creates a new MuteAction instance using the specified properties.
@@ -5466,6 +5491,103 @@ export namespace SyncAction {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of a NctSaltSyncAction. */
+        interface INctSaltSyncAction {
+
+            /** NctSaltSyncAction salt */
+            salt?: (Uint8Array|null);
+        }
+
+        /** Represents a NctSaltSyncAction. */
+        class NctSaltSyncAction implements INctSaltSyncAction {
+
+            /**
+             * Constructs a new NctSaltSyncAction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.INctSaltSyncAction);
+
+            /** NctSaltSyncAction salt. */
+            public salt?: (Uint8Array|null);
+
+            /**
+             * Creates a new NctSaltSyncAction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns NctSaltSyncAction instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.INctSaltSyncAction): SyncAction.SyncActionValue.NctSaltSyncAction;
+
+            /**
+             * Encodes the specified NctSaltSyncAction message. Does not implicitly {@link SyncAction.SyncActionValue.NctSaltSyncAction.verify|verify} messages.
+             * @param message NctSaltSyncAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.INctSaltSyncAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified NctSaltSyncAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.NctSaltSyncAction.verify|verify} messages.
+             * @param message NctSaltSyncAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.INctSaltSyncAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a NctSaltSyncAction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns NctSaltSyncAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.NctSaltSyncAction;
+
+            /**
+             * Decodes a NctSaltSyncAction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns NctSaltSyncAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.NctSaltSyncAction;
+
+            /**
+             * Verifies a NctSaltSyncAction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a NctSaltSyncAction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns NctSaltSyncAction
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.NctSaltSyncAction;
+
+            /**
+             * Creates a plain object from a NctSaltSyncAction message. Also converts values to other types if specified.
+             * @param message NctSaltSyncAction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.NctSaltSyncAction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this NctSaltSyncAction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for NctSaltSyncAction
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a NewsletterSavedInterestsAction. */
         interface INewsletterSavedInterestsAction {
 
@@ -5484,9 +5606,6 @@ export namespace SyncAction {
 
             /** NewsletterSavedInterestsAction newsletterSavedInterests. */
             public newsletterSavedInterests?: (string|null);
-
-            /** NewsletterSavedInterestsAction _newsletterSavedInterests. */
-            public _newsletterSavedInterests?: "newsletterSavedInterests";
 
             /**
              * Creates a new NewsletterSavedInterestsAction instance using the specified properties.
@@ -5609,21 +5728,6 @@ export namespace SyncAction {
             /** NoteEditAction unstructuredContent. */
             public unstructuredContent?: (string|null);
 
-            /** NoteEditAction _type. */
-            public _type?: "type";
-
-            /** NoteEditAction _chatJid. */
-            public _chatJid?: "chatJid";
-
-            /** NoteEditAction _createdAt. */
-            public _createdAt?: "createdAt";
-
-            /** NoteEditAction _deleted. */
-            public _deleted?: "deleted";
-
-            /** NoteEditAction _unstructuredContent. */
-            public _unstructuredContent?: "unstructuredContent";
-
             /**
              * Creates a new NoteEditAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -5729,9 +5833,6 @@ export namespace SyncAction {
 
             /** NotificationActivitySettingAction notificationActivitySetting. */
             public notificationActivitySetting?: (SyncAction.SyncActionValue.NotificationActivitySettingAction.NotificationActivitySetting|null);
-
-            /** NotificationActivitySettingAction _notificationActivitySetting. */
-            public _notificationActivitySetting?: "notificationActivitySetting";
 
             /**
              * Creates a new NotificationActivitySettingAction instance using the specified properties.
@@ -5841,9 +5942,6 @@ export namespace SyncAction {
             /** NuxAction acknowledged. */
             public acknowledged?: (boolean|null);
 
-            /** NuxAction _acknowledged. */
-            public _acknowledged?: "acknowledged";
-
             /**
              * Creates a new NuxAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -5922,6 +6020,109 @@ export namespace SyncAction {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of an OutContactAction. */
+        interface IOutContactAction {
+
+            /** OutContactAction fullName */
+            fullName?: (string|null);
+
+            /** OutContactAction firstName */
+            firstName?: (string|null);
+        }
+
+        /** Represents an OutContactAction. */
+        class OutContactAction implements IOutContactAction {
+
+            /**
+             * Constructs a new OutContactAction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.IOutContactAction);
+
+            /** OutContactAction fullName. */
+            public fullName?: (string|null);
+
+            /** OutContactAction firstName. */
+            public firstName?: (string|null);
+
+            /**
+             * Creates a new OutContactAction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns OutContactAction instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.IOutContactAction): SyncAction.SyncActionValue.OutContactAction;
+
+            /**
+             * Encodes the specified OutContactAction message. Does not implicitly {@link SyncAction.SyncActionValue.OutContactAction.verify|verify} messages.
+             * @param message OutContactAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.IOutContactAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified OutContactAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.OutContactAction.verify|verify} messages.
+             * @param message OutContactAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.IOutContactAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an OutContactAction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns OutContactAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.OutContactAction;
+
+            /**
+             * Decodes an OutContactAction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns OutContactAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.OutContactAction;
+
+            /**
+             * Verifies an OutContactAction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an OutContactAction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns OutContactAction
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.OutContactAction;
+
+            /**
+             * Creates a plain object from an OutContactAction message. Also converts values to other types if specified.
+             * @param message OutContactAction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.OutContactAction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this OutContactAction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for OutContactAction
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a PaymentInfoAction. */
         interface IPaymentInfoAction {
 
@@ -5940,9 +6141,6 @@ export namespace SyncAction {
 
             /** PaymentInfoAction cpi. */
             public cpi?: (string|null);
-
-            /** PaymentInfoAction _cpi. */
-            public _cpi?: "cpi";
 
             /**
              * Creates a new PaymentInfoAction instance using the specified properties.
@@ -6046,12 +6244,6 @@ export namespace SyncAction {
 
             /** PaymentTosAction accepted. */
             public accepted?: (boolean|null);
-
-            /** PaymentTosAction _paymentNotice. */
-            public _paymentNotice?: "paymentNotice";
-
-            /** PaymentTosAction _accepted. */
-            public _accepted?: "accepted";
 
             /**
              * Creates a new PaymentTosAction instance using the specified properties.
@@ -6158,9 +6350,6 @@ export namespace SyncAction {
             /** PinAction pinned. */
             public pinned?: (boolean|null);
 
-            /** PinAction _pinned. */
-            public _pinned?: "pinned";
-
             /**
              * Creates a new PinAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -6257,9 +6446,6 @@ export namespace SyncAction {
 
             /** PnForLidChatAction pnJid. */
             public pnJid?: (string|null);
-
-            /** PnForLidChatAction _pnJid. */
-            public _pnJid?: "pnJid";
 
             /**
              * Creates a new PnForLidChatAction instance using the specified properties.
@@ -6455,9 +6641,6 @@ export namespace SyncAction {
             /** PrimaryVersionAction version. */
             public version?: (string|null);
 
-            /** PrimaryVersionAction _version. */
-            public _version?: "version";
-
             /**
              * Creates a new PrimaryVersionAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -6554,9 +6737,6 @@ export namespace SyncAction {
 
             /** PrivacySettingChannelsPersonalisedRecommendationAction isUserOptedOut. */
             public isUserOptedOut?: (boolean|null);
-
-            /** PrivacySettingChannelsPersonalisedRecommendationAction _isUserOptedOut. */
-            public _isUserOptedOut?: "isUserOptedOut";
 
             /**
              * Creates a new PrivacySettingChannelsPersonalisedRecommendationAction instance using the specified properties.
@@ -6655,9 +6835,6 @@ export namespace SyncAction {
             /** PrivacySettingDisableLinkPreviewsAction isPreviewsDisabled. */
             public isPreviewsDisabled?: (boolean|null);
 
-            /** PrivacySettingDisableLinkPreviewsAction _isPreviewsDisabled. */
-            public _isPreviewsDisabled?: "isPreviewsDisabled";
-
             /**
              * Creates a new PrivacySettingDisableLinkPreviewsAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -6755,9 +6932,6 @@ export namespace SyncAction {
             /** PrivacySettingRelayAllCalls isEnabled. */
             public isEnabled?: (boolean|null);
 
-            /** PrivacySettingRelayAllCalls _isEnabled. */
-            public _isEnabled?: "isEnabled";
-
             /**
              * Creates a new PrivacySettingRelayAllCalls instance using the specified properties.
              * @param [properties] Properties to set
@@ -6854,9 +7028,6 @@ export namespace SyncAction {
 
             /** PrivateProcessingSettingAction privateProcessingStatus. */
             public privateProcessingStatus?: (SyncAction.SyncActionValue.PrivateProcessingSettingAction.PrivateProcessingStatus|null);
-
-            /** PrivateProcessingSettingAction _privateProcessingStatus. */
-            public _privateProcessingStatus?: "privateProcessingStatus";
 
             /**
              * Creates a new PrivateProcessingSettingAction instance using the specified properties.
@@ -6964,9 +7135,6 @@ export namespace SyncAction {
 
             /** PushNameSetting name. */
             public name?: (string|null);
-
-            /** PushNameSetting _name. */
-            public _name?: "name";
 
             /**
              * Creates a new PushNameSetting instance using the specified properties.
@@ -7088,18 +7256,6 @@ export namespace SyncAction {
 
             /** QuickReplyAction deleted. */
             public deleted?: (boolean|null);
-
-            /** QuickReplyAction _shortcut. */
-            public _shortcut?: "shortcut";
-
-            /** QuickReplyAction _message. */
-            public _message?: "message";
-
-            /** QuickReplyAction _count. */
-            public _count?: "count";
-
-            /** QuickReplyAction _deleted. */
-            public _deleted?: "deleted";
 
             /**
              * Creates a new QuickReplyAction instance using the specified properties.
@@ -7295,9 +7451,6 @@ export namespace SyncAction {
             /** RemoveRecentStickerAction lastStickerSentTs. */
             public lastStickerSentTs?: (number|Long|null);
 
-            /** RemoveRecentStickerAction _lastStickerSentTs. */
-            public _lastStickerSentTs?: "lastStickerSentTs";
-
             /**
              * Creates a new RemoveRecentStickerAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -7447,6 +7600,30 @@ export namespace SyncAction {
 
             /** SettingsSyncAction notificationToneId */
             notificationToneId?: (number|null);
+
+            /** SettingsSyncAction mediaUploadQuality */
+            mediaUploadQuality?: (SyncAction.SyncActionValue.SettingsSyncAction.MediaQualitySetting|null);
+
+            /** SettingsSyncAction isSpellCheckEnabled */
+            isSpellCheckEnabled?: (boolean|null);
+
+            /** SettingsSyncAction isEnterToSendEnabled */
+            isEnterToSendEnabled?: (boolean|null);
+
+            /** SettingsSyncAction isGroupMessageNotificationEnabled */
+            isGroupMessageNotificationEnabled?: (boolean|null);
+
+            /** SettingsSyncAction isGroupReactionsNotificationEnabled */
+            isGroupReactionsNotificationEnabled?: (boolean|null);
+
+            /** SettingsSyncAction isStatusNotificationEnabled */
+            isStatusNotificationEnabled?: (boolean|null);
+
+            /** SettingsSyncAction statusNotificationToneId */
+            statusNotificationToneId?: (number|null);
+
+            /** SettingsSyncAction shouldPlaySoundForCallNotification */
+            shouldPlaySoundForCallNotification?: (boolean|null);
         }
 
         /** Represents a SettingsSyncAction. */
@@ -7527,74 +7704,29 @@ export namespace SyncAction {
             /** SettingsSyncAction notificationToneId. */
             public notificationToneId?: (number|null);
 
-            /** SettingsSyncAction _startAtLogin. */
-            public _startAtLogin?: "startAtLogin";
+            /** SettingsSyncAction mediaUploadQuality. */
+            public mediaUploadQuality?: (SyncAction.SyncActionValue.SettingsSyncAction.MediaQualitySetting|null);
 
-            /** SettingsSyncAction _minimizeToTray. */
-            public _minimizeToTray?: "minimizeToTray";
+            /** SettingsSyncAction isSpellCheckEnabled. */
+            public isSpellCheckEnabled?: (boolean|null);
 
-            /** SettingsSyncAction _language. */
-            public _language?: "language";
+            /** SettingsSyncAction isEnterToSendEnabled. */
+            public isEnterToSendEnabled?: (boolean|null);
 
-            /** SettingsSyncAction _replaceTextWithEmoji. */
-            public _replaceTextWithEmoji?: "replaceTextWithEmoji";
+            /** SettingsSyncAction isGroupMessageNotificationEnabled. */
+            public isGroupMessageNotificationEnabled?: (boolean|null);
 
-            /** SettingsSyncAction _bannerNotificationDisplayMode. */
-            public _bannerNotificationDisplayMode?: "bannerNotificationDisplayMode";
+            /** SettingsSyncAction isGroupReactionsNotificationEnabled. */
+            public isGroupReactionsNotificationEnabled?: (boolean|null);
 
-            /** SettingsSyncAction _unreadCounterBadgeDisplayMode. */
-            public _unreadCounterBadgeDisplayMode?: "unreadCounterBadgeDisplayMode";
+            /** SettingsSyncAction isStatusNotificationEnabled. */
+            public isStatusNotificationEnabled?: (boolean|null);
 
-            /** SettingsSyncAction _isMessagesNotificationEnabled. */
-            public _isMessagesNotificationEnabled?: "isMessagesNotificationEnabled";
+            /** SettingsSyncAction statusNotificationToneId. */
+            public statusNotificationToneId?: (number|null);
 
-            /** SettingsSyncAction _isCallsNotificationEnabled. */
-            public _isCallsNotificationEnabled?: "isCallsNotificationEnabled";
-
-            /** SettingsSyncAction _isReactionsNotificationEnabled. */
-            public _isReactionsNotificationEnabled?: "isReactionsNotificationEnabled";
-
-            /** SettingsSyncAction _isStatusReactionsNotificationEnabled. */
-            public _isStatusReactionsNotificationEnabled?: "isStatusReactionsNotificationEnabled";
-
-            /** SettingsSyncAction _isTextPreviewForNotificationEnabled. */
-            public _isTextPreviewForNotificationEnabled?: "isTextPreviewForNotificationEnabled";
-
-            /** SettingsSyncAction _defaultNotificationToneId. */
-            public _defaultNotificationToneId?: "defaultNotificationToneId";
-
-            /** SettingsSyncAction _groupDefaultNotificationToneId. */
-            public _groupDefaultNotificationToneId?: "groupDefaultNotificationToneId";
-
-            /** SettingsSyncAction _appTheme. */
-            public _appTheme?: "appTheme";
-
-            /** SettingsSyncAction _wallpaperId. */
-            public _wallpaperId?: "wallpaperId";
-
-            /** SettingsSyncAction _isDoodleWallpaperEnabled. */
-            public _isDoodleWallpaperEnabled?: "isDoodleWallpaperEnabled";
-
-            /** SettingsSyncAction _fontSize. */
-            public _fontSize?: "fontSize";
-
-            /** SettingsSyncAction _isPhotosAutodownloadEnabled. */
-            public _isPhotosAutodownloadEnabled?: "isPhotosAutodownloadEnabled";
-
-            /** SettingsSyncAction _isAudiosAutodownloadEnabled. */
-            public _isAudiosAutodownloadEnabled?: "isAudiosAutodownloadEnabled";
-
-            /** SettingsSyncAction _isVideosAutodownloadEnabled. */
-            public _isVideosAutodownloadEnabled?: "isVideosAutodownloadEnabled";
-
-            /** SettingsSyncAction _isDocumentsAutodownloadEnabled. */
-            public _isDocumentsAutodownloadEnabled?: "isDocumentsAutodownloadEnabled";
-
-            /** SettingsSyncAction _disableLinkPreviews. */
-            public _disableLinkPreviews?: "disableLinkPreviews";
-
-            /** SettingsSyncAction _notificationToneId. */
-            public _notificationToneId?: "notificationToneId";
+            /** SettingsSyncAction shouldPlaySoundForCallNotification. */
+            public shouldPlaySoundForCallNotification?: (boolean|null);
 
             /**
              * Creates a new SettingsSyncAction instance using the specified properties.
@@ -7684,6 +7816,13 @@ export namespace SyncAction {
                 ONLY_WHEN_APP_IS_OPEN = 3
             }
 
+            /** MediaQualitySetting enum. */
+            enum MediaQualitySetting {
+                MEDIA_QUALITY_UNKNOWN = 0,
+                STANDARD = 1,
+                HD = 2
+            }
+
             /** SettingKey enum. */
             enum SettingKey {
                 SETTING_KEY_UNKNOWN = 0,
@@ -7709,7 +7848,15 @@ export namespace SyncAction {
                 IS_VIDEOS_AUTODOWNLOAD_ENABLED = 20,
                 IS_DOCUMENTS_AUTODOWNLOAD_ENABLED = 21,
                 DISABLE_LINK_PREVIEWS = 22,
-                NOTIFICATION_TONE_ID = 23
+                NOTIFICATION_TONE_ID = 23,
+                MEDIA_UPLOAD_QUALITY = 24,
+                IS_SPELL_CHECK_ENABLED = 25,
+                IS_ENTER_TO_SEND_ENABLED = 26,
+                IS_GROUP_MESSAGE_NOTIFICATION_ENABLED = 27,
+                IS_GROUP_REACTIONS_NOTIFICATION_ENABLED = 28,
+                IS_STATUS_NOTIFICATION_ENABLED = 29,
+                STATUS_NOTIFICATION_TONE_ID = 30,
+                SHOULD_PLAY_SOUND_FOR_CALL_NOTIFICATION = 31
             }
 
             /** SettingPlatform enum. */
@@ -7740,9 +7887,6 @@ export namespace SyncAction {
 
             /** StarAction starred. */
             public starred?: (boolean|null);
-
-            /** StarAction _starred. */
-            public _starred?: "starred";
 
             /**
              * Creates a new StarAction instance using the specified properties.
@@ -7841,9 +7985,6 @@ export namespace SyncAction {
             /** StatusPostOptInNotificationPreferencesAction enabled. */
             public enabled?: (boolean|null);
 
-            /** StatusPostOptInNotificationPreferencesAction _enabled. */
-            public _enabled?: "enabled";
-
             /**
              * Creates a new StatusPostOptInNotificationPreferencesAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -7930,6 +8071,15 @@ export namespace SyncAction {
 
             /** StatusPrivacyAction userJid */
             userJid?: (string[]|null);
+
+            /** StatusPrivacyAction shareToFB */
+            shareToFB?: (boolean|null);
+
+            /** StatusPrivacyAction shareToIG */
+            shareToIG?: (boolean|null);
+
+            /** StatusPrivacyAction customLists */
+            customLists?: (SyncAction.SyncActionValue.StatusPrivacyAction.ICustomList[]|null);
         }
 
         /** Represents a StatusPrivacyAction. */
@@ -7947,8 +8097,14 @@ export namespace SyncAction {
             /** StatusPrivacyAction userJid. */
             public userJid: string[];
 
-            /** StatusPrivacyAction _mode. */
-            public _mode?: "mode";
+            /** StatusPrivacyAction shareToFB. */
+            public shareToFB?: (boolean|null);
+
+            /** StatusPrivacyAction shareToIG. */
+            public shareToIG?: (boolean|null);
+
+            /** StatusPrivacyAction customLists. */
+            public customLists: SyncAction.SyncActionValue.StatusPrivacyAction.ICustomList[];
 
             /**
              * Creates a new StatusPrivacyAction instance using the specified properties.
@@ -8030,12 +8186,134 @@ export namespace SyncAction {
 
         namespace StatusPrivacyAction {
 
+            /** Properties of a CustomList. */
+            interface ICustomList {
+
+                /** CustomList listId */
+                listId?: (string|null);
+
+                /** CustomList name */
+                name?: (string|null);
+
+                /** CustomList emoji */
+                emoji?: (string|null);
+
+                /** CustomList isSelected */
+                isSelected?: (boolean|null);
+
+                /** CustomList userJid */
+                userJid?: (string[]|null);
+            }
+
+            /** Represents a CustomList. */
+            class CustomList implements ICustomList {
+
+                /**
+                 * Constructs a new CustomList.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: SyncAction.SyncActionValue.StatusPrivacyAction.ICustomList);
+
+                /** CustomList listId. */
+                public listId?: (string|null);
+
+                /** CustomList name. */
+                public name?: (string|null);
+
+                /** CustomList emoji. */
+                public emoji?: (string|null);
+
+                /** CustomList isSelected. */
+                public isSelected?: (boolean|null);
+
+                /** CustomList userJid. */
+                public userJid: string[];
+
+                /**
+                 * Creates a new CustomList instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns CustomList instance
+                 */
+                public static create(properties?: SyncAction.SyncActionValue.StatusPrivacyAction.ICustomList): SyncAction.SyncActionValue.StatusPrivacyAction.CustomList;
+
+                /**
+                 * Encodes the specified CustomList message. Does not implicitly {@link SyncAction.SyncActionValue.StatusPrivacyAction.CustomList.verify|verify} messages.
+                 * @param message CustomList message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: SyncAction.SyncActionValue.StatusPrivacyAction.ICustomList, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified CustomList message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.StatusPrivacyAction.CustomList.verify|verify} messages.
+                 * @param message CustomList message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: SyncAction.SyncActionValue.StatusPrivacyAction.ICustomList, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a CustomList message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns CustomList
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.StatusPrivacyAction.CustomList;
+
+                /**
+                 * Decodes a CustomList message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns CustomList
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.StatusPrivacyAction.CustomList;
+
+                /**
+                 * Verifies a CustomList message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a CustomList message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns CustomList
+                 */
+                public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.StatusPrivacyAction.CustomList;
+
+                /**
+                 * Creates a plain object from a CustomList message. Also converts values to other types if specified.
+                 * @param message CustomList
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: SyncAction.SyncActionValue.StatusPrivacyAction.CustomList, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this CustomList to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for CustomList
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
             /** StatusDistributionMode enum. */
             enum StatusDistributionMode {
                 ALLOW_LIST = 0,
                 DENY_LIST = 1,
                 CONTACTS = 2,
-                CLOSE_FRIENDS = 3
+                CLOSE_FRIENDS = 3,
+                CUSTOM_LIST = 4
             }
         }
 
@@ -8129,45 +8407,6 @@ export namespace SyncAction {
 
             /** StickerAction isAvatarSticker. */
             public isAvatarSticker?: (boolean|null);
-
-            /** StickerAction _url. */
-            public _url?: "url";
-
-            /** StickerAction _fileEncSha256. */
-            public _fileEncSha256?: "fileEncSha256";
-
-            /** StickerAction _mediaKey. */
-            public _mediaKey?: "mediaKey";
-
-            /** StickerAction _mimetype. */
-            public _mimetype?: "mimetype";
-
-            /** StickerAction _height. */
-            public _height?: "height";
-
-            /** StickerAction _width. */
-            public _width?: "width";
-
-            /** StickerAction _directPath. */
-            public _directPath?: "directPath";
-
-            /** StickerAction _fileLength. */
-            public _fileLength?: "fileLength";
-
-            /** StickerAction _isFavorite. */
-            public _isFavorite?: "isFavorite";
-
-            /** StickerAction _deviceIdHint. */
-            public _deviceIdHint?: "deviceIdHint";
-
-            /** StickerAction _isLottie. */
-            public _isLottie?: "isLottie";
-
-            /** StickerAction _imageHash. */
-            public _imageHash?: "imageHash";
-
-            /** StickerAction _isAvatarSticker. */
-            public _isAvatarSticker?: "isAvatarSticker";
 
             /**
              * Creates a new StickerAction instance using the specified properties.
@@ -8278,15 +8517,6 @@ export namespace SyncAction {
             /** SubscriptionAction expirationDate. */
             public expirationDate?: (number|Long|null);
 
-            /** SubscriptionAction _isDeactivated. */
-            public _isDeactivated?: "isDeactivated";
-
-            /** SubscriptionAction _isAutoRenewing. */
-            public _isAutoRenewing?: "isAutoRenewing";
-
-            /** SubscriptionAction _expirationDate. */
-            public _expirationDate?: "expirationDate";
-
             /**
              * Creates a new SubscriptionAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -8365,6 +8595,366 @@ export namespace SyncAction {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of a SubscriptionsSyncV2Action. */
+        interface ISubscriptionsSyncV2Action {
+
+            /** SubscriptionsSyncV2Action subscriptions */
+            subscriptions?: (SyncAction.SyncActionValue.SubscriptionsSyncV2Action.ISubscriptionInfo[]|null);
+
+            /** SubscriptionsSyncV2Action paidFeature */
+            paidFeature?: (SyncAction.SyncActionValue.SubscriptionsSyncV2Action.IPaidFeature[]|null);
+        }
+
+        /** Represents a SubscriptionsSyncV2Action. */
+        class SubscriptionsSyncV2Action implements ISubscriptionsSyncV2Action {
+
+            /**
+             * Constructs a new SubscriptionsSyncV2Action.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.ISubscriptionsSyncV2Action);
+
+            /** SubscriptionsSyncV2Action subscriptions. */
+            public subscriptions: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.ISubscriptionInfo[];
+
+            /** SubscriptionsSyncV2Action paidFeature. */
+            public paidFeature: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.IPaidFeature[];
+
+            /**
+             * Creates a new SubscriptionsSyncV2Action instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns SubscriptionsSyncV2Action instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.ISubscriptionsSyncV2Action): SyncAction.SyncActionValue.SubscriptionsSyncV2Action;
+
+            /**
+             * Encodes the specified SubscriptionsSyncV2Action message. Does not implicitly {@link SyncAction.SyncActionValue.SubscriptionsSyncV2Action.verify|verify} messages.
+             * @param message SubscriptionsSyncV2Action message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.ISubscriptionsSyncV2Action, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified SubscriptionsSyncV2Action message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.SubscriptionsSyncV2Action.verify|verify} messages.
+             * @param message SubscriptionsSyncV2Action message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.ISubscriptionsSyncV2Action, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a SubscriptionsSyncV2Action message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns SubscriptionsSyncV2Action
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.SubscriptionsSyncV2Action;
+
+            /**
+             * Decodes a SubscriptionsSyncV2Action message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns SubscriptionsSyncV2Action
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.SubscriptionsSyncV2Action;
+
+            /**
+             * Verifies a SubscriptionsSyncV2Action message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a SubscriptionsSyncV2Action message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns SubscriptionsSyncV2Action
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.SubscriptionsSyncV2Action;
+
+            /**
+             * Creates a plain object from a SubscriptionsSyncV2Action message. Also converts values to other types if specified.
+             * @param message SubscriptionsSyncV2Action
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this SubscriptionsSyncV2Action to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for SubscriptionsSyncV2Action
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace SubscriptionsSyncV2Action {
+
+            /** Properties of a PaidFeature. */
+            interface IPaidFeature {
+
+                /** PaidFeature name */
+                name?: (string|null);
+
+                /** PaidFeature enabled */
+                enabled?: (boolean|null);
+
+                /** PaidFeature limit */
+                limit?: (number|null);
+
+                /** PaidFeature expirationTime */
+                expirationTime?: (number|Long|null);
+            }
+
+            /** Represents a PaidFeature. */
+            class PaidFeature implements IPaidFeature {
+
+                /**
+                 * Constructs a new PaidFeature.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.IPaidFeature);
+
+                /** PaidFeature name. */
+                public name?: (string|null);
+
+                /** PaidFeature enabled. */
+                public enabled?: (boolean|null);
+
+                /** PaidFeature limit. */
+                public limit?: (number|null);
+
+                /** PaidFeature expirationTime. */
+                public expirationTime?: (number|Long|null);
+
+                /**
+                 * Creates a new PaidFeature instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns PaidFeature instance
+                 */
+                public static create(properties?: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.IPaidFeature): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature;
+
+                /**
+                 * Encodes the specified PaidFeature message. Does not implicitly {@link SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature.verify|verify} messages.
+                 * @param message PaidFeature message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.IPaidFeature, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified PaidFeature message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature.verify|verify} messages.
+                 * @param message PaidFeature message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.IPaidFeature, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a PaidFeature message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns PaidFeature
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature;
+
+                /**
+                 * Decodes a PaidFeature message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns PaidFeature
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature;
+
+                /**
+                 * Verifies a PaidFeature message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a PaidFeature message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns PaidFeature
+                 */
+                public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature;
+
+                /**
+                 * Creates a plain object from a PaidFeature message. Also converts values to other types if specified.
+                 * @param message PaidFeature
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.PaidFeature, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this PaidFeature to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for PaidFeature
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a SubscriptionInfo. */
+            interface ISubscriptionInfo {
+
+                /** SubscriptionInfo id */
+                id?: (string|null);
+
+                /** SubscriptionInfo tier */
+                tier?: (number|null);
+
+                /** SubscriptionInfo status */
+                status?: (string|null);
+
+                /** SubscriptionInfo startTime */
+                startTime?: (number|Long|null);
+
+                /** SubscriptionInfo endTime */
+                endTime?: (number|Long|null);
+
+                /** SubscriptionInfo isPlatformChanged */
+                isPlatformChanged?: (boolean|null);
+
+                /** SubscriptionInfo source */
+                source?: (string|null);
+
+                /** SubscriptionInfo creationTime */
+                creationTime?: (number|Long|null);
+            }
+
+            /** Represents a SubscriptionInfo. */
+            class SubscriptionInfo implements ISubscriptionInfo {
+
+                /**
+                 * Constructs a new SubscriptionInfo.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.ISubscriptionInfo);
+
+                /** SubscriptionInfo id. */
+                public id?: (string|null);
+
+                /** SubscriptionInfo tier. */
+                public tier?: (number|null);
+
+                /** SubscriptionInfo status. */
+                public status?: (string|null);
+
+                /** SubscriptionInfo startTime. */
+                public startTime?: (number|Long|null);
+
+                /** SubscriptionInfo endTime. */
+                public endTime?: (number|Long|null);
+
+                /** SubscriptionInfo isPlatformChanged. */
+                public isPlatformChanged?: (boolean|null);
+
+                /** SubscriptionInfo source. */
+                public source?: (string|null);
+
+                /** SubscriptionInfo creationTime. */
+                public creationTime?: (number|Long|null);
+
+                /**
+                 * Creates a new SubscriptionInfo instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns SubscriptionInfo instance
+                 */
+                public static create(properties?: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.ISubscriptionInfo): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo;
+
+                /**
+                 * Encodes the specified SubscriptionInfo message. Does not implicitly {@link SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo.verify|verify} messages.
+                 * @param message SubscriptionInfo message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.ISubscriptionInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified SubscriptionInfo message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo.verify|verify} messages.
+                 * @param message SubscriptionInfo message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.ISubscriptionInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a SubscriptionInfo message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns SubscriptionInfo
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo;
+
+                /**
+                 * Decodes a SubscriptionInfo message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns SubscriptionInfo
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo;
+
+                /**
+                 * Verifies a SubscriptionInfo message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a SubscriptionInfo message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns SubscriptionInfo
+                 */
+                public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo;
+
+                /**
+                 * Creates a plain object from a SubscriptionInfo message. Also converts values to other types if specified.
+                 * @param message SubscriptionInfo
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: SyncAction.SyncActionValue.SubscriptionsSyncV2Action.SubscriptionInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this SubscriptionInfo to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for SubscriptionInfo
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+        }
+
         /** Properties of a SyncActionMessage. */
         interface ISyncActionMessage {
 
@@ -8389,12 +8979,6 @@ export namespace SyncAction {
 
             /** SyncActionMessage timestamp. */
             public timestamp?: (number|Long|null);
-
-            /** SyncActionMessage _key. */
-            public _key?: "key";
-
-            /** SyncActionMessage _timestamp. */
-            public _timestamp?: "timestamp";
 
             /**
              * Creates a new SyncActionMessage instance using the specified properties.
@@ -8505,12 +9089,6 @@ export namespace SyncAction {
             /** SyncActionMessageRange messages. */
             public messages: SyncAction.SyncActionValue.ISyncActionMessage[];
 
-            /** SyncActionMessageRange _lastMessageTimestamp. */
-            public _lastMessageTimestamp?: "lastMessageTimestamp";
-
-            /** SyncActionMessageRange _lastSystemMessageTimestamp. */
-            public _lastSystemMessageTimestamp?: "lastSystemMessageTimestamp";
-
             /**
              * Creates a new SyncActionMessageRange instance using the specified properties.
              * @param [properties] Properties to set
@@ -8589,6 +9167,103 @@ export namespace SyncAction {
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
 
+        /** Properties of a ThreadPinAction. */
+        interface IThreadPinAction {
+
+            /** ThreadPinAction pinned */
+            pinned?: (boolean|null);
+        }
+
+        /** Represents a ThreadPinAction. */
+        class ThreadPinAction implements IThreadPinAction {
+
+            /**
+             * Constructs a new ThreadPinAction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: SyncAction.SyncActionValue.IThreadPinAction);
+
+            /** ThreadPinAction pinned. */
+            public pinned?: (boolean|null);
+
+            /**
+             * Creates a new ThreadPinAction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ThreadPinAction instance
+             */
+            public static create(properties?: SyncAction.SyncActionValue.IThreadPinAction): SyncAction.SyncActionValue.ThreadPinAction;
+
+            /**
+             * Encodes the specified ThreadPinAction message. Does not implicitly {@link SyncAction.SyncActionValue.ThreadPinAction.verify|verify} messages.
+             * @param message ThreadPinAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: SyncAction.SyncActionValue.IThreadPinAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ThreadPinAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.ThreadPinAction.verify|verify} messages.
+             * @param message ThreadPinAction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: SyncAction.SyncActionValue.IThreadPinAction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ThreadPinAction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ThreadPinAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): SyncAction.SyncActionValue.ThreadPinAction;
+
+            /**
+             * Decodes a ThreadPinAction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ThreadPinAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): SyncAction.SyncActionValue.ThreadPinAction;
+
+            /**
+             * Verifies a ThreadPinAction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ThreadPinAction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ThreadPinAction
+             */
+            public static fromObject(object: { [k: string]: any }): SyncAction.SyncActionValue.ThreadPinAction;
+
+            /**
+             * Creates a plain object from a ThreadPinAction message. Also converts values to other types if specified.
+             * @param message ThreadPinAction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: SyncAction.SyncActionValue.ThreadPinAction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ThreadPinAction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ThreadPinAction
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
         /** Properties of a TimeFormatAction. */
         interface ITimeFormatAction {
 
@@ -8607,9 +9282,6 @@ export namespace SyncAction {
 
             /** TimeFormatAction isTwentyFourHourFormatEnabled. */
             public isTwentyFourHourFormatEnabled?: (boolean|null);
-
-            /** TimeFormatAction _isTwentyFourHourFormatEnabled. */
-            public _isTwentyFourHourFormatEnabled?: "isTwentyFourHourFormatEnabled";
 
             /**
              * Creates a new TimeFormatAction instance using the specified properties.
@@ -8708,9 +9380,6 @@ export namespace SyncAction {
             /** UGCBot definition. */
             public definition?: (Uint8Array|null);
 
-            /** UGCBot _definition. */
-            public _definition?: "definition";
-
             /**
              * Creates a new UGCBot instance using the specified properties.
              * @param [properties] Properties to set
@@ -8807,9 +9476,6 @@ export namespace SyncAction {
 
             /** UnarchiveChatsSetting unarchiveChats. */
             public unarchiveChats?: (boolean|null);
-
-            /** UnarchiveChatsSetting _unarchiveChats. */
-            public _unarchiveChats?: "unarchiveChats";
 
             /**
              * Creates a new UnarchiveChatsSetting instance using the specified properties.
@@ -8908,9 +9574,6 @@ export namespace SyncAction {
             /** UserStatusMuteAction muted. */
             public muted?: (boolean|null);
 
-            /** UserStatusMuteAction _muted. */
-            public _muted?: "muted";
-
             /**
              * Creates a new UserStatusMuteAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -9007,9 +9670,6 @@ export namespace SyncAction {
 
             /** UsernameChatStartModeAction chatStartMode. */
             public chatStartMode?: (SyncAction.SyncActionValue.UsernameChatStartModeAction.ChatStartMode|null);
-
-            /** UsernameChatStartModeAction _chatStartMode. */
-            public _chatStartMode?: "chatStartMode";
 
             /**
              * Creates a new UsernameChatStartModeAction instance using the specified properties.
@@ -9117,9 +9777,6 @@ export namespace SyncAction {
             /** WaffleAccountLinkStateAction linkState. */
             public linkState?: (SyncAction.SyncActionValue.WaffleAccountLinkStateAction.AccountLinkState|null);
 
-            /** WaffleAccountLinkStateAction _linkState. */
-            public _linkState?: "linkState";
-
             /**
              * Creates a new WaffleAccountLinkStateAction instance using the specified properties.
              * @param [properties] Properties to set
@@ -9226,9 +9883,6 @@ export namespace SyncAction {
 
             /** WamoUserIdentifierAction identifier. */
             public identifier?: (string|null);
-
-            /** WamoUserIdentifierAction _identifier. */
-            public _identifier?: "identifier";
 
             /**
              * Creates a new WamoUserIdentifierAction instance using the specified properties.
@@ -9412,48 +10066,6 @@ export namespace SyncAction {
         /** CallLogRecord callType. */
         public callType?: (SyncAction.CallLogRecord.CallType|null);
 
-        /** CallLogRecord _callResult. */
-        public _callResult?: "callResult";
-
-        /** CallLogRecord _isDndMode. */
-        public _isDndMode?: "isDndMode";
-
-        /** CallLogRecord _silenceReason. */
-        public _silenceReason?: "silenceReason";
-
-        /** CallLogRecord _duration. */
-        public _duration?: "duration";
-
-        /** CallLogRecord _startTime. */
-        public _startTime?: "startTime";
-
-        /** CallLogRecord _isIncoming. */
-        public _isIncoming?: "isIncoming";
-
-        /** CallLogRecord _isVideo. */
-        public _isVideo?: "isVideo";
-
-        /** CallLogRecord _isCallLink. */
-        public _isCallLink?: "isCallLink";
-
-        /** CallLogRecord _callLinkToken. */
-        public _callLinkToken?: "callLinkToken";
-
-        /** CallLogRecord _scheduledCallId. */
-        public _scheduledCallId?: "scheduledCallId";
-
-        /** CallLogRecord _callId. */
-        public _callId?: "callId";
-
-        /** CallLogRecord _callCreatorJid. */
-        public _callCreatorJid?: "callCreatorJid";
-
-        /** CallLogRecord _groupJid. */
-        public _groupJid?: "groupJid";
-
-        /** CallLogRecord _callType. */
-        public _callType?: "callType";
-
         /**
          * Creates a new CallLogRecord instance using the specified properties.
          * @param [properties] Properties to set
@@ -9581,12 +10193,6 @@ export namespace SyncAction {
             /** ParticipantInfo callResult. */
             public callResult?: (SyncAction.CallLogRecord.CallResult|null);
 
-            /** ParticipantInfo _userJid. */
-            public _userJid?: "userJid";
-
-            /** ParticipantInfo _callResult. */
-            public _callResult?: "callResult";
-
             /**
              * Creates a new ParticipantInfo instance using the specified properties.
              * @param [properties] Properties to set
@@ -9698,12 +10304,6 @@ export namespace SyncAction {
 
         /** RecentEmojiWeight weight. */
         public weight?: (number|null);
-
-        /** RecentEmojiWeight _emoji. */
-        public _emoji?: "emoji";
-
-        /** RecentEmojiWeight _weight. */
-        public _weight?: "weight";
 
         /**
          * Creates a new RecentEmojiWeight instance using the specified properties.
@@ -9857,8 +10457,16 @@ export namespace SyncAction {
         AI_THREAD_RENAME_ACTION = 76,
         INTERACTIVE_MESSAGE_ACTION = 77,
         SETTINGS_SYNC_ACTION = 78,
+        OUT_CONTACT_ACTION = 79,
+        NCT_SALT_SYNC_ACTION = 80,
+        BUSINESS_BROADCAST_CAMPAIGN_ACTION = 81,
+        BUSINESS_BROADCAST_INSIGHTS_ACTION = 82,
+        CUSTOMER_DATA_ACTION = 83,
+        SUBSCRIPTIONS_SYNC_V2_ACTION = 84,
+        THREAD_PIN_ACTION = 85,
         SHARE_OWN_PN = 10001,
-        BUSINESS_BROADCAST_ACTION = 10002
+        BUSINESS_BROADCAST_ACTION = 10002,
+        AI_THREAD_DELETE_ACTION = 10003
     }
 
     /** CollectionName enum. */
@@ -9899,12 +10507,6 @@ export namespace ChatLockSettings {
 
         /** ChatLockSettings secretCode. */
         public secretCode?: (UserPassword.IUserPassword|null);
-
-        /** ChatLockSettings _hideLockedChats. */
-        public _hideLockedChats?: "hideLockedChats";
-
-        /** ChatLockSettings _secretCode. */
-        public _secretCode?: "secretCode";
 
         /**
          * Creates a new ChatLockSettings instance using the specified properties.
@@ -10025,15 +10627,6 @@ export namespace UserPassword {
         /** UserPassword transformedData. */
         public transformedData?: (Uint8Array|null);
 
-        /** UserPassword _encoding. */
-        public _encoding?: "encoding";
-
-        /** UserPassword _transformer. */
-        public _transformer?: "transformer";
-
-        /** UserPassword _transformedData. */
-        public _transformedData?: "transformedData";
-
         /**
          * Creates a new UserPassword instance using the specified properties.
          * @param [properties] Properties to set
@@ -10151,12 +10744,6 @@ export namespace UserPassword {
 
             /** TransformerArg value. */
             public value?: (UserPassword.UserPassword.TransformerArg.IValue|null);
-
-            /** TransformerArg _key. */
-            public _key?: "key";
-
-            /** TransformerArg _value. */
-            public _value?: "value";
 
             /**
              * Creates a new TransformerArg instance using the specified properties.
@@ -10399,24 +10986,6 @@ export namespace DeviceCapabilities {
         /** DeviceCapabilities aiThread. */
         public aiThread?: (DeviceCapabilities.DeviceCapabilities.IAiThread|null);
 
-        /** DeviceCapabilities _chatLockSupportLevel. */
-        public _chatLockSupportLevel?: "chatLockSupportLevel";
-
-        /** DeviceCapabilities _lidMigration. */
-        public _lidMigration?: "lidMigration";
-
-        /** DeviceCapabilities _businessBroadcast. */
-        public _businessBroadcast?: "businessBroadcast";
-
-        /** DeviceCapabilities _userHasAvatar. */
-        public _userHasAvatar?: "userHasAvatar";
-
-        /** DeviceCapabilities _memberNameTagPrimarySupport. */
-        public _memberNameTagPrimarySupport?: "memberNameTagPrimarySupport";
-
-        /** DeviceCapabilities _aiThread. */
-        public _aiThread?: "aiThread";
-
         /**
          * Creates a new DeviceCapabilities instance using the specified properties.
          * @param [properties] Properties to set
@@ -10516,9 +11085,6 @@ export namespace DeviceCapabilities {
             /** AiThread supportLevel. */
             public supportLevel?: (DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel|null);
 
-            /** AiThread _supportLevel. */
-            public _supportLevel?: "supportLevel";
-
             /**
              * Creates a new AiThread instance using the specified properties.
              * @param [properties] Properties to set
@@ -10612,6 +11178,15 @@ export namespace DeviceCapabilities {
 
             /** BusinessBroadcast importListEnabled */
             importListEnabled?: (boolean|null);
+
+            /** BusinessBroadcast companionSupportEnabled */
+            companionSupportEnabled?: (boolean|null);
+
+            /** BusinessBroadcast campaignSyncEnabled */
+            campaignSyncEnabled?: (boolean|null);
+
+            /** BusinessBroadcast insightsSyncEnabled */
+            insightsSyncEnabled?: (boolean|null);
         }
 
         /** Represents a BusinessBroadcast. */
@@ -10626,8 +11201,14 @@ export namespace DeviceCapabilities {
             /** BusinessBroadcast importListEnabled. */
             public importListEnabled?: (boolean|null);
 
-            /** BusinessBroadcast _importListEnabled. */
-            public _importListEnabled?: "importListEnabled";
+            /** BusinessBroadcast companionSupportEnabled. */
+            public companionSupportEnabled?: (boolean|null);
+
+            /** BusinessBroadcast campaignSyncEnabled. */
+            public campaignSyncEnabled?: (boolean|null);
+
+            /** BusinessBroadcast insightsSyncEnabled. */
+            public insightsSyncEnabled?: (boolean|null);
 
             /**
              * Creates a new BusinessBroadcast instance using the specified properties.
@@ -10733,9 +11314,6 @@ export namespace DeviceCapabilities {
             /** LIDMigration chatDbMigrationTimestamp. */
             public chatDbMigrationTimestamp?: (number|Long|null);
 
-            /** LIDMigration _chatDbMigrationTimestamp. */
-            public _chatDbMigrationTimestamp?: "chatDbMigrationTimestamp";
-
             /**
              * Creates a new LIDMigration instance using the specified properties.
              * @param [properties] Properties to set
@@ -10839,9 +11417,6 @@ export namespace DeviceCapabilities {
 
             /** UserHasAvatar userHasAvatar. */
             public userHasAvatar?: (boolean|null);
-
-            /** UserHasAvatar _userHasAvatar. */
-            public _userHasAvatar?: "userHasAvatar";
 
             /**
              * Creates a new UserHasAvatar instance using the specified properties.
@@ -10962,18 +11537,6 @@ export namespace Protocol {
 
         /** LimitSharing initiatedByMe. */
         public initiatedByMe?: (boolean|null);
-
-        /** LimitSharing _sharingLimited. */
-        public _sharingLimited?: "sharingLimited";
-
-        /** LimitSharing _trigger. */
-        public _trigger?: "trigger";
-
-        /** LimitSharing _limitSharingSettingTimestamp. */
-        public _limitSharingSettingTimestamp?: "limitSharingSettingTimestamp";
-
-        /** LimitSharing _initiatedByMe. */
-        public _initiatedByMe?: "initiatedByMe";
 
         /**
          * Creates a new LimitSharing instance using the specified properties.
@@ -11100,18 +11663,6 @@ export namespace Protocol {
 
         /** MessageKey participant. */
         public participant?: (string|null);
-
-        /** MessageKey _remoteJid. */
-        public _remoteJid?: "remoteJid";
-
-        /** MessageKey _fromMe. */
-        public _fromMe?: "fromMe";
-
-        /** MessageKey _id. */
-        public _id?: "id";
-
-        /** MessageKey _participant. */
-        public _participant?: "participant";
 
         /**
          * Creates a new MessageKey instance using the specified properties.

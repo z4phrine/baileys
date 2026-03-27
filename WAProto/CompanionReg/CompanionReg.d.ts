@@ -17,6 +17,9 @@ export namespace CompanionReg {
 
         /** ClientPairingProps isHsThumbnailSyncEnabled */
         isHsThumbnailSyncEnabled?: (boolean|null);
+
+        /** ClientPairingProps subscriptionSyncPayload */
+        subscriptionSyncPayload?: (Uint8Array|null);
     }
 
     /** Represents a ClientPairingProps. */
@@ -40,17 +43,8 @@ export namespace CompanionReg {
         /** ClientPairingProps isHsThumbnailSyncEnabled. */
         public isHsThumbnailSyncEnabled?: (boolean|null);
 
-        /** ClientPairingProps _isChatDbLidMigrated. */
-        public _isChatDbLidMigrated?: "isChatDbLidMigrated";
-
-        /** ClientPairingProps _isSyncdPureLidSession. */
-        public _isSyncdPureLidSession?: "isSyncdPureLidSession";
-
-        /** ClientPairingProps _isSyncdSnapshotRecoveryEnabled. */
-        public _isSyncdSnapshotRecoveryEnabled?: "isSyncdSnapshotRecoveryEnabled";
-
-        /** ClientPairingProps _isHsThumbnailSyncEnabled. */
-        public _isHsThumbnailSyncEnabled?: "isHsThumbnailSyncEnabled";
+        /** ClientPairingProps subscriptionSyncPayload. */
+        public subscriptionSyncPayload?: (Uint8Array|null);
 
         /**
          * Creates a new ClientPairingProps instance using the specified properties.
@@ -154,12 +148,6 @@ export namespace CompanionReg {
 
         /** EncryptedPairingRequest iv. */
         public iv?: (Uint8Array|null);
-
-        /** EncryptedPairingRequest _encryptedPayload. */
-        public _encryptedPayload?: "encryptedPayload";
-
-        /** EncryptedPairingRequest _iv. */
-        public _iv?: "iv";
 
         /**
          * Creates a new EncryptedPairingRequest instance using the specified properties.
@@ -270,15 +258,6 @@ export namespace CompanionReg {
         /** PairingRequest advSecret. */
         public advSecret?: (Uint8Array|null);
 
-        /** PairingRequest _companionPublicKey. */
-        public _companionPublicKey?: "companionPublicKey";
-
-        /** PairingRequest _companionIdentityKey. */
-        public _companionIdentityKey?: "companionIdentityKey";
-
-        /** PairingRequest _advSecret. */
-        public _advSecret?: "advSecret";
-
         /**
          * Creates a new PairingRequest instance using the specified properties.
          * @param [properties] Properties to set
@@ -381,12 +360,6 @@ export namespace CompanionReg {
 
         /** PrimaryEphemeralIdentity nonce. */
         public nonce?: (Uint8Array|null);
-
-        /** PrimaryEphemeralIdentity _publicKey. */
-        public _publicKey?: "publicKey";
-
-        /** PrimaryEphemeralIdentity _nonce. */
-        public _nonce?: "nonce";
 
         /**
          * Creates a new PrimaryEphemeralIdentity instance using the specified properties.
@@ -491,12 +464,6 @@ export namespace CompanionReg {
         /** ProloguePayload commitment. */
         public commitment?: (CompanionReg.ICompanionCommitment|null);
 
-        /** ProloguePayload _companionEphemeralIdentity. */
-        public _companionEphemeralIdentity?: "companionEphemeralIdentity";
-
-        /** ProloguePayload _commitment. */
-        public _commitment?: "commitment";
-
         /**
          * Creates a new ProloguePayload instance using the specified properties.
          * @param [properties] Properties to set
@@ -593,9 +560,6 @@ export namespace CompanionReg {
 
         /** CompanionCommitment hash. */
         public hash?: (Uint8Array|null);
-
-        /** CompanionCommitment _hash. */
-        public _hash?: "hash";
 
         /**
          * Creates a new CompanionCommitment instance using the specified properties.
@@ -705,15 +669,6 @@ export namespace CompanionReg {
 
         /** CompanionEphemeralIdentity ref. */
         public ref?: (string|null);
-
-        /** CompanionEphemeralIdentity _publicKey. */
-        public _publicKey?: "publicKey";
-
-        /** CompanionEphemeralIdentity _deviceType. */
-        public _deviceType?: "deviceType";
-
-        /** CompanionEphemeralIdentity _ref. */
-        public _ref?: "ref";
 
         /**
          * Creates a new CompanionEphemeralIdentity instance using the specified properties.
@@ -835,21 +790,6 @@ export namespace CompanionReg {
 
         /** DeviceProps historySyncConfig. */
         public historySyncConfig?: (CompanionReg.DeviceProps.IHistorySyncConfig|null);
-
-        /** DeviceProps _os. */
-        public _os?: "os";
-
-        /** DeviceProps _version. */
-        public _version?: "version";
-
-        /** DeviceProps _platformType. */
-        public _platformType?: "platformType";
-
-        /** DeviceProps _requireFullSync. */
-        public _requireFullSync?: "requireFullSync";
-
-        /** DeviceProps _historySyncConfig. */
-        public _historySyncConfig?: "historySyncConfig";
 
         /**
          * Creates a new DeviceProps instance using the specified properties.
@@ -973,21 +913,6 @@ export namespace CompanionReg {
 
             /** AppVersion quinary. */
             public quinary?: (number|null);
-
-            /** AppVersion _primary. */
-            public _primary?: "primary";
-
-            /** AppVersion _secondary. */
-            public _secondary?: "secondary";
-
-            /** AppVersion _tertiary. */
-            public _tertiary?: "tertiary";
-
-            /** AppVersion _quaternary. */
-            public _quaternary?: "quaternary";
-
-            /** AppVersion _quinary. */
-            public _quinary?: "quinary";
 
             /**
              * Creates a new AppVersion instance using the specified properties.
@@ -1126,6 +1051,15 @@ export namespace CompanionReg {
 
             /** HistorySyncConfig thumbnailSyncDaysLimit */
             thumbnailSyncDaysLimit?: (number|null);
+
+            /** HistorySyncConfig initialSyncMaxMessagesPerChat */
+            initialSyncMaxMessagesPerChat?: (number|null);
+
+            /** HistorySyncConfig supportManusHistory */
+            supportManusHistory?: (boolean|null);
+
+            /** HistorySyncConfig supportHatchHistory */
+            supportHatchHistory?: (boolean|null);
         }
 
         /** Represents a HistorySyncConfig. */
@@ -1194,62 +1128,14 @@ export namespace CompanionReg {
             /** HistorySyncConfig thumbnailSyncDaysLimit. */
             public thumbnailSyncDaysLimit?: (number|null);
 
-            /** HistorySyncConfig _fullSyncDaysLimit. */
-            public _fullSyncDaysLimit?: "fullSyncDaysLimit";
+            /** HistorySyncConfig initialSyncMaxMessagesPerChat. */
+            public initialSyncMaxMessagesPerChat?: (number|null);
 
-            /** HistorySyncConfig _fullSyncSizeMbLimit. */
-            public _fullSyncSizeMbLimit?: "fullSyncSizeMbLimit";
+            /** HistorySyncConfig supportManusHistory. */
+            public supportManusHistory?: (boolean|null);
 
-            /** HistorySyncConfig _storageQuotaMb. */
-            public _storageQuotaMb?: "storageQuotaMb";
-
-            /** HistorySyncConfig _inlineInitialPayloadInE2EeMsg. */
-            public _inlineInitialPayloadInE2EeMsg?: "inlineInitialPayloadInE2EeMsg";
-
-            /** HistorySyncConfig _recentSyncDaysLimit. */
-            public _recentSyncDaysLimit?: "recentSyncDaysLimit";
-
-            /** HistorySyncConfig _supportCallLogHistory. */
-            public _supportCallLogHistory?: "supportCallLogHistory";
-
-            /** HistorySyncConfig _supportBotUserAgentChatHistory. */
-            public _supportBotUserAgentChatHistory?: "supportBotUserAgentChatHistory";
-
-            /** HistorySyncConfig _supportCagReactionsAndPolls. */
-            public _supportCagReactionsAndPolls?: "supportCagReactionsAndPolls";
-
-            /** HistorySyncConfig _supportBizHostedMsg. */
-            public _supportBizHostedMsg?: "supportBizHostedMsg";
-
-            /** HistorySyncConfig _supportRecentSyncChunkMessageCountTuning. */
-            public _supportRecentSyncChunkMessageCountTuning?: "supportRecentSyncChunkMessageCountTuning";
-
-            /** HistorySyncConfig _supportHostedGroupMsg. */
-            public _supportHostedGroupMsg?: "supportHostedGroupMsg";
-
-            /** HistorySyncConfig _supportFbidBotChatHistory. */
-            public _supportFbidBotChatHistory?: "supportFbidBotChatHistory";
-
-            /** HistorySyncConfig _supportAddOnHistorySyncMigration. */
-            public _supportAddOnHistorySyncMigration?: "supportAddOnHistorySyncMigration";
-
-            /** HistorySyncConfig _supportMessageAssociation. */
-            public _supportMessageAssociation?: "supportMessageAssociation";
-
-            /** HistorySyncConfig _supportGroupHistory. */
-            public _supportGroupHistory?: "supportGroupHistory";
-
-            /** HistorySyncConfig _onDemandReady. */
-            public _onDemandReady?: "onDemandReady";
-
-            /** HistorySyncConfig _supportGuestChat. */
-            public _supportGuestChat?: "supportGuestChat";
-
-            /** HistorySyncConfig _completeOnDemandReady. */
-            public _completeOnDemandReady?: "completeOnDemandReady";
-
-            /** HistorySyncConfig _thumbnailSyncDaysLimit. */
-            public _thumbnailSyncDaysLimit?: "thumbnailSyncDaysLimit";
+            /** HistorySyncConfig supportHatchHistory. */
+            public supportHatchHistory?: (boolean|null);
 
             /**
              * Creates a new HistorySyncConfig instance using the specified properties.

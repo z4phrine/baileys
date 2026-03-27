@@ -113,7 +113,7 @@ export namespace BotMetadata {
         public avatarMetadata?: (BotMetadata.IBotAvatarMetadata|null);
 
         /** BotMetadata personaId. */
-        public personaId: string;
+        public personaId?: (string|null);
 
         /** BotMetadata pluginMetadata. */
         public pluginMetadata?: (BotMetadata.IBotPluginMetadata|null);
@@ -122,7 +122,7 @@ export namespace BotMetadata {
         public suggestedPromptMetadata?: (BotMetadata.IBotSuggestedPromptMetadata|null);
 
         /** BotMetadata invokerJid. */
-        public invokerJid: string;
+        public invokerJid?: (string|null);
 
         /** BotMetadata sessionMetadata. */
         public sessionMetadata?: (BotMetadata.IBotSessionMetadata|null);
@@ -131,7 +131,7 @@ export namespace BotMetadata {
         public memuMetadata?: (BotMetadata.IBotMemuMetadata|null);
 
         /** BotMetadata timezone. */
-        public timezone: string;
+        public timezone?: (string|null);
 
         /** BotMetadata reminderMetadata. */
         public reminderMetadata?: (BotMetadata.IBotReminderMetadata|null);
@@ -140,7 +140,7 @@ export namespace BotMetadata {
         public modelMetadata?: (BotMetadata.IBotModelMetadata|null);
 
         /** BotMetadata messageDisclaimerText. */
-        public messageDisclaimerText: string;
+        public messageDisclaimerText?: (string|null);
 
         /** BotMetadata progressIndicatorMetadata. */
         public progressIndicatorMetadata?: (BotMetadata.IBotProgressIndicatorMetadata|null);
@@ -167,7 +167,7 @@ export namespace BotMetadata {
         public richResponseSourcesMetadata?: (BotMetadata.IBotSourcesMetadata|null);
 
         /** BotMetadata aiConversationContext. */
-        public aiConversationContext: Uint8Array;
+        public aiConversationContext?: (Uint8Array|null);
 
         /** BotMetadata botPromotionMessageMetadata. */
         public botPromotionMessageMetadata?: (BotMetadata.IBotPromotionMessageMetadata|null);
@@ -182,10 +182,10 @@ export namespace BotMetadata {
         public botAgeCollectionMetadata?: (BotMetadata.IBotAgeCollectionMetadata|null);
 
         /** BotMetadata conversationStarterPromptId. */
-        public conversationStarterPromptId: string;
+        public conversationStarterPromptId?: (string|null);
 
         /** BotMetadata botResponseId. */
-        public botResponseId: string;
+        public botResponseId?: (string|null);
 
         /** BotMetadata verificationMetadata. */
         public verificationMetadata?: (BotMetadata.IBotSignatureVerificationMetadata|null);
@@ -402,7 +402,7 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.AIThreadInfo.IAIThreadClientInfo);
 
             /** AIThreadClientInfo type. */
-            public type: BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType;
+            public type?: (BotMetadata.AIThreadInfo.AIThreadClientInfo.AIThreadType|null);
 
             /**
              * Creates a new AIThreadClientInfo instance using the specified properties.
@@ -509,7 +509,7 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.AIThreadInfo.IAIThreadServerInfo);
 
             /** AIThreadServerInfo title. */
-            public title: string;
+            public title?: (string|null);
 
             /**
              * Creates a new AIThreadServerInfo instance using the specified properties.
@@ -706,7 +706,7 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.BotUnifiedResponseMutation.ISideBySideMetadata);
 
             /** SideBySideMetadata primaryResponseId. */
-            public primaryResponseId: string;
+            public primaryResponseId?: (string|null);
 
             /**
              * Creates a new SideBySideMetadata instance using the specified properties.
@@ -804,7 +804,7 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotMessageOrigin);
 
         /** BotMessageOrigin type. */
-        public type: BotMetadata.BotMessageOrigin.BotMessageOriginType;
+        public type?: (BotMetadata.BotMessageOrigin.BotMessageOriginType|null);
 
         /**
          * Creates a new BotMessageOrigin instance using the specified properties.
@@ -1054,55 +1054,55 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IInThreadSurveyMetadata);
 
         /** InThreadSurveyMetadata tessaSessionId. */
-        public tessaSessionId: string;
+        public tessaSessionId?: (string|null);
 
         /** InThreadSurveyMetadata simonSessionId. */
-        public simonSessionId: string;
+        public simonSessionId?: (string|null);
 
         /** InThreadSurveyMetadata simonSurveyId. */
-        public simonSurveyId: string;
+        public simonSurveyId?: (string|null);
 
         /** InThreadSurveyMetadata tessaRootId. */
-        public tessaRootId: string;
+        public tessaRootId?: (string|null);
 
         /** InThreadSurveyMetadata requestId. */
-        public requestId: string;
+        public requestId?: (string|null);
 
         /** InThreadSurveyMetadata tessaEvent. */
-        public tessaEvent: string;
+        public tessaEvent?: (string|null);
 
         /** InThreadSurveyMetadata invitationHeaderText. */
-        public invitationHeaderText: string;
+        public invitationHeaderText?: (string|null);
 
         /** InThreadSurveyMetadata invitationBodyText. */
-        public invitationBodyText: string;
+        public invitationBodyText?: (string|null);
 
         /** InThreadSurveyMetadata invitationCtaText. */
-        public invitationCtaText: string;
+        public invitationCtaText?: (string|null);
 
         /** InThreadSurveyMetadata invitationCtaUrl. */
-        public invitationCtaUrl: string;
+        public invitationCtaUrl?: (string|null);
 
         /** InThreadSurveyMetadata surveyTitle. */
-        public surveyTitle: string;
+        public surveyTitle?: (string|null);
 
         /** InThreadSurveyMetadata questions. */
         public questions: BotMetadata.InThreadSurveyMetadata.IInThreadSurveyQuestion[];
 
         /** InThreadSurveyMetadata surveyContinueButtonText. */
-        public surveyContinueButtonText: string;
+        public surveyContinueButtonText?: (string|null);
 
         /** InThreadSurveyMetadata surveySubmitButtonText. */
-        public surveySubmitButtonText: string;
+        public surveySubmitButtonText?: (string|null);
 
         /** InThreadSurveyMetadata privacyStatementFull. */
-        public privacyStatementFull: string;
+        public privacyStatementFull?: (string|null);
 
         /** InThreadSurveyMetadata privacyStatementParts. */
         public privacyStatementParts: BotMetadata.InThreadSurveyMetadata.IInThreadSurveyPrivacyStatementPart[];
 
         /** InThreadSurveyMetadata feedbackToastText. */
-        public feedbackToastText: string;
+        public feedbackToastText?: (string|null);
 
         /**
          * Creates a new InThreadSurveyMetadata instance using the specified properties.
@@ -1207,13 +1207,13 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.InThreadSurveyMetadata.IInThreadSurveyOption);
 
             /** InThreadSurveyOption stringValue. */
-            public stringValue: string;
+            public stringValue?: (string|null);
 
             /** InThreadSurveyOption numericValue. */
-            public numericValue: number;
+            public numericValue?: (number|null);
 
             /** InThreadSurveyOption textTranslated. */
-            public textTranslated: string;
+            public textTranslated?: (string|null);
 
             /**
              * Creates a new InThreadSurveyOption instance using the specified properties.
@@ -1313,10 +1313,10 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.InThreadSurveyMetadata.IInThreadSurveyPrivacyStatementPart);
 
             /** InThreadSurveyPrivacyStatementPart text. */
-            public text: string;
+            public text?: (string|null);
 
             /** InThreadSurveyPrivacyStatementPart url. */
-            public url: string;
+            public url?: (string|null);
 
             /**
              * Creates a new InThreadSurveyPrivacyStatementPart instance using the specified properties.
@@ -1419,10 +1419,10 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.InThreadSurveyMetadata.IInThreadSurveyQuestion);
 
             /** InThreadSurveyQuestion questionText. */
-            public questionText: string;
+            public questionText?: (string|null);
 
             /** InThreadSurveyQuestion questionId. */
-            public questionId: string;
+            public questionId?: (string|null);
 
             /** InThreadSurveyQuestion questionOptions. */
             public questionOptions: BotMetadata.InThreadSurveyMetadata.IInThreadSurveyOption[];
@@ -1640,25 +1640,25 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.BotSourcesMetadata.IBotSourceItem);
 
             /** BotSourceItem provider. */
-            public provider: BotMetadata.BotSourcesMetadata.BotSourceItem.SourceProvider;
+            public provider?: (BotMetadata.BotSourcesMetadata.BotSourceItem.SourceProvider|null);
 
             /** BotSourceItem thumbnailCdnUrl. */
-            public thumbnailCdnUrl: string;
+            public thumbnailCdnUrl?: (string|null);
 
             /** BotSourceItem sourceProviderUrl. */
-            public sourceProviderUrl: string;
+            public sourceProviderUrl?: (string|null);
 
             /** BotSourceItem sourceQuery. */
-            public sourceQuery: string;
+            public sourceQuery?: (string|null);
 
             /** BotSourceItem faviconCdnUrl. */
-            public faviconCdnUrl: string;
+            public faviconCdnUrl?: (string|null);
 
             /** BotSourceItem citationNumber. */
-            public citationNumber: number;
+            public citationNumber?: (number|null);
 
             /** BotSourceItem sourceTitle. */
-            public sourceTitle: string;
+            public sourceTitle?: (string|null);
 
             /**
              * Creates a new BotSourceItem instance using the specified properties.
@@ -1771,10 +1771,10 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotAgeCollectionMetadata);
 
         /** BotAgeCollectionMetadata ageCollectionEligible. */
-        public ageCollectionEligible: boolean;
+        public ageCollectionEligible?: (boolean|null);
 
         /** BotAgeCollectionMetadata shouldTriggerAgeCollectionOnClient. */
-        public shouldTriggerAgeCollectionOnClient: boolean;
+        public shouldTriggerAgeCollectionOnClient?: (boolean|null);
 
         /**
          * Creates a new BotAgeCollectionMetadata instance using the specified properties.
@@ -1871,7 +1871,7 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotImagineMetadata);
 
         /** BotImagineMetadata imagineType. */
-        public imagineType: BotMetadata.BotImagineMetadata.ImagineType;
+        public imagineType?: (BotMetadata.BotImagineMetadata.ImagineType|null);
 
         /**
          * Creates a new BotImagineMetadata instance using the specified properties.
@@ -2085,13 +2085,13 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.BotQuotaMetadata.IBotFeatureQuotaMetadata);
 
             /** BotFeatureQuotaMetadata featureType. */
-            public featureType: BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata.BotFeatureType;
+            public featureType?: (BotMetadata.BotQuotaMetadata.BotFeatureQuotaMetadata.BotFeatureType|null);
 
             /** BotFeatureQuotaMetadata remainingQuota. */
-            public remainingQuota: number;
+            public remainingQuota?: (number|null);
 
             /** BotFeatureQuotaMetadata expirationTimestamp. */
-            public expirationTimestamp: (number|Long);
+            public expirationTimestamp?: (number|Long|null);
 
             /**
              * Creates a new BotFeatureQuotaMetadata instance using the specified properties.
@@ -2454,7 +2454,7 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotProgressIndicatorMetadata);
 
         /** BotProgressIndicatorMetadata progressDescription. */
-        public progressDescription: string;
+        public progressDescription?: (string|null);
 
         /** BotProgressIndicatorMetadata stepsMetadata. */
         public stepsMetadata: BotMetadata.BotProgressIndicatorMetadata.IBotPlanningStepMetadata[];
@@ -2574,22 +2574,22 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.BotProgressIndicatorMetadata.IBotPlanningStepMetadata);
 
             /** BotPlanningStepMetadata statusTitle. */
-            public statusTitle: string;
+            public statusTitle?: (string|null);
 
             /** BotPlanningStepMetadata statusBody. */
-            public statusBody: string;
+            public statusBody?: (string|null);
 
             /** BotPlanningStepMetadata sourcesMetadata. */
             public sourcesMetadata: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata[];
 
             /** BotPlanningStepMetadata status. */
-            public status: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.PlanningStepStatus;
+            public status?: (BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.PlanningStepStatus|null);
 
             /** BotPlanningStepMetadata isReasoning. */
-            public isReasoning: boolean;
+            public isReasoning?: (boolean|null);
 
             /** BotPlanningStepMetadata isEnhancedSearch. */
-            public isEnhancedSearch: boolean;
+            public isEnhancedSearch?: (boolean|null);
 
             /** BotPlanningStepMetadata sections. */
             public sections: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningStepSectionMetadata[];
@@ -2700,16 +2700,16 @@ export namespace BotMetadata {
                 constructor(properties?: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourceMetadata);
 
                 /** BotPlanningSearchSourceMetadata title. */
-                public title: string;
+                public title?: (string|null);
 
                 /** BotPlanningSearchSourceMetadata provider. */
-                public provider: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider;
+                public provider?: (BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider|null);
 
                 /** BotPlanningSearchSourceMetadata sourceUrl. */
-                public sourceUrl: string;
+                public sourceUrl?: (string|null);
 
                 /** BotPlanningSearchSourceMetadata favIconUrl. */
-                public favIconUrl: string;
+                public favIconUrl?: (string|null);
 
                 /**
                  * Creates a new BotPlanningSearchSourceMetadata instance using the specified properties.
@@ -2812,13 +2812,13 @@ export namespace BotMetadata {
                 constructor(properties?: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata);
 
                 /** BotPlanningSearchSourcesMetadata sourceTitle. */
-                public sourceTitle: string;
+                public sourceTitle?: (string|null);
 
                 /** BotPlanningSearchSourcesMetadata provider. */
-                public provider: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider;
+                public provider?: (BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider|null);
 
                 /** BotPlanningSearchSourcesMetadata sourceUrl. */
-                public sourceUrl: string;
+                public sourceUrl?: (string|null);
 
                 /**
                  * Creates a new BotPlanningSearchSourcesMetadata instance using the specified properties.
@@ -2932,10 +2932,10 @@ export namespace BotMetadata {
                 constructor(properties?: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningStepSectionMetadata);
 
                 /** BotPlanningStepSectionMetadata sectionTitle. */
-                public sectionTitle: string;
+                public sectionTitle?: (string|null);
 
                 /** BotPlanningStepSectionMetadata sectionBody. */
-                public sectionBody: string;
+                public sectionBody?: (string|null);
 
                 /** BotPlanningStepSectionMetadata sourcesMetadata. */
                 public sourcesMetadata: BotMetadata.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourceMetadata[];
@@ -3056,10 +3056,10 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotModelMetadata);
 
         /** BotModelMetadata modelType. */
-        public modelType: BotMetadata.BotModelMetadata.ModelType;
+        public modelType?: (BotMetadata.BotModelMetadata.ModelType|null);
 
         /** BotModelMetadata premiumModelStatus. */
-        public premiumModelStatus: BotMetadata.BotModelMetadata.PremiumModelStatus;
+        public premiumModelStatus?: (BotMetadata.BotModelMetadata.PremiumModelStatus|null);
 
         /**
          * Creates a new BotModelMetadata instance using the specified properties.
@@ -3188,16 +3188,16 @@ export namespace BotMetadata {
         public requestMessageKey?: (Protocol.IMessageKey|null);
 
         /** BotReminderMetadata action. */
-        public action: BotMetadata.BotReminderMetadata.ReminderAction;
+        public action?: (BotMetadata.BotReminderMetadata.ReminderAction|null);
 
         /** BotReminderMetadata name. */
-        public name: string;
+        public name?: (string|null);
 
         /** BotReminderMetadata nextTriggerTimestamp. */
-        public nextTriggerTimestamp: (number|Long);
+        public nextTriggerTimestamp?: (number|Long|null);
 
         /** BotReminderMetadata frequency. */
-        public frequency: BotMetadata.BotReminderMetadata.ReminderFrequency;
+        public frequency?: (BotMetadata.BotReminderMetadata.ReminderFrequency|null);
 
         /**
          * Creates a new BotReminderMetadata instance using the specified properties.
@@ -3429,25 +3429,25 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotMediaMetadata);
 
         /** BotMediaMetadata fileSha256. */
-        public fileSha256: string;
+        public fileSha256?: (string|null);
 
         /** BotMediaMetadata mediaKey. */
-        public mediaKey: string;
+        public mediaKey?: (string|null);
 
         /** BotMediaMetadata fileEncSha256. */
-        public fileEncSha256: string;
+        public fileEncSha256?: (string|null);
 
         /** BotMediaMetadata directPath. */
-        public directPath: string;
+        public directPath?: (string|null);
 
         /** BotMediaMetadata mediaKeyTimestamp. */
-        public mediaKeyTimestamp: (number|Long);
+        public mediaKeyTimestamp?: (number|Long|null);
 
         /** BotMediaMetadata mimetype. */
-        public mimetype: string;
+        public mimetype?: (string|null);
 
         /** BotMediaMetadata orientationType. */
-        public orientationType: BotMetadata.BotMediaMetadata.OrientationType;
+        public orientationType?: (BotMetadata.BotMediaMetadata.OrientationType|null);
 
         /**
          * Creates a new BotMediaMetadata instance using the specified properties.
@@ -3557,10 +3557,10 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotSessionMetadata);
 
         /** BotSessionMetadata sessionId. */
-        public sessionId: string;
+        public sessionId?: (string|null);
 
         /** BotSessionMetadata sessionSource. */
-        public sessionSource: BotMetadata.BotSessionSource;
+        public sessionSource?: (BotMetadata.BotSessionSource|null);
 
         /**
          * Creates a new BotSessionMetadata instance using the specified properties.
@@ -3663,13 +3663,13 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotMetricsMetadata);
 
         /** BotMetricsMetadata destinationId. */
-        public destinationId: string;
+        public destinationId?: (string|null);
 
         /** BotMetricsMetadata destinationEntryPoint. */
-        public destinationEntryPoint: BotMetadata.BotMetricsEntryPoint;
+        public destinationEntryPoint?: (BotMetadata.BotMetricsEntryPoint|null);
 
         /** BotMetricsMetadata threadOrigin. */
-        public threadOrigin: BotMetadata.BotMetricsThreadEntryPoint;
+        public threadOrigin?: (BotMetadata.BotMetricsThreadEntryPoint|null);
 
         /**
          * Creates a new BotMetricsMetadata instance using the specified properties.
@@ -3868,7 +3868,7 @@ export namespace BotMetadata {
             constructor(properties?: BotMetadata.BotRenderingMetadata.IKeyword);
 
             /** Keyword value. */
-            public value: string;
+            public value?: (string|null);
 
             /** Keyword associatedPrompts. */
             public associatedPrompts: string[];
@@ -3972,10 +3972,10 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotPromotionMessageMetadata);
 
         /** BotPromotionMessageMetadata promotionType. */
-        public promotionType: BotMetadata.BotPromotionMessageMetadata.BotPromotionType;
+        public promotionType?: (BotMetadata.BotPromotionMessageMetadata.BotPromotionType|null);
 
         /** BotPromotionMessageMetadata buttonTitle. */
-        public buttonTitle: string;
+        public buttonTitle?: (string|null);
 
         /**
          * Creates a new BotPromotionMessageMetadata instance using the specified properties.
@@ -4091,16 +4091,16 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotSignatureVerificationUseCaseProof);
 
         /** BotSignatureVerificationUseCaseProof version. */
-        public version: number;
+        public version?: (number|null);
 
         /** BotSignatureVerificationUseCaseProof useCase. */
-        public useCase: BotMetadata.BotSignatureVerificationUseCaseProof.BotSignatureUseCase;
+        public useCase?: (BotMetadata.BotSignatureVerificationUseCaseProof.BotSignatureUseCase|null);
 
         /** BotSignatureVerificationUseCaseProof signature. */
-        public signature: Uint8Array;
+        public signature?: (Uint8Array|null);
 
         /** BotSignatureVerificationUseCaseProof certificateChain. */
-        public certificateChain: Uint8Array;
+        public certificateChain?: (Uint8Array|null);
 
         /**
          * Creates a new BotSignatureVerificationUseCaseProof instance using the specified properties.
@@ -4305,10 +4305,10 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotMemoryFact);
 
         /** BotMemoryFact fact. */
-        public fact: string;
+        public fact?: (string|null);
 
         /** BotMemoryFact factId. */
-        public factId: string;
+        public factId?: (string|null);
 
         /**
          * Creates a new BotMemoryFact instance using the specified properties.
@@ -4417,7 +4417,7 @@ export namespace BotMetadata {
         public removedFacts: BotMetadata.IBotMemoryFact[];
 
         /** BotMemoryMetadata disclaimer. */
-        public disclaimer: string;
+        public disclaimer?: (string|null);
 
         /**
          * Creates a new BotMemoryMetadata instance using the specified properties.
@@ -4514,7 +4514,7 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotLinkedAccount);
 
         /** BotLinkedAccount type. */
-        public type: BotMetadata.BotLinkedAccount.BotLinkedAccountType;
+        public type?: (BotMetadata.BotLinkedAccount.BotLinkedAccountType|null);
 
         /**
          * Creates a new BotLinkedAccount instance using the specified properties.
@@ -4628,10 +4628,10 @@ export namespace BotMetadata {
         public accounts: BotMetadata.IBotLinkedAccount[];
 
         /** BotLinkedAccountsMetadata acAuthTokens. */
-        public acAuthTokens: Uint8Array;
+        public acAuthTokens?: (Uint8Array|null);
 
         /** BotLinkedAccountsMetadata acErrorCode. */
-        public acErrorCode: number;
+        public acErrorCode?: (number|null);
 
         /**
          * Creates a new BotLinkedAccountsMetadata instance using the specified properties.
@@ -4731,10 +4731,10 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotPromptSuggestion);
 
         /** BotPromptSuggestion prompt. */
-        public prompt: string;
+        public prompt?: (string|null);
 
         /** BotPromptSuggestion promptId. */
-        public promptId: string;
+        public promptId?: (string|null);
 
         /**
          * Creates a new BotPromptSuggestion instance using the specified properties.
@@ -4940,13 +4940,13 @@ export namespace BotMetadata {
         public suggestedPrompts: string[];
 
         /** BotSuggestedPromptMetadata selectedPromptIndex. */
-        public selectedPromptIndex: number;
+        public selectedPromptIndex?: (number|null);
 
         /** BotSuggestedPromptMetadata promptSuggestions. */
         public promptSuggestions?: (BotMetadata.IBotPromptSuggestions|null);
 
         /** BotSuggestedPromptMetadata selectedPromptId. */
-        public selectedPromptId: string;
+        public selectedPromptId?: (string|null);
 
         /**
          * Creates a new BotSuggestedPromptMetadata instance using the specified properties.
@@ -5076,40 +5076,40 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotPluginMetadata);
 
         /** BotPluginMetadata provider. */
-        public provider: BotMetadata.BotPluginMetadata.SearchProvider;
+        public provider?: (BotMetadata.BotPluginMetadata.SearchProvider|null);
 
         /** BotPluginMetadata pluginType. */
-        public pluginType: BotMetadata.BotPluginMetadata.PluginType;
+        public pluginType?: (BotMetadata.BotPluginMetadata.PluginType|null);
 
         /** BotPluginMetadata thumbnailCdnUrl. */
-        public thumbnailCdnUrl: string;
+        public thumbnailCdnUrl?: (string|null);
 
         /** BotPluginMetadata profilePhotoCdnUrl. */
-        public profilePhotoCdnUrl: string;
+        public profilePhotoCdnUrl?: (string|null);
 
         /** BotPluginMetadata searchProviderUrl. */
-        public searchProviderUrl: string;
+        public searchProviderUrl?: (string|null);
 
         /** BotPluginMetadata referenceIndex. */
-        public referenceIndex: number;
+        public referenceIndex?: (number|null);
 
         /** BotPluginMetadata expectedLinksCount. */
-        public expectedLinksCount: number;
+        public expectedLinksCount?: (number|null);
 
         /** BotPluginMetadata searchQuery. */
-        public searchQuery: string;
+        public searchQuery?: (string|null);
 
         /** BotPluginMetadata parentPluginMessageKey. */
         public parentPluginMessageKey?: (Protocol.IMessageKey|null);
 
         /** BotPluginMetadata deprecatedField. */
-        public deprecatedField: BotMetadata.BotPluginMetadata.PluginType;
+        public deprecatedField?: (BotMetadata.BotPluginMetadata.PluginType|null);
 
         /** BotPluginMetadata parentPluginType. */
-        public parentPluginType: BotMetadata.BotPluginMetadata.PluginType;
+        public parentPluginType?: (BotMetadata.BotPluginMetadata.PluginType|null);
 
         /** BotPluginMetadata faviconCdnUrl. */
-        public faviconCdnUrl: string;
+        public faviconCdnUrl?: (string|null);
 
         /**
          * Creates a new BotPluginMetadata instance using the specified properties.
@@ -5236,19 +5236,19 @@ export namespace BotMetadata {
         constructor(properties?: BotMetadata.IBotAvatarMetadata);
 
         /** BotAvatarMetadata sentiment. */
-        public sentiment: number;
+        public sentiment?: (number|null);
 
         /** BotAvatarMetadata behaviorGraph. */
-        public behaviorGraph: string;
+        public behaviorGraph?: (string|null);
 
         /** BotAvatarMetadata action. */
-        public action: number;
+        public action?: (number|null);
 
         /** BotAvatarMetadata intensity. */
-        public intensity: number;
+        public intensity?: (number|null);
 
         /** BotAvatarMetadata wordCount. */
-        public wordCount: number;
+        public wordCount?: (number|null);
 
         /**
          * Creates a new BotAvatarMetadata instance using the specified properties.
@@ -5424,18 +5424,6 @@ export namespace Protocol {
         /** LimitSharing initiatedByMe. */
         public initiatedByMe?: (boolean|null);
 
-        /** LimitSharing _sharingLimited. */
-        public _sharingLimited?: "sharingLimited";
-
-        /** LimitSharing _trigger. */
-        public _trigger?: "trigger";
-
-        /** LimitSharing _limitSharingSettingTimestamp. */
-        public _limitSharingSettingTimestamp?: "limitSharingSettingTimestamp";
-
-        /** LimitSharing _initiatedByMe. */
-        public _initiatedByMe?: "initiatedByMe";
-
         /**
          * Creates a new LimitSharing instance using the specified properties.
          * @param [properties] Properties to set
@@ -5561,18 +5549,6 @@ export namespace Protocol {
 
         /** MessageKey participant. */
         public participant?: (string|null);
-
-        /** MessageKey _remoteJid. */
-        public _remoteJid?: "remoteJid";
-
-        /** MessageKey _fromMe. */
-        public _fromMe?: "fromMe";
-
-        /** MessageKey _id. */
-        public _id?: "id";
-
-        /** MessageKey _participant. */
-        public _participant?: "participant";
 
         /**
          * Creates a new MessageKey instance using the specified properties.
