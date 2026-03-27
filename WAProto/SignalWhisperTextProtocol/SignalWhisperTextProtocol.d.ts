@@ -28,12 +28,6 @@ export namespace SignalWhisperTextProtocol {
         /** DeviceConsistencyCodeMessage signature. */
         public signature?: (Uint8Array|null);
 
-        /** DeviceConsistencyCodeMessage _generation. */
-        public _generation?: "generation";
-
-        /** DeviceConsistencyCodeMessage _signature. */
-        public _signature?: "signature";
-
         /**
          * Creates a new DeviceConsistencyCodeMessage instance using the specified properties.
          * @param [properties] Properties to set
@@ -149,18 +143,6 @@ export namespace SignalWhisperTextProtocol {
         /** SenderKeyDistributionMessage signingKey. */
         public signingKey?: (Uint8Array|null);
 
-        /** SenderKeyDistributionMessage _id. */
-        public _id?: "id";
-
-        /** SenderKeyDistributionMessage _iteration. */
-        public _iteration?: "iteration";
-
-        /** SenderKeyDistributionMessage _chainKey. */
-        public _chainKey?: "chainKey";
-
-        /** SenderKeyDistributionMessage _signingKey. */
-        public _signingKey?: "signingKey";
-
         /**
          * Creates a new SenderKeyDistributionMessage instance using the specified properties.
          * @param [properties] Properties to set
@@ -269,15 +251,6 @@ export namespace SignalWhisperTextProtocol {
 
         /** SenderKeyMessage ciphertext. */
         public ciphertext?: (Uint8Array|null);
-
-        /** SenderKeyMessage _id. */
-        public _id?: "id";
-
-        /** SenderKeyMessage _iteration. */
-        public _iteration?: "iteration";
-
-        /** SenderKeyMessage _ciphertext. */
-        public _ciphertext?: "ciphertext";
 
         /**
          * Creates a new SenderKeyMessage instance using the specified properties.
@@ -399,21 +372,6 @@ export namespace SignalWhisperTextProtocol {
 
         /** KeyExchangeMessage baseKeySignature. */
         public baseKeySignature?: (Uint8Array|null);
-
-        /** KeyExchangeMessage _id. */
-        public _id?: "id";
-
-        /** KeyExchangeMessage _baseKey. */
-        public _baseKey?: "baseKey";
-
-        /** KeyExchangeMessage _ratchetKey. */
-        public _ratchetKey?: "ratchetKey";
-
-        /** KeyExchangeMessage _identityKey. */
-        public _identityKey?: "identityKey";
-
-        /** KeyExchangeMessage _baseKeySignature. */
-        public _baseKeySignature?: "baseKeySignature";
 
         /**
          * Creates a new KeyExchangeMessage instance using the specified properties.
@@ -542,24 +500,6 @@ export namespace SignalWhisperTextProtocol {
         /** PreKeySignalMessage message. */
         public message?: (Uint8Array|null);
 
-        /** PreKeySignalMessage _registrationId. */
-        public _registrationId?: "registrationId";
-
-        /** PreKeySignalMessage _preKeyId. */
-        public _preKeyId?: "preKeyId";
-
-        /** PreKeySignalMessage _signedPreKeyId. */
-        public _signedPreKeyId?: "signedPreKeyId";
-
-        /** PreKeySignalMessage _baseKey. */
-        public _baseKey?: "baseKey";
-
-        /** PreKeySignalMessage _identityKey. */
-        public _identityKey?: "identityKey";
-
-        /** PreKeySignalMessage _message. */
-        public _message?: "message";
-
         /**
          * Creates a new PreKeySignalMessage instance using the specified properties.
          * @param [properties] Properties to set
@@ -674,18 +614,6 @@ export namespace SignalWhisperTextProtocol {
 
         /** SignalMessage ciphertext. */
         public ciphertext?: (Uint8Array|null);
-
-        /** SignalMessage _ratchetKey. */
-        public _ratchetKey?: "ratchetKey";
-
-        /** SignalMessage _counter. */
-        public _counter?: "counter";
-
-        /** SignalMessage _previousCounter. */
-        public _previousCounter?: "previousCounter";
-
-        /** SignalMessage _ciphertext. */
-        public _ciphertext?: "ciphertext";
 
         /**
          * Creates a new SignalMessage instance using the specified properties.
