@@ -18,9 +18,6 @@
   "devDependencies": {
     "acorn": "latest",
     "acorn-walk": "latest",
-    "protobufjs-cli": "latest",
-    "request": "latest",
-    "request-promise-core": "latest",
-    "request-promise-native": "latest"
+    "protobufjs-cli": "latest"
   }
 }

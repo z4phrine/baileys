@@ -1,5 +1,4 @@
 const protobuf = require('protobufjs');
-const request = require('request-promise-native');
 const acorn = require('acorn');
 const walk = require('acorn-walk');
 const fs = require('fs/promises');
@@ -8,6 +7,36 @@ const path = require('path');
 
 // Output to WAProto at the repo root
 const OUTPUT_DIR = path.resolve(__dirname, '..', 'WAProto');
+
+const MAX_RETRIES = 5;
+const INITIAL_DELAY_MS = 5000;
+
+async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
+   for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+         const response = await fetch(url, options);
+         if (response.ok) {
+            return await response.text();
+         }
+         // On 503 or other server errors, retry
+         if (response.status >= 500 && attempt < retries) {
+            const delay = INITIAL_DELAY_MS * Math.pow(2, attempt - 1) + Math.random() * 2000;
+            console.warn(`Attempt ${attempt}/${retries} got ${response.status} for ${url}. Retrying in ${Math.round(delay / 1000)}s...`);
+            await new Promise(r => setTimeout(r, delay));
+            continue;
+         }
+         throw new Error(`HTTP ${response.status}: ${response.statusText} for ${url}`);
+      } catch (err) {
+         if (attempt < retries && (err.code === 'ECONNRESET' || err.code === 'ETIMEDOUT' || err.message?.includes('fetch failed'))) {
+            const delay = INITIAL_DELAY_MS * Math.pow(2, attempt - 1) + Math.random() * 2000;
+            console.warn(`Attempt ${attempt}/${retries} failed: ${err.message}. Retrying in ${Math.round(delay / 1000)}s...`);
+            await new Promise(r => setTimeout(r, delay));
+            continue;
+         }
+         throw err;
+      }
+   }
+}
 
 const addPrefix = (lines, prefix) => lines.map((line) => prefix + line);
 
@@ -44,20 +73,21 @@ const extractAllExpressions = (node) => {
 };
 
 async function findAppModules() {
-   const ua = {
-      headers: {
-         'User-Agent':
-            'Mozilla/5.0 (X11; Linux x86_64; rv:100.0) Gecko/20100101 Firefox/100.0',
-         'Sec-Fetch-Dest': 'script',
-         'Sec-Fetch-Mode': 'no-cors',
-         'Sec-Fetch-Site': 'same-origin',
-         Referer: 'https://web.whatsapp.com/',
-         Accept: '*/*',
-         'Accept-Language': 'Accept-Language: en-US,en;q=0.5',
-      },
+   const headers = {
+      'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+      'Sec-Fetch-Dest': 'script',
+      'Sec-Fetch-Mode': 'no-cors',
+      'Sec-Fetch-Site': 'same-origin',
+      'Sec-Ch-Ua': '"Chromium";v="131", "Not_A Brand";v="24"',
+      'Sec-Ch-Ua-Mobile': '?0',
+      'Sec-Ch-Ua-Platform': '"Linux"',
+      'Referer': 'https://web.whatsapp.com/',
+      'Accept': '*/*',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept-Encoding': 'gzip, deflate, br',
    };
    const baseURL = 'https://web.whatsapp.com';
-   const serviceworker = await request.get(`${baseURL}/sw.js`, ua);
+   const serviceworker = await fetchWithRetry(`${baseURL}/sw.js`, { method: 'GET', headers });
 
    const versions = [
       ...serviceworker.matchAll(/client_revision\\":([\d\.]+),/g),
@@ -74,7 +104,7 @@ async function findAppModules() {
 
    console.info('Found source JS URL:', bootstrapQRURL);
 
-   const qrData = await request.get(bootstrapQRURL, ua);
+   const qrData = await fetchWithRetry(bootstrapQRURL, { method: 'GET', headers });
 
    // This one list of types is so long that it's split into two JavaScript declarations.
    // The module finder below can't handle it, so just patch it manually here.

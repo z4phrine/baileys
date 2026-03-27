@@ -13,7 +13,7 @@ permissions:
 jobs:
   update-protos:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@v3
@@ -29,7 +29,11 @@ jobs:
 
       - name: Fetch latest protos from WhatsApp Web
         working-directory: scripts
-        run: npm run build
+        run: node index.js
+
+      - name: Generate JS from proto files
+        working-directory: scripts
+        run: node generate-proto.js
 
       - name: Generate TypeScript declarations
         working-directory: scripts
